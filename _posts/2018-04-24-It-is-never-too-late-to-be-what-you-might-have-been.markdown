@@ -3,7 +3,7 @@ layout: post
 title:  Digital Transformations of Classrooms in Virtual Reality
 date:   2018-04-24 15:01:35 +0300
 image:  '/images/14.jpg'
-tags:   [travel, notes]
+tags:   [Research Review]
 ---
 **Researh Question**<br/>
 Investigates the interaction-related efects of sitting positions of learners, visualization styles of peer-learners and teachers, and hand-raising behaviors of virtual peer-learners on learners in an immersive VR classroom, using eye tracking data
@@ -11,7 +11,7 @@ Investigates the interaction-related efects of sitting positions of learners, vi
 **Method**<br/>
 Participant : 381 volunteer sixth-grade students (179 female, 202 male) age range 10 to 13
 
-Condition : 2*2*4 (Sitting position, visualization style, hand raising)<br/>
+Condition : 2x2x4 (Sitting position, visualization style, hand raising)<br/>
 Measure : number of fixation, fixation duration, saccade durations, saccade amplitudes, and normalized pupil diameters, self-reported presence, perceived realism<br/>
 
 
