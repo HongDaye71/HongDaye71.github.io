@@ -3,7 +3,7 @@ layout: post
 title:  Digital Transformations of Classrooms in Virtual Reality / CHI 2021
 date:   2018-04-24 15:01:35 +0300
 image:  '/images/14.jpg'
-tags:   [Research(VR), Review]
+tags:   [Research review]
 ---
 1.Researh Question
 Investigates the interaction-related efects of sitting positions of learners, visualization styles of peer-learners and teachers, and hand-raising behaviors of virtual peer-learners on learners in an immersive VR classroom, using eye tracking data
