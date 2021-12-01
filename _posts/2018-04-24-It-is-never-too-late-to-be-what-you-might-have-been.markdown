@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  Digital Transformations of Classrooms in Virtual Reality / CHI 2021
-date:   2021-10-01 15:01:35 +0300
-image:  '/images/14.png'
-tags:   [Research review]
+date:   2018-04-24 15:01:35 +0300
+image:  '/images/14.jpg'
+tags:   [travel, notes]
 ---
 **Researh Question**<br/>
 Investigates the interaction-related efects of sitting positions of learners, visualization styles of peer-learners and teachers, and hand-raising behaviors of virtual peer-learners on learners in an immersive VR classroom, using eye tracking data
@@ -31,8 +31,8 @@ The hand-raising behaviors of virtual peer-learners have signifcant impacts on t
 Did not fnd signifcant efects of diferent experimental conditions
 
 ___
-
-Gao, Hong, et al. "Digital Transformations of Classrooms in Virtual Reality." *Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems.* 2021.
+Gao, Hong, et al. "Digital Transformations of Classrooms in Virtual Reality." Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems. 2021.
+Full Paper : https://dl.acm.org/doi/abs/10.1145/3411764.3445596
 
 <div class="gallery-box">
   <div class="gallery">
