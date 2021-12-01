@@ -1,7 +1,7 @@
 ---
-title: Abstraction
+title: Virtual Reality
 date: 2021-01-25 08:01:35 +0300
-subtitle: Branding
+subtitle: Unity3D Program
 image: '/images/project-1.jpg'
 ---
 

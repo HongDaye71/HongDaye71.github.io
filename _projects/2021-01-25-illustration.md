@@ -1,7 +1,7 @@
 ---
-title: Illustration
+title: Frontend
 date: 2021-01-25 07:20:35 +0300
-subtitle: Branding
+subtitle: HTML,CSS,JS
 image: '/images/project-7.jpg'
 ---
 

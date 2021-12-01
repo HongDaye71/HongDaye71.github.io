@@ -1,7 +1,7 @@
 ---
-title: City Lights
+title: UI UX Design
 date: 2021-01-25 07:30:35 +0300
-subtitle: Photography
+subtitle: Figma
 image: '/images/project-6.jpg'
 ---
 
