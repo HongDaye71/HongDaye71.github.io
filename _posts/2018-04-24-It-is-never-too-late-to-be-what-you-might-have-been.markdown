@@ -1,11 +1,36 @@
 ---
 layout: post
-title:  It is never too late to be what you might have been
+title:  Digital Transformations of Classrooms in Virtual Reality / CHI 2021
 date:   2018-04-24 15:01:35 +0300
 image:  '/images/14.jpg'
-tags:   [travel, notes]
+tags:   [Research(VR), Review]
 ---
-In qua quid est boni praeter summam voluptatem, et eam sempiternam. Cur post Tarentum ad Archytam. Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, reman voluptatem amico percipi quam rebus exquisitissimis ad epulandum. Non enim iam stirpis bonum quaeret, sed animalis. Qui autem esse poteris, nisi te amor ipse ceperit. Sic igitur in homine perfectio ista in eo potissimum, quod est optimum, id est in virtute, laudatur. Natura sic ab iis investigata est, ut nulla pars caelo, mari, terra, ut poëtice loquar, praetermissa sit. Eadem nunc means adversum te oratio est. Mihi quidem Homerus huius modi quiddam vidisse videatur in nis.
+1.Researh Question
+Investigates the interaction-related efects of sitting positions of learners, visualization styles of peer-learners and teachers, and hand-raising behaviors of virtual peer-learners on learners in an immersive VR classroom, using eye tracking data
+
+2.Method
+-Participant : 381 volunteer sixth-grade students (179 female, 202 male) age range 10 to 13
+
+-Condition : 2*2*4 (Sitting position, visualization style, hand raising)
+-Measure : number of fixation, fixation duration, saccade durations, saccade
+amplitudes, and normalized pupil diameters, self-reported presence, perceived realism
+
+
+3.Result
+-Analysis on Diferent Sitting Positions :
+Diferent sitting positions have an impact on the mean fxation and
+saccade durations, and mean saccade amplitudes the participants that sit in the back have signifcantly longer mean fxation durations, and the that sit in the front have signifcantly longer saccade durations
+
+-Analysis on Diferent Avatar Styles :
+Diferent avatar visualization styles afect the mean fxation and saccade durations, and pupil diameters.The mean fxation durations are signifcantly longer in the cartoon-styled avatar condition tion. By contrast, the mean saccade durations are signifcantly shorter in the cartoon-styled avatar condition. The normalized mean pupil diameter, which refectsthe cognitive load, is signifcantly larger in the realistic-styled avatar condition
+
+-Analysis on Diferent Hand-raising Behavior-
+The hand-raising behaviors of virtual peer-learners have signifcant impacts on the pupil diameters and number of fxations. Mean pupil diameter in the 80% hand-raising condition is significantly larger than 35% hand-raising condition. And there are notably more fixation in the 65% hand-raising condition
+
+-Analysis on Experienced Presence and Perceived Realism
+Did not fnd signifcant efects of diferent experimental conditions
+
+
 
 <div class="gallery-box">
   <div class="gallery">
