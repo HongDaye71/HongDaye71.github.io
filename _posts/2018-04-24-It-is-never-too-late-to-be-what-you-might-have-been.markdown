@@ -9,11 +9,10 @@ tags:   [travel, notes]
 Investigates the interaction-related efects of sitting positions of learners, visualization styles of peer-learners and teachers, and hand-raising behaviors of virtual peer-learners on learners in an immersive VR classroom, using eye tracking data
 
 **Method**<br/>
--Participant : 381 volunteer sixth-grade students (179 female, 202 male) age range 10 to 13
+Participant : 381 volunteer sixth-grade students (179 female, 202 male) age range 10 to 13
 
--Condition : 2*2*4 (Sitting position, visualization style, hand raising)<br/>
--Measure : number of fixation, fixation duration, saccade durations, saccade<br/>
-amplitudes, and normalized pupil diameters, self-reported presence, perceived realism<br/>
+Condition : 2*2*4 (Sitting position, visualization style, hand raising)<br/>
+Measure : number of fixation, fixation duration, saccade durations, saccade amplitudes, and normalized pupil diameters, self-reported presence, perceived realism<br/>
 
 
 **Result**<br/>
