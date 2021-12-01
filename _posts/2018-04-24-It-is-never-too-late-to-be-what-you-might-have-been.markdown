@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Digital Transformations of Classrooms in Virtual Reality / CHI 2021
+title:  Digital Transformations of Classrooms in Virtual Reality
 date:   2018-04-24 15:01:35 +0300
 image:  '/images/14.jpg'
 tags:   [travel, notes]
