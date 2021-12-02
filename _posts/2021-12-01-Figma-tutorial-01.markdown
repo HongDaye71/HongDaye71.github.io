@@ -39,19 +39,17 @@ Click Figma [Download](https://www.figma.com/downloads/)
 
 ___
 
-## Frame & Constraint
-<img src="/images/Posting/Figma/Tutorial01_01.png" alt="Project">
-
+## Frame & Constraint <br/>
 * File명 변경 : 상단 툴바 중앙에서 변경<br/>
 * Frame 생성 : 상단 툴바 좌측에서 세 번째 아이콘을 통해 변경<br/>
 * Frame Size 및 위치변경 : 우측 Design Pannel의 Frame영역에서 변경<br/>
 * Frame View Point 중앙배치 : Shift + 2<br/>
 * Frame 이름 변경 : Command(Ctrl)+R <br/>
-
-<img src="/images/Posting/Figma/Tutorial01_02.png" alt="Project">
+<img src="/images/Posting/Figma/Tutorial01_01.png" alt="Project">
 
 * Constraints란 : Frame크기에 따라 안에 있는 component의 위치와 크기를 통제할 수 있도록 하는 기능 
 (ex.Frame:Iphone의 Background, component:Iphone내 상단 시간과 와이파이,충전표시 요소라고 했을 때 Iphone version에 따라 Frame의 크기가 어떻게 변경되더라도 Component는 정해진 위치에 고정되도록 하는 기능)<br/>
+<img src="/images/Posting/Figma/Tutorial01_02.png" alt="Project">
 
 * Constraints기능 :<br/>
 1. Horizental or Vertical 설정
@@ -63,12 +61,11 @@ ___
 1. Component를 Frame내에 배치<br/>
 2. Component의 Constraints를 원하는 기능으로 선택 후 사용<br/>
 
-<img src="/images/Posting/Figma/Tutorial01_03.png" alt="Project">
-
 * Constraints사용예제 : <br/>
 1. Frame 내에 Imgae1, Image2 배치 <br/>
 2. Image1(Apple logo) / Imgae2(Check Icon) : Constraints를 Right, Top으로 설정 / Left, Top으로 설정
 3. Frame크기 변경하여 Image1, Imgae2가 Right, Top/ Left, Top에 고정되어 있는 것을 확인
+<img src="/images/Posting/Figma/Tutorial01_03.png" alt="Project">
 
 ___
 
@@ -76,17 +73,15 @@ ___
 
 * Image import의 세 가지 방법 :<br/>
 1. Local Image사용 : Desing Pannel -> Fill -> Image<br/>
+2. Local Image사용 : Shift + Command(Ctrl)+ K<br/>
 <img src="/images/Posting/Figma/Tutorial01_04.png" alt="Project">
 
-2. Local Image사용 : Shift + Command(Ctrl)+ K<br/>
-<img src="/images/Posting/Figma/Tutorial01_05.png" alt="Project">
-
 3. 무료 이미지 제공 서비스 사용 : Plugin 설치 -> Plugin에서 다운로드 받은 위젯선택 후 원하는 이미지 선택 <br/>
+<img src="/images/Posting/Figma/Tutorial01_05.png" alt="Project">
 
 * Image Overlay :<br/>
-<img src="/images/Posting/Figma/Tutorial01_05.png" alt="Project">
-
 1. Desing Pannel -> Fill -> 플러스 버튼 클릭 -> 색상지정,Linear선택 -> Frame에서 Overlay방향설정
+<img src="/images/Posting/Figma/Tutorial01_05.png" alt="Project">
 
 ___
 
