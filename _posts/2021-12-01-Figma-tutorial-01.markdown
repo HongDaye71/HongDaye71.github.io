@@ -2,7 +2,7 @@
 layout: post
 title:  Figma Tutorial 01
 date:   2021-12-01 15:01:35 +0300
-image:  '/images/02.jpg'
+image:  '/images/02.png'
 tags:   [Design, Figma]
 ---
 ## Contents:<br/>
