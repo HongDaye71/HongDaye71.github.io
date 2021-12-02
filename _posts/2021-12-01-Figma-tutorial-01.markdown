@@ -7,7 +7,7 @@ tags:   [Design, Figma]
 ---
 ## Contents:<br/>
 1. Figma란<br/>
-2. Frame 생성<br/>
+2. Frame & Constraints<br/>
 3. Image import & Overlay<br/>
 4. Plugin<br/>
 5. Text Edit<br/>
@@ -38,4 +38,34 @@ ___
 Click [FigmaDownload](https://www.figma.com/downloads/)
 
 
-### Frame 생성 
+### Frame & Constraint
+<img src="/images/Posting/Figma/Tutorial01_01.png" alt="Project">
+
+* File명 변경 : 상단 툴바 중앙에서 변경<br/>
+* Frame 생성 : 상단 툴바 좌측에서 세 번째 아이콘을 통해 변경<br/>
+* Frame Size 및 위치변경 : 우측 Design Pannel의 Frame영역에서 변경<br/>
+* Frame View Point 중앙배치 : Shift + 2<br/>
+* Frame 이름 변경 : Command(Ctrl)+R <br/>
+
+<img src="/images/Posting/Figma/Tutorial01_02.png" alt="Project">
+
+* Constraints란 : Frame크기에 따라 안에 있는 component의 위치와 크기를 통제할 수 있도록 하는 기능 
+(ex.Frame:Iphone의 Background, component:Iphone내 상단 시간과 와이파이,충전표시 요소라고 했을 때 Iphone version에 따라 Frame의 크기가 어떻게 변경되더라도 Component는 정해진 위치에 고정되도록 하는 기능)<br/>
+
+* Constraints기능 :<br/>
+1. Horizental or Vertical 설정
+2. Left, Right, Left and Right : Frame기준 Component의 고정위치 설정<br/>
+3. Center : Frame기준 Component가 중앙에 위치하도록 설정<br/>
+4. Scale : Frame기준 Component의 크기조정<br/>
+
+
+* Constraints사용 : <br/>
+1. Component를 Frame내에 배치<br/>
+2. Component의 Constraints를 원하는 기능으로 선택 후 사용<br/>
+
+<img src="/images/Posting/Figma/Tutorial01_03.png" alt="Project">
+
+* Constraints사용예제 : <br/>
+1. Frame 내에 Imgae1, Image2 배치 <br/>
+2. Image1(Apple logo) / Imgae2(Check Icon) : Constraints를 Right, Top으로 설정 / Left, Top으로 설정
+3. Frame크기 변경하여 Image1, Imgae2가 Right, Top/ Left, Top에 고정되어 있는 것을 확인
