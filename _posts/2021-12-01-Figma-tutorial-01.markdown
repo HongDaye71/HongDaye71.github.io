@@ -59,7 +59,6 @@ ___
 3. Center : Frame기준 Component가 중앙에 위치하도록 설정<br/>
 4. Scale : Frame기준 Component의 크기조정<br/>
 
-
 * Constraints사용 : <br/>
 1. Component를 Frame내에 배치<br/>
 2. Component의 Constraints를 원하는 기능으로 선택 후 사용<br/>
