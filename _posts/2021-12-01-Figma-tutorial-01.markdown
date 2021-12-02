@@ -5,16 +5,16 @@ date:   2021-12-01 15:01:35 +0300
 image:  '/images/02.png'
 tags:   [Design, Figma]
 ---
+
 ## Contents:<br/>
 1. Figma란<br/>
 2. Frame & Constraints<br/>
 3. Image import & Overlay<br/>
-4. Plugin<br/>
-5. Text Edit<br/>
+4. 단축키<br/>
 
 ___
 
-### Figma란? 
+## Figma란? 
 피그마(Figma)는 XD, Sketch처럼 UI 디자인을 위해 유용한 도구 중 하나이며 다음과 같은 여섯가지 특징을 갖습니다.
 
 * 실시간 협업기능<br/>
@@ -35,10 +35,11 @@ ___
 * 편리한 자동저장<br/>
 인터넷에 연결을 한 후, 작업을 하면서 자동으로 저장되는 기능이 있습니다.
 
-Click [FigmaDownload](https://www.figma.com/downloads/)
+Click Figma [Download](https://www.figma.com/downloads/)
 
+___
 
-### Frame & Constraint
+## Frame & Constraint
 <img src="/images/Posting/Figma/Tutorial01_01.png" alt="Project">
 
 * File명 변경 : 상단 툴바 중앙에서 변경<br/>
@@ -69,3 +70,27 @@ Click [FigmaDownload](https://www.figma.com/downloads/)
 1. Frame 내에 Imgae1, Image2 배치 <br/>
 2. Image1(Apple logo) / Imgae2(Check Icon) : Constraints를 Right, Top으로 설정 / Left, Top으로 설정
 3. Frame크기 변경하여 Image1, Imgae2가 Right, Top/ Left, Top에 고정되어 있는 것을 확인
+
+___
+
+## Image import & Overlay<br/>
+
+* Image import의 세 가지 방법 :<br/>
+1. Local Image사용 : Desing Pannel -> Fill -> Image<br/>
+<img src="/images/Posting/Figma/Tutorial01_04.png" alt="Project">
+
+2. Local Image사용 : Shift + Command(Ctrl)+ K<br/>
+<img src="/images/Posting/Figma/Tutorial01_05.png" alt="Project">
+
+3. 무료 이미지 제공 서비스 사용 : Plugin 설치 -> Plugin에서 다운로드 받은 위젯선택 후 원하는 이미지 선택 <br/>
+
+* Image Overlay :<br/>
+<img src="/images/Posting/Figma/Tutorial01_05.png" alt="Project">
+
+1. Desing Pannel -> Fill -> 플러스 버튼 클릭 -> 색상지정,Linear선택 -> Frame에서 Overlay방향설정
+
+___
+
+## 단축키 <br/>
+1. 복사 : Shift + Option(alt)<br/>
+2. 객체 그룹화 : Command(Ctrl) + G<br/>
