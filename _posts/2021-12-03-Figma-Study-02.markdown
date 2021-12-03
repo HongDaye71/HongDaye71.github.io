@@ -1,0 +1,35 @@
+---
+layout: post
+title:  Figma Study 02
+date:   2021-12-03 15:01:35 +0300
+image:  '/images/03.png'
+tags:   [Design, Figma]
+---
+
+## Button 생성하기:<br/>
+1. 스타일 정의<br/>
+2. 오토 레이아웃 기능<br/>
+3. Component & Variants 기능<br/>
+4. 단축키<br/>
+
+** Youtube 연정's Figma 채널의 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅 입니다 **<br/>
+** 연정's Figma [바로가기](https://www.youtube.com/c/%EC%97%B0%EC%A0%95sFigma) ** 
+
+___
+
+1. 스타일 정의<br/>
+* Component란? : 두 번 이상 재사용 될 UI Asset<br/>
+* 스타일 정의 : 색상이나 서체 등 반복적으로 사용되는 스타일 속성을 저장하고, 이를 다른 작업에 적용할 수 있도록 하는 기능<br/>
+* Text 스타일 지정하기 : <br/>
+> * <img src="/images/Posting/Figma/Study02/01.png" alt="Project">
+
+
+
+4. 단축키<br/>
+* 텍스트 작성 : T
+
+___
+
+
+___
+

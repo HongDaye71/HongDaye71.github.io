@@ -1,7 +1,7 @@
 ---
-title: Minimalism
+title: Advertisement
 date: 2021-01-25 08:00:35 +0300
-subtitle: Photography
+subtitle: COMAS INTERACTIVE / Manager
 image: '/images/project-8.jpg'
 ---
 
