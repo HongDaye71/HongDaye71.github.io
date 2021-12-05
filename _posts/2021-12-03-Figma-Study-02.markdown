@@ -20,8 +20,14 @@ ___
 1. 스타일 정의<br/>
 * Component란? : 두 번 이상 재사용 될 UI Asset<br/>
 * 스타일 정의 : 색상이나 서체 등 반복적으로 사용되는 스타일 속성을 저장하고, 이를 다른 작업에 적용할 수 있도록 하는 기능<br/>
-* Text 스타일 지정하기 : <br/>
-> * <img src="/images/Posting/Figma/Study02/01.png" alt="Project">
+* Text 스타일 지정 : 폰트 굵기, 행간, 어간, Resize option(텍스트 변경 시, 박스 사이즈 자동변경 혹은 유지), Letter case등 설정<br/>
+<img src="/images/Posting/Figma/Study02/01.png" alt="Project">
+
+* Text 스타일 정의(Component생성) : <br/>
+<img src="/images/Posting/Figma/Study02/02.png" alt="Project">
+
+* Component사용 :<br/>
+<img src="/images/Posting/Figma/Study02/03.png" alt="Project">
 
 
 
