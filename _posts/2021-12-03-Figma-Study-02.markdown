@@ -9,7 +9,7 @@ tags:   [Design, Figma]
 ## Button 생성하기:<br/>
 1. 스타일 정의<br/>
 2. 오토 레이아웃 기능<br/>
-3. Component & Variants 기능<br/>
+3. Button Component생성 & Variants 기능<br/>
 4. 단축키 & 기타<br/>
 
 **Youtube 연정's Figma 채널의 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅 입니다**<br/>
@@ -17,7 +17,7 @@ tags:   [Design, Figma]
 
 ___
 
-### 1. 스타일 정의<br/>
+## 스타일 정의<br/>
 * Text 스타일 지정 : <br/>
 <img src="/images/Posting/Figma/Study02/01.png" alt="Project">
 
@@ -37,7 +37,7 @@ ___
 
 ___
 
-### 2. 오토 레이아웃 기능<br/>
+## 오토 레이아웃 기능<br/>
 * Auto Layout 생성 및 여백설정: <br/>
 <img src="/images/Posting/Figma/Study02/06.png" alt="Project"><br/>
 <img src="/images/Posting/Figma/Study02/07.png" alt="Project">
@@ -51,9 +51,45 @@ ___
 * Icon 적용 :<br/>
 <img src="/images/Posting/Figma/Study02/10.png" alt="Project">
 
+___
+
+## Button Component생성 & Variants 기능<br/>
+* Button Component 생성<br/>
+1. 상단 툴바 아이콘을 통해 생성<br/>
+2. Main Component와 Instance는 Layer 아이콘을 통해 확인가능<br/>
+3. Main Component 변경 시, Instance는 함께 변경됨<br/>
+4. Instance 변경 시, Main Component는 변경되지 않음(Override)<br/>
+<img src="/images/Posting/Figma/Study02/11.png" alt="Project">
+
+* Instance Option<br/>
+1. Reset all overrides : Main Component와 동일한 스타일로 Instance 초기화 <br/>
+<img src="/images/Posting/Figma/Study02/12.png" alt="Project">
+
+2. Push overrides to main component : Instance의 스타일을 Main Component에 적용<br/>
+<img src="/images/Posting/Figma/Study02/13.png" alt="Project">
+
+* Detach Instance (Main Component와의 연결해제)<br/>
+<img src="/images/Posting/Figma/Study02/14.png" alt="Project">
+
+* Variants 기능<br/>
+1. Variants 기능이란 : Component의 모든 상태를 Variation하여 하나의 Component로 만드는 것(약간의 수정사항이 있을 때 마다 Single Component를 만들경우, Component의 개수가 많아진다는 문제를 해결한 기능)<br/>
+
+2. Button을 다양한 버전으로 만든 뒤, Create multiple Component클릭<br/>
+<img src="/images/Posting/Figma/Study02/15.png" alt="Project">
+
+3. 모든 Button을 드래그한 뒤, Create as variants클릭<br/>
+<img src="/images/Posting/Figma/Study02/16.png" alt="Project">
+
+4. Property설정 후, 각 Button의 Name을 Property에 맞게 설정<br/>
+<img src="/images/Posting/Figma/Study02/17.png" alt="Project">
+
+5. Property적용<br/>
+<img src="/images/Posting/Figma/Study02/18.png" alt="Project">
 
 
-### 4. 단축키 & 기타<br/>
+___
+
+## 단축키 & 기타<br/>
 * 텍스트 작성 : T<br/>
 * Rename : Command(Ctrl) + R<br/>
 * Image Crop : Alr + Double Click <br/>
@@ -61,16 +97,10 @@ ___
 * ZoomIn : + <br/>
 * ZoomOut : - <br/>
 * 사이즈 초기화 : Command(Ctrl) + Alt + Shift + R <br/>
+* Component 생성 : Command(Ctrl) + Alt + K <br/>
 
 * Resize Option : 텍스트 변경 시, 박스 사이즈 자동변경 혹은 유지하는 기능<br/>
 * Component란? : 두 번 이상 재사용 될 UI Asset<br/>
 * 스타일 정의 : 색상이나 서체 등 반복적으로 사용되는 스타일 속성을 저장하고, 이를 다른 작업에 적용할 수 있도록 하는 기능 (스타일 변경 시, 해당 스타일이 적용된 모든 Component가 함께 변경됨)<br/>
 * Figma Styler : 선택한 레이어들을 바탕으로 스타일을 생성해주는 플러그인
-
-
-
-___
-
-
-___
 

@@ -79,8 +79,8 @@ ___
 2. Local Image사용 : Shift + Command(Ctrl)+ K<br/>
 3. 무료 이미지 제공 서비스 사용 : Plugin 설치 -> Plugin에서 다운로드 받은 위젯선택 후 원하는 이미지 선택 <br/>
 
-[2번]<img src="/images/Posting/Figma/Study01/Tutorial01_04.png" alt="Project">
-[3번]<img src="/images/Posting/Figma/Study01/Tutorial01_05.png" alt="Project">
+<img src="/images/Posting/Figma/Study01/Tutorial01_04.png" alt="Project">
+<img src="/images/Posting/Figma/Study01/Tutorial01_05.png" alt="Project">
 
 * Image Overlay :<br/>
 <img src="/images/Posting/Figma/Study01/Tutorial01_06.png" alt="Project">
