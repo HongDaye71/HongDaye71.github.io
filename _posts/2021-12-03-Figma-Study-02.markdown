@@ -17,7 +17,7 @@ tags:   [Design, Figma]
 
 ___
 
-1. 스타일 정의<br/>
+### 1. 스타일 정의<br/>
 * Text 스타일 지정 : <br/>
 <img src="/images/Posting/Figma/Study02/01.png" alt="Project" width="80%" height="80%">
 
@@ -35,7 +35,7 @@ ___
 
 
 
-4. 단축키 & 기타<br/>
+### 4. 단축키 & 기타<br/>
 * 텍스트 작성 : T<br/>
 * Rename : Command(Ctrl) + R<br/>
 * Resize Option : 텍스트 변경 시, 박스 사이즈 자동변경 혹은 유지하는 기능<br/>
