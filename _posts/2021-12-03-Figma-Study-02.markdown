@@ -10,17 +10,15 @@ tags:   [Design, Figma]
 1. 스타일 정의<br/>
 2. 오토 레이아웃 기능<br/>
 3. Component & Variants 기능<br/>
-4. 단축키<br/>
+4. 단축키 & 기타<br/>
 
-** Youtube 연정's Figma 채널의 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅 입니다 **<br/>
-** 연정's Figma [바로가기](https://www.youtube.com/c/%EC%97%B0%EC%A0%95sFigma) ** 
+**Youtube 연정's Figma 채널의 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅 입니다**<br/>
+**연정's Figma [바로가기](https://www.youtube.com/c/%EC%97%B0%EC%A0%95sFigma)** 
 
 ___
 
 1. 스타일 정의<br/>
-* Component란? : 두 번 이상 재사용 될 UI Asset<br/>
-* 스타일 정의 : 색상이나 서체 등 반복적으로 사용되는 스타일 속성을 저장하고, 이를 다른 작업에 적용할 수 있도록 하는 기능<br/>
-* Text 스타일 지정 : 폰트 굵기, 행간, 어간, Resize option(텍스트 변경 시, 박스 사이즈 자동변경 혹은 유지), Letter case등 설정<br/>
+* Text 스타일 지정 : <br/>
 <img src="/images/Posting/Figma/Study02/01.png" alt="Project">
 
 * Text 스타일 정의(Component생성) : <br/>
@@ -29,10 +27,22 @@ ___
 * Component사용 :<br/>
 <img src="/images/Posting/Figma/Study02/03.png" alt="Project">
 
+* Figma Plugin을 활용한 스타일 생성 : <br/>
+<img src="/images/Posting/Figma/Study02/04.png" alt="Project">
+ 
+###### Figma Plugin [Styler Download](https://www.figma.com/community/plugin/820660579767995949/Styler)<br/>
 
 
-4. 단축키<br/>
-* 텍스트 작성 : T
+
+
+4. 단축키 & 기타<br/>
+* 텍스트 작성 : T<br/>
+* Rename : Command(Ctrl) + R<br/>
+* Resize Option : 텍스트 변경 시, 박스 사이즈 자동변경 혹은 유지하는 기능<br/>
+* Component란? : 두 번 이상 재사용 될 UI Asset<br/>
+* 스타일 정의 : 색상이나 서체 등 반복적으로 사용되는 스타일 속성을 저장하고, 이를 다른 작업에 적용할 수 있도록 하는 기능 (스타일 변경 시, 해당 스타일이 적용된 모든 Component가 함께 변경됨)<br/>
+
+
 
 ___
 
