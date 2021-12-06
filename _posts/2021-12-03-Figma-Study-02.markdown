@@ -39,7 +39,7 @@ ___
 
 ### 2. 오토 레이아웃 기능<br/>
 * Auto Layout 생성 및 여백설정: <br/>
-<img src="/images/Posting/Figma/Study02/06.png" alt="Project">
+<img src="/images/Posting/Figma/Study02/06.png" alt="Project"><br/>
 <img src="/images/Posting/Figma/Study02/07.png" alt="Project">
 
 * Button background & Text Color에 생성했던 스타일 적용: <br/>
