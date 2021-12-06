@@ -19,16 +19,16 @@ ___
 
 1. 스타일 정의<br/>
 * Text 스타일 지정 : <br/>
-<img src="/images/Posting/Figma/Study02/01.png" alt="Project">
+<img src="/images/Posting/Figma/Study02/01.png" alt="Project" width="80%" height="80%">
 
 * Text 스타일 정의(Component생성) : <br/>
-<img src="/images/Posting/Figma/Study02/02.png" alt="Project">
+<img src="/images/Posting/Figma/Study02/02.png" alt="Project" width="80%" height="80%">
 
 * Component사용 :<br/>
-<img src="/images/Posting/Figma/Study02/03.png" alt="Project">
+<img src="/images/Posting/Figma/Study02/03.png" alt="Project" width="80%" height="80%">
 
 * Figma Plugin을 활용한 스타일 생성 : <br/>
-<img src="/images/Posting/Figma/Study02/04.png" alt="Project">
+<img src="/images/Posting/Figma/Study02/04.png" alt="Project" width="80%" height="80%">
  
 ###### Figma Plugin [Styler Download](https://www.figma.com/community/plugin/820660579767995949/Styler)<br/>
 
