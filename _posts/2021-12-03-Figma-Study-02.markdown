@@ -19,32 +19,49 @@ ___
 
 ### 1. 스타일 정의<br/>
 * Text 스타일 지정 : <br/>
-<img src="/images/Posting/Figma/Study02/01.png" alt="Project" width="80%" height="80%">
+<img src="/images/Posting/Figma/Study02/01.png" alt="Project">
 
 * Text 스타일 정의(Component생성) : <br/>
-<img src="/images/Posting/Figma/Study02/02.png" alt="Project" width="80%" height="80%">
+<img src="/images/Posting/Figma/Study02/02.png" alt="Project">
 
 * Component사용 :<br/>
-<img src="/images/Posting/Figma/Study02/03.png" alt="Project" width="80%" height="80%">
+<img src="/images/Posting/Figma/Study02/03.png" alt="Project">
 
 * Figma Plugin을 활용한 스타일 생성 : <br/>
-<img src="/images/Posting/Figma/Study02/04.png" alt="Project" width="80%" height="80%">
+<img src="/images/Posting/Figma/Study02/04.png" alt="Project">
  
 ###### Figma Plugin [Styler Download](https://www.figma.com/community/plugin/820660579767995949/Styler)<br/>
 
 * Figma Plugin 생성 예제 (Text & Color) : <br/>
-<img src="/images/Posting/Figma/Study02/05.png" alt="Project" width="80%" height="80%">
+<img src="/images/Posting/Figma/Study02/05.png" alt="Project">
 
 ___
 
 ### 2. 오토 레이아웃 기능<br/>
-* 
+* Auto Layout 생성 및 여백설정: <br/>
+<img src="/images/Posting/Figma/Study02/06.png" alt="Project">
+<img src="/images/Posting/Figma/Study02/07.png" alt="Project">
+
+* Button background & Text Color에 생성했던 스타일 적용: <br/>
+<img src="/images/Posting/Figma/Study02/08.png" alt="Project">
+
+* Frame Radius 적용 & Frame 내 텍스트 위치설정 :<br/>
+<img src="/images/Posting/Figma/Study02/09.png" alt="Project">
+
+* Icon 적용 :<br/>
+<img src="/images/Posting/Figma/Study02/10.png" alt="Project">
+
 
 
 ### 4. 단축키 & 기타<br/>
 * 텍스트 작성 : T<br/>
 * Rename : Command(Ctrl) + R<br/>
 * Image Crop : Alr + Double Click <br/>
+* Auto Layout frame 생성 : Shift + A <br/>
+* ZoomIn : + <br/>
+* ZoomOut : - <br/>
+* 사이즈 초기화 : Command(Ctrl) + Alt + Shift + R <br/>
+
 * Resize Option : 텍스트 변경 시, 박스 사이즈 자동변경 혹은 유지하는 기능<br/>
 * Component란? : 두 번 이상 재사용 될 UI Asset<br/>
 * 스타일 정의 : 색상이나 서체 등 반복적으로 사용되는 스타일 속성을 저장하고, 이를 다른 작업에 적용할 수 있도록 하는 기능 (스타일 변경 시, 해당 스타일이 적용된 모든 Component가 함께 변경됨)<br/>
