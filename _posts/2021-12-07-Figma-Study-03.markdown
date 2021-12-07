@@ -34,18 +34,16 @@ ___
 ___
 
 ## Interaction & Animation 옵션 알아보기<br/>
-* Interaction Option 
-1. On Click / On Tap : 데스트탑을 클릭하거나 모바일 화면을 두드렸을 때 이동
-2. On Drag : 드래그 시 이동 
-3. While Hovering : 마우스를 위에 올리고 있는동안 이동 
-4. While Pressing : 마우스 클릭 후 hold하고 있는동안 이동
-5. Keyboard and Gamepad Shortcuts : 특정 키 혹은 단축키 등을 입력했을 때 이동
-6. Mouse Enter : 마우스 클릭 시 이동
-7. Mouse Leave : 커서가 hotspot area에서 벗어났을 때 이동
-8. Mouse Down : 데스트탑을 클릭하거나 모바일 화면을 두드렸을 때 이동
-9. After Delay : 기존 프레임에서 특정 시간 이상 머물렀을 때 이동
-
-**[InteractionOption_참고링크]](https://help.figma.com/hc/en-us/articles/360040522373)** 
+* Interaction Option <br/>
+1. On Click / On Tap : 데스트탑을 클릭하거나 모바일 화면을 두드렸을 때 이동<br/>
+2. On Drag : 드래그 시 이동 <br/>
+3. While Hovering : 마우스를 위에 올리고 있는동안 이동 <br/>
+4. While Pressing : 마우스 클릭 후 hold하고 있는동안 이동<br/>
+5. Keyboard and Gamepad Shortcuts : 특정 키 혹은 단축키 등을 입력했을 때 이동<br/>
+6. Mouse Enter : 마우스 클릭 시 이동<br/>
+7. Mouse Leave : 커서가 hotspot area에서 벗어났을 때 이동<br/>
+8. Mouse Down : 데스트탑을 클릭하거나 모바일 화면을 두드렸을 때 이동<br/>
+9. After Delay : 기존 프레임에서 특정 시간 이상 머물렀을 때 이동<br/>
 
 * Animation Option<br/>
 1. Instant : 목적지 프레임으로 즉시 이동 <br/>
@@ -55,7 +53,8 @@ ___
 5. Push : 기존 프레임이 밀리면서 목적지 프레임이 뷰에 나타남
 6. Slide in / Slide out : Push와 비슷하게 작동
 
-**[AnimationOption_참고링크]](https://help.figma.com/hc/en-us/articles/360040522373)** 
+[InteractionOption_참고링크](https://help.figma.com/hc/en-us/articles/360040522373)
+[AnimationOption_참고링크](https://help.figma.com/hc/en-us/articles/360040522373)
 
 ___
 
