@@ -2,7 +2,7 @@
 layout: post
 title:  Why we love blue hues on websites:a fNIRS investigation of color and its impact on the neural processing of ecommerce websites
 date:   2021-12-07 15:01:35 +0300
-image:  '/images/FigmaStudy03.png'
+image:  '/images/fNIRS01.png'
 tags:   [Researh review, fNIRS]
 ---
 **Background Knowledge**<br/>
