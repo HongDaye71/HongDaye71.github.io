@@ -2,7 +2,7 @@
 title: Virtual Reality
 date: 2021-01-25 08:01:35 +0300
 subtitle: Unity3D Program
-image: '/images/project-1.jpg'
+image: '/images/Project_VR.jpg'
 ---
 
 In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
