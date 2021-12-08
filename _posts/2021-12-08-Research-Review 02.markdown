@@ -2,7 +2,7 @@
 layout: post
 title:  Using fNIRS in Usability Testing Understanding the Effect of Web Form Layout on Mental Workload
 date:   2021-12-08 15:01:35 +0300
-image:  '/images/fNIRS01.png'
+image:  '/images/fNIRS02.png'
 tags:   [Researh review, fNIRS]
 ---
 ## Background Knowledge<br/>
