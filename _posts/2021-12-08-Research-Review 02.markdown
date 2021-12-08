@@ -20,7 +20,7 @@ ___
 ## Experiment Design <br/>
 1. Participants : N = 15 (right handed participants / 10 male, 5 female) <br/>
 2. Layout variations of web forms : 
-<img src="/images/Posting/ResearchReview/fNIRS/04.png" alt="Project">
+<img src="/images/Posting/ResearchReview/fNIRS/04.png" alt="Project"><br/>
 
 3. Procedure : <br/>
 <img src="/images/Posting/ResearchReview/fNIRS/05.png" alt="Project">
