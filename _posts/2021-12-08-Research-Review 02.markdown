@@ -26,11 +26,13 @@ ___
 <img src="/images/Posting/ResearchReview/fNIRS/05.png" alt="Project">
 
 *Video Clip : Video clips of car accidents were used as the stimulus for filling in insurance claims during the study (30-60s long)*<br/>
-*NASA-TI X : Subjective measures (user opinions, user’s experience of effort)*<br/>
+*NASA-TI X : Subjective measures (user opinions, user’s experience of effort)*<br/><br/>
 
 4. Measure : <br/>
 Subjective Measure : Mental demand, Physical demand, Temporal demand, Performance, Effort, Frustration, Emotional affect<br/>
 Objective Measure : MLT data collected through fNIRS), Performance(Time to complete)<br/>
+
+___
 
 ## Result <br/>
 Subjective Mental Workload : 
