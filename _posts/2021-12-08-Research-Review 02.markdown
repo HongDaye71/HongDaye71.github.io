@@ -18,27 +18,27 @@ Amongst the many tasks in our lives, we encounter web forms on a regular basis, 
 ___
 
 ## Experiment Design <br/>
-1. Participants : N = 15 (right handed participants / 10 male, 5 female) <br/>
-2. Layout variations of web forms : 
+* Participants : N = 15 (right handed participants / 10 male, 5 female) <br/>
+* Layout variations of web forms : 
 <img src="/images/Posting/ResearchReview/fNIRS/04.png" alt="Project"><br/>
 
-3. Procedure : <br/>
+* Procedure : <br/>
 <img src="/images/Posting/ResearchReview/fNIRS/05.png" alt="Project">
 
 *Video Clip : Video clips of car accidents were used as the stimulus for filling in insurance claims during the study (30-60s long)*<br/>
 *NASA-TI X : Subjective measures (user opinions, user’s experience of effort)*<br/><br/>
 
-4. Measure : <br/>
+* Measure : <br/>
 Subjective Measure : Mental demand, Physical demand, Temporal demand, Performance, Effort, Frustration, Emotional affect<br/>
 Objective Measure : MLT data collected through fNIRS), Performance(Time to complete)<br/>
 
 ___
 
 ## Result <br/>
-Subjective Mental Workload : 
+* Subjective Mental Workload : 
 In line with the objective data from the fNIRS, participants perceived Index3 as the most mentally demanding
 
-Objective Mental Workload :
+* Objective Mental Workload :
 Index3 had significantly higher Hbo(Oxegenated Hemoglobin) activation than Index1: p = 0.047.
 (Higher Hbo values indicates higher workload)
 <img src="/images/Posting/ResearchReview/fNIRS/06.png" alt="Project">
