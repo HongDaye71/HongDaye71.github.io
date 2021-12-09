@@ -7,6 +7,7 @@ image: '/images/project-6.jpg'
 
 ## Figma Web Design 
 
+<!-- hagendazs Find Your Flavor페이지 디자인!-->
 
 <!--작업물 영상!-->
 <!--작업물 설명! 날짜 사용 프로그램 등-->

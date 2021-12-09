@@ -1,0 +1,20 @@
+---
+layout: post
+title:  Figma Study 04
+date:   2021-12-07 15:01:35 +0300
+image:  '/images/FigmaStudy03.png'
+tags:   [Design, Figma]
+---
+
+## Figma로 프레젠테이션 제작하기 (프로토타이핑) 기초):<br/>
+1. 프레젠테이션 모드설정<br/>
+2. Interaction & Animation 설정<br/>
+3. Interaction & Animation 옵션 알아보기<br/>
+4. 프레젠테이션 공유 및 피드백 받기
+5. 모바일 디바이스로 Figma Mirroring<br/>
+
+___
+
+## 단축키 <br/>
+* Auto Layout : Shift + A (단어 간격 등 맞출 시 사용) <br/>
+
