@@ -6,14 +6,17 @@ image:  '/images/FigmaStudy03.png'
 tags:   [Design, Figma]
 ---
 
-## Figma로 프레젠테이션 제작하기 (프로토타이핑) 기초):<br/>
-1. 프레젠테이션 모드설정<br/>
-2. Interaction & Animation 설정<br/>
-3. Interaction & Animation 옵션 알아보기<br/>
-4. 프레젠테이션 공유 및 피드백 받기
-5. 모바일 디바이스로 Figma Mirroring<br/>
+## Food Ordering App Design :<br/>
 
+**Building Amazing Things Youtube Channel의 Figma Web Design Tutorial을 따라 만든 작업물 입니다(It's a work based on YouTube Channel's Figma Tutorial called Building Amazing Things)**
+
+**[Building Amazing Things Youtube Channel](https://www.youtube.com/channel/UCbVPTU8fv7e0EjGeQFbIsJA)**
+
+**[공부영상](https://www.youtube.com/watch?v=CBf0BOaIBVw&t=14s)**  
 ___
+
+## 작업물 <br/>
+
 
 ## 단축키 <br/>
 * Auto Layout : Shift + A (단어 간격 등 맞출 시 사용) <br/>
