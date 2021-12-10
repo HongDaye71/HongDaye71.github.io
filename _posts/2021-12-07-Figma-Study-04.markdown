@@ -20,4 +20,5 @@ ___
 
 ## 단축키 <br/>
 * Auto Layout : Shift + A (단어 간격 등 맞출 시 사용) <br/>
-
+* 뒤집기 : Shift + V <br/>
+* 눈금자 : Shift + R <br/>

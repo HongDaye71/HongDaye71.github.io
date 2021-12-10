@@ -48,7 +48,7 @@ ___
 * Animation Option<br/>
 1. Instant : 목적지 프레임으로 즉시 이동 <br/>
 2. Dissolve : 목적지 프레임으로 Fade in 되면서 이동 <br/>
-3. Smart Animate : 드래그를 통해 페이지 넘기기<br/>
+3. Smart Animate : Prototype Mode에서 상호작용을 설정할 때 사용할 수 있는 애니메이션 유형 중 하나 (ex. 작은 원과 큰 원이 하나씩 그려진 두 개의 프레임을 연결하고, 플레이하면 작은 원이 점점 커지면서 큰 원으로 변하는 애니메이션이 나타남)<br/>
 4. Move in / Move out : 사진첩 등에 사용되며 폴더 내 요소를 보여주거나 다시 폴더를 빠져나갈 때 사용<br/>
 5. Push : 기존 프레임이 밀리면서 목적지 프레임이 뷰에 나타남
 6. Slide in / Slide out : Push와 비슷하게 작동
