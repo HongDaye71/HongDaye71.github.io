@@ -13,9 +13,29 @@ tags:   [Design, Figma]
 **[Building Amazing Things Youtube Channel](https://www.youtube.com/channel/UCbVPTU8fv7e0EjGeQFbIsJA)**
 
 **[공부영상](https://www.youtube.com/watch?v=CBf0BOaIBVw&t=14s)**  
+
 ___
 
+
 ## 작업물 <br/>
+
+<!--작업물 영상!-->
+<p><iframe src="https://youtu.be/woUzEX31dVE" frameborder="0" allowfullscreen></iframe></p>
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/Figma/Study04/01.png" alt="Project">
+    <img src="/images/Posting/Figma/Study04/02.png" alt="Project">
+    <img src="/images/Posting/Figma/Study03/03.png" alt="Project">
+  </div>
+  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
+</div>
+
+* Title : Food Ordering App (Landing Page)
+* Device : Imac (1280x720)
+* Production Program : Figma
+* Explanation : 
+
+___
 
 
 ## 단축키 <br/>
