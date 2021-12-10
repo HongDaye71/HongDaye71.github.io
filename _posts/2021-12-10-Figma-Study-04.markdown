@@ -21,6 +21,7 @@ ___
 
 <!--작업물 영상!-->
 <p><iframe src="https://youtu.be/woUzEX31dVE" frameborder="0" allowfullscreen></iframe></p>
+<!--작업물 세부 이미지!-->
 <div class="gallery-box">
   <div class="gallery">
     <img src="/images/Posting/Figma/Study04/01.png" alt="Project">
