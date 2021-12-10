@@ -59,9 +59,19 @@ ___
 ___
 
 ## 프레젠테이션 공유 및 피드백 받기<br/>
+* 프레젠테이션 공유하기
+1. Presentation Mode > Share Prototype > Email주소 입력 > Send Invite (초대한 사람에 대해 각각 권한부여 가능)
+2. 하단 Copy link를 통해 공유
+<img src="/images/Posting/Figma/Study03/03.png" alt="Project">
+
+* 피드백 받기
+1. 좌측 상단 Comment Icon 클릭 > 원하는 곳에 Comment남기기
+<img src="/images/Posting/Figma/Study03/04.png" alt="Project">
+
 ___
 
 ## 모바일 디바이스로 Figma Mirroring<br/>
+* App Store > Figma Mirror Download
 
 ___
 
