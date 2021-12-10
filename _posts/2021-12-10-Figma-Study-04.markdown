@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Figma Study 04
-date:   2021-12-07 15:01:35 +0300
-image:  '/images/FigmaStudy03.png'
+date:   2021-12-10 15:01:35 +0300
+image:  '/images/FigmaStudy04.png'
 tags:   [Design, Figma]
 ---
 
