@@ -43,27 +43,27 @@ ___
 |테스트1|테스트2|테스트3|
 
 **사용법**
-1. 소프트웨어 다운로드 (PC 소프트웨어는 구매 후 사용가능)
-   - NIRST AnalysisTool 
-   - UnityWebPlayer (3d brain확인용)
-   - Matlab 
+1. 소프트웨어 다운로드 (PC 소프트웨어는 구매 후 사용가능)<br/>
+   - NIRST AnalysisTool <br/>
+   - UnityWebPlayer (3d brain확인용)<br/>
+   - Matlab <br/>
 
-2. 장비착용 
+2. 장비착용 <br/>
 
-3. 시리얼포트 연결
-<img src="/images/Posting/ResearchReview/fNIRS/08.png" alt="Project">
-   - "Default"선택 (처음 시작할 경우, New선택)
-   - BLED112 동글을 PC에 장착 후 해당하는 comport를 "COM"에서 선택 후 Open
-   - "N-Lite Scan"을 눌러 장비검색 (장비 전원이 켜져있어야 함)
-   - "Connect"버튼을 눌러 장비와 연결
+3. 시리얼포트 연결<br/>
+<img src="/images/Posting/ResearchReview/fNIRS/08.png" alt="Project"><br/>
+   - "Default"선택 (처음 시작할 경우, New선택)<br/>
+   - BLED112 동글을 PC에 장착 후 해당하는 comport를 "COM"에서 선택 후 Open<br/>
+   - "N-Lite Scan"을 눌러 장비검색 (장비 전원이 켜져있어야 함)<br/>
+   - "Connect"버튼을 눌러 장비와 연결<br/>
 
-4. Calibration 
-<img src="/images/Posting/ResearchReview/fNIRS/09.png" alt="Project">
-   - Gain Cal Start 선택 (시작 전, “Select Measured DB” 버튼을 통해 데이터가 저장될 DB 의 위치를 정의할 수 있음)
+4. Calibration <br/>
+<img src="/images/Posting/ResearchReview/fNIRS/09.png" alt="Project"><br/>
+   - Gain Cal Start 선택 (시작 전, “Select Measured DB” 버튼을 통해 데이터가 저장될 DB 의 위치를 정의할 수 있음)<br/>
    - Calibration이 완료되면, 채널 번호와 함께 사용 가능한 채널이 노란색으로 표시되고 SNR(Signal to Noise Ration:신호대 잡음비)이 하단 그래프로 나타남
 
-5. Monitoring
-<img src="/images/Posting/ResearchReview/fNIRS/10.png" alt="Project">
+5. Monitoring<br/>
+<img src="/images/Posting/ResearchReview/fNIRS/10.png" alt="Project"><br/>
 
 
 * 분석방법
