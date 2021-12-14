@@ -19,10 +19,11 @@ ___
 ## NIRS란<br/>
 * NIRS (Near Infrared Spectroscopy): 근적외광(파장: 650~1000㎚)을 시료(생체조직)에 조사하여 생체를 투과하거나 생체 내에서 반사한 빛을 검출하여 비침습적으로 뇌, 근육 및 기타 조직 내의 헤모글로빈(hemoglobin)의 농도와 산소결합(oxygenation)을 검출할 수 있는 영상기술이다. 다시 말해서 NIRS는 측정대상에 근적외광을 조사하여 그 흡광도에 의해 혈류량을 산출하는 수법이다.<br/>
 
-## NIRSIT LITE이란?<br/>
+## NIRSIT LITE<br/>
+**NIRSIT LITE이란?**<br/>
 * OBELAB Inc. 에서 개발한 휴대용 근적외선 뇌영상 기기(functional Near-Infrared spectroscopy device)로 780nm과 850nm 파장의 근적외선 빛을 대뇌 피질에 입사하여 뇌 혈중 산소포화도 변화를 측정
 
-* 장비각부 명칭과 위치
+**장비각부 명칭과 위치**
 <img src="/images/Posting/ResearchReview/fNIRS/07.png" alt="Project">
 |No.|Description|
 |--|--|
@@ -34,7 +35,14 @@ ___
 |6|상태표시부(전원)|
 |7|상태표시부(충전중)|
 
-* 사용법
+
+|제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+
+**사용법**
 1. 소프트웨어 다운로드 (PC 소프트웨어는 구매 후 사용가능)
    - NIRST AnalysisTool 
    - UnityWebPlayer (3d brain확인용)
