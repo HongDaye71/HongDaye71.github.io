@@ -62,6 +62,7 @@ ___
 
 **5. Monitoring<br/>**
 <img src="/images/Posting/ResearchReview/fNIRS/10.png" alt="Project"><br/>
+
 |Mornitoring Mode|Description|
 |------|---|---|
 |3D Mode|3D로 구현한 뇌 모델에서 헤모글로빈 농도의 변화
