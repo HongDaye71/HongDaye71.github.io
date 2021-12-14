@@ -20,12 +20,12 @@ ___
 
 ___
 
-## NIRSIT LITE이란?**<br/>
+## NIRSIT LITE이란?<br/>
 * OBELAB Inc. 에서 개발한 휴대용 근적외선 뇌영상 기기(functional Near-Infrared spectroscopy device)로 780nm과 850nm 파장의 근적외선 빛을 대뇌 피질에 입사하여 뇌 혈중 산소포화도 변화를 측정
 
 ___
 
-## 장비각부 명칭과 위치**<br/>
+## 장비각부 명칭과 위치<br/>
 <img src="/images/Posting/ResearchReview/fNIRS/07.png" alt="Project"><br/>
 
 |No|Description|
@@ -38,27 +38,29 @@ ___
 |6|상태표시부(전원)|
 |7|상태표시부(충전중)|
 
+___
+
 ## 사용법
-1. 소프트웨어 다운로드 (PC 소프트웨어는 구매 후 사용가능)<br/>
+**1. 소프트웨어 다운로드 (PC 소프트웨어는 구매 후 사용가능)<br/>**
    - NIRST AnalysisTool <br/>
    - UnityWebPlayer (3d brain확인용)<br/>
    - Matlab <br/>
 
-2. 장비착용 <br/>
+**2. 장비착용 <br/>**
 
-3. 시리얼포트 연결<br/>
+**3. 시리얼포트 연결<br/>**
 <img src="/images/Posting/ResearchReview/fNIRS/08.png" alt="Project"><br/>
    - "Default"선택 (처음 시작할 경우, New선택)<br/>
    - BLED112 동글을 PC에 장착 후 해당하는 comport를 "COM"에서 선택 후 Open<br/>
    - "N-Lite Scan"을 눌러 장비검색 (장비 전원이 켜져있어야 함)<br/>
    - "Connect"버튼을 눌러 장비와 연결<br/>
 
-4. Calibration <br/>
+**4. Calibration <br/>**
 <img src="/images/Posting/ResearchReview/fNIRS/09.png" alt="Project"><br/>
    - Gain Cal Start 선택 (시작 전, “Select Measured DB” 버튼을 통해 데이터가 저장될 DB 의 위치를 정의할 수 있음)<br/>
    - Calibration이 완료되면, 채널 번호와 함께 사용 가능한 채널이 노란색으로 표시되고 SNR(Signal to Noise Ration:신호대 잡음비)이 하단 그래프로 나타남
 
-5. Monitoring<br/>
+**5. Monitoring<br/>**
 <img src="/images/Posting/ResearchReview/fNIRS/10.png" alt="Project"><br/>
 
 ___
