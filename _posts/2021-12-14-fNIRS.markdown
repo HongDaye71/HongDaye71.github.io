@@ -44,7 +44,7 @@ ___
 **1. 소프트웨어 다운로드 (PC 소프트웨어는 구매 후 사용가능)<br/>**
    - NIRST AnalysisTool <br/>
    - UnityWebPlayer (3d brain확인용)<br/>
-   - Matlab <br/>
+   - Matlab <br/><br/>
 
 **2. 장비착용 <br/>**
 
@@ -53,15 +53,21 @@ ___
    - "Default"선택 (처음 시작할 경우, New선택)<br/>
    - BLED112 동글을 PC에 장착 후 해당하는 comport를 "COM"에서 선택 후 Open<br/>
    - "N-Lite Scan"을 눌러 장비검색 (장비 전원이 켜져있어야 함)<br/>
-   - "Connect"버튼을 눌러 장비와 연결<br/>
+   - "Connect"버튼을 눌러 장비와 연결<br/><br/>
 
 **4. Calibration <br/>**
 <img src="/images/Posting/ResearchReview/fNIRS/09.png" alt="Project"><br/>
    - Gain Cal Start 선택 (시작 전, “Select Measured DB” 버튼을 통해 데이터가 저장될 DB 의 위치를 정의할 수 있음)<br/>
-   - Calibration이 완료되면, 채널 번호와 함께 사용 가능한 채널이 노란색으로 표시되고 SNR(Signal to Noise Ration:신호대 잡음비)이 하단 그래프로 나타남
+   - Calibration이 완료되면, 채널 번호와 함께 사용 가능한 채널이 노란색으로 표시되고 SNR(Signal to Noise Ration:신호대 잡음비)이 하단 그래프로 나타남<br/><br/>
 
 **5. Monitoring<br/>**
 <img src="/images/Posting/ResearchReview/fNIRS/10.png" alt="Project"><br/>
+|Mornitoring Mode|Description|
+|------|---|---|
+|3D Mode|3D로 구현한 뇌 모델에서 헤모글로빈 농도의 변화
+를 실시간으로 보여주며 사용 방법에 따라 HbO2, HbR, 또는
+HbT 변화를 선택적으로 모니터할 수 있음|
+|Time Series Mode|각 채널마다 실시간으로 HbO2 및 HbR 변화를 그래프 형태로 보여줌|
 
 ___
 
