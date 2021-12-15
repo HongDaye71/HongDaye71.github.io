@@ -24,9 +24,9 @@ ___
 <!--작업물 세부 이미지!-->
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/Posting/Figma/Study04/01.png" alt="Project">
-    <img src="/images/Posting/Figma/Study04/02.png" alt="Project">
-    <img src="/images/Posting/Figma/Study04/03.png" alt="Project">
+    <img src="/images/Posting/Figma/Study05/01.png" alt="Project">
+    <img src="/images/Posting/Figma/Study05/02.png" alt="Project">
+    <img src="/images/Posting/Figma/Study05/03.png" alt="Project">
   </div>
   <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
