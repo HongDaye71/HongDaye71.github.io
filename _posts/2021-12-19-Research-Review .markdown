@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Mental workload during n-back task—quantified in the prefrontal cortex using fNIRS
-date:   2021-12-08 15:01:35 +0300
+date:   2021-12-20 15:01:35 +0300
 image:  '/images/fNIRS01.png'
 tags:   [Researh review, fNIRS]
 ---
