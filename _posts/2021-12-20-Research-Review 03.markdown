@@ -9,14 +9,13 @@ tags:   [Researh review, fNIRS]
 *encoding : 인지과정 혹은 정보 처리 과정의 한 형태로, 청각, 시각, 촉각 등 감각을 통해 들어오는 정보를 처리하고 저장하기 위해 그 정보를 유의미하게 만들고, 장기기억에 저장되어 있는 기존의 정보와 연결하고 결합하는 과정<br/>
 
 *Prefrontal Cortex : <br/>
-<img src="/images/Posting/ResearchReview/fNIRS/02.png" alt="Project"><br/>
+<img src="/images/Posting/ResearchReview/fNIRS/16.jpg" alt="Project"><br/>
 <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project"><br/>
 
 *NIRSLITE Channel Info(HCILab 보유장비 / 논문 내 사용장비(CW7 NIRS)와 상이) : <br/>
 <img src="/images/Posting/ResearchReview/fNIRS/13.png" alt="Project"><br/>
 
-*Episodic Memory : 자전적 사건들(시간, 장소, 감정, 지식)에 관한 기억으로 어느 특정시간과 장소에서 일어났던 과거의 개인적인 경험의 모음이라고 할 수 있다. Episodic Memory는 Semantic Memory와 대비되는데  
-Episodic Memory는 시간 및 장소와 관련하여 조직된 기억내용을 가리키고 Semantic Memory는 그것이 획득된 맥락 등을 가리킨다.
+*Episodic Memory : 자전적 사건들(시간, 장소, 감정, 지식)에 관한 기억으로 어느 특정시간과 장소에서 일어났던 과거의 개인적인 경험의 모음이라고 할 수 있다. Episodic Memory는 Semantic Memory와 대비되는데  Episodic Memory는 시간 및 장소와 관련하여 조직된 기억내용을 가리키고 Semantic Memory는 그것이 획득된 맥락 등을 가리킨다.
 
 ___
 
