@@ -2,51 +2,54 @@
 layout: post
 title:  Mental workload during n-back task—quantified in the prefrontal cortex using fNIRS
 date:   2021-12-08 15:01:35 +0300
-image:  '/images/fNIRS04.png'
+image:  '/images/fNIRS03.png'
 tags:   [Researh review, fNIRS]
 ---
 ## Background Knowledge<br/>
-* Hbr (Reduced Hemoglobin)
-* Hbt (Total Hemoglobin)
-* Hbo(Oxegenated Hemoglobin)
+* N-Back Task : Recall a sequence of items and determine whether the current item matches the item presented “n” positions prior <br/> [참고영상](https://www.youtube.com/watch?v=Ro5AI6nhzlQ&t=175s)
 
 ___
 
 ## Abstract<br/>
-Amongst the many tasks in our lives, we encounter web forms on a regular basis, whether they are mundane like registering for a website, or complex and important like tax returns. There are many aspects of Usability, but one concern for user interfaces is to reduce mental workload and error rates. Whilst most assessment of mental workload is subjective and retrospective reporting by users, **we examine the potential of functional Near Infrared Spectroscopy (fNIRS) as a tool for objectively and concurrently measuring mental workload during usability testing. We use this technology to evaluate the design of three different form layouts for a car insurance claim process** and show that **a form divided into subforms increases mental workload, contrary to our expectations**
+Human-machine interfaces (HCIs) are desirable which continuously monitor the users’ workload. and dynamically adapt the behavior of the interface to the measured workload. While memory tasks have been shown to elicit hemodynamic responses in the brain when averaging over multiple trials, a robust single trial classification is a crucial prerequisite for the purpose of dynamically adapting HCIs to the workload of its user. The prefrontal cortex (PFC) plays an important role in the processing of memory and the associated workload. 
+
+In this study of 10 subjects, we used functional Near-Infrared Spectroscopy (fNIRS) The results show
+up to 78% accuracy for single-trial discrimination of three levels of workload from each other. We use an n-back task (n ∈ {1, 2, 3}) to induce different levels of workload, Our experimental results show that measuring hemodynamic responses in the PFC with fNIRS, can be used to robustly quantify and classify mental workload. Single trial analysis is still a young field that suffers from a general lack of standards. To increase comparability of fNIRS methods and results, the data corpus for this study is made available online.<br/>
+
+정리 : <br/>
+HCI분야에서는 사용자의 인지부하를 지속적으로 모니터링하고 측정된 인지부하에 맞게 인터페이스를 조정하고자 하는 시도가 계속되고 있다.-> Block Design을 통해 특정 조건에 대한 평균적인 인지부하를 측정하는 연구는 많이 진행되어 왔지만, 사용자의 인지부하에 맞추어 동적으로 인터페이스를 조정하기 위해선 단일 이벤트에 대한 정확한 분류가 필요하다. -> 본 실험은 10명의 피험자를 대상으로 3개 난이도의 N-Back Task를 진행했고, fNIRS장비를 사용하여 실시간으로 사용자의 Hemoglobin변화를 측정했다. -> 그 결과 3개 난이도를 가진 N-Back Task에 대한 single-trial discrimination에서 78%의 정확도가 나타났고, 본 실험의 결과는 fNIRS가 사용자의 인지부하를 정확하고 정량적으로 분석해낼 수 있음을 증명한다.
 
 ___
 
 ## Experiment Design <br/>
-* Participants : N = 15 (right handed participants / 10 male, 5 female) <br/>
-* Layout variations of web forms : 
-<img src="/images/Posting/ResearchReview/fNIRS/04.png" alt="Project"><br/>
+<img src="/images/Posting/ResearchReview/fNIRS/12.png" alt="Project">
 
-* Procedure : <br/>
-<img src="/images/Posting/ResearchReview/fNIRS/05.png" alt="Project">
+In our experiment, we investigated 10 trials each of 1-,2-, and 3-back tasks. Each trial contained 3 ± 1 targets. The experiment was presented to the subjects on a screen.
 
-*Video Clip : Video clips of car accidents were used as the stimulus for filling in insurance claims during the study (30-60s long)*<br/>
-*NASA-TI X : Subjective measures (user opinions, user’s experience of effort)*<br/><br/>
+A trial consisted of 5 s of instruction. The trial then presented a new letter every 2 s. Every letter was displayed for 500 ms. The screen was left blank for the remaining 1.5 s. A total of 22 letters was presented during every trial resulting in a trial length of 44 s. Subsequently, a cross was displayed for 15 s during which the subjects were asked to relax to ensure that hemoglobin levels returned to baseline
 
-* Measure : <br/>
-Subjective Measure : Mental demand, Physical demand, Temporal demand, Performance, Effort, Frustration, Emotional affect<br/>
-Objective Measure : MLT data collected through fNIRS), Performance(Time to complete)<br/>
+After half of the trials, an additional 10 s ofthe resting cross were displayed to have data periods with no
+activity to be used as RELAX trials. The order of the different n-back conditions was pseudo-randomized. A 150 s break during which the subjects could drink or chat was included after 15 trials. The entire experiment had a recording time of 37 min (30 trials of 64 s, 15 relax trials of 10 s and 150 s in the middle).
+
+___
+
+## Participants <br/>
+
+___
+
+## Signal Processing and Artifact Removal <br/>
+
+___
+
+## Feature Exraction and Selection <br/>
 
 ___
 
 ## Result <br/>
-* Subjective Mental Workload : 
-In line with the objective data from the fNIRS, participants perceived Index3 as the most mentally demanding
-
-* Objective Mental Workload :
-Index3 had significantly higher Hbo(Oxegenated Hemoglobin) activation than Index1: p = 0.047.
-(Higher Hbo values indicates higher workload)
-<img src="/images/Posting/ResearchReview/fNIRS/06.png" alt="Project">
-
-Based on post-study ratings, the bulk of participants preferred Index1 and Index3. Overall, we found that the designs of the forms did not create an emotional affect, and did not affect performance in terms of time
+* User Performance and Subjective Rating : <br/>
+* Hemodynamic Responses :<br/>
 
 ___
 
-Lukanov, K., Maior, H. A., & Wilson, M. L. (2016, May). Using fNIRS in usability testing: understanding the effect of web form layout on mental workload. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (pp. 4011-4016).
-
+Herff, C., Heger, D., Fortmann, O., Hennrich, J., Putze, F., & Schultz, T. (2014). Mental workload during n-back task—quantified in the prefrontal cortex using fNIRS. Frontiers in human neuroscience, 7, 935.
 
