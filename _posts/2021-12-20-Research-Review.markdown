@@ -2,12 +2,11 @@
 layout: post
 title:  Mental workload during n-back task—quantified in the prefrontal cortex using fNIRS
 date:   2021-12-20 15:01:35 +0300
-image:  '/images/fNIRS03.png'
+image:  '/images/fNIRS04.png'
 tags:   [Researh review, fNIRS]
 ---
 ## Background Knowledge<br/>
 * N-Back Task : Recall a sequence of items and determine whether the current item matches the item presented “n” positions prior <br/> [참고영상](https://www.youtube.com/watch?v=Ro5AI6nhzlQ&t=175s)
-* fNIRS : [지난포스팅바로가기](https://hongdaye71.github.io/blog/fnirs)<br/>
 ___
 
 ## Abstract<br/>
