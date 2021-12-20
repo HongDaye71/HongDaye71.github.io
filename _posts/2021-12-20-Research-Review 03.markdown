@@ -8,10 +8,15 @@ tags:   [Researh review, fNIRS]
 ## Background Knowledge<br/>
 *encoding : 인지과정 혹은 정보 처리 과정의 한 형태로, 청각, 시각, 촉각 등 감각을 통해 들어오는 정보를 처리하고 저장하기 위해 그 정보를 유의미하게 만들고, 장기기억에 저장되어 있는 기존의 정보와 연결하고 결합하는 과정<br/>
 
-*Prefrontal Cortex : 
+*Prefrontal Cortex : <br/>
 <img src="/images/Posting/ResearchReview/fNIRS/02.png" alt="Project"><br/>
-*NIRSLITE Channel Info(HCILab 보유장비 / 논문 내 사용장비와 상이) : 
+<img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project"><br/>
+
+*NIRSLITE Channel Info(HCILab 보유장비 / 논문 내 사용장비와 상이) : <br/>
 <img src="/images/Posting/ResearchReview/fNIRS/13.png" alt="Project"><br/>
+
+*Episodic Memory : 자전적 사건들(시간, 장소, 감정, 지식)에 관한 기억으로 어느 특정시간과 장소에서 일어났던 과거의 개인적인 경험의 모음이라고 할 수 있다. Episodic Memory는 Semantic Memory와 대비되는데  
+Episodic Memory는 시간 및 장소와 관련하여 조직된 기억내용을 가리키고 Semantic Memory는 그것이 획득된 맥락 등을 가리킨다.
 
 ___
 
@@ -31,6 +36,15 @@ Overall, this study shows that fNIRS can reliably measure cortical brain activat
 
 ___
 ## Introduction<br/>
+Early detection of Alzheimer’s disease (AD) is critical to facilitate timely intervention to attenuate or stop the progressive cognitive decline. Loss of memory for recently experienced events or the so-called “episodic memory” is the frst symptom of amnesia in patients with AD and thus a large number of studies have been conducted to investigate the underlying brain phsyiology. Remembering proper names, the paired-associate learning task (PAL), which requires the use of episodic
+memory is the most common problem among elderly2, 10–15. Several studies suggested that the PAL task could be useful in early detection of memory impairment.In the PAL task, one item of a pair is used to cue recall of the other item<br/>
+
+The PAL task is widely used for assessing memory performance in the young and elderly population as well as patients with Mild Cognitive Impairment (MCI) and Alzheimer’s Disease2, 11–13, 18–20. Specifc regions of the hippocampus and prefrontal cortices have been identifed as critical to the success of memory encoding in both young and healthy elderly subjects during a face-name PAL task2, 18. In particular, the dorsolateral and ventrolateral prefrontal cortex (DLPFC and VLPFC) have been shown to be associated with the encoding and recalling phase of face-name PAL task
+
+정리 :
+AD는 인지력 저하 약화를 위해 조기발견하는 것이 중요하다. 최근 경험된 사건에 대한 기억이 손실되는 것, 즉 "episodic memory" 상실은 AD의 첫 번째 증상인데 선행연구에 따르면 PAL과제는 episodic memory를 사용하게끔 하여 AD를 초기에 발견할 수 있도록 하는 유용한 과제이다. (PAL은 두 개 아이템이 쌍을 이루어 제공된 뒤, 몇초 후 하나의 아이템을 통해 나머지 하나를 recall하도록 한다)
+
+PAL 과제는 AD뿐만 아니라 경도인지장애(Mild Cognitive Impairment;MCI) 와 젊은층과 노년층의 기억성능을 평가하는 데에도 널리 사용된다. 선행연구에 따르면 전전두엽피질(prefrontal cortex;PFC)영역 중 dorsolateral과 ventrolateral prefrontal cortex (DLPFC and VLPFC)이 PAL과제 내 encoding과 recalling과 연관이 있는 것으로 나타났다.
 
 ___
 
