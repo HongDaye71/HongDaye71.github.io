@@ -10,9 +10,9 @@ tags:   [Design, Figma]
 
 * Building Amazing Things Youtube Channel의 Figma Web Design Tutorial을 따라 만든 작업물 입니다(It's a work based on YouTube Channel's Figma Tutorial called Building Amazing Things)
 
-* [Building Amazing Things Youtube Channel](https://www.youtube.com/channel/UCbVPTU8fv7e0EjGeQFbIsJA)**
+* [Building Amazing Things Youtube Channel](https://www.youtube.com/channel/UCbVPTU8fv7e0EjGeQFbIsJA)
 
-* [공부영상 바로가기](https://www.youtube.com/watch?v=CBf0BOaIBVw&t=14s)**  
+* [공부영상 바로가기](https://www.youtube.com/watch?v=CBf0BOaIBVw&t=14s)
 
 ___
 
