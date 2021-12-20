@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  fNIRS can robustly measure brain activity during memory encoding and retrieval in healthy subjects
-date:   2021-12-08 15:01:35 +0300
+date:   2021-12-20 15:01:35 +0300
 image:  '/images/fNIRS04.png'
 tags:   [Researh review, fNIRS]
 ---
