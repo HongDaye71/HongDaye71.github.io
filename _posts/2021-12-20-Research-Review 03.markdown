@@ -12,7 +12,7 @@ tags:   [Researh review, fNIRS]
 <img src="/images/Posting/ResearchReview/fNIRS/02.png" alt="Project"><br/>
 <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project"><br/>
 
-*NIRSLITE Channel Info(HCILab 보유장비 / 논문 내 사용장비와 상이) : <br/>
+*NIRSLITE Channel Info(HCILab 보유장비 / 논문 내 사용장비(CW7 NIRS)와 상이) : <br/>
 <img src="/images/Posting/ResearchReview/fNIRS/13.png" alt="Project"><br/>
 
 *Episodic Memory : 자전적 사건들(시간, 장소, 감정, 지식)에 관한 기억으로 어느 특정시간과 장소에서 일어났던 과거의 개인적인 경험의 모음이라고 할 수 있다. Episodic Memory는 Semantic Memory와 대비되는데  
@@ -41,15 +41,31 @@ memory is the most common problem among elderly2, 10–15. Several studies sugge
 
 The PAL task is widely used for assessing memory performance in the young and elderly population as well as patients with Mild Cognitive Impairment (MCI) and Alzheimer’s Disease2, 11–13, 18–20. Specifc regions of the hippocampus and prefrontal cortices have been identifed as critical to the success of memory encoding in both young and healthy elderly subjects during a face-name PAL task2, 18. In particular, the dorsolateral and ventrolateral prefrontal cortex (DLPFC and VLPFC) have been shown to be associated with the encoding and recalling phase of face-name PAL task
 
-정리 :
+Several fMRI studies have shown that left inferior frontal and superior temporal cortices are activated during encoding of novel faces, while frontal and parietal cortices are activated during the encoding of the same faces
+
+정리 :<br/>
 AD는 인지력 저하 약화를 위해 조기발견하는 것이 중요하다. 최근 경험된 사건에 대한 기억이 손실되는 것, 즉 "episodic memory" 상실은 AD의 첫 번째 증상인데 선행연구에 따르면 PAL과제는 episodic memory를 사용하게끔 하여 AD를 초기에 발견할 수 있도록 하는 유용한 과제이다. (PAL은 두 개 아이템이 쌍을 이루어 제공된 뒤, 몇초 후 하나의 아이템을 통해 나머지 하나를 recall하도록 한다)
 
 PAL 과제는 AD뿐만 아니라 경도인지장애(Mild Cognitive Impairment;MCI) 와 젊은층과 노년층의 기억성능을 평가하는 데에도 널리 사용된다. 선행연구에 따르면 전전두엽피질(prefrontal cortex;PFC)영역 중 dorsolateral과 ventrolateral prefrontal cortex (DLPFC and VLPFC)이 PAL과제 내 encoding과 recalling과 연관이 있는 것으로 나타났다.
 
+또한 fMRI 연구에 따르면 novel face를 encoding할 때에는 left inferior frontal과 superior temporal cortices가 활성화되고, same face를 encoding할 때에는 frontal과 parietal cortices이 활성화 되는 것으로 나타났다.
 ___
 
-## Experiment Design <br/>
+## Method <br/>
+* Experimental Design :<br/>
+<img src="/images/Posting/ResearchReview/fNIRS/15.png" alt="Project"><br/>
 
+A face-name PAL task was used in this study that has previously been used in an fMRI study.
+The stimuli were presented using a personal computer. Each run consisted of two novel face-name pair blocks and two same face-name pair blocks, Each block lasted ~50 secs in which 7 face-name pairs were displayed sequentially. Faces were presented on a white background on the screen for 4.5 secs and there was a 3–3.5 sec interval between each face-name pair trial.
+
+정리 : <br/>
+본 실험에서는 face-name PAL과제를 사용했으며 실험은 아래와 같이 진행됨.<br/>
+[Baseline -> novel face encoding -> rest -> same face retrieval -> rest -> novel face encoding -> rest -> same face retrieval]<br/>
+Baseline : 25s
+Each Block : 50초가량 진행 / 7개의 face-name pair 제공(4.5sec제공 - 3~3.5s Interval 반복) <br/>
+
+
+* Participants : N = 19 (age: 31±9.7 years, 11 male, 8 female)<br/>
 
 ___
 
