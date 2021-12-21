@@ -6,16 +6,18 @@ image:  '/images/fNIRS04.png'
 tags:   [Researh review, fNIRS]
 ---
 ## Background Knowledge<br/>
-*encoding : 인지과정 혹은 정보 처리 과정의 한 형태로, 청각, 시각, 촉각 등 감각을 통해 들어오는 정보를 처리하고 저장하기 위해 그 정보를 유의미하게 만들고, 장기기억에 저장되어 있는 기존의 정보와 연결하고 결합하는 과정<br/>
+* encoding : 인지과정 혹은 정보 처리 과정의 한 형태로, 청각, 시각, 촉각 등 감각을 통해 들어오는 정보를 처리하고 저장하기 위해 그 정보를 유의미하게 만들고, 장기기억에 저장되어 있는 기존의 정보와 연결하고 결합하는 과정<br/>
 
-*Prefrontal Cortex : <br/>
-<img src="/images/Posting/ResearchReview/fNIRS/16.jpg" alt="Project"><br/>
-<img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project"><br/>
+* Episodic Memory : 자전적 사건들(시간, 장소, 감정, 지식)에 관한 기억으로 어느 특정시간과 장소에서 일어났던 과거의 개인적인 경험의 모음이라고 할 수 있다. Episodic Memory는 Semantic Memory와 대비되는데  Episodic Memory는 시간 및 장소와 관련하여 조직된 기억내용을 가리키고 Semantic Memory는 그것이 획득된 맥락 등을 가리킨다.
 
-*NIRSLITE Channel Info(HCILab 보유장비 / 논문 내 사용장비(CW7 NIRS)와 상이) : <br/>
-<img src="/images/Posting/ResearchReview/fNIRS/13.png" alt="Project"><br/>
-
-*Episodic Memory : 자전적 사건들(시간, 장소, 감정, 지식)에 관한 기억으로 어느 특정시간과 장소에서 일어났던 과거의 개인적인 경험의 모음이라고 할 수 있다. Episodic Memory는 Semantic Memory와 대비되는데  Episodic Memory는 시간 및 장소와 관련하여 조직된 기억내용을 가리키고 Semantic Memory는 그것이 획득된 맥락 등을 가리킨다.
+* Prefrontal Cortex : <br/>
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/ResearchReview/fNIRS/16.jpg" alt="Project">
+    <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project">
+  </div>
+  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
+</div>
 
 ___
 
@@ -28,7 +30,7 @@ Our fndings demonstrate that encoding of novel face-name pairs compared to basel
 
 Overall, this study shows that fNIRS can reliably measure cortical brain activation during a face-name paired-associate learning task. Future work will include similar measurements in populations with progressing memory defcits.<br/>
 
-정리 : 
+**정리 :** 
 선행연구에 따르면 paired-associate learning tasks는 알츠하이머를 조기에 발견하는데 유용하다. 본 연구에서는 fNIRS의 활용성을 평가하기 위해 건강한 성인 19명을 대상으로 face-name paired-associate learning task를 진행했다. 실험이 진행되는 동안 PFC영역의 헤모글로빈이 측정되었고, 실험결과는 아래와 같다.<br/>
 1. novel face-name pairs을 encoding하는것은 left dorsolateral prefrontal cortex의 활성화로 이어졌다.<br/>
 2. recalling은 dorsolateral prefrontal cortex의 활성화로 이어졌다.<br/>
@@ -42,7 +44,8 @@ The PAL task is widely used for assessing memory performance in the young and el
 
 Several fMRI studies have shown that left inferior frontal and superior temporal cortices are activated during encoding of novel faces, while frontal and parietal cortices are activated during the encoding of the same faces
 
-정리 :<br/>
+
+**정리 :**<br/>
 AD는 인지력 저하 약화를 위해 조기발견하는 것이 중요하다. 최근 경험된 사건에 대한 기억이 손실되는 것, 즉 "episodic memory" 상실은 AD의 첫 번째 증상인데 선행연구에 따르면 PAL과제는 episodic memory를 사용하게끔 하여 AD를 초기에 발견할 수 있도록 하는 유용한 과제이다. (PAL은 두 개 아이템이 쌍을 이루어 제공된 뒤, 몇초 후 하나의 아이템을 통해 나머지 하나를 recall하도록 한다)
 
 PAL 과제는 AD뿐만 아니라 경도인지장애(Mild Cognitive Impairment;MCI) 와 젊은층과 노년층의 기억성능을 평가하는 데에도 널리 사용된다. 선행연구에 따르면 전전두엽피질(prefrontal cortex;PFC)영역 중 dorsolateral과 ventrolateral prefrontal cortex (DLPFC and VLPFC)이 PAL과제 내 encoding과 recalling과 연관이 있는 것으로 나타났다.
@@ -51,20 +54,23 @@ PAL 과제는 AD뿐만 아니라 경도인지장애(Mild Cognitive Impairment;MC
 ___
 
 ## Method <br/>
-* Experimental Design :<br/>
+* **Experimental Design :**<br/>
 <img src="/images/Posting/ResearchReview/fNIRS/15.png" alt="Project"><br/>
 
 A face-name PAL task was used in this study that has previously been used in an fMRI study.
 The stimuli were presented using a personal computer. Each run consisted of two novel face-name pair blocks and two same face-name pair blocks, Each block lasted ~50 secs in which 7 face-name pairs were displayed sequentially. Faces were presented on a white background on the screen for 4.5 secs and there was a 3–3.5 sec interval between each face-name pair trial.
 
-정리 : <br/>
-본 실험에서는 face-name PAL과제를 사용했으며 실험은 아래와 같이 진행됨.<br/>
-[Baseline -> novel face encoding -> rest -> same face retrieval -> rest -> novel face encoding -> rest -> same face retrieval]<br/>
-Baseline : 25s
+**정리 :** <br/>
+실험은 두 개의 Run으로 구성됨 (encoding run / recalling run)<br/>
+각각의 Run은 encoding - recalling - encoding - recalling순으로 총 두번씩 나타남<br/>
+encoding : 얼굴-이름 쌍을 보여줌<br/>
+recalling : 얼굴만 보여주고 이름을 맞추도록 함<br/>
+
+각각의 Run은 두 개의 Block으로 구성됨 (novel face name pair block / same face name pair block)
+각각의 Block은 novel - same - novel - same순으로 총 두번씩 나타남(상단 이미지 참고)<br/>
 Each Block : 50초가량 진행 / 7개의 face-name pair 제공(4.5sec제공 - 3~3.5s Interval 반복) <br/>
 
-
-* Participants : N = 19 (age: 31±9.7 years, 11 male, 8 female)<br/>
+* **Participants** : N = 19 (age: 31±9.7 years, 11 male, 8 female)<br/>
 
 ___
 
