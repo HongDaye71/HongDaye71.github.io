@@ -2,7 +2,7 @@
 layout: post
 title:  Figma Study 06
 date:   2021-12-10 15:01:35 +0300
-image:  '/images/FigmaStudy05.png'
+image:  '/images/FigmaStudy06.png'
 tags:   [Design, Figma]
 ---
 
@@ -12,7 +12,7 @@ tags:   [Design, Figma]
 
 * [Building Amazing Things Youtube Channel](https://www.youtube.com/channel/UCbVPTU8fv7e0EjGeQFbIsJA)
 
-* [Tutorial Video](https://www.youtube.com/watch?v=O3BmHGNAGhM&list=PLS4Ael_3TpK0S02VQDq6qABI0qF-QCZlG&index=4)
+* [Tutorial Video](https://www.youtube.com/watch?v=JM7P7mWgJbo)
 
 ___
 
@@ -20,21 +20,20 @@ ___
 ## 작업물 <br/>
 
 <!--작업물 영상!-->
-<p><iframe src="https://www.youtube.com/embed/3IY6-RIi6ls" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe src="https://www.youtube.com/embed/j1E3_UOrqUo" frameborder="0" allowfullscreen></iframe></p>
 <!--작업물 세부 이미지!-->
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/Posting/Figma/Study05/01.png" alt="Project">
-    <img src="/images/Posting/Figma/Study05/02.png" alt="Project">
-    <img src="/images/Posting/Figma/Study05/03.png" alt="Project">
+    <img src="/images/Posting/Figma/Study06/01.png" alt="Project">
+    <img src="/images/Posting/Figma/Study06/02.png" alt="Project">
   </div>
   <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
 
-* [View Prototype](https://www.figma.com/proto/84f8zor4XzN0j1WFvGFFIC/FoodAppDesign?page-id=0%3A1&node-id=3%3A375&viewport=241%2C48%2C0.36&scaling=scale-down&starting-point-node-id=3%3A375) 
+* [View Prototype](https://www.figma.com/proto/DxhzUIs2FMEgs5latrn9Xp/Shoe-Ordering-Mobile-App?page-id=2%3A26&node-id=2%3A160&viewport=241%2C48%2C1.31&scaling=scale-down&starting-point-node-id=2%3A27) 
 
 
-* Title : Food Ordering Mobile App Design
+* Title : Shoe Ordering Mobile App Design
 * Device : Iphone11 Pro / X (375x812)
 * Production Program : Figma
 * Explanation : 
