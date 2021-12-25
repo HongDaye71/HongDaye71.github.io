@@ -5,14 +5,9 @@ subtitle: Figma
 image: '/images/project-6.jpg'
 ---
 
-## Figma Web Design 
+## 영양제 알림 어플
 
-<!-- hagendazs Find Your Flavor페이지 디자인!-->
-
-<!--작업물 영상!-->
-<!--작업물 설명! 날짜 사용 프로그램 등-->
-<!--작업물 multi version image-->
-
+<!--정리된 결과물 넣고, 과정은 Blog Posting으로 연결되도록 하기!-->
 
 <div class="gallery-box">
   <div class="gallery">
