@@ -1,33 +1,23 @@
 ---
 layout: post
-title:  Figma Study 06
+title:  01_복약 알람어플_서비스 기획
 date:   2021-12-10 15:01:35 +0300
-image:  '/images/FigmaStudy06.png'
-tags:   [Design, Figma]
+image:  '/images/MedicineAlram01.jpg'
+tags:   [Service Planning]
 ---
 
-[서비스기획참고사이트](https://smkdir.tistory.com/3)
+### 시장조사 : <br/>
+- 기존 복약알림 어플 : <br/>
+2022년 1월 기준 Google Play Store Top3 : <br/>
+1. MyTherapy<br/>
+2. 약 알림 태양이<br/>
+3. 약톡<br/>
 
-## 서비스 개요 <br/>
-### 서비스 : 영양제 알람 어플
+- 주요기능 : <br/>
+1. MyTherapy : 복약알림, 혈압 체중 등 건강상태 기록, 의사와 진행상황 공유<br/>
+2. 약 알림 태양이 : 복약알림 <br/>
+3. 약톡 : 복약알림, 가족 약 복용 모니터링, 메시지로 가족 약 챙겨주기<br/>
 
-### 목표 : 영양제 복용 시간 알림을 통해 정해진 시간, 정량의 약을 복용할 수 있도록 돕는다.
+- 사용자 평가 : <br/>
 
-### 주요기능 : 
-
-___
-
-## IA(Information Architecture) <br/>
-
-___
-
-## 주요서비스 프로세스
-
-___
-
-## 메뉴트리
-
-___
-
-## 공통규칙
-
+### 사용자조사 : 
