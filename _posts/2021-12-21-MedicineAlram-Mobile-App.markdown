@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 복약 알림어플 챙김이 - 서비스기획
-date:   2021-12-25 15:01:35 +0300
+title:  Figma Study 06
+date:   2021-12-10 15:01:35 +0300
 image:  '/images/FigmaStudy06.png'
-tags:   [Service Planning, Mobile App Development]
+tags:   [Design, Figma]
 ---
 
 [서비스기획참고사이트](https://smkdir.tistory.com/3)
@@ -30,6 +30,4 @@ ___
 ___
 
 ## 공통규칙
-
-
 
