@@ -52,9 +52,12 @@ data = pd.DataFrame(data=[], columns=['아이디','리뷰','별점','날짜'])
 - XPath : F12 -> 상단 '상자 안 마우스 아이콘' 클릭-> 리뷰 모두보기 클릭하여 해당 버튼이 작성된 소스코드 확인 -> 마우스 우클릭 -> Copy -> Copy xpath
 
 ```python
-driver = webdriver.Chrome(executable_path='C:/Users/ghdek/Desktop/chromedriver') #브라우저 드라이버 설치경로 입력 
-driver.get('https://play.google.com/store/apps/details?id=eu.smartpatient.mytherapy&hl=ko&gl=US') #크롤링 할 페이지 주소
-driver.find_element_by_xpath('//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div/main/div/div[1]/div[6]/div/span/span').click() #첫 화면에는 4개의 리뷰만이 보이므로 Selenium을 사용해 '리뷰 모두보기'버튼클릭 
+#브라우저 드라이버 설치경로 입력
+driver = webdriver.Chrome(executable_path='C:/Users/ghdek/Desktop/chromedriver')  
+#크롤링 할 페이지 주소
+driver.get('https://play.google.com/store/apps/details?id=eu.smartpatient.mytherapy&hl=ko&gl=US') 
+#첫 화면에는 4개의 리뷰만이 보이므로 Selenium을 사용해 '리뷰 모두보기'버튼클릭 
+driver.find_element_by_xpath('//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div/main/div/div[1]/div[6]/div/span/span').click() 
 ```
 <br/>
 
@@ -62,7 +65,7 @@ driver.find_element_by_xpath('//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div/
 
 ```python
 while True:
-    # 끝까지 스크롤 다운
+    # 페이지 끝까지 스크롤 다운
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     last_height = driver.execute_script("return document.body.scrollHeight")
     # 1초 대기
@@ -71,9 +74,8 @@ while True:
     new_height = driver.execute_script("return document.body.scrollHeight")
     
     # 스크롤이 끝까지 내려간 경우 : 
-    # 해당 어플의 경우, 리뷰의 수가 많아 스크롤다운 반복을 통해 모든 리뷰를 확인할 수 없음(더보기버튼 클릭필요)
+    # 해당 어플의 경우, 리뷰 수가 많아 스크롤다운 반복을 통해 모든 리뷰를 확인할 수 없음(더보기버튼 클릭필요)
     if new_height == last_height :
-        #break
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div/main/div/div[1]/div[2]/div[2]/div/span/span').click()
         viewmore += 1
@@ -82,7 +84,8 @@ while True:
         viewmore += 1
     # 더보기 버튼을 세번 클릭하면, 모든 리뷰가 확인되므로 스크롤 종료 후 크롤링
     if new_height == last_height and viewmore == 4 :
-        # 스크롤 다운 후 크롤링해야 인덱스 오류가 발생하지 않음 (크롤링 할 리뷰개수는 crawl 세번째 parameter에 입력)
+        # 스크롤 다운 후 크롤링해야 인덱스 오류가 발생하지 않음 
+        # 크롤링 할 리뷰개수는 crawl 세번째 parameter에 입력
         data = crawl(driver,data, 200)
         break
 
@@ -95,7 +98,7 @@ driver.get('https://play.google.com/store/apps/details?id=eu.smartpatient.myther
 
 ```python
 def crawl(driver, data, k):
-    user_names = driver.find_elements_by_css_selector('.X43Kjb') #괄호 안에는 Class name입력
+    user_names = driver.find_elements_by_css_selector('.X43Kjb') 
     reviews = driver.find_elements_by_css_selector('.UD7Dzf')
     star_grades = driver.find_elements_by_xpath('//div[@class="pf5lIe"]/div[@role="img"]')
     dates = driver.find_elements_by_css_selector('.p2TkOb')
