@@ -6,7 +6,7 @@ image:  '/images/Crawling.png'
 tags:   [Crawling]
 ---
 
-> # Python_Selenium을 사용한 Google PlayStore Review Crawling <br/>
+> # Python_Selenium을 사용한 Google PlayStore Review Crawling <br/> >
 
 *본 포스팅에서는 2022.01.04기준 GooglePalyStore의 Mytheraphy App리뷰를 크롤링하는 Python코드를 다룹니다.*
 
