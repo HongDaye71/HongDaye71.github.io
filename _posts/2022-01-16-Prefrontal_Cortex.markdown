@@ -18,9 +18,6 @@ tags:   [Research, Brain(PFC)]
 1. 배외측 전전두피질(Dorsolateral prefrontal cortex;DLPFC)<br/>
 2. 복내측전전두피질(Ventrolateral prefrontal cortex;VLPFC)<br/>
 3. 안와전두피질(Orbitofrontal Cortex;OFC)<br/>
-4. 위이마이랑(superior frontal gyrus;SPG)<br/>
-5. 중간이마이랑(middle frontal gyrus;MFG)<br/>
-6. 아래이마이랑(inferior frontal gyrus;IFG)<br/>
 
 <div class="gallery-box">
   <div class="gallery">
@@ -29,6 +26,17 @@ tags:   [Research, Brain(PFC)]
     <em>Prefrontal_Cortex/ <a href="https://www.ktown1st.com/blog/BodynbrainWilshire/15039" target="_blank">ImageRef_KTOWM</a></em>
 </div>
 
+4. 위이마이랑(superior frontal gyrus;SPG)<br/>
+5. 중간이마이랑(middle frontal gyrus;MFG)<br/>
+6. 아래이마이랑(inferior frontal gyrus;IFG)<br/>
+
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project">
+    <img src="/images/Posting/ResearchReview/fNIRS/18.png" alt="Project">
+  </div>
+    <em>Prefrontal_Cortex/ <a href="https://www.ktown1st.com/blog/BodynbrainWilshire/15039" target="_blank">ImageRef_KTOWM</a></em>
+</div>
 
 정의, 영역, 영역 별 혈류변화를 통해 인지부하 정도, 감정 등 측정가능
 
