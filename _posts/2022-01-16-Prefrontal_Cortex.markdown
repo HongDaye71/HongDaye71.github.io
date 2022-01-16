@@ -26,7 +26,7 @@ tags:   [Research, Brain(PFC)]
   <div class="gallery">
     <img src="/images/Posting/ResearchReview/fNIRS/19.png" alt="Project">
   </div>
-    <em>Prefrontal Cortex/ <a href="https://www.ktown1st.com/blog/BodynbrainWilshire/15039" target="_blank">이미지 출처</a></em>
+    <em>Prefrontal_Cortex/ <a href="https://www.ktown1st.com/blog/BodynbrainWilshire/15039" target="_blank">ImageRef_KTOWM</a></em>
 </div>
 
 
