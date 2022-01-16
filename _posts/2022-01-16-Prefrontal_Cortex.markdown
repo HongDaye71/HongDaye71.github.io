@@ -6,9 +6,11 @@ image:  '/images/PFC.png'
 tags:   [Research, Brain(PFC)]
 ---
 
+
 ## 전두엽 (Prefrontal Lobe) : <br/>
 전두엽(Prefrontal Lobe)은 대뇌에서 가장 넓은 면적을 차지하며 정수리 부근을 지나는 중심고랑을 기준으로 앞쪽이 전두엽, 뒤쪽이 두정엽이다. 전두엽의 중심고랑 바로 앞에는 일차운동피질(움직임을 조절하는 기능)이 존재한다.
-<img src="/images/Posting/ResearchReview/fNIRS/21.png" alt="Project"><br/>
+
+___
 
 ## 전전두피질 (Prefrontal Cortex;PFC) : 
 전전두피질은 전두엽의 앞 부분을 덮고있는 대뇌피질로 전두엽에서 일차운동피질과 전운동피질을 뺀 부분을 가리킨다. 사람의 성격이나, 의사결정, 사회적 행동 조율, 발화와 언어 조율이 모두 이 부위의 기능으로 여겨진다. 
@@ -36,6 +38,8 @@ tags:   [Research, Brain(PFC)]
   </div>
     <em>Prefrontal_Cortex</em>
 </div>
+
+위 여섯개 영역의
 
 정의, 영역, 영역 별 혈류변화를 통해 인지부하 정도, 감정 등 측정가능
 
