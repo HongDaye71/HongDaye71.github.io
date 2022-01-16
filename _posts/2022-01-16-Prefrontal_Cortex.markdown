@@ -27,16 +27,16 @@ ___
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/Posting/ResearchReview/fNIRS/19.png" alt="Project">
+    <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project">
+    <img src="/images/Posting/ResearchReview/fNIRS/18.png" alt="Project">
   </div>
-    <em>Prefrontal_Cortex /<a href="https://www.ktown1st.com/blog/BodynbrainWilshire/15039" target="_blank">ImageRef_KTOWM</a></em>
 </div>
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project">
-    <img src="/images/Posting/ResearchReview/fNIRS/18.png" alt="Project">
+    <img src="/images/Posting/ResearchReview/fNIRS/19.png" alt="Project">
   </div>
+    <em>Prefrontal_Cortex /<a href="https://www.ktown1st.com/blog/BodynbrainWilshire/15039" target="_blank">ImageRef_KTOWM</a></em>
 </div>
 
 ___
