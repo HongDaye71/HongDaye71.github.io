@@ -47,15 +47,15 @@ ___
 
 |Area|Typical Functions|Ref|
 |------|---|---|
-|DLPFC_left|activated for pleasing stimuli||
+|DLPFC_left|-activated for pleasing stimuli<br/>||
 |DLPFC_right|||
-|VLPFC_left|activated for facing negative images||
+|VLPFC_left|-activated for facing negative images<br/>||
 |VLPFC_right|||
 |OFC_left|||
 |OFC_right|||
 |SPG|||
-|MFG|activated passive states such as rest|1|
-|IFG|||
+|MFG|-activated passive states such as rest<br/>|1|
+|IFG_left|-memory formation(ex.encoding novel faces·words·pictures)<br/>Control hand and eye movement|1|
 
 **Reference**
 1. fNIRS can robustly measure brain activity during memory encoding and retrieval in healthy subjects *Scientific reports * / IF : 4.380
