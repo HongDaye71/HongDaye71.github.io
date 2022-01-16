@@ -12,10 +12,11 @@ tags:   [Research, Brain(PFC)]
 
 ___
 
-## 전전두피질 (Prefrontal Cortex;PFC) : 
-전전두피질은 전두엽의 앞 부분을 덮고있는 대뇌피질로 전두엽에서 일차운동피질과 전운동피질을 뺀 부분을 가리킨다. 사람의 성격이나, 의사결정, 사회적 행동 조율, 발화와 언어 조율이 모두 이 부위의 기능으로 여겨진다. 
+## 전전두피질 (Prefrontal Cortex;PFC) : <br/>
+전전두피질은 전두엽의 앞 부분을 덮고있는 대뇌피질로 전두엽에서 일차운동피질과 전운동피질을 뺀 부분을 가리킨다. 사람의 성격이나, 의사결정, 사회적 행동 조율, 발화와 언어 조율이 모두 이 부위의 기능으로 여겨진다. <br/>
 
 전두엽의 기능을 설명할 때 가장 많이 언급되는 부위는 아래와 같다.<br/>
+
 
 1. 배외측 전전두피질(Dorsolateral prefrontal cortex;DLPFC)<br/>
 2. 복내측전전두피질(Ventrolateral prefrontal cortex;VLPFC)<br/>
@@ -36,12 +37,12 @@ ___
     <img src="/images/Posting/ResearchReview/fNIRS/14.png" alt="Project">
     <img src="/images/Posting/ResearchReview/fNIRS/18.png" alt="Project">
   </div>
-    <em>Prefrontal_Cortex</em>
 </div>
 
-위 여섯개 영역의
+___
 
-정의, 영역, 영역 별 혈류변화를 통해 인지부하 정도, 감정 등 측정가능
+## 전전두피질의 영역별 기능 : <br/>
+위 여섯개 부위의 영역 별 혈류변화를 측정하면, 조건에 따른 사람의 인지부하 정도나 감정 등을 확인할 수 있는데 각 영역의 일반적인 기능은 아래와 같다.
 
 ## PFC 영역 : 
 
