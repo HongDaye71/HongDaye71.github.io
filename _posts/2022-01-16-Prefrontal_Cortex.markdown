@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Prefrontal Cortex
+title:  Prefrontal Cortex Area
 date:   2022-01-16 15:01:35 +0300
 image:  '/images/PFC.png'
 tags:   [Research, Brain(PFC)]
@@ -42,26 +42,29 @@ ___
 ___
 
 ## 전전두피질의 영역별 기능 : <br/>
-위 여섯개 부위의 영역 별 혈류변화를 측정하면, 조건에 따른 사람의 인지부하 정도나 감정 등을 확인할 수 있는데 각 영역의 일반적인 기능은 아래와 같다.
+위 여섯개 부위의 영역 별 혈류변화를 측정하면, 조건에 따른 사람의 인지부하 정도나 감정 등을 확인할 수 있다.
+혈류변화는 산소화 헤모글로빈(HbO) 농도와 탈산소화 헤모글로빈(HbR) 농도를 통해 측정하며 각 영역의 일반적인 기능은 아래와 같다.
 
-## PFC 영역 : 
-
-|Area|Typical Functions|ref|
+|Area|Typical Functions|Ref|
 |------|---|---|
-|DLPFC_left|스트랩||
-|DLPFC_right|전원버튼||
-|VLPFC_left|실리콘 패드 센서부||
-|VLPFC_(right)|5-pin 마이크로 커넥터||
-|OFC_left|상태표시부(블루투스)||
-|OFC_right|상태표시부(전원)||
+|DLPFC_left|||
+|DLPFC_right|||
+|VLPFC_left|  ||
+|VLPFC_right|||
+|OFC_left|||
+|OFC_right|||
+|SPG|||
+|MFG|Activated passive states such as rest||
+|IFG|||
 
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/ResearchReview/fNIRS/17.png" alt="Project">
-    <img src="/images/Posting/ResearchReview/fNIRS/18.png" alt="Project">
-  </div>
-  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div>
+**Reference**
+1. 
+2. 
+3. 
+4.  
+5. 
+
+
 
 
 
