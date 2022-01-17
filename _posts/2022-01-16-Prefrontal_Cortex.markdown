@@ -47,20 +47,17 @@ ___
 
 |Area|Typical Functions|Ref|
 |------|---|---|
-|DLPFC|-activated for pleasing stimuli(left)<br/>|2|
-|VLPFC|-activated for facing negative images(left)<br/>-guide access to relevant information from semantic memory in cognitive control(left)|2,3|
+|DLPFC|-activated for pleasing stimuli(left)<br/>-deactivated in stroop task under congruent condition<br/>-avtivated for encoding episodic memory<br/>-avtivated for recalling episodic memory(left)|1,2,3|
+|VLPFC|-activated for facing negative images(left)<br/>-guide access to relevant information from semantic memory in cognitive control(left)<br/>-activated in stroop task under congruent condition<br/>-avtivated for encoding and recalling episodic memory<br/>|2,3|
 |OFC||
 |SPG|||
 |MFG|-activated passive states such as rest<br/>|1|
 |IFG|-memory formation(ex.encoding novel faces·words·pictures)(left)<br/>-Control hand and eye movement(left)|1,2|
 
-**Reference**
-1. fNIRS can robustly measure brain activity during memory encoding and retrieval in healthy subjects *Scientific reports* / IF : 4.380 /Citation : 35
-2. Why we love blue hues on websites: a fNIRS investigation of color and its impact on the neural processing of ecommerce websites *NeuroIS Retreat*
-3. Left ventrolateral prefrontal cortex and the cognitive control of memory *Neuropsychologia* / IF : 3.139 / Citation : 1401
-4.  
-5. 
-
+**Reference**<br/>
+1. fNIRS can robustly measure brain activity during memory encoding and retrieval in healthy subjects *Scientific reports* / IF : 4.380 /Citation : 35<br/>
+2. Why we love blue hues on websites: a fNIRS investigation of color and its impact on the neural processing of ecommerce websites *NeuroIS Retreat*<br/>
+3. Left ventrolateral prefrontal cortex and the cognitive control of memory *Neuropsychologia* / IF : 3.139 / Citation : 1401<br/>
 
 
 
