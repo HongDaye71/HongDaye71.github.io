@@ -52,7 +52,7 @@ ___
 |OFC||
 |SPG|||
 |MFG|-activated passive states such as rest<br/>|1|
-|IFG|-memory formation(ex.encoding novel faces·words·pictures)(left)<br/>-Control hand and eye movement(left)|1,2|
+|IFG|-memory formation(ex.encoding novel faces·words·pictures)(left)<br/>-control hand and eye movement(left)|1,2|
 
 **Reference**<br/>
 1. fNIRS can robustly measure brain activity during memory encoding and retrieval in healthy subjects *Scientific reports* / IF : 4.380 /Citation : 35<br/>
