@@ -62,7 +62,34 @@ driver.find_element_by_xpath('//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div/
 ```
 <br/>
 
-4. Scroll down <br/>
+4. 어플 이름, 아이디, 리뷰, 별점, 날짜 수집 <br/>
+
+```python
+def crawl(driver, data, k):
+    user_names = driver.find_elements_by_css_selector('.X43Kjb') 
+    reviews = driver.find_elements_by_css_selector('.UD7Dzf')
+    star_grades = driver.find_elements_by_xpath('//span[@class="nt2C1d"]/div[@class="pf5lIe"]/div[@role="img"]')
+    dates = driver.find_elements_by_css_selector('.p2TkOb')
+    
+    for i in range(k):
+        tmp = []
+        tmp.append(user_names[i].text)
+        tmp.append(reviews[i].text)
+        tmp.append(star_grades[i].get_attribute('aria-label'))
+        tmp.append(dates[i].text)
+        
+        # 수집한 1명의 리뷰를 결과 프레임에 추가
+        tmp = pd.DataFrame(data=[tmp], columns=data.columns)
+        data = pd.concat([data,tmp])
+    print("리뷰 크롤링 완료")
+    return data
+
+    # 인덱스 번호가 0으로 반복되지 않도록 새로운 인덱스 할당
+    data.reset_index(inplace=True, drop=True)
+```
+<br/>
+
+5. Scroll down <br/>
 
 ```python
 while True:
@@ -92,33 +119,6 @@ while True:
 
 #스크롤 다운 시 페이지 새로고침
 driver.get('https://play.google.com/store/apps/details?id=eu.smartpatient.mytherapy&hl=ko&gl=US&showAllReviews=true')
-```
-<br/>
-
-5. 어플 이름, 아이디, 리뷰, 별점, 날짜 수집 <br/>
-
-```python
-def crawl(driver, data, k):
-    user_names = driver.find_elements_by_css_selector('.X43Kjb') 
-    reviews = driver.find_elements_by_css_selector('.UD7Dzf')
-    star_grades = driver.find_elements_by_xpath('//div[@class="pf5lIe"]/div[@role="img"]')
-    dates = driver.find_elements_by_css_selector('.p2TkOb')
-    
-    for i in range(k):
-        tmp = []
-        tmp.append(user_names[i].text)
-        tmp.append(reviews[i].text)
-        tmp.append(star_grades[i].get_attribute('aria-label'))
-        tmp.append(dates[i].text)
-        
-        # 수집한 1명의 리뷰를 결과 프레임에 추가
-        tmp = pd.DataFrame(data=[tmp], columns=data.columns)
-        data = pd.concat([data,tmp])
-    print("리뷰 크롤링 완료")
-    return data
-
-    # 인덱스 번호가 0으로 반복되지 않도록 새로운 인덱스 할당
-    data.reset_index(inplace=True, drop=True)
 ```
 <br/>
 
