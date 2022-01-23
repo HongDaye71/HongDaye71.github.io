@@ -29,6 +29,13 @@ tags:   [Service Planning]
  ___
  
 **잠깨우기 기능**<br/>
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/AlramApp/02.png" alt="Project">
+    <img src="/images/Posting/AlramApp/01.png" alt="Project">
+  </div>
+  <em>개별기능 언급비율 / 개별기능 평점</em>
+</div>
 
 다섯개 어플의 사용자 평가(총 1112개)데이터를 분석한 결과는 아래와 같았다.<br/>
 
@@ -43,6 +50,7 @@ tags:   [Service Planning]
 5. 스쿼트(4.2%)<br/>
 6. 텍스트따라쓰기(1.4%)<br/>
 
+
 * 개별기능 평점 : <br/>
 1. 스쿼트(5)<br/>
 2. 텍스트따라쓰기(5)<br/>
@@ -52,14 +60,6 @@ tags:   [Service Planning]
 6. 사진찍기(3)<br/>
 
 <!--사진찍기, 수학계산, 핸드폰 흔들기의 언급비중이 가장 높은데, 이 중 사진찍기는 평점이 4점 이하니까 제외 즉 수학계산과 핸드폰 흔들기가 가장 좋다는 것!-->
-
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/AlramApp/02.png" alt="Project">
-    <img src="/images/Posting/AlramApp/01.png" alt="Project">
-  </div>
-  <em>개별기능 언급비율 / 개별기능 평점</em>
-</div>
 
 ## 서비스기획 단계 별 목표 : <br/>
 1. 기존 알람어플의 기능 중 소비자 평가가 높은 기능을 replicate한다.
