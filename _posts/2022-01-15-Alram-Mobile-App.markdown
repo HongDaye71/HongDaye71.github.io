@@ -26,11 +26,15 @@ tags:   [Service Planning]
 그렇다면 다양한 잠 깨우기 기능과 부차기능에 대한 사용자들의 생각은 어떨까?<br/>
 마찬가지로 2021년 1월 15일 구글 플레이스토어 기준 다섯개 어플의 사용자 리뷰를 살펴보았다.<br/>
 
-**잠깨우기 기능**
-<img src="/images/Posting/AlramApp/02.png" alt="Project"><br/>
-<img src="/images/Posting/AlramApp/01.png" alt="Project"><br/>
-x : 기능
-y : 별점
+**잠깨우기 기능**<br/>
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/AlramApp/02.png" alt="Project">
+    <img src="/images/Posting/AlramApp/01.png" alt="Project">
+  </div>
+  <em>리뷰 내 개별기능 언급 비율 / 각 기능에 대한 평점</em>
+</div>
+
 낮은 별점을 준 사용자가 언급한 기능과, 높은 별점을 준 사용자가 언급한 기능
 
 **부차기능**
