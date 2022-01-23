@@ -26,9 +26,9 @@ tags:   [Service Planning]
 그렇다면 다양한 잠 깨우기 기능과 부차기능에 대한 사용자들의 생각은 어떨까?<br/>
 마찬가지로 2021년 1월 15일 구글 플레이스토어 기준 다섯개 어플의 사용자 리뷰를 살펴보았다.<br/>
 
- ___
  
-**잠깨우기 기능**<br/>
+**잠깨우기 기능에 대한 사용자평가**<br/>
+
 <div class="gallery-box">
   <div class="gallery">
     <img src="/images/Posting/AlramApp/02.png" alt="Project">
@@ -61,11 +61,7 @@ tags:   [Service Planning]
 
 <!--사진찍기, 수학계산, 핸드폰 흔들기의 언급비중이 가장 높은데, 이 중 사진찍기는 평점이 4점 이하니까 제외 즉 수학계산과 핸드폰 흔들기가 가장 좋다는 것!-->
 
-## 서비스기획 단계 별 목표 : <br/>
-1. 기존 알람어플의 기능 중 소비자 평가가 높은 기능을 replicate한다.
-2. 소비자조사를 통해 필요를 충족하는 기능을 개발한다.
-3. UI UX를 최적화한다 
-
+___
 
 ## Appendix : <br/>
 1. [Google PlayStore Review Crawling Source Code](https://hongdaye71.github.io/blog/crawling)
