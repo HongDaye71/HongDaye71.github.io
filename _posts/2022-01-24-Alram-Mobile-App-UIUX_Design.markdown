@@ -12,9 +12,11 @@ tags:   [Service Planning, Design, Figma]
 <!--작업물 세부 이미지!-->
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/Posting/AlramApp/04.JPG" alt="Project">
+    <img src="/images/Posting/AlramApp/02.JPG" alt="Project">
     <img src="/images/Posting/AlramApp/03.JPG" alt="Project">
-    <img src="/images/Posting/AlramApp/.JPG" alt="Project">
+    <img src="/images/Posting/AlramApp/04.JPG" alt="Project">
+    <img src="/images/Posting/AlramApp/05.JPG" alt="Project">
+    <img src="/images/Posting/AlramApp/06.JPG" alt="Project">
   </div>
   <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
