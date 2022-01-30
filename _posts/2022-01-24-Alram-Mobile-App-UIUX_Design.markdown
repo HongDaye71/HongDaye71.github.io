@@ -18,7 +18,7 @@ tags:   [Service Planning, Design, Figma]
     2. Odbert, H. S., Karwoski, T. F., & Eckerson, A. B. (1942). Studies in synesthetic thinking: I. Musical and verbal associations of color and mood. *The journal of general psychology*, 26(1), 153-173.
     3. Kaya, N., & Epps, H. H. (2004). Relationship between color and emotion: A study of college students. *College student journal*, 38(3), 396-405 <br/><br/>
 
-- ### 잠깨우기 기능 : 수열 규칙찾기, 핸드폰 흔들어 공넣기, 문장 따라쓰기<br/>
+- ### 잠깨우기 기능 : 수열 규칙찾기 / 핸드폰 흔들어 공넣기 / 문장 따라쓰기<br/>
     2022년 구글플레이스토어 기준, Top5 알람어플에서 높은 사용자 평가를 보인 잠깨우기 기능은 '수학계산'과 '핸드폰 흔들기'이다.<sup>1</sup> 본 어플에서는 ~~ 하기 위해 아래와 같은 가설을 세웠고 fNIRS장비(Prefrontal Cortex의 영역 별 헤모글로빈 농도측정을 통해 피험자의 인지부하 및 감정변화 등을 확인하는 생체신호 장비)를 통해 해당 가설이 참임을 확인하였다.<sup>2</sup> <br/>
 
     **Hypothesis**
