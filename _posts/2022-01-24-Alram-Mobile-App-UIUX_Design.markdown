@@ -19,10 +19,10 @@ tags:   [Service Planning, Design, Figma]
     * Kaya, N., & Epps, H. H. (2004). Relationship between color and emotion: A study of college students. College student journal, 38(3), 396-405.
 
 - ##### 잠깨우기 기능 : 수열 규칙찾기, 핸드폰 흔들어 공넣기, 문장 따라쓰기**<br/><br/>
-    2022년 구글플레이스토어 기준, Top5 알람어플에서 높은 사용자 평가를 보인 잠깨우기 기능은 '수학계산'과 '핸드폰 흔들기'이다. 본 어플에서는 ~~ 하기 위해 아래와 같은 가설을 세웠고 fNIRS장비를 통해<br/>
+    2022년 구글플레이스토어 기준, Top5 알람어플에서 높은 사용자 평가를 보인 잠깨우기 기능은 '수학계산'과 '핸드폰 흔들기'이다.^1^ 본 어플에서는 ~~ 하기 위해 아래와 같은 가설을 세웠고 fNIRS장비를 통해<br/>
     
-    * [시장조사 포스팅 바로가기](https://hongdaye71.github.io/blog/alram-mobile-app-research)
-    * [기능평가 포스팅 바로가기]((https://hongdaye71.github.io/blog/alram-mobile-app-serviceplanning))
+    * [알람어플 시장조사 포스팅 바로가기](https://hongdaye71.github.io/blog/alram-mobile-app-research)
+    * [잠깨우기 기능평가 포스팅 바로가기]((https://hongdaye71.github.io/blog/alram-mobile-app-serviceplanning))
     * fNIRS : Prefrontal Cortex의 영역 별 헤모글로빈 농도측정을 통해 피험자의 인지부하 및 감정변화 등을 확인하는 생체신호 장비 [장비설명 포스팅 바로가기](https://hongdaye71.github.io/blog/fnirs)
 
 
