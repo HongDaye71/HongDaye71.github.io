@@ -9,15 +9,15 @@ tags:   [Service Planning, Design, Figma]
 <br/>
 
 - ##### 어플명 : 하루시작, 알림이 <br/>
-- ##### 메인컬러 : Yellow <br/><br/>
+- ##### 메인색상 : Yellow <br/><br/>
     The colors of emotion에 따르면 '색'은 그것을 보는 사람들로 하여금 특정 감정을 유도하는 효과가 있다.<sup>1</sup>
-    그 중에서도 노란색은 "발랄한" "쾌활한" "생기를 주는"<sup>2</sup> "장난스러운"<sup>3</sup>과 같은 감정을 불러일으킨다. 또한 '색'은 연결되는 사물에 따라 그 선호도가 달라지는데, 예를들어 파란색은 하늘, 바다와 연결됐을 때에는 선호도가 높아지지만 음식, 사람과 연결될 경우 선호도가 낮아진다.
+    그 중에서도 노란색은 '발랄한' '쾌활한' '생기를 주는'<sup>2</sup> '장난스러운'<sup>3</sup>과 같은 감정 및 분위기를 불러일으킨다. 이러한 기존 연구에 기반하여 본 어플은 사용자들이 아침을 맞는 순간에 쾌활하며 생기있는 분위기를 느낄 수 있도록 노란색을 메인색상으로 사용하였다.
+
  <br/>
 
     1. D'ANDRADE, R., & Egan, M. (1974). The colors of emotion 1. American ethnologist, 1(1), 49-63.
     2. Odbert, H. S., Karwoski, T. F., & Eckerson, A. B. (1942). Studies in synesthetic thinking: I. Musical and verbal associations of color and mood. The journal of general psychology, 26(1), 153-173.
     3. Kaya, N., & Epps, H. H. (2004). Relationship between color and emotion: A study of college students. College student journal, 38(3), 396-405
-    4. Seckler, M., Opwis, K., & Tuch, A. N. (2015). Linking objective design factors with subjective aesthetics: An experimental study on how structure and color of websites affect the facets of users’ visual aesthetic perception. Computers in Human Behavior, 49, 375-389. 
 <br/>
 
 - ##### 잠깨우기 기능 : 수열 규칙찾기, 핸드폰 흔들어 공넣기, 문장 따라쓰기**<br/><br/>
