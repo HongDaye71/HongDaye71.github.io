@@ -11,9 +11,7 @@ tags:   [Service Planning, Design, Figma]
 - ##### 어플명 : 하루시작, 알림이 <br/>
 - ##### 메인색상 : Yellow <br/><br/>
     The colors of emotion에 따르면 '색'은 그것을 보는 사람들로 하여금 특정 감정을 유도하는 효과가 있다.<sup>1</sup>
-    그 중에서도 노란색은 '발랄한' '쾌활한' '생기를 주는'<sup>2</sup> '장난스러운'<sup>3</sup>과 같은 감정 및 분위기를 불러일으킨다. 이러한 기존 연구에 기반하여 본 어플은 사용자들이 아침을 맞는 순간에 쾌활하며 생기있는 분위기를 느낄 수 있도록 노란색을 메인색상으로 UI를 디자인하였다.
-
- <br/>
+    그 중에서도 노란색은 '발랄한' '쾌활한' '생기를 주는'<sup>2</sup> '장난스러운'<sup>3</sup>과 같은 감정 및 분위기를 불러일으킨다. 이러한 기존 연구에 기반하여 본 어플은 사용자들이 아침을 맞는 순간에 쾌활하며 생기있는 분위기를 느낄 수 있도록 노란색을 메인색상으로 UI를 디자인하였다.<br/>
 
     1. D'ANDRADE, R., & Egan, M. (1974). The colors of emotion 1. American ethnologist, 1(1), 49-63.
     2. Odbert, H. S., Karwoski, T. F., & Eckerson, A. B. (1942). Studies in synesthetic thinking: I. Musical and verbal associations of color and mood. The journal of general psychology, 26(1), 153-173.
