@@ -2,9 +2,23 @@
 layout: post
 title:  03_알람어플_UI UX Design
 date:   2022-01-15 15:01:35 +0300
-image:  '/images/fNIRS_01.jpg'
-tags:   [Service Planning]
+image:  '/images/AlramApp_Design.jpg'
+tags:   [Service Planning, Design, Figma]
 ---
+
+
+<!--작업물 영상!-->
+<p><iframe src="https://www.youtube.com/embed/RpW-rzw1kx8" frameborder="0" allowfullscreen></iframe></p>
+<!--작업물 세부 이미지!-->
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/AlramApp/04.JPG" alt="Project">
+    <img src="/images/Posting/AlramApp/03.JPG" alt="Project">
+    <img src="/images/Posting/AlramApp/.JPG" alt="Project">
+  </div>
+  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
+</div>
+
 
 ## 어플명 : 하루시작, 알라미
 ## 메인컬러 : Yellow
@@ -20,19 +34,6 @@ tags:   [Service Planning]
 1. [시장조사 포스팅 (인기 알람어플 중 사용자평가가 높은 기능확인)](https://hongdaye71.github.io/blog/alram-mobile-app-research)
 2. [기능평가 포스팅 (수열 규칙찾기 / 핸드폰 흔들어 공넣기 기능의 효과확인)](https://hongdaye71.github.io/blog/alram-mobile-app-serviceplanning)
 3. [fNIRS 장비설명](https://hongdaye71.github.io/blog/fnirs)
-
-
-<!--작업물 영상!-->
-<p><iframe src="https://www.youtube.com/embed/RpW-rzw1kx8" frameborder="0" allowfullscreen></iframe></p>
-<!--작업물 세부 이미지!-->
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/Figma/Study05/01.png" alt="Project">
-    <img src="/images/Posting/Figma/Study05/02.png" alt="Project">
-    <img src="/images/Posting/Figma/Study05/03.png" alt="Project">
-  </div>
-  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div>
 
 
 <!--
