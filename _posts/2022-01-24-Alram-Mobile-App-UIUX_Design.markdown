@@ -6,8 +6,10 @@ image:  '/images/AlramApp_Design.JPG'
 tags:   [Service Planning, Design, Figma]
 ---
 
+<br/>
+
 - **어플명 : 하루시작, 알림이** <br/>
-- **메인컬러 : Yellow** <br/>
+- **메인컬러 : Yellow** <br/><br/>
     The colors of emotion에 따르면 '색'은 그것을 보는 사람들로 하여금 특정 감정을 유도하는 효과가 있다. 
     그 중에서도 노란색은 "발랄한" "쾌활한" "생기를 주는" "장난스러운"과 같은 감정을 불러일으키는데
  <br/>
@@ -16,7 +18,7 @@ tags:   [Service Planning, Design, Figma]
     * Odbert, H. S., Karwoski, T. F., & Eckerson, A. B. (1942). Studies in synesthetic thinking: I. Musical and verbal associations of color and mood. The journal of general psychology, 26(1), 153-173.
     * Kaya, N., & Epps, H. H. (2004). Relationship between color and emotion: A study of college students. College student journal, 38(3), 396-405.
 
-- **잠깨우기 기능 : 수열 규칙찾기, 핸드폰 흔들어 공넣기, 문장 따라쓰기**<br/>
+- **잠깨우기 기능 : 수열 규칙찾기, 핸드폰 흔들어 공넣기, 문장 따라쓰기**<br/><br/>
     2022년 구글플레이스토어 기준, Top5 알람어플에서 높은 사용자 평가를 보인 잠깨우기 기능은 '수학계산'과 '핸드폰 흔들기'이다. 본 어플에서는 ~~ 하기 위해 아래와 같은 가설을 세웠고 fNIRS장비를 통해<br/>
     
     * [시장조사 포스팅 바로가기](https://hongdaye71.github.io/blog/alram-mobile-app-research)
