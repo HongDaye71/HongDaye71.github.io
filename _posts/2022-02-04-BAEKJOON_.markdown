@@ -19,15 +19,34 @@ tags:   [BAEKJOON]
 출력 : <br/>
 각 테스트 케이스마다 류재명이 있을 수 있는 위치의 수를 출력한다. 만약 류재명이 있을 수 있는 위치의 개수가 무한대일 경우에는 -1을 출력한다.<br/>
 
-```python
-A,B = input().split() 
-#입력되는 문자를 input()함수로 받고, split()함수로 문자를 나누어 A,B변수에 저장
 
-print(int(A) + int(B))
+```python
+
 ```
+
 문제풀이 : <br/>
 해당 문제는 원과 원의 접점의 개수를 구하면 되는 문제이다.
 x와 y는 원의 중심위치, r은 원의 반지름이 될 수 있다.
 <img src="/images/Posting/BaekJoon/1002_01.png" alt="Project">
+
+따라서 원의 중심좌표(x,y) 두 쌍이 주어졌을 때, 두 좌표 사이의 거리를 구하고 두 원의 위치관계를 확인해야 한다.<br/>
+
+두 좌표 사이의 거리를 구하는 공식 : sqrt((x1-x2)^2 + (y1-y2)^2)<br/>
+
+위치관계와 접접의 개수 :<br/>
+
+1. 만나지 않는 경우 (접점이 0인 경우)<br/>
+<img src="/images/Posting/BaekJoon/1002_02.png" alt="Project"><br/>
+
+2. 한 점에서 만나는 경우 (접점이 1개인 경우)<br/>
+<img src="/images/Posting/BaekJoon/1002_03.png" alt="Project"><br/>
+
+3. 두 점에서 만나는 경우 (접점이 2개인 경우)<br/>
+<img src="/images/Posting/BaekJoon/1002_04.png" alt="Project"><br/>
+
+4. 두 원이 겹치는 경우 (접점이 무수히 많은 경우)<br/>
+<img src="/images/Posting/BaekJoon/1002_05.png" alt="Project"><br/>
+
+
 
 
