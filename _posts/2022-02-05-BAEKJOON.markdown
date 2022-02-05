@@ -2,7 +2,7 @@
 layout: post
 title:  [BAEKHJOON/Python] 1000-1001번
 date:   2022-01-15 15:01:35 +0300
-image:  '/images/AlramApp_Design.JPG'
+image:  '/images/BaekJoon.png'
 tags:   [BAEKJOON]
 ---
 
