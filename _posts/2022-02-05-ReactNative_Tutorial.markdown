@@ -3,7 +3,7 @@ layout: post
 title:  React Native Study 01
 date:   2022-02-04 15:01:35 +0300
 image:  '/images/ReactNative.png'
-tags:   [React Native]
+tags:   [React Native, App Development]
 ---
 
 ## Contents <br/>
@@ -40,10 +40,9 @@ ___
         (2) 
 
             ```
-            $ node -v #설치여부 확인
+            node -v #설치여부 확인
 
             ``` 
-        <br/>
 
         * Node.js : V8엔진으로 빌드된 JavaScript런타임<br/>
             * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/>
@@ -56,16 +55,25 @@ ___
     3. 프로제트 실행<br/>
         (1) 프로젝트 설치경로 지정 : 
 
-            ```python
+            ```
             dir #현재경로 확인
-            cd foldername #경로지정
+            cd Expo #경로지정
 
             ``` 
-        (2) 프로젝트 생성 : 
+
+        (2) 프로젝트 생성 및 실행 : 
             
-            ```python
-            pip init filename
+            ```
+            pip init expoTest
+            #프로젝트 폴더 생성
+            #이후 blank, blank(TypeScript), tabs 을 선택하라는 화면이 뜨면 택1 (본인은 blank선택)
+
+            cd expoTest 
+            npm strart
+            #프로젝트 폴더에 들어간 뒤 실행
 
             ``` 
+        (3) 
+
         
             
