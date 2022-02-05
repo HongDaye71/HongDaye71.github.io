@@ -23,7 +23,30 @@ tags:   [BAEKJOON]
 
 
 ```python
+import math
 
+T = int(input()) 
+#테스트케이스 개수(좌표 및 거리를 통해 류재명이 있을 수 있는 좌표의 수를 출력하는 테스트를 몇 번 반복할 것인지)
+
+for i in range(T) : #테스트케이스 개수만큼 for문 반복
+    x1, y1, r1, x2, y2, r2 = map(int, input().split()) #map()합수 : 리스트의 요소를 지정된 함수로 처리
+    d = math.sqrt((x1-x2)**2 + (y1-y2)**2)
+    
+    if (d == 0) : 
+        if (r1 == r2) : #두 원이 같은경우, 접점이 무한함으로 -1 출력
+            print(-1)
+        else : #동심원인 경우
+            print(0)
+        continue 
+            
+    if (d > r1+r2 or d!=0 and r1 > d+r2 or d!=0 and r2 > d+r1) : #두 원이 만나지 않는 경우거나 작은 원이 큰 원 내부에 포함된 경우
+        print(0)
+            
+    elif (d == r1+r2 or d!=0 and r1 == r2+d or d!=0 and r2 == r1+d) : #외접하거나 내접할 때
+        print(1)
+        
+    else : #두 점에서 만나는 경우
+        print(2)
 ```
 <br/>
 
