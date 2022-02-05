@@ -1,14 +1,39 @@
 ---
 layout: post
-title:  [BAEKHJOON/Python] 1000번
+title:  [BAEKHJOON/Python] 1000-1001번
 date:   2022-01-15 15:01:35 +0300
 image:  '/images/AlramApp_Design.JPG'
 tags:   [BAEKJOON]
 ---
 
-BAEKJOON_1000 [Python Algorithm]
+BAEKJOON_1000 [Python Algorithm] <br/>
 
+문제 : 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오<br/>
+입력 : 첫째 줄에 A와 B가 주어진다<br/>
+출력 : 첫째 줄에 A+B를 출력한다<br/>
 
 ```python
+A,B = input().split() 
+#입력되는 문자를 input()함수로 받고, split()함수로 문자를 나누어 A,B변수에 저장
 
+print(int(A) + int(B))
 ```
+
+___
+
+BAEKJOON_1001 [Python Algorithm]
+
+문제 : 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
+입력 : 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
+출력 : 첫째 줄에 A-B를 출력한다.
+
+```python
+A,B = input().split()
+#입력되는 문자를 input()함수로 받고, split()함수로 문자를 나누어 A,B변수에 저장
+
+print(int(A)-int(B))
+```
+
+___
+
+BAEKJOON_1000 [Python Algorithm]
