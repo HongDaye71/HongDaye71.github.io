@@ -37,21 +37,18 @@ ___
 
     1. Node.js 설치<br/>
         (1) [사이트 접속 후 LTS Ver Download](https://nodejs.org/en/)<br/>
-        (2) 
-
-            ```
-            node -v #설치여부 확인
-
-            ``` 
+        (2) node -v (설치여부 확인)<br/>
 
         * Node.js : V8엔진으로 빌드된 JavaScript런타임<br/>
             * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/>
 
+
     2. Expo설치 <br/>
         (1) npm install -g expo-cli<br/>
 
-        * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저
-            
+        * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/>
+
+
     3. 프로제트 실행<br/>
         (1) 프로젝트 설치경로 지정 : 
 
