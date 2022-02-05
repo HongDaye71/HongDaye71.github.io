@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  백준/Python/1000-1001번
-date:   2022-02-04 15:01:35 +0300
+date:   2022-02-03 15:01:35 +0300
 image:  '/images/BaekJoon.jpg'
 tags:   [BAEKJOON]
 ---
