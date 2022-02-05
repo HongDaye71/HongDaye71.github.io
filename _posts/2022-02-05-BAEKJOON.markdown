@@ -25,4 +25,7 @@ A,B = input().split()
 
 print(int(A) + int(B))
 ```
-
+문제풀이 : <br/>
+해당 문제는 원과 원의 접점의 개수를 구하면 되는 문제이다.
+x와 y는 원의 중심위치, r은 원의 반지름이 될 수 있다.<br/>
+<img src="/images/Posting/BaekJoon/1002_01.png" alt="Project">
