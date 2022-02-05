@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  BAEKHJOON/Python/1000-1001번
-date:   2022-01-15 15:01:35 +0300
-image:  '/images/BaekJoon.png'
+date:   2022-02-5 15:01:35 +0300
+image:  '/images/BaekJoon.jpg'
 tags:   [BAEKJOON]
 ---
 
@@ -21,11 +21,11 @@ print(int(A) + int(B))
 
 ___
 
-BAEKJOON_1001 [Python Algorithm]
+BAEKJOON_1001 [Python Algorithm]<br/>
 
-문제 : 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
-입력 : 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
-출력 : 첫째 줄에 A-B를 출력한다.
+문제 : 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오<br/>
+입력 : 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)<br/>
+출력 : 첫째 줄에 A-B를 출력한다<br/>
 
 ```python
 A,B = input().split()
