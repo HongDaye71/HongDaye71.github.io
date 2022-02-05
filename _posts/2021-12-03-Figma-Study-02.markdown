@@ -12,7 +12,7 @@ tags:   [Design, Figma]
 3. Button Component생성 & Variants 기능<br/>
 4. 단축키 & 기타<br/>
 
-**Youtube 연정's Figma 채널의 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅 입니다**<br/>
+**연정's Figma 채널의 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅 입니다**<br/>
 **[연정's Figma 바로가기](https://www.youtube.com/c/%EC%97%B0%EC%A0%95sFigma)** 
 
 ___
