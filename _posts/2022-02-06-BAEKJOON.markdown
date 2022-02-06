@@ -26,11 +26,21 @@ ___
 
 **코드**
 ```python
+n,Jimin,Hansu = map(int, input().split())
 
+cnt = 0
+
+while Jimin!= Hansu :
+    Jimin -= Jimin//2
+    Hansu -= Hansu//2
+    cnt +=1
+    
+print(cnt)
 ```
 ___
 
 **문제풀이** <br/>
+각자가 받은 번호를 2로 나눈 뒤, 그 몫을 뺀 값이 서로 같아졌을 때가 둘이 대결하는 때 이다.
 <br/>
 
 
