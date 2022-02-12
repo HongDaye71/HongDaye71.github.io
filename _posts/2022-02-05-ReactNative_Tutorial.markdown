@@ -43,10 +43,12 @@ ___
             * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/>
 
 
+
     2. Expo설치 <br/>
         (1) npm install -g expo-cli<br/>
 
         * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/>
+
 
 
     3. 프로제트 실행<br/>
@@ -57,6 +59,7 @@ ___
             cd Expo #경로지정
 
             ``` 
+
 
         (2) 프로젝트 생성 및 실행 : 
             
@@ -70,7 +73,23 @@ ___
             #프로젝트 폴더에 들어간 뒤 실행
 
             ``` 
-        (3) 프
+    
+
+
+    4. 휴대폰으로 연결<br/>
+        (1) 휴대폰과 PC를 동일한 네트워크에 연결<br/>
+        (2) 휴대폰 내 Expo go 어플 설치 후 회원가입<br/>
+        (3) PC_Expo 좌측 하단에 QR코드 스캔하여 휴대폰으로 접속<br/>
+        (4) 위 과정까지 완료하면, 휴대폰 화면에서 "expo open up app.js to start working on you app"문구가 뜨는 것을 확인할 수 있다 (프로젝트 폴더 내 App.js파일의 Text시, 문구변경 가능)
+
+
+
+    5. 안드로이드 화면 가상실행<br/>
+        * 본인은 Iphone 사용자로 Android 화면은 가상으로 실행하여 확인
+
+        (1) [Android Studion Download](https://developer.android.com/studio?gclid=Cj0KCQiA0p2QBhDvARIsAACSOOMW9pVBHxCyXdLhzdMIvCRSPOleHFa4Wj3sUoD3zzRYkq4Ot4QOezcaAgZZEALw_wcB&gclsrc=aw.ds)<br/>
+        (2)
+
 
         
             
