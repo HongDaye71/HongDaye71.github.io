@@ -33,36 +33,29 @@ ___
 
 ## React Native설치<br/>
 - Expo CLI를 사용하여 설치<br/>
-    * Expo란 :  React Native사용 시에 개발,구축,배포 과정이 빠르게 진행될 수 있도록 도와주는 툴<br/>
+    * Expo :  React Native사용 시 개발,구축,배포 과정이 빠르게 진행될 수 있도록 도와주는 툴<br/>
 
     1. Node.js 설치<br/>
         (1) [사이트 접속 후 LTS Ver Download](https://nodejs.org/en/)<br/>
         (2) node -v (설치여부 확인)<br/>
 
         * Node.js : V8엔진으로 빌드된 JavaScript런타임<br/>
-            * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/>
-
-
+            * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/><br/>
 
     2. Expo설치 <br/>
         (1) npm install -g expo-cli<br/>
 
-        * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/>
-
-
+        * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/><br/>
 
     3. 프로제트 실행<br/>
         (1) 프로젝트 설치경로 지정 : 
-
             ```
             dir #현재경로 확인
             cd Expo #경로지정
 
             ``` 
 
-
         (2) 프로젝트 생성 및 실행 : 
-            
             ```
             pip init expoTest
             #프로젝트 폴더 생성
@@ -73,15 +66,12 @@ ___
             #프로젝트 폴더에 들어간 뒤 실행
 
             ``` 
+    <br/><br/>
     
-
-
     4. 휴대폰으로 연결<br/>
         (1) 휴대폰과 PC를 동일한 네트워크에 연결<br/>
         (2) 휴대폰 내 Expo go 어플 설치 후 회원가입<br/>
-        (3) PC_Expo 좌측 하단에 QR코드 스캔하여 휴대폰으로 접속<br/>
-        (4) 위 과정까지 완료하면, 휴대폰 화면에서 "expo open up app.js to start working on you app"문구가 뜨는 것을 확인할 수 있다 (프로젝트 폴더 내 App.js파일의 Text시, 문구변경 가능)
-
+        (3) PC_Expo 좌측 하단에 QR코드 스캔하여 휴대폰으로 접속<br/><br/>
 
 
     5. 안드로이드 화면 가상실행<br/>
