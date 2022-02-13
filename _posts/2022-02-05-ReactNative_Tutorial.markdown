@@ -26,80 +26,86 @@ ___
 ## React Native환경세팅<br/>
 - 본 포스팅에서는 React Native CLI대신 Expo를 사용 <br/>
 
-    ### 1. Node.js 설치<br/>
-    (1) [사이트 접속 후 LTS Ver Download](https://nodejs.org/en/)<br/>
-    (2) node -v (cmd에 입력하여 설치여부 확인)<br/>
+### 1. Node.js 설치<br/>
+(1) [사이트 접속 후 LTS Ver Download](https://nodejs.org/en/)<br/>
+(2) node -v (cmd에 입력하여 설치여부 확인)<br/>
 
-    * Expo : React Native사용 시 개발,구축,배포가 빠르게 진행될 수 있도록 도와주는 툴<br/>
-    * Node.js : V8엔진으로 빌드된 JavaScript런타임<br/>
-    * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/><br/>
+* Expo : React Native사용 시 개발,구축,배포가 빠르게 진행될 수 있도록 도와주는 툴<br/>
+* Node.js : V8엔진으로 빌드된 JavaScript런타임<br/>
+* (런타임 : 프로그래밍 언어가 구동되는 환경)<br/><br/>
 
-    ### Expo설치 <br/>
+### Expo설치 <br/>
 
-    ```
-    npm install -g expo-cli
-    ```
+```
+npm install -g expo-cli
+```
 
-    * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/><br/>
+* NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/><br/>
     
-    ### Visual Studio Code내 Extension설치(아래항목 설치)<br/>
-    (1) React Native Tools (Debugging용)<br/>
-    (2) React-Native/React/Redux snippets for es6/es7 (코드 자동완성용)<br/>
-    (3) Prettier - Code formatter<br/>
-    (4) Material Icon Theme<br/><br/>
+### Visual Studio Code내 Extension설치(아래항목 설치)<br/>
+(1) React Native Tools (Debugging용)<br/>
+(2) React-Native/React/Redux snippets for es6/es7 (코드 자동완성용)<br/>
+(3) Prettier - Code formatter<br/>
+(4) Material Icon Theme<br/><br/>
 
-    ### 4. 프로제트 실행<br/>
-    (1) 프로젝트 설치경로 지정 : 
+### 4. 프로제트 실행<br/>
+(1) 프로젝트 설치경로 지정 : 
 
-    ```
-    dir #현재경로 확인
-    cd Expo #경로지정
-    ``` 
+```
+dir #현재경로 확인
+cd Expo #경로지정
+``` 
 
-    (2) 프로젝트 생성 및 실행 : 
+(2) 프로젝트 생성 및 실행 : 
         
-    ```
-    pip init expoTest
-    #프로젝트 폴더 생성
-    #이후 blank, blank(TypeScript), tabs 을 선택하라는 화면이 뜨면 택1 (본인은 blank선택)
+```
+pip init expoTest
+#프로젝트 폴더 생성
+#이후 blank, blank(TypeScript), tabs 을 선택하라는 화면이 뜨면 택1 (본인은 blank선택)
 
-    cd expoTest #프로젝트 폴더로 이동
-    code . #vscode로 expoTest폴더 열기
-    npm strart #Expo server열기
-    ``` 
-    <br/><br/>
+cd expoTest #프로젝트 폴더로 이동
+code . #vscode로 expoTest폴더 열기
+npm strart #Expo server열기
+``` 
+<br/><br/>
     
-    ### 5. 휴대폰으로 연결<br/>
-    (1) 휴대폰과 PC를 동일한 네트워크에 연결<br/>
-    (2) 휴대폰 내 Expo go 어플 설치 후 회원가입<br/>
-    (3) PC_Expo 좌측 하단에 QR코드 스캔하여 휴대폰으로 접속<br/><br/>
+### 5. 휴대폰으로 연결<br/>
+(1) 휴대폰과 PC를 동일한 네트워크에 연결<br/>
+(2) 휴대폰 내 Expo go 어플 설치 후 회원가입<br/>
+(3) PC_Expo 좌측 하단에 QR코드 스캔하여 휴대폰으로 접속<br/><br/>
 
 
-    ### 6. 안드로이드 화면 가상실행<br/>
-    * 본인은 Iphone 사용자로 Android 화면은 가상으로 실행하여 확인<br/>
+### 6. 안드로이드 화면 가상실행<br/>
+* 본인은 Iphone 사용자로 Android 화면은 가상으로 실행하여 확인<br/>
 
-    (1) [Android Studion Download](https://developer.android.com/studio?gclid=Cj0KCQiA0p2QBhDvARIsAACSOOMW9pVBHxCyXdLhzdMIvCRSPOleHFa4Wj3sUoD3zzRYkq4Ot4QOezcaAgZZEALw_wcB&gclsrc=aw.ds)<br/>
-    (2) SDK Platforms Setting : <br/>
-        SDK Manager - SDK Platforms에서 원하는 버전 다운로드<br/>
-    (3) SDK Tools Setting: <br/>
-        SDK Manager - SDK Tools에서아래항목 다운로드<br/>
-        - Android SDK Build-Tools 33 rc1<br/>
-        - Android Emulator<br/>
-        - Android SDK Platform-Tools<br/>
-        - Intel x86 Emulator Accelerator (HAXM installer) <br/>
-    (4) Device Manager - Create device : Emulator device선택<br/>
-    (5) Emulator device작동여부, Play버튼 클릭하여 확인<br/>
-    (6) 시스템 환경변수 설정 : <br/>
-        - ANDROID_HOME환경변수 추가 : <br/>
-            시스템 환경변수 편집 - 환경변수 - 사용자변수 - 새로만들기<br/>
-            변수이름 : ANDROID_HOME, 변수 값 : SDK 설치경로 (SDK Manager 상단에서 확인가능)<br/>
-        - platform-tools Path 추가 : <br/>
-            시스템 환경변수 편집 - 환경변수 - 사용자변수 - Path변수 편집 - 새로만들기<br/>
-            %ANDROID_HOME%\platform-tools<br/>
-    (7) cmd에 adb shell입력하여 Emulator연결확인<br/>
-    (8) Expo server에서 Run on Android device/emulator 클릭하여 정상작동 확인<br/>
+(1) [Android Studion Download](https://developer.android.com/studio?gclid=Cj0KCQiA0p2QBhDvARIsAACSOOMW9pVBHxCyXdLhzdMIvCRSPOleHFa4Wj3sUoD3zzRYkq4Ot4QOezcaAgZZEALw_wcB&gclsrc=aw.ds)<br/>
+
+(2) SDK Platforms Setting : <br/>
+    SDK Manager - SDK Platforms에서 원하는 버전 다운로드<br/>
+
+(3) SDK Tools Setting: <br/>
+    SDK Manager - SDK Tools에서아래항목 다운로드<br/>
+    - Android SDK Build-Tools 33 rc1<br/>
+    - Android Emulator<br/>
+    - Android SDK Platform-Tools<br/>
+    - Intel x86 Emulator Accelerator (HAXM installer) <br/>
+
+(4) Device Manager - Create device : Emulator device선택<br/>
+
+(5) Emulator device작동여부, Play버튼 클릭하여 확인<br/>
+
+(6) 시스템 환경변수 설정 : <br/>
+    - ANDROID_HOME환경변수 추가 : <br/>
+        시스템 환경변수 편집 - 환경변수 - 사용자변수 - 새로만들기<br/>
+        변수이름 : ANDROID_HOME, 변수 값 : SDK 설치경로 (SDK Manager 상단에서 확인가능)<br/>
+    - platform-tools Path 추가 : <br/>
+        시스템 환경변수 편집 - 환경변수 - 사용자변수 - Path변수 편집 - 새로만들기<br/>
+        %ANDROID_HOME%\platform-tools<br/>
+        
+(7) cmd에 adb shell입력하여 Emulator연결확인<br/>
+(8) Expo server에서 Run on Android device/emulator 클릭하여 정상작동 확인<br/>
     
-    <img src="/images/Posting/ReactNative/01.png" alt="Project"><br/>
+<img src="/images/Posting/ReactNative/01.png" alt="Project"><br/>
 
             
 
