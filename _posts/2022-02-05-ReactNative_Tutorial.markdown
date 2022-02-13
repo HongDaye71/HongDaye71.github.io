@@ -12,11 +12,11 @@ tags:   [React Native, App Development]
 3. 
 
 
-* 스피드잡의 채널의 리액트 네이티브 기본강좌 강의자료를 바탕으로 공부한 내용을 정리하는 포스팅입니다 (채널에서 언급되지 않은 내용이 일부 포함되어 있음)
+* Programming with Mosh 채널의 React Native Tutorial for Beginners 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다 (영상 내 언급되지 않은 내용이 일부 포함되어 있음)
 
-* [스피드잡스 유투브채널 바로가기](https://www.youtube.com/channel/UCoIGXCqf2U1dTetloCYF46Q)
+* [Programming with Mosh 유투브채널 바로가기](https://www.youtube.com/watch?v=0-S5a0eXPoc&t=790s)
 
-* [Tutorial Video](https://www.youtube.com/watch?v=Sr5UOR4llXY&list=PL60Uti4nULBN7EQYmgjksXJXnkufo0m-9)
+* [Tutorial Video](https://www.youtube.com/watch?v=0-S5a0eXPoc&t=790s)
 
 ___
 
@@ -37,13 +37,16 @@ ___
 
     1. Node.js 설치<br/>
         (1) [사이트 접속 후 LTS Ver Download](https://nodejs.org/en/)<br/>
-        (2) node -v (설치여부 확인)<br/>
+        (2) node -v (cmd에 입력하여 설치여부 확인)<br/>
 
         * Node.js : V8엔진으로 빌드된 JavaScript런타임<br/>
             * (런타임 : 프로그래밍 언어가 구동되는 환경)<br/><br/>
 
     2. Expo설치 <br/>
-        (1) npm install -g expo-cli<br/>
+
+        ```
+        npm install -g expo-cli
+        ```
 
         * NPM : Node Package Manager의 약자로, Node.js에서 사용 가능한 모듈을 패키지화 하여 모아놓고 개발자가 프로젝트에 사용하는 모듈을 편하게 install하고 관리할 수 있도록 돕는 패키지 매니저<br/><br/>
 
