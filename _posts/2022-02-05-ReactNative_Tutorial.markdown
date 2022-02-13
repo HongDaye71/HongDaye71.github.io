@@ -102,7 +102,8 @@ ___
                 시스템 환경변수 편집 - 환경변수 - 사용자변수 - Path변수 편집 - 새로만들기<br/>
                 %ANDROID_HOME%\platform-tools<br/>
         (7) cmd에 adb shell입력하여 Emulator연결확인<br/>
-        (8) Expo server에서 Run on Android device/emulator 클릭하여 정상작동 확인
+        (8) Expo server에서 Run on Android device/emulator 클릭하여 정상작동 확인<br/>
+        <img src="/images/Posting/ReactNative/01.png" alt="Project"><br/>
 
             
 
