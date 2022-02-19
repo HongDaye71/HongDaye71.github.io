@@ -37,7 +37,7 @@ export default function App() {
         <View style={styles.titles}>
           <Text style={styles.title}>Model S</Text>
           <Text style={styles.subtitle}>Starting at $69,420</Text>
-        </View>
+      </View>
       {/*<View></View> = Component를 Group으로 관리*/}
       {/*style={styles.__} = 스타일 지정(스타일은 하단에서 설정))*/}
         
@@ -154,7 +154,6 @@ const styles = StyleSheet.create({
 ___
 
 ## Create a separate component for CarItem<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/03.png" alt="Project">
 
 <div class="gallery-box">
   <div class="gallery">
@@ -162,18 +161,7 @@ ___
     <img src="/images/Posting/ReactNative/TeslaProject/05.png" alt="Project">
     <img src="/images/Posting/ReactNative/TeslaProject/06.png" alt="Project">
   </div>
-  <em>TeslaProjects / <a href="https://unsplash.com/" target="_blank"></a></em>
+  <em>App.js / index.js / style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
 </div>
 
 - Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 index & style file 별도생성<br/>
-
-<details>
-<summary>Source Code</summary>
-<div markdown="1">
-
-```javaScript
-
-```
-
-</div>
-</details>
