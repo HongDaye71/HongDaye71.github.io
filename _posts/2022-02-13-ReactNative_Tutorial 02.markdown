@@ -20,7 +20,7 @@ tags:   [React Native, App Development]
 ___
 
 ### Render the text<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project">
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width='80' height='80'>
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
 ___
 
 ### Render the Background Image<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project">
+<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width='80' height='80'>
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
@@ -145,6 +145,33 @@ const styles = StyleSheet.create({
     color:'#5c5e62'
   },
 });
+
+```
+
+</div>
+</details>
+
+___
+
+## Create a separate component for CarItem<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/03.png" alt="Project">
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project">
+    <img src="/images/Posting/ReactNative/TeslaProject/05.png" alt="Project">
+    <img src="/images/Posting/ReactNative/TeslaProject/06.png" alt="Project">
+  </div>
+  <em>TeslaProjects / <a href="https://unsplash.com/" target="_blank"></a></em>
+</div>
+
+- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 index & style file 별도생성<br/>
+
+
+```javaScript
 
 ```
 
