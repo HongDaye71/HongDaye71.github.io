@@ -21,11 +21,12 @@ tags:   [ProtoPie, LottieFiles]
 Monica Lim & Shannon Yu가 주최한 ProtoPie 프로토타입에 Lottie 애니메이션으로 모션 더하기 웨비나의 내용을 정리하는 포스팅입니다.
 
 * [웨비나 다시보기](https://www.youtube.com/watch?v=lkcqnQPYsNA)
-
+* [ProtoPie Site](https://www.protopie.io/)
+ 
 ___
 
 ## ProtoPie와 LottieFiles란?<br/>
-- ProtoPie : 디자인 아이디어를 실제 프로토타입으로 쉽게 구현할 수 있는 프로토타이필 툴<br/>
+- ProtoPie : 디자인 아이디어를 실제 프로토타입으로 쉽게 구현할 수 있는 프로토타이필 툴(High Fidelity Tool로 다양한 Interaction가능)<br/>
 - ProtoPie Studio : macOS 및 Windows에서 실제로 프로토타입을 제작할 수 있는 프로그램<br/>
 - ProtoPie Player : iOS, iPadOS, Android 등 모바일 및 태블릿 기기에서 프로토타입 확인<br/>
 - ProtoPie Cloud : 프로토타입 저장 및 공유 등 협업<br/>
