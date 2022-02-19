@@ -2,7 +2,7 @@
 layout: post
 title:  ProtoPie Tutorial 01
 date:   2022-02-19 15:01:35 +0300
-image:  '/images/ProtoPie_LottieFiles_Webinar.png'
+image:  '/images/ProtoPie.png'
 tags:   [ProtoPie]
 ---
 
