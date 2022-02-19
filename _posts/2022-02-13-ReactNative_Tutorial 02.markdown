@@ -20,12 +20,12 @@ tags:   [React Native, App Development]
 ___
 
 ### Render the text<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project">
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
 
-```javascript
+```javaScript
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
