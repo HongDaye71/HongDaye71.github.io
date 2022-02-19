@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  React Native Study 01
+title:  React Native Study 01_환경세팅
 date:   2022-02-04 15:01:35 +0300
 image:  '/images/ReactNative.png'
 tags:   [React Native, App Development]

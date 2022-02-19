@@ -6,7 +6,7 @@ image:  '/images/ReactNative_TeslaProject.png'
 tags:   [React Native, App Development]
 ---
 
-# Project : React Native를 활용한 TESLA Mobile App제작
+# React Native를 활용한 TESLA Mobile App제작
 
 ## Contents <br/>
 1. Render the text<br/>
@@ -21,6 +21,73 @@ ___
 
 ### Render the text<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project">
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+```javaScript
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+
+      <View style={styles.carContainer}>  
+        <View style={styles.titles}>
+          <Text style={styles.title}>Model S</Text>
+          <Text style={styles.subtitle}>Starting at $69,420</Text>
+        </View>
+      {/*<View></View> = Component를 Group으로 관리*/}
+      {/*style={styles.__} = 스타일 지정(스타일은 하단에서 설정))*/}
+        
+
+      </View>
+
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  carContainer:{
+    width:'100%',
+    height:'100%',
+  },
+
+  titles:{
+    marginTop:'30%',
+    width:'100%',
+    alignItems:'center'
+  },
+
+  title:{
+    fontSize:40,
+    fontWeight:'500',
+  },
+
+  subtitle:{
+    fontSize:16,
+    color:'#5c5e62'
+  },
+});
+
+```
+
+</div>
+</details>
+
+___
+
+### Render the Background Image<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
