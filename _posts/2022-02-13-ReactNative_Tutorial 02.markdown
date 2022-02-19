@@ -2,7 +2,7 @@
 layout: post
 title:  React Native Study02_TESLA Mobile App제작
 date:   2022-02-13 15:01:35 +0300
-image:  '/images/ReactNative.png'
+image:  '/images/ReactNative_TeslaProject.png'
 tags:   [React Native, App Development]
 ---
 
