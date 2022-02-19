@@ -29,7 +29,13 @@ ___
 ___
 
 ## 핵심개념 알아보기(Object, Trigger, Response)<br/>
+- Object : 트리거의 대상이 되는 물체<br/>
+- Trigger : 탭이나 드래그, 스크롤과 같은 행동<br/>
+- Response : 트리거에 대한 반응<br/>
 
+<img src="/images/Posting/ProtoPie/02.png" alt="Project">
+<!--영상!-->
+<p><iframe src="https://www.youtube.com/embed/IrNxNjeEHyA" frameborder="0" allowfullscreen></iframe></p>
 ___
 
 
