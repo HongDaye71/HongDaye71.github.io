@@ -20,12 +20,12 @@ tags:   [React Native, App Development]
 ___
 
 ### Render the text<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width='80' height='80'>
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width='95' height='95'>
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
 
-```javaScript
+```javascript
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -87,12 +87,12 @@ const styles = StyleSheet.create({
 ___
 
 ### Render the Background Image<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width='80' height='80'>
+<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width='95' height='95'>
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
 
-```javaScript
+```javascript
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
