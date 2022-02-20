@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
 
 ___
 
-### 2.2 Button Component(Render the Background Image)<br/>
+### 2.2 Button Component(Receive props)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/07.png" alt="Project" width="95" height="95">
 
 <div class="gallery-box">
@@ -492,7 +492,7 @@ export default styles;
 
 ___
 
-## 2.2 Button Component(Recieve Props)<br/>
+## 2.3 Button Component(Style The Button based on 'type' prop)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="95" height="95">
 
 - Props : Component간 데이터 공유를 위해 사용되는 객체<br/>
