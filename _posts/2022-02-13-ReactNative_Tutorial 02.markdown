@@ -32,7 +32,6 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-
       <View style={styles.carContainer}>  
         <View style={styles.titles}>
           <Text style={styles.title}>Model S</Text>
@@ -40,8 +39,6 @@ export default function App() {
       </View>
       {/*<View></View> = Component를 Group으로 관리*/}
       {/*style={styles.__} = 스타일 지정(스타일은 하단에서 설정))*/}
-        
-
       </View>
 
       <StatusBar style="auto" />
@@ -100,15 +97,16 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.carContainer}>  
+      <View style={styles.carContainer}>
+        <ImageBackground
+          source={require('../assets/images/ModelX.jpeg')}
+          style={styles.image}
+        />
+        
         <View style={styles.titles}>
           <Text style={styles.title}>Model S</Text>
-          <Text style={styles.subtitle}>Starting at $69,420</Text>
+          <Text style={styles.subtitle}>Starting at $69.428</Text>
         </View>
-      {/*<View></View> = Component를 Group으로 관리*/}
-      {/*style={styles.__} = 스타일 지정(스타일은 하단에서 설정))*/}
-        
-
       </View>
 
       <StatusBar style="auto" />
@@ -144,10 +142,16 @@ const styles = StyleSheet.create({
     fontSize:16,
     color:'#5c5e62'
   },
+
+  image : {
+    width:'100%',
+    height:'100%',
+    resizeMode:'cover',
+    position:'absolute',
+  }
 });
 
 ```
-
 </div>
 </details>
 
@@ -164,4 +168,4 @@ ___
   <em>App.js / index.js / style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
 </div>
 
-- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 index & style file 별도생성<br/>
+- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 index & style file 별도생성하여 App.js Script에서 사용<br/>
