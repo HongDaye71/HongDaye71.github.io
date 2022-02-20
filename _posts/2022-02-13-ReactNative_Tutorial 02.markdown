@@ -21,6 +21,7 @@ tags:   [React Native, App Development]
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
 * [Programming with Mosh 유투브채널 바로가기](https://www.youtube.com/channel/UCYSa_YLoJokZAwHhlwJntIA) <br/>
 * [Tutorial Video](https://www.youtube.com/watch?v=iQ_0Fd_N3Mk)<br/>
+* *작업단계 별 부연설명은 Source Code내 주석으로 작성*
 
 ___
 
@@ -432,20 +433,10 @@ ___
     <img src="/images/Posting/ReactNative/TeslaProject/08.png" alt="Project">
     <img src="/images/Posting/ReactNative/TeslaProject/09.png" alt="Project">
   </div>
-  <em>App.js / StyleButton_index.js / StyleButton_style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
+  <em>CarItem_index.js / StyleButton_index.js / StyleButton_style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
 </div>
 
-<details>
-<summary>App.js Source Code</summary>
-<div markdown="1">
-
-- StyleButton Folder 생성 후 index & style file 별도 작성하여 App.js에서 사용<br/>
-
-```javascript
-
-```
-</div>
-</details>
+- StyleButton Folder 생성 후 index & style file 별도 작성하여 CarItem_index.js에서 사용<br/>
 
 <details>
 <summary>CarItem_index.js Source Code</summary>
@@ -458,7 +449,7 @@ ___
 </details>
 
 <details>
-<summary>CarItem_styles.js Source Code</summary>
+<summary>StyleButton Folder_index.js Source Code</summary>
 <div markdown="1">
 
 ```javascript
@@ -467,8 +458,126 @@ ___
 </div>
 </details>
 
+<details>
+<summary>StyleButton Folder_styles.js Source Code</summary>
+<div markdown="1">
+
+```javascript
+import {StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+    container: {
+        width:'100%',
+        padding:10,
+    },
+
+    button: {
+        height:40,
+        borderRadius:20, /*Button radius설정*/
+        justifyContent : 'center', /*vertical기준 : Text Center*/
+        alignItems :'center', /*Horizontal기준 : Text Center*/
+    },
+
+    text: {
+        fontSize:12,
+        fontWeight:'500',
+        textTransform:'uppercase', /*대문자 세팅*/
+    }
+});
+
+export default styles;
+```
+</div>
+</details>
+
 ___
 
 ## 2.2 Button Component(Recieve Props)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/11.png" alt="Project" width="95" height="95">
+<img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="95" height="95">
+
 - Props : Component간 데이터 공유를 위해 사용되는 객체<br/>
+- Button Background의 경우, 두 개 버튼의 색상이 다르기 때문에 Style.js에서 지정하지 않고 Props를 통해 별도지정(StyleButton Folder_index.js에서 Type에 따른 Style설정 후 CarItem Folder_index.js에서 type,content,onPress등 설정)<br/>
+
+<details>
+<summary>CarItem_index.js Source Code</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Text, ImageBackground} from 'react-native';
+import StyleButton  from '../StyleButton';
+import styles from './styles'
+
+const CarItem = (props) => {
+    return (
+        <View style={styles.carContainer}>
+            <ImageBackground
+                source={require('../assets/images/ModelX.jpeg')}
+                style={styles.image}
+            />
+        
+            <View style={styles.titles}>
+                <Text style={styles.title}>Model S</Text>
+                <Text style={styles.subtitle}>Starting at $69.428</Text>
+            </View>
+
+            <StyleButton 
+                type='primary' 
+                content={"Custom Order"} 
+                onPress={()=>{
+                    console.warn("Custom Order was pressed")
+                }}
+            />
+            {/*Parameter : Type, Content, onPress시 출력 될 텍스트*/}
+            <StyleButton 
+                type='secondary' 
+                content={"Existing Inventory"} 
+                onPress={()=>{
+                    console.warn("Existing Inventory was pressed")
+                }}
+            />
+        </View>
+    );
+};
+
+export default CarItem;
+```
+</div>
+</details>
+
+<details>
+<summary>StyleButton Folder_index.js Source Code</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Text, Pressable} from 'react-native';
+import styles from './styles';
+
+const StyleButton = (props) => {
+
+    const {type, content, onPress} = props;
+    {/*type, contet, onPress : CarItem_index.js에서 별도지정될 수 있도록 선언*/}
+
+    const backgroundColor = type === 'primary' ? '#171a20CC' : '#FFFFFFA6';
+    const textColor = type === 'primary' ? '#FFFFFFA6' : '#171a20CC';
+    /*Background Color, Text Color : CarItem_index.js에서 지정한 type에 따라 색상을 어떻게 설정할지 Setting*/
+
+    return (
+        <View style={styles.container}>
+            <Pressable
+                style={[styles.button, {backgroundColor : backgroundColor}]}
+                onPress={()=>onPress()}
+            >
+                <Text style={[styles.text, {color : textColor}]}>{content}</Text>
+            </Pressable>
+            {/*Background Color, Text Color, Content: 위에서 Setting한 type별 색상이 적용되도록 설정*/}
+        </View>
+    );
+};
+
+export default StyleButton;
+
+```
+</div>
+</details>
