@@ -283,81 +283,6 @@ export default CarItem;
 ___
 
 ## 2.1 Button Component(Create a separate component)<br/>
-
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project">
-    <img src="/images/Posting/ReactNative/TeslaProject/05.png" alt="Project">
-    <img src="/images/Posting/ReactNative/TeslaProject/06.png" alt="Project">
-  </div>
-  <em>App.js / CarItem_index.js / CarItem_style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
-</div>
-
-- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 CarItem Folder생성 후 index & style file 별도 작성하여 App.js에서 사용<br/>
-
-<details>
-<summary>Source Code</summary>
-<div markdown="1">
-
-```javascript
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.carContainer}>  
-        <View style={styles.titles}>
-          <Text style={styles.title}>Model S</Text>
-          <Text style={styles.subtitle}>Starting at $69,420</Text>
-      </View>
-      {/*<View></View> = Component를 Group으로 관리*/}
-      {/*style={styles.__} = 스타일 지정(스타일은 하단에서 설정))*/}
-      </View>
-
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  carContainer:{
-    width:'100%',
-    height:'100%',
-  },
-
-  titles:{
-    marginTop:'30%',
-    width:'100%',
-    alignItems:'center'
-  },
-
-  title:{
-    fontSize:40,
-    fontWeight:'500',
-  },
-
-  subtitle:{
-    fontSize:16,
-    color:'#5c5e62'
-  },
-});
-
-```
-
-</div>
-</details>
-
-___
-
-### 2.2 Button Component(Receive props)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/07.png" alt="Project" width="95" height="95">
 
 <div class="gallery-box">
@@ -421,6 +346,10 @@ export default styles;
 ```
 </div>
 </details>
+
+___
+
+## 2.2 Button Component(Receive props))<br/>
 
 ___
 
