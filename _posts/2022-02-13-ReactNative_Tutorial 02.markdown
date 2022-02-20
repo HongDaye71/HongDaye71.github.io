@@ -27,7 +27,7 @@ ___
 ___
 
 ### 1.1 Car Item Component (Render the text)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="50%" height="50%">
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
 ___
 
 ### 1.2 Car Item Component(Render the Background Image)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="95" height="95">
+<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="40%" height="40%">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
@@ -217,7 +217,6 @@ const styles = StyleSheet.create({
 ```javascript
 import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
-import StyleButton  from '../StyleButton';
 import styles from './styles'
 
 const CarItem = (props) => {
@@ -232,8 +231,6 @@ const CarItem = (props) => {
                 <Text style={styles.title}>Model S</Text>
                 <Text style={styles.subtitle}>Starting at $69.428</Text>
             </View>
-
-            <StyleButton/>
         </View>
     );
 };
@@ -288,7 +285,7 @@ export default CarItem;
 ___
 
 ## 2.1 Button Component(Create a separate component)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/07.png" alt="Project" width="95" height="95">
+<img src="/images/Posting/ReactNative/TeslaProject/07.png" alt="Project" width="40%" height="40%">
 
 <div class="gallery-box">
   <div class="gallery">
@@ -364,7 +361,7 @@ export default styles;
 ___
 
 ## 2.2 Button Component(Receive props / Style The Button based on 'type' prop)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="95" height="95">
+<img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="40%" height="40%">
 
 - Props : Component간 데이터 공유를 위해 사용되는 객체<br/>
 - Button Background의 경우, 두 개 버튼의 색상이 다르기 때문에 Style.js에서 지정하지 않고 Props를 통해 별도지정(StyleButton Folder_index.js에서 Type에 따른 Style설정 후 CarItem Folder_index.js에서 type,content,onPress등 설정)<br/>
