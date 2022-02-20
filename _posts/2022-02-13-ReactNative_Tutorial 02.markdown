@@ -176,6 +176,10 @@ ___
 
 - Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 Car_Item폴더생성 후 index & style file 별도작성하여 App.js Script에서 사용<br/>
 
+<details>
+<summary>App.js  Source Code</summary>
+<div markdown="1">
+
 ```javascript
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
