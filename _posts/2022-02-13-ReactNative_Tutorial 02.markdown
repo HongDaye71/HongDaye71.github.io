@@ -174,12 +174,7 @@ ___
   <em>App.js / index.js / style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
 </div>
 
-- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 index & style file 별도생성하여 App.js Script에서 사용<br/>
-
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="95" height="95">
-<details>
-<summary>App.js Source Code</summary>
-<div markdown="1">
+- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 Car_Item폴더생성 후 index & style file 별도작성하여 App.js Script에서 사용<br/>
 
 ```javascript
 import { StatusBar } from 'expo-status-bar';
