@@ -20,7 +20,7 @@ tags:   [React Native, App Development]
 ___
 
 ### Render the text<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project">
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="90%" height="90%">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
 ___
 
 ### Render the Background Image<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project">
+<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="90%" height="90%">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
