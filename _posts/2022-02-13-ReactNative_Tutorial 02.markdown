@@ -9,9 +9,14 @@ tags:   [React Native, App Development]
 # React Native를 활용한 TESLA Mobile App제작
 
 ## Contents <br/>
-1. Render the text<br/>
-2. Render the Background Image<br/>
-3. Create a separate component for CarItem<br/>
+1. Car Item Component<br/>
+  (1) Render the text<br/>
+  (2) Render the Background Image<br/>
+  (3) Create a separate component for CarItem<br/>
+2. Button Component<br/>
+  (1) Create separate Component<br/>
+  (2) Receive props<br/>
+  (3) Style The button based on 'type' prop<br/>
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
 * [Programming with Mosh 유투브채널 바로가기](https://www.youtube.com/channel/UCYSa_YLoJokZAwHhlwJntIA) <br/>
@@ -19,7 +24,7 @@ tags:   [React Native, App Development]
 
 ___
 
-### Render the text<br/>
+### 1.1 Car Item Component (Render the text)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="90%" height="90%">
 <details>
 <summary>Source Code</summary>
@@ -83,7 +88,7 @@ const styles = StyleSheet.create({
 
 ___
 
-### Render the Background Image<br/>
+### 1.2 Car Item Component(Render the Background Image)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="90%" height="90%">
 <details>
 <summary>Source Code</summary>
@@ -157,7 +162,7 @@ const styles = StyleSheet.create({
 
 ___
 
-## Create a separate component for CarItem<br/>
+## 1.3 Car Item Component(Create a separate component for CarItem)<br/>
 
 <div class="gallery-box">
   <div class="gallery">
@@ -169,3 +174,7 @@ ___
 </div>
 
 - Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 index & style file 별도생성하여 App.js Script에서 사용<br/>
+
+___
+
+## 2.1 Button Component(Create a separate component)<br/>
