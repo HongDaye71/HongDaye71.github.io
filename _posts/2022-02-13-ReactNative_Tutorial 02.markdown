@@ -25,7 +25,7 @@ tags:   [React Native, App Development]
 ___
 
 ### 1.1 Car Item Component (Render the text)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="95%" height="95%">
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="95" height="95">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
@@ -350,7 +350,6 @@ export default CarItem;
 ___
 
 ## 2.1 Button Component(Create a separate component)<br/>
-## 1.3 Car Item Component(Create a separate component for CarItem)<br/>
 
 <div class="gallery-box">
   <div class="gallery">
@@ -467,3 +466,9 @@ ___
 ```
 </div>
 </details>
+
+___
+
+## 2.2 Button Component(Recieve Props)<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/11.png" alt="Project" width="95" height="95">
+- Props : Component간 데이터 공유를 위해 사용되는 객체<br/>
