@@ -12,9 +12,9 @@ tags:   [React Native, App Development]
 1. Car Item Component<br/>
   (1) Render the text<br/>
   (2) Render the Background Image<br/>
-  (3) Create a separate component for CarItem<br/>
+  (3) Create a Separate component for CarItem<br/>
 2. Button Component<br/>
-  (1) Create separate Component<br/>
+  (1) Create Separate Component<br/>
   (2) Receive props<br/>
   (3) Style The button based on 'type' prop<br/>
 
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
 
 ___
 
-## 1.3 Car Item Component(Create a separate component for CarItem)<br/>
+## 1.3 Car Item Component(Create a Separate component for CarItem)<br/>
 
 <div class="gallery-box">
   <div class="gallery">
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
 
 ___
 
-### 1.2 Car Item Component(Render the Background Image)<br/>
+### 2.1 Button Component(Create Separate Component)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="95" height="95">
 <details>
 <summary>App.js Source Code</summary>
@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
 
 ___
 
-### 1.2 Car Item Component(Render the Background Image)<br/>
+### 2.2 Button Component(Render the Background Image)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/07.png" alt="Project" width="95" height="95">
 
 <div class="gallery-box">
