@@ -15,8 +15,7 @@ tags:   [React Native, App Development]
   (3) Create a Separate component for CarItem<br/>
 2. Button Component<br/>
   (1) Create Separate Component<br/>
-  (2) Receive props<br/>
-  (3) Style The button based on 'type' prop<br/>
+  (2) Receive props / Style The button based on 'type' prop<br/>
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
 * [Programming with Mosh 유투브채널 바로가기](https://www.youtube.com/channel/UCYSa_YLoJokZAwHhlwJntIA) <br/>
@@ -300,20 +299,29 @@ ___
 - StyleButton Folder 생성 후 index & style file 별도 작성하여 CarItem_index.js에서 사용<br/>
 
 <details>
-<summary>CarItem_index.js Source Code</summary>
-<div markdown="1">
-
-```javascript
-
-```
-</div>
-</details>
-
-<details>
 <summary>StyleButton Folder_index.js Source Code</summary>
 <div markdown="1">
 
 ```javascript
+import React from 'react';
+import {View, Text, Pressable} from 'react-native';
+import styles from './styles';
+
+const StyleButton = (props) => {
+
+    return (
+        <View style={styles.container}>
+            <Pressable
+                style={styles.button}
+                onPress={()=> console.warn ('Hey there')}
+            >
+                <Text style={styles.text}>Custom Order</Text>
+            </Pressable>
+        </View>
+    );
+};
+
+export default StyleButton;
 
 ```
 </div>
@@ -353,11 +361,7 @@ export default styles;
 
 ___
 
-## 2.2 Button Component(Receive props))<br/>
-
-___
-
-## 2.3 Button Component(Style The Button based on 'type' prop)<br/>
+## 2.2 Button Component(Receive props / Style The Button based on 'type' prop)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="95" height="95">
 
 - Props : Component간 데이터 공유를 위해 사용되는 객체<br/>
