@@ -27,7 +27,7 @@ ___
 ___
 
 ### 1.1 Car Item Component (Render the text)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="95" height="95">
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="50%" height="50%">
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
