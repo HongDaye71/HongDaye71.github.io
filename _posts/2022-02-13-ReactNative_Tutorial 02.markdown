@@ -29,6 +29,10 @@ ___
 
 ___
 
+## 결과물
+<p><iframe src="https://www.youtube.com/embed/qIG1yNURnQ8" frameborder="0" allowfullscreen></iframe></p>
+[Source Code Download]()
+
 ### 1.1 Car Item Component (Render the text)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
 <details>
@@ -621,7 +625,9 @@ ___
 ### 3.2 Finish Car Item Component (Implement props)<br/>
 <p><iframe src="https://www.youtube.com/embed/qIG1yNURnQ8" frameborder="0" allowfullscreen></iframe></p>
 
-- 
+- CarList Folder 생성 후 car & index & style file 별도 작성하여 App.js에서 사용<br/>
+  - car.js : 스크롤다운 시 나타날 4개 페이지 내 정보<br/>
+  - index.js : car.js 내 한 개의 정보가 CarItem_index.js양식으로 하나씩 랜더링 되도록 코드작성<br/>
 
 <details>
 <summary>CarItem_index.js</summary>
@@ -826,7 +832,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <CarsList />
-      {/*CarsList(스크롤링 시 나타날 3개 페이지 내 정보)*/}
+      {/*기존 CarItem_index.js에서 가져오던 정보를 CarsList_index/js에서 가져오도록 수정 (다수 페이지 생성을 위함)*/}
       <StatusBar style="auto" />
     </View>
   );
