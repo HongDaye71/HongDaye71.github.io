@@ -615,3 +615,8 @@ const styles = StyleSheet.create({
 ```
 </div>
 </details>
+
+___
+
+### 3.2 Finish Car Item Component (Implement props)<br/>
+<p><iframe src="https://youtube.com/shorts/XZgz4d_YhSE?feature=share" frameborder="0" allowfullscreen></iframe></p>
