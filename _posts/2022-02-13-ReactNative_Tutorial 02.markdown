@@ -458,7 +458,7 @@ ___
 ### 3.1 Finish Car Item Component (Use buttons)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="40%" height="40%">
 - 버튼 위치조정 (Style지정 후 CarItem_style.js에서 위치조정)
-- CarItem_index.js : name(MainText), tagline(BodyText), image(Background Image)에 props적용 (App Scrolling시, 화면이동 작업을 용이하게 하기위함)
+- CarItem_index.js의 name, tagline, image 요소에 props적용 (앱 스크롤링 시, 화면이동 작업을 용이하게 하기위함)
 
 <details>
 <summary>CarItem_index.js</summary>
