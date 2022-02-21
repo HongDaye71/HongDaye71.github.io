@@ -16,6 +16,9 @@ tags:   [React Native, App Development]
 2. Button Component<br/>
   (1) Create Separate Component<br/>
   (2) Receive props / Style The button based on 'type' prop<br/>
+3. Finish Car Item Component
+  (1) Use buttons
+  (2) Implement props 
 
 ___
 
@@ -445,6 +448,169 @@ const StyleButton = (props) => {
 };
 
 export default StyleButton;
+
+```
+</div>
+</details>
+
+___
+
+### 3.1 Finish Car Item Component (Use buttons)<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="40%" height="40%">
+- 버튼 위치조정 (Style지정 후 CarItem_style.js에서 위치조정)
+- CarItem_index.js : name(MainText), tagline(BodyText), image(Background Image)에 props적용 (App Scrolling시, 화면이동 작업을 용이하게 하기위함)
+
+<details>
+<summary>CarItem_index.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Text, ImageBackground} from 'react-native';
+import StyleButton  from '../StyleButton';
+import styles from './styles'
+
+const CarItem = (props) => {
+
+    const {name, tagline, taglineCTA, image} = props;
+    {/*name, tagline, image : App.js에서 별도 지정할 수 있도록 선언*/}
+
+    return (
+        <View style={styles.carContainer}>
+            {/*name, tagline, image : App.js에서 별도 지정할 수 있도록 설정*/}
+            <ImageBackground
+                source={image}
+                style={styles.image}
+            />
+        
+            <View style={styles.titles}>
+                <Text style={styles.title}>{name}</Text>
+                <Text style={styles.subtitle}>
+                    {tagline}&nbsp;
+                    <Text style={styles.subtitleCTA}>
+                        {/*Tochless Delivery 텍스트의 경우, 클릭 가능하도록 별도 스타일 지정*/}
+                        {taglineCTA}
+                    </Text>
+                    </Text>
+            </View>
+
+            <View style={styles.buttonsContainer}> 
+            {/*Button 위치조정을 위해 하나의 그룹으로 묶어준 뒤 style.js에서 작업*/}
+                <StyleButton 
+                    type='primary' 
+                    content={"Custom Order"} 
+                    onPress={()=>{
+                        console.warn("Custom Order was pressed")
+                    }}
+                />
+                <StyleButton 
+                    type='secondary' 
+                    content={"Existing Inventory"} 
+                    onPress={()=>{
+                        console.warn("Existing Inventory was pressed")
+                    }}
+                />
+            </View>
+        </View>
+    );
+};
+
+export default CarItem;
+
+```
+</div>
+</details>
+
+<details>
+<summary>CarItem_style.js</summary>
+<div markdown="1">
+
+```javascript
+ import {StyleSheet} from 'react-native';
+
+ const styles = StyleSheet.create({
+    carContainer:{
+        width:'100%',
+        height:'100%',
+      },
+    
+      titles:{
+        marginTop:'30%',
+        width:'100%',
+        alignItems:'center'
+      },
+    
+      title:{
+        fontSize:40,
+        fontWeight:'500',
+      },
+    
+      subtitle:{
+        fontSize:16,
+        color:'#5c5e62'
+      },
+
+      subtitleCTA:{
+        /*Tochless Delivery 텍스트의 경우, 클릭 가능하도록 별도 스타일 지정*/
+        textDecorationLine:'underline',
+      },
+      
+      image : {
+        width:'100%',
+        height:'100%',
+        resizeMode:'cover',
+        position:'absolute',
+      },
+
+      /*Button 위치조정*/
+      buttonsContainer: {
+        position: 'absolute',
+        bottom: 50,
+        width: '100%'
+      }
+ });
+
+ export default styles;
+```
+</div>
+</details>
+
+<details>
+<summary>App.js</summary>
+<div markdown="1">
+
+```javascript
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import CarItem from './CarItem'; 
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+
+      <CarItem 
+      name={"Model X"}
+      tagline={"Order Online For"}
+      taglineCTA={"Touchless Delivery"}
+      image={require('./assets/images/ModelX.jpeg')}
+      /> 
+      {/*CarItem_index.js에서 name, tagline, image는 별도 지정하는 것으로 수정하였으므로 해당 스크립트에서 별도지정*/}
+
+
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 ```
 </div>
