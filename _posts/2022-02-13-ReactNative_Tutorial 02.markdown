@@ -620,3 +620,228 @@ ___
 
 ### 3.2 Finish Car Item Component (Implement props)<br/>
 <p><iframe src="https://youtube.com/shorts/XZgz4d_YhSE?feature=share" frameborder="0" allowfullscreen></iframe></p>
+
+- 
+
+<details>
+<summary>CarItem_index.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Text, ImageBackground} from 'react-native';
+import StyleButton  from '../StyleButton';
+import styles from './styles'
+
+const CarItem = (props) => {
+
+    const {name, tagline, taglineCTA, image} = props.car;
+
+    return (
+        <View style={styles.carContainer}>
+            <ImageBackground
+                source={image}
+                style={styles.image}
+            />
+        
+            <View style={styles.titles}>
+                <Text style={styles.title}>{name}</Text>
+                <Text style={styles.subtitle}>
+                    {tagline}&nbsp;
+                    <Text style={styles.subtitleCTA}>
+                        {taglineCTA}
+                    </Text>
+                    </Text>
+            </View>
+
+            <View style={styles.buttonsContainer}> 
+
+                <StyleButton 
+                    type='primary' 
+                    content={"Custom Order"} 
+                    onPress={()=>{
+                        console.warn("Custom Order was pressed")
+                    }}
+                />
+                <StyleButton 
+                    type='secondary' 
+                    content={"Existing Inventory"} 
+                    onPress={()=>{
+                        console.warn("Existing Inventory was pressed")
+                    }}
+                />
+            </View>
+        </View>
+    );
+};
+
+export default CarItem;
+
+```
+</div>
+</details>
+
+<details>
+<summary>CarItem_style.js</summary>
+<div markdown="1">
+
+```javascript
+ import {StyleSheet, Dimensions} from 'react-native';
+
+ const styles = StyleSheet.create({
+    carContainer:{
+        width:'100%',
+        height: Dimensions.get('window').height, 
+        /**/
+      },
+    
+      titles:{
+        marginTop:'30%',
+        width:'100%',
+        alignItems:'center'
+      },
+    
+      title:{
+        fontSize:40,
+        fontWeight:'500',
+      },
+    
+      subtitle:{
+        fontSize:16,
+        color:'#5c5e62'
+      },
+
+      subtitleCTA:{
+        textDecorationLine:'underline',
+      },
+      
+      image : {
+        width:'100%',
+        height:'100%',
+        resizeMode:'cover',
+        position:'absolute',
+      },
+
+      buttonsContainer: {
+        position: 'absolute',
+        bottom: 50,
+        width: '100%'
+      }
+ });
+
+ export default styles;
+```
+</div>
+</details>
+
+<details>
+<summary>CarList_car.js</summary>
+<div markdown="1">
+
+```javascript
+export default [{
+  name: 'Model S',
+  tagline: 'Starting at $69,420',
+  image: require('../assets/images/ModelS.jpeg'),
+}, {
+  name: 'Model 3',
+  tagline: 'Order Online for',
+  taglineCTA: 'Touchless Delivery',
+  image: require('../assets/images/Model3.jpeg'),
+}, {
+  name: 'Model X',
+  tagline: 'Order Online for',
+  taglineCTA: 'Touchless Delivery',
+  image: require('../assets/images/ModelX.jpeg'),
+}, {
+  name: 'Model Y',
+  tagline: 'Order Online for',
+  taglineCTA: 'Touchless Delivery',
+  image: require('../assets/images/ModelY.jpeg'),
+}];
+
+```
+</div>
+</details>
+
+<details>
+<summary>CarList_index.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, FlatList} from 'react-native';
+
+import CarItem from '../CarItem';
+import styles from './styles';
+import cars from './cars';
+
+const CarsList = (props) => {
+    return (
+        <View style={styles.container}>
+            <FlatList
+            /*FlatList : 출력해야 하는 데이터 양이 많은 경우, 모든 데이터를 한 번에 렌더링 하지 않고 보여지는 부분 혹은 수동으로 설정한 양 만큼의 데이터만 렌더링 되도록 하는 Comonent*/
+                data={cars}
+                renderItem={({item}) => <CarItem car={item} />}
+            />
+        </View>
+    );
+};
+
+export default CarsList;
+```
+</div>
+</details>
+
+<details>
+<summary>CarList_style.js</summary>
+<div markdown="1">
+
+```javascript
+import {StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+    container:{
+        width:'100%',
+    }
+});
+
+export default styles;
+```
+</div>
+</details>
+
+
+<details>
+<summary>App.js</summary>
+<div markdown="1">
+
+```javascript
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import CarsList from './CarsList'; 
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <CarsList />
+      {/*CarsList(스크롤링 시 나타날 3개 페이지 내 정보)*/}
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+```
+</div>
+</details>
+
