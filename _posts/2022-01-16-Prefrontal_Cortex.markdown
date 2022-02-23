@@ -48,11 +48,11 @@ ___
 |Area|Typical Functions|Ref|
 |------|---|---|
 |DLPFC|-activated for pleasing stimuli(left)<br/>-deactivated in stroop task under congruent condition<br/>-activated for encoding episodic memory<br/>-activated for recalling episodic memory(left)<br/>- closely associated with sensory neocortex than is the ventromedial PFC. It receives visual, somatosensory, audiroty information(mid-dorsal)<br/>- has preferential connections with motor system structure that may be central to how the PFC exerts control over behavior. also sends proejection to area 8, which contains the frontal eye fields, a region important for voluntary shift of gaze|1,2,3,4|
-|VLPFC|-activated for facing negative images(left)<br/>-guide access to relevant information from semantic memory in cognitive control(left)<br/>-activated in stroop task under congruent condition<br/>-avtivated for encoding and recalling episodic memory<br/>- recieve projection from visual, auditory, somatosensory cortex|2,3,4|
+|VLPFC|-activated for facing negative images(left)<br/>-guide access to relevant information from semantic memory in cognitive control(left)<br/>-activated in stroop task under congruent condition<br/>-avtivated for encoding and recalling episodic memory<br/>- recieve projection from visual, auditory, somatosensory cortex<br/>-control hand and eye movement(left)|2,3,4|
 |OFC||
 |SPG|||
 |MFG|-activated passive states such as rest<br/>-closely associated with medial temporal limbic structures critical for long-term memory and the processing of internal states, such as affect and motivation|1,4|
-|IFG|-memory formation(ex.encoding novel faces·words·pictures)(left)<br/>-control hand and eye movement(left)|1,2|
+|IFG|-memory formation(ex.encoding novel faces·words·pictures)(left)|1|
 
 
 **Reference**<br/>
