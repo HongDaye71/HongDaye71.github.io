@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  React Native Study02_TESLA Mobile App제작
+title:  React Native Study02_TESLA Mobile App Clone
 date:   2022-02-13 15:01:35 +0300
 image:  '/images/ReactNative_TeslaProject.png'
 tags:   [React Native, App Development]
 ---
 
-# React Native를 활용한 TESLA Mobile App제작
+# React Native를 활용한 TESLA Mobile App Clone
 
 ## Contents <br/>
 1. Car Item Component<br/>
@@ -31,7 +31,7 @@ ___
 
 ## 결과물
 <p><iframe src="https://www.youtube.com/embed/qIG1yNURnQ8" frameborder="0" allowfullscreen></iframe></p>
-[Source Code Download]()
+[Source Code Download](https://github.com/HongDaye71/ReactNative-TeslaMobileApp-Clone)
 
 ### 1.1 Car Item Component (Render the text)<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
