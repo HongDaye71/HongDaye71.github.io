@@ -311,6 +311,8 @@ ___
 
 ### Album Component<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
+- Album folder생성 후 index.tsx / style.ts script작성
+
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
