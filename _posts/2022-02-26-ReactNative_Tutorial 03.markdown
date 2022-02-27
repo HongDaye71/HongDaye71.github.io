@@ -6,7 +6,7 @@ image:  '/images/ReactNative_SpotifyProject.png'
 tags:   [React Native, App Development]
 ---
 
-# React Native를 활용한 TESLA Mobile App제작
+# React Native_Spotify Mobile App Clone
 
 ## Contents <br/>
 1. Initialise the expo project<br/>

@@ -6,7 +6,7 @@ image:  '/images/ReactNative_TeslaProject.png'
 tags:   [React Native, App Development]
 ---
 
-# React Native를 활용한 TESLA Mobile App Clone
+# React Native_TESLA Mobile App Clone
 
 ## Contents <br/>
 1. Car Item Component<br/>
