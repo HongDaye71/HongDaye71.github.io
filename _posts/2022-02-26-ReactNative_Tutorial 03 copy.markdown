@@ -9,17 +9,11 @@ tags:   [React Native, App Development]
 # React Native를 활용한 TESLA Mobile App제작
 
 ## Contents <br/>
-1. Car Item Component<br/>
-  (1) Render the text<br/>
-  (2) Render the Background Image<br/>
-  (3) Create a Separate component for CarItem<br/>
-2. Button Component<br/>
-  (1) Create Separate Component<br/>
-  (2) Receive props / Style The button based on 'type' prop<br/>
-3. Finish Car Item Component
-  (1) Use buttons
-  (2) Implement props 
-
+1. Bottom Tab Navigator<br/>
+    (1) Entypo:home<br/>
+    (2) Evilcons:search<br/>
+    (3) MaterialCommunityIcons:library-music-outline<br/>
+    (4) FontAwesome5:Spotify<br/>
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
@@ -36,7 +30,16 @@ ___
 <p><iframe src="https://www.youtube.com/embed/qIG1yNURnQ8" frameborder="0" allowfullscreen></iframe></p>
 [Source Code Download]()
 
-### 1.1 Car Item Component (Render the text)<br/>
+### Initialise the expo project<br/>
+<img src="/images/Posting/ReactNative/Spotify/01.png" alt="Project" width="40%" height="40%">
+- tabs(TypeScript) template선택하여 프로젝트 생성<br/>
+    (1) blank : 처음부터 expo를 시작하고 싶을 때 선택<br/>
+    (2) blank(TypeScript) : TypeScript 사용 시 선택<br/>
+    (3) tabs(TypeScript) : NavigationTab과 같은 Tab사용 시 선택<br/>
+
+___
+
+### Initialise the expo project<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
 <details>
 <summary>Source Code</summary>
