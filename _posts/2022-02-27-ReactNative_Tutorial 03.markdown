@@ -11,6 +11,8 @@ tags:   [React Native, App Development]
 ## Contents <br/>
 1. Initialise the expo project<br/>
 2. Bottom Tab Navigator<br/>
+3. Home Screen Setup<br/>
+4. Album Component<br/>
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
@@ -267,7 +269,47 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 
 ___
 
-### Bottom Tab Navigator (Entypo:home)<br/>
+### Home Screen Setup<br/>
+<details>
+<summary>screens_HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet, Text, View } from 'react-native';
+import { RootTabScreenProps } from '../types';
+
+export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
+  return (
+    <View style={styles.container}>
+      <Text style={{color:'white'}}>Hello</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+```
+
+</div>
+</details>
+
+___
+
+### Album Component<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
 <details>
 <summary>Source Code</summary>
@@ -283,4 +325,19 @@ ___
 
 ___
 
+### Title<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+```javascript
+
+
+```
+
+</div>
+</details>
+
+___
 
