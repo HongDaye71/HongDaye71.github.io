@@ -312,14 +312,110 @@ ___
 ### Album Component<br/>
 <img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
 - Album folder생성 후 index.tsx / style.ts script작성
+- screens_HomeScreen.tsx에서 album내 component작성 및 Album import
 
 <details>
-<summary>Source Code</summary>
+<summary>Album_index.tsx</summary>
 <div markdown="1">
 
 ```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
 
+export type AlbumProps = {
+    album: {
+        id:string;
+        imageUri:string;
+        artistsHeadline:string;
+    }
+}
 
+const Album = (props:AlbumProps)=>(
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.image}/>
+        <Text style={styles.text}>{props.album.artistsHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+
+</div>
+</details>
+
+<details>
+<summary>Album_syltes.ts</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+    container: {
+        width:200,
+    },
+    
+    image: {
+        width:'100%',
+        height:200,
+    },
+
+    text: {
+        color:'grey',
+        marginTop:10,
+    }
+})
+
+export default styles;
+```
+
+</div>
+</details>
+
+</div>
+</details>
+
+<details>
+<summary>screens_HomeScreen.ts</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import Album from '../components/Album';
+
+const album = {
+  /*album내 component작성*/
+  id: '1',
+  imageUri:'https://user-images.githubusercontent.com/81608287/155875578-be0f8c69-b72e-45d7-a8de-8a7b144b2056.jpg',
+  artistsHeadline:'Taylor Swift, Cardi Objective C, Avicii'
+}
+
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <Album album={album}/>  {/*Album import*/}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
 ```
 
 </div>
@@ -334,7 +430,6 @@ ___
 <div markdown="1">
 
 ```javascript
-
 
 ```
 
