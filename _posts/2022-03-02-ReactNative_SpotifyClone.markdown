@@ -49,6 +49,130 @@ ___
 - types.tsx의 RootTabParamList에 각 버튼명 추가
 
 
+<details>
+<summary>navigation_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { Entypo, EvilIcons, MaterialCommunityIcons, FontAwesome5, FontAwesome } from '@expo/vector-icons';
+/*Bottom Tab Icon Site Import*/
+
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import { ColorSchemeName, Pressable } from 'react-native';
+
+import Colors from '../constants/Colors';
+import useColorScheme from '../hooks/useColorScheme';
+import ModalScreen from '../screens/ModalScreen';
+import NotFoundScreen from '../screens/NotFoundScreen';
+
+import HomeScreen from '../screens/HomeScreen';
+import SearchScreen from '../screens/SearchScreen';
+import LibraryScreen from '../screens/LibraryScreen';
+import PremiumScreen from '../screens/PremiumScreen';
+/*Bottom Tab 클릭시, 나타날 페이지 import*/
+import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import LinkingConfiguration from './LinkingConfiguration';
+
+export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+  return (
+    <NavigationContainer
+      linking={LinkingConfiguration}
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <RootNavigator />
+    </NavigationContainer>
+  );
+}
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+function RootNavigator() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Group screenOptions={{ presentation: 'modal' }}>
+        <Stack.Screen name="Modal" component={ModalScreen} />
+      </Stack.Group>
+    </Stack.Navigator>
+  );
+}
+
+const BottomTab = createBottomTabNavigator<RootTabParamList>();
+
+function BottomTabNavigator() {
+  const colorScheme = useColorScheme();
+
+  return (
+    <BottomTab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: Colors[colorScheme].tint,
+      }}>
+        
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen} /*Home Button 클릭 시 나타나는 페이지*/
+        options={({ navigation }: RootTabScreenProps<'Home'>) => ({
+          title: 'Home',
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+          headerRight: () => (
+            <Pressable
+              onPress={() => navigation.navigate('Modal')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+              <FontAwesome
+                name="info-circle"
+                size={25}
+                color={Colors[colorScheme].text}
+                style={{ marginRight: 15 }}
+              />
+            </Pressable>
+          ),
+        })}
+      />
+      <BottomTab.Screen
+        name="Search"
+        component={SearchScreen} /*Search Button 클릭 시 나타나는 페이지*/
+        options={{
+          title: 'Search',
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Library"
+        component={LibraryScreen} /*Library Button 클릭 시 나타나는 페이지*/
+        options={{
+          title: 'Library',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="music-box-multiple" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Premium"
+        component={PremiumScreen} /*Library Button 클릭 시 나타나는 페이지*/
+        options={{
+          title: 'Premium',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+    </BottomTab.Navigator>
+  );
+}
+
+function TabBarIcon(props: {
+  name: React.ComponentProps<typeof FontAwesome>['name'];
+  color: string;
+}) {
+  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
+}
+```
+</div>
+</details>
+
+
 
 
 
