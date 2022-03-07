@@ -179,8 +179,6 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 ```
 </div>
 </details>
-
-
 ___
 
 ### Home Screen Setup<br/>
@@ -338,7 +336,7 @@ const styles = StyleSheet.create({
 ___
 
 ### Album Category Component<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project" width="40%" height="40%">
+<p><iframe src="https://www.youtube.com/embed/Noz3zuQMam8" frameborder="0" allowfullscreen></iframe></p>
 - Album Category 폴더생성 후 index.tsd, styles.ts 작성 <br/>
 - Album Component type(id,image, artistHeadline의 type을 string으로 지정하는 것)은 types.tsx에 작성하여 clone과 같이 사용 <br/>
 
@@ -388,22 +386,159 @@ export type Album={ /*Album Component Type작성(Clone과 같이 사용될 수 �
 }
 
 ```
-
 </div>
 </details>
 
 <details>
-<summary>Source Code</summary>
+<summary>Album Category_index.tsx</summary>
 <div markdown="1">
 
 ```javascript
+import React from 'react';
+import {FlatList, Text, View} from 'react-native';
+import {Album} from "../../types";
+import AlbumComponent from '../Album';
+import styles from "./styles";
 
+export type AlbumCategoryProps = {
+    title:string, 
+    albums:[Album],
+}
+
+const AlbumCategory=(props:AlbumCategoryProps)=>(
+    <View style={styles.container}>
+        {/*Title of Category*/}
+        <Text style={styles.title}>{props.title}</Text>
+
+        {/*List of albums*/}
+        <FlatList 
+        /*많은 양의 리스트 아이템을 스크롤로 내리면서 보여주고자 할 때 사용하며 parameter로는 data, renderItem, keyExtractor가 있다*/
+            data={props.albums}
+            /*data : 만들고자 하는 리스트의 데이터*/
+            renderItem={({ item }) => <AlbumComponent album={item} />}
+            /*renderItem : data로 받은 데이터를 item에 각각 render*/
+            keyExtractor={( item ) => item.id}
+            /*keyExtractor : 각 요소 구별*/
+            horizontal
+            showsHorizontalScrollIndicator={false}
+        />
+    </View>
+)
+
+export default AlbumCategory;
 ```
 
 </div>
 </details>
 
+<details>
+<summary>Album Category_style.ts</summary>
+<div markdown="1">
 
+```javascript
+import React from 'react';
+import {FlatList, Text, View} from 'react-native';
+import {Album} from "../../types";
+import AlbumComponent from '../Album';
+import styles from "./styles";
+
+export type AlbumCategoryProps = {
+    title:string, 
+    albums:[Album],
+}
+
+const AlbumCategory=(props:AlbumCategoryProps)=>(
+    <View style={styles.container}>
+        {/*Title of Category*/}
+        <Text style={styles.title}>{props.title}</Text>
+
+        {/*List of albums*/}
+        <FlatList 
+        /*많은 양의 리스트 아이템을 스크롤로 내리면서 보여주고자 할 때 사용하며 parameter로는 data, renderItem, keyExtractor가 있다*/
+            data={props.albums}
+            /*data : 만들고자 하는 리스트의 데이터*/
+            renderItem={({ item }) => <AlbumComponent album={item} />}
+            /*renderItem : data로 받은 데이터를 item에 각각 render*/
+            keyExtractor={( item ) => item.id}
+            /*keyExtractor : 각 요소 구별*/
+            horizontal
+            showsHorizontalScrollIndicator={false}
+        />
+    </View>
+)
+
+export default AlbumCategory;
+```
+</div>
+</details>
+
+<details>
+<summary>HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import AlbumCategory from '../components/AlbumCategory';
+
+const albumCategory = {
+  id:'1',
+  title:'Happy Vibes',
+  albums: 
+  [
+    {
+      id:'1',
+      imageUri:'https://user-images.githubusercontent.com/81608287/156109216-cd427b41-efb0-4b72-af57-e56b2a9e261a.jpg',
+      artistsHeadline:'the mamas & the papas'
+    }, 
+    {
+      id:'2',
+      imageUri:'https://user-images.githubusercontent.com/81608287/156109488-d1346086-53d5-4428-aa95-b3cd1f3509e4.jpg',
+      artistsHeadline:'Don McLean'
+    },
+    {
+      id:'3',
+      imageUri:'https://user-images.githubusercontent.com/81608287/156109573-2137d151-2f76-42fa-bf90-55455ba3a82d.jpg',
+      artistsHeadline:'Madeleine Peyroux'
+    },
+    {
+      id:'4',
+      imageUri:'https://user-images.githubusercontent.com/81608287/156109687-d4f0ee5d-514b-4eef-8f92-ea8d306be0ae.jpg',
+      artistsHeadline:'Roy Orbison'
+    }
+  ]
+}
+
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <AlbumCategory 
+        title={albumCategory.title} 
+        albums={albumCategory.albums}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+```
+</div>
+</details>
 
 ___
 
