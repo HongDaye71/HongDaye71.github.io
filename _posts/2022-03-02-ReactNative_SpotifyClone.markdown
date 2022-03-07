@@ -41,6 +41,13 @@ ___
 
 ___
 
+### Bottom Tab Navigator <br/>
+<img src="/images/Posting/ReactNative/Spotify/02.png" alt="Project" width="40%" height="40%">
+- Backdground Color : app.json script의 userInterfaceStyle변수변경<br/>
+- navigation_index.tsx에서 Home, Search, Your Library, Premium 버튼생성<br/>
+- screens folder에서 각 버튼 페이지 생성
+- types.tsx의 RootTabParamList에 각 버튼명 추가
+
 
 
 
