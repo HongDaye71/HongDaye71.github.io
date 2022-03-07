@@ -85,10 +85,6 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   );
 }
 
-/**
- * A root stack navigator is often used for displaying modals on top of all other content.
- * https://reactnavigation.org/docs/modal
- */
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
@@ -103,10 +99,6 @@ function RootNavigator() {
   );
 }
 
-/**
- * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
- * https://reactnavigation.org/docs/bottom-tab-navigator
- */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
@@ -169,9 +161,6 @@ function BottomTabNavigator() {
   );
 }
 
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
@@ -181,6 +170,7 @@ function TabBarIcon(props: {
 ```
 </div>
 </details>
+
 
 <details>
 <summary>screens_HomeScreen (Search, Library, Premium 유사)</summary>
@@ -227,6 +217,7 @@ const styles = StyleSheet.create({
 </div>
 </details>
 
+
 <details>
 <summary>types.tsx</summary>
 <div markdown="1">
@@ -266,7 +257,6 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   NativeStackScreenProps<RootStackParamList>
 >;
 ```
-
 </div>
 </details>
 
