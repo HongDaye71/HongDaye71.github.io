@@ -14,6 +14,8 @@ tags:  [React Native, App Development]
 3. Home Screen Setup<br/>
 4. Album Component<br/>
 5. Album Category Component<br/>
+6. Data :<br/>
+    - Album Categories : Array<br/>
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
@@ -542,8 +544,10 @@ const styles = StyleSheet.create({
 
 ___
 
-### Title<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
+### Data (Album Categories : Array)<br/>
+- Spotify Mobile App 내 전체 Album Categories생성 후 개별 페이지에서 사용 <br/>
+- data folder 생성 후 Album Categories data작성<br/>
+
 <details>
 <summary>Source Code</summary>
 <div markdown="1">
