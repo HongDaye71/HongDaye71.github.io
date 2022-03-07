@@ -50,7 +50,7 @@ ___
 
 
 <details>
-<summary>navigation_index.tsx</summary>
+<summary>navigation_index.tsx (프로젝트 초기생성 후 수정된 부분)</summary>
 <div markdown="1">
 
 ```javascript
@@ -88,6 +88,339 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 ```
 </div>
 </details>
+
+
+
+
+<details>
+<summary>screens_HomeScreen (Search, Library, Premium 유사)</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet, TouchableOpacity } from 'react-native';
+
+import { Text, View } from '../components/Themed';
+import { RootStackScreenProps } from '../types';
+
+export default function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>This screen doesn't exist.</Text>
+      <TouchableOpacity onPress={() => navigation.replace('Root')} style={styles.link}>
+        <Text style={styles.linkText}>Go to home screen!</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  link: {
+    marginTop: 15,
+    paddingVertical: 15,
+  },
+  linkText: {
+    fontSize: 14,
+    color: '#2e78b7',
+  },
+});
+```
+</div>
+</details>
+
+
+<details>
+<summary>types.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+export type RootStackParamList = {
+  Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Modal: undefined;
+  NotFound: undefined;
+};
+
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
+  Screen
+>;
+
+export type RootTabParamList = {
+  /*TypeScript에 BottomTap추가*/
+  Home: undefined;
+  Search: undefined;
+  Library: undefined;
+  Premium:undefined;
+};
+
+export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
+  BottomTabScreenProps<RootTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>;
+```
+</div>
+</details>
+
+
+___
+
+### Home Screen Setup<br/>
+<details>
+<summary>screens_HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet, Text, View } from 'react-native';
+import { RootTabScreenProps } from '../types';
+
+export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
+  return (
+    <View style={styles.container}>
+      <Text style={{color:'white'}}>Hello</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+```
+
+</div>
+</details>
+
+___
+
+### Album Component<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/03.png" alt="Project" width="40%" height="40%">
+- Album folder생성 후 index.tsx / style.ts script작성
+- screens_HomeScreen.tsx에서 album내 component작성 및 Album import
+
+<details>
+<summary>Album_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
+
+export type AlbumProps = {
+    album: {
+        id:string;
+        imageUri:string;
+        artistsHeadline:string;
+    }
+}
+
+const Album = (props:AlbumProps)=>(
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.image}/>
+        <Text style={styles.text}>{props.album.artistsHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+
+</div>
+</details>
+
+<details>
+<summary>Album_syltes.ts</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+    container: {
+        width:200,
+    },
+    
+    image: {
+        width:'100%',
+        height:200,
+    },
+
+    text: {
+        color:'grey',
+        marginTop:10,
+    }
+})
+
+export default styles;
+```
+
+</div>
+</details>
+
+</div>
+</details>
+
+<details>
+<summary>screens_HomeScreen.ts</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import Album from '../components/Album';
+
+const album = {
+  /*album내 component작성*/
+  id: '1',
+  imageUri:'https://user-images.githubusercontent.com/81608287/155875578-be0f8c69-b72e-45d7-a8de-8a7b144b2056.jpg',
+  artistsHeadline:'Taylor Swift, Cardi Objective C, Avicii'
+}
+
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <Album album={album}/>  {/*Album import*/}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+```
+
+</div>
+</details>
+
+___
+
+### Album Category Component<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project" width="40%" height="40%">
+- Album Category 폴더생성 후 index.tsd, styles.ts 작성 <br/>
+- Album Component type(id,image, artistHeadline의 type을 string으로 지정하는 것)은 types.tsx에 작성하여 clone과 같이 사용 <br/>
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+export type RootStackParamList = {
+  Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Modal: undefined;
+  NotFound: undefined;
+};
+
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
+  Screen
+>;
+
+export type RootTabParamList = {
+  /*TypeScript에 BottomTap추가*/
+  Home: undefined;
+  Search: undefined;
+  Library: undefined;
+  Premium:undefined;
+};
+
+export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
+  BottomTabScreenProps<RootTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>;
+
+export type Album={ /*Album Component Type작성(Clone과 같이 사용될 수 있도록)*/
+  id:string;
+  imageUri:string;
+  artistsHeadline:string;
+}
+
+```
+
+</div>
+</details>
+
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+```javascript
+
+```
+
+</div>
+</details>
+
+
+
+___
+
+### Title<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+```javascript
+
+```
+
+</div>
+</details>
+
+___
 
 
 
