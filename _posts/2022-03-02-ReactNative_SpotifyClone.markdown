@@ -16,6 +16,7 @@ tags:  [React Native, App Development]
 5. Album Category Component<br/>
 6. Data :<br/>
     - Album Categories : Array<br/>
+7. Album Scrren<br/>
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
@@ -545,6 +546,7 @@ const styles = StyleSheet.create({
 ___
 
 ### Data (Album Categories : Array)<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project" width="40%" height="40%">
 - Spotify Mobile App 내 전체 Album Categories생성 후 개별 페이지에서 사용 <br/>
 - data folder 생성 후 Album Categories data작성<br/>
 
@@ -695,7 +697,20 @@ const styles = StyleSheet.create({
 
 ___
 
+### Album Screen<br/>
+<img src="/images/Posting/ReactNative/TeslaProject/05.png" alt="Project" width="40%" height="40%">
+- Home화면 앨범 클릭 시, 나타나는 페이지 제작 (screens 폴더 내 AlbumScreen.tsx생성)
+- Navigation_index.tsx 수정하여 Home화면 앨범 클릭 시 AlbumScreen페이지로 이동 되도록 설정
 
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+```javascript
+```
+
+</div>
+</details>
 
 
 
