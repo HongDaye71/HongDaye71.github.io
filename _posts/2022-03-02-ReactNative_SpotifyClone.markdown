@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
 ___
 
 ### Album Component<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/03.png" alt="Project" width="40%" height="40%">
+<img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
 - Album folder생성 후 index.tsx / style.ts script작성
 - screens_HomeScreen.tsx에서 album내 component작성 및 Album import
 
@@ -546,7 +546,7 @@ const styles = StyleSheet.create({
 ___
 
 ### Data (Album Categories : Array)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project" width="40%" height="40%">
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
 - Spotify Mobile App 내 전체 Album Categories생성 후 개별 페이지에서 사용 <br/>
 - data folder 생성 후 Album Categories data작성<br/>
 
@@ -703,7 +703,7 @@ ___
 - Navigation_index.tsx 수정하여 Home화면 앨범 클릭 시 AlbumScreen페이지로 이동 되도록 설정
 
 <details>
-<summary>Source Code</summary>
+<summary>Source Code(프로젝트 초기생성 후 수정된 부분)</summary>
 <div markdown="1">
 
 ```javascript
