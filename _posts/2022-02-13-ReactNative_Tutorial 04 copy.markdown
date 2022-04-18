@@ -92,7 +92,7 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 <details>
 <summary>Source Code_navigation_index.tsx</summary>
 
-```javascript
+```
 /*수정된 부분만 작성*/
 import { 
   /*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
