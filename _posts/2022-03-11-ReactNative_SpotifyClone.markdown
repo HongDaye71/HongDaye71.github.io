@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  React Native Study03_Spotify App Clone
-date:   2022-03-10 15:01:35 +0300
+date:   2022-03-11 15:01:35 +0300
 image:  '/images/ReactNative_SpotifyProject.png'
 tags:  [React Native, App Development]
 ---
@@ -335,8 +335,8 @@ const styles = StyleSheet.create({
 
 ___
 
-### ---- <br/>
-<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+### Album Category Component <br/>
+<img src="/images/Posting/ReactNative/Spotify/06.png" alt="Project" width="40%" height="40%">
 
 <details>
 <summary>type.tsx</summary>
