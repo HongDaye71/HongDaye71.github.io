@@ -25,7 +25,9 @@ ___
   <em>Mosaic / Netscape  <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
 
-1993년, UI요소가 요소가 더해진 첫 번째 웹 브라우저 Mosaic이 출시되었다. 개발팀을 이끌던 Marc Andreessen은 Netscape라는 회사를 설립하여 Mosaic을 만들었던 경험을 토대로 1994년, UI요소가 조금 더 추가된 Netscape Navigator 웹 브라우저를 출시한다. 이 당시에는 HTML과 CSS로 간단한 웹 페이지를 만들 수 있었는데, 스타일을 정의하는 CSS(Cascading Style Sheets) 외 HTML(Hypertext Markup Langauge)만을 사용한 만큼 텍스트에 링크를 걸어 페이지 간 이동만 가능하게 하는 매우 정적인 웹 페이지가 전부였다.
+1993년, UI요소가 요소가 더해진 첫 번째 웹 브라우저 Mosaic이 출시되었다. 개발팀을 이끌던 Marc Andreessen은 Netscape라는 회사를 설립하여 Mosaic을 만들었던 경험을 토대로 1994년, UI요소가 조금 더 추가된 Netscape Navigator 웹 브라우저를 출시한다. 이 당시에는 HTML과 CSS로 간단한 웹 페이지를 만들 수 있었는데, 스타일을 정의하는 CSS(Cascading Style Sheets) 외 HTML(Hypertext Markup Langauge)만을 사용한 만큼 텍스트에 링크를 걸어 페이지 간 이동만 가능하게 하는 매우 정적인 웹 페이지가 전부였다. 이에 Marc Andreessen은 동적인 웹사이트를 만들고자 새로운 프로그래밍 언어를 추가하기로 한다. 
+
+그리하여 1994년 9월, Scheme Script 언어를 변형한 JavaScript 언어와 함께 JS engine이 추가된 Netscape가 출시된다. (이는 웹 개발자들이 JS를 사용해 웹 페이지를 만들게되면, Netscape Navigator 브라우저가 언어를 이해하고 실행하고자 하는 것에 알맞게 DOM요소들을 조작할 수 있게 되었음을 의미한다.)
 
 
 
@@ -34,6 +36,6 @@ ___
 
 
 
-
+* DOM(Document Object Model) : 웹 페이지에 대한 인터페이스로 여러 프로그램들이 페이지의 콘텐츠 및 구조, 스타일을 읽고 조작할 수 있도록 API를 제공한다.
 
 
