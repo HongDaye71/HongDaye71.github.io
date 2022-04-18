@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  React Native Study03_Spotify App Clone
-date:   2022-03-11 15:01:35 +0300
+date:   2022-04-18 15:01:35 +0300
 image:  '/images/ReactNative_SpotifyProject.png'
 tags:  [React Native, App Development]
 ---
@@ -228,7 +228,7 @@ ___
 ### Album Component<br/>
 <img src="/images/Posting/ReactNative/Spotify/05.png" alt="Project" width="40%" height="40%">
 - Album 폴더 생성
-- Album_index.tsx : AlbumProps(id, imageUri, artistHeadline을 입력받음)를 사용하는 Album function생성
+- Album_index.tsx : AlbumProps(id, imageUri, artistHeadline정보를 string 입력받음)를 사용하는 Album function생성
 - Album_styles.tsx : Album function style지정
 - screens_HomeScreen.tsx : Album function사용
 
@@ -337,10 +337,93 @@ ___
 
 ### Album Category Component <br/>
 <img src="/images/Posting/ReactNative/Spotify/06.png" alt="Project" width="40%" height="40%">
+- AlbumProps를 types.tsx에 입력하여 타 스크립트에서 불러와 사용할 수 있도록 함
+- 기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)
+- screens_HomeScreen.tsx : Album -> AlbumCategory변경 (Album : 단일앨범 / AlbumCategory : 다수앨범 포함 카테고리 )
 
 <details>
-<summary>type.tsx</summary>
+<summary>type.tsx(추가한 부분)</summary>
 <div markdown="1">
+
+```javascript
+export type Album = {
+  id : string;
+  imageUri : string;
+  artistHeadline : string;
+}
+```
+</div>
+</details>
+
+<details>
+<summary>Album_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
+import {Album} from '../../types';
+
+/*기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)*/
+export type AlbumProps = {
+    album : Album,
+}
+
+const Album=(props:AlbumProps) => (
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.images}/>
+        <Text style={styles.text}>{props.album.artistHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+</div>
+</details>
+
+<details>
+<summary>AlbumCategory_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Text} from 'react-native'
+import {Album} from '../../types';
+import styles from './styles';
+
+export type AlbumCategoryProps = {
+    title:string,
+    albums: [Album],
+}
+
+const AlbumCategory = (props:AlbumCategoryProps) => (
+    <View>
+        <Text style={styles.title}>{props.title}</Text>
+    </View>
+)
+
+export default AlbumCategory;
+```
+</div>
+</details>
+
+<details>
+<summary>AlbumCategory_styles.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+<details>
+<summary>screen_HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+
 
 ```javascript
 
