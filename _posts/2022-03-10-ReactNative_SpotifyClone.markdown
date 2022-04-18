@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  React Native Study03_Spotify App Clone
-date:   2022-04-18 15:01:35 +0300
+date:   2022-03-10 15:01:35 +0300
 image:  '/images/ReactNative_SpotifyProject.png'
 tags:  [React Native, App Development]
 ---
@@ -49,7 +49,7 @@ ___
 ### Bottom Tab Navigator <br/>
 <img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
 - types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
-- index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
+- navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
 
 [Icoone download](https://icons.expo.fyi/)
 
@@ -160,7 +160,7 @@ ___
 
 ### HomeScreen Setup <br/>
 <img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
-- HomeScreen 생성 후 index.tsx의 Home Component변경
+- HomeScreen 생성 후 navigation_index.tsx의 Home Component변경
 
 <details>
 <summary>HomeScreen.tsx</summary>
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
 </details>
 
 <details>
-<summary>index.tex(수정된 부분)</summary>
+<summary>navigation_index.tex(수정된 부분)</summary>
 <div markdown="1">
 
 ```javascript
@@ -225,6 +225,116 @@ import HomeScreen from '../screens/HomeScreen';
 
 ___
 
+### Album Component<br/>
+<img src="/images/Posting/ReactNative/Spotify/05.png" alt="Project" width="40%" height="40%">
+- Album 폴더 생성
+- Album_index.tsx : AlbumProps(id, imageUri, artistHeadline을 입력받음)를 사용하는 Album function생성
+- Album_styles.tsx : Album function style지정
+- screens_HomeScreen.tsx : Album function사용
+
+<details>
+<summary>Album_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
+
+export type AlbumProps = {
+    album : {
+        id : string;
+        imageUri : string;
+        artistHeadline : string;
+    }
+}
+
+const Album=(props:AlbumProps) => (
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.images}/>
+        <Text>{props.album.artistHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+</div>
+</details>
+
+<details>
+<summary>Album_styles.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+    container:{
+        width:200,
+    },
+    images:{
+        width:'100%',
+        height:200,
+    },
+    text:{
+        color:'grey',
+        marginTop:10,
+    }
+})
+
+export default styles;
+```
+</div>
+</details>
+
+
+<details>
+<summary>screens_HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+import Album from '../components/Album'
+
+const album = {
+  id:'1',
+  imageUri : 'https://user-images.githubusercontent.com/81608287/163757044-767912f2-5cdf-4553-b029-b47c67d82ce8.jpg',
+  artistHeadline :'Dennis Brown'
+}
+
+export default function HomeScreen() {
+  return(
+    <View style={styles.container}>
+      <Album album={album}/>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+
+```
+</div>
+</details>
+
+___
+
 ### ---- <br/>
 <img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
 
@@ -237,6 +347,23 @@ ___
 ```
 </div>
 </details>
+
+___
+
+### ---- <br/>
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+
 
 ___
 
