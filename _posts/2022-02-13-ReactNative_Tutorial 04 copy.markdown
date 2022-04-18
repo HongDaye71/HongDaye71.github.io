@@ -17,6 +17,7 @@ tags:   [React Native, App Development]
 6. Data :<br/>
     - Album Categories : Array<br/>
 7. Album Scrren<br/>
+
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
