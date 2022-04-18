@@ -52,6 +52,7 @@ ___
 
 <details>
 <summary>Source Code_type.tsx</summary>
+<div markdown="1">
 
 ```javascript
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
@@ -87,6 +88,6 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   NativeStackScreenProps<RootStackParamList>
 >;
 ```
+</div>
 </details>
-
 
