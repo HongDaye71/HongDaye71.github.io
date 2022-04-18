@@ -92,16 +92,11 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 <details>
 <summary>Source Code_navigation_index.tsx</summary>
 
-```
+```javascript
 /*수정된 부분만 작성*/
 import { 
   /*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
-  FontAwesome,
-  Entypo, 
-  EvilIcons, 
-  MaterialIcons , 
-  FontAwesome5 } 
-  from '@expo/vector-icons';
+  FontAwesome,Entypo,EvilIcons,MaterialIcons,FontAwesome5}from '@expo/vector-icons';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
@@ -113,36 +108,28 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}>
+        tabBarActiveTintColor: Colors[colorScheme].tint,}}>
+
       <BottomTab.Screen
         name="Home"
         component={TabOneScreen}
         options={{
-          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,}}/>
       <BottomTab.Screen
         name="Search"
         component={TabTwoScreen}
         options={{
-          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,}}/>
       <BottomTab.Screen
         name="Library"
         component={TabTwoScreen}
         options={{
-          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
+          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={{marginBottom:-3}} color={color} />,}}/>
       <BottomTab.Screen
         name="Premium"
         component={TabTwoScreen}
         options={{
-          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
+          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,}}/>
     </BottomTab.Navigator>
   );
 }
