@@ -1,10 +1,10 @@
 ---
 layout: post
+published : true
 title:  기술면접_JavaScript_01
 date:   2022-04-18 15:01:35 +0300
 image:  '/images/JavaScript.png'
 tags:   [JavaScript]
-publsihed : true
 ---
 
 ## 자바스크립트의 역사와 현재 그리고 미래<br/>
