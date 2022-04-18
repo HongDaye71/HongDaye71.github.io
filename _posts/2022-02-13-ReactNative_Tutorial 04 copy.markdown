@@ -112,34 +112,7 @@ function BottomTabNavigator() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
-      <BottomTab.Screen
-        name="Home"
-        component={TabOneScreen}
-        options={{
-          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Search"
-        component={TabTwoScreen}
-        options={{
-          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Library"
-        component={TabTwoScreen}
-        options={{
-          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Premium"
-        component={TabTwoScreen}
-        options={{
-          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,
-        }}
-      />
+
   );
 }
 ```
