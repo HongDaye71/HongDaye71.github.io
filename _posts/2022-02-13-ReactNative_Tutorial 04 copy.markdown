@@ -95,8 +95,8 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 <div markdown="1">
 
 ```javascript
-/*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
 import { 
+  /*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
   FontAwesome,
   Entypo, 
   EvilIcons, 
