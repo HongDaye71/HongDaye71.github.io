@@ -52,7 +52,6 @@ ___
 
 <details>
 <summary>Source Code_type.tsx</summary>
-<div markdown="1">
 
 ```javascript
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
@@ -88,12 +87,10 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   NativeStackScreenProps<RootStackParamList>
 >;
 ```
-</div>
 </details>
 
 <details>
 <summary>Source Code_navigation_index.tsx(수정된 부분)</summary>
-<div markdown="1">
 
 ```javascript
 import { 
@@ -150,5 +147,4 @@ function BottomTabNavigator() {
 }
 
 ```
-</div>
 </details>
