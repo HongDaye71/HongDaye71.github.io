@@ -91,8 +91,7 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 </div>
 </details>
 
-<details>
-<summary>navigation_index.tsx</summary>
+
 <div markdown="1">
 
 ```javascript
@@ -152,5 +151,4 @@ function BottomTabNavigator() {
 }
 ```
 </div>
-</details>
 
