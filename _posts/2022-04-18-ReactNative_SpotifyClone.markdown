@@ -337,9 +337,14 @@ ___
 
 ### Album Category Component <br/>
 <img src="/images/Posting/ReactNative/Spotify/06.png" alt="Project" width="40%" height="40%">
-- AlbumProps를 types.tsx에 입력하여 타 스크립트에서 불러와 사용할 수 있도록 함
-- 기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)
-- screens_HomeScreen.tsx : Album -> AlbumCategory변경 (Album : 단일앨범 / AlbumCategory : 다수앨범 포함 카테고리 )
+- AlbumProps를 types.tsx에 입력하여 타 스크립트에서 불러와 사용할 수 있도록 함<br/>
+- 기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)<br/>
+- screens_HomeScreen.tsx : Album -> AlbumCategory변경 (Album : 단일앨범 / AlbumCategory : 다수앨범 포함 카테고리 )<br/>
+
+* FlatList : 많은 양의 리스트 아이템을 보여주고자 할 때 쓰이는 Component이다. Scroll View와 유사한 기능을 하나 동작 방식에 차이가 있다.<br/>
+  (1) ScrollView : 데이터가 화면에 보이지 않을 때 사용자가 Swipe를 통해 가려진 데이터를 볼 수 있도록 한다(출력해야 하는 데이터가 고정적이고 많지 않을 때 사용)<br/>
+  (2) FlatList : 모든 데이터를 한 번에 렌더링 하지 않고, 보여지는 부분 혹은 수동으로 설정한 양 만큼의 데이터만을 렌더링 한다. 사용자가 Swipe를 할 때 자동으로 다시 렌더링 한다. (데이터의 길이가 가변적이고 양을 예측할 수 없는 경우에 사용)<br/>
+
 
 <details>
 <summary>type.tsx(추가한 부분)</summary>
@@ -388,18 +393,25 @@ export default Album;
 
 ```javascript
 import React from 'react';
-import {View, Text} from 'react-native'
+import {FlatList, View, Text} from 'react-native'
 import {Album} from '../../types';
 import styles from './styles';
+import AlbumComponent from '../Album';
 
 export type AlbumCategoryProps = {
-    title:string,
+    title: string,
     albums: [Album],
 }
 
 const AlbumCategory = (props:AlbumCategoryProps) => (
     <View>
         <Text style={styles.title}>{props.title}</Text>
+        <FlatList
+            data ={props.albums}
+            renderItem = {({ item }) => <AlbumComponent album={item}/>}
+            keyExtractor={( item ) => item.id}
+            horizontal        
+        />
     </View>
 )
 
@@ -409,23 +421,51 @@ export default AlbumCategory;
 </details>
 
 <details>
-<summary>AlbumCategory_styles.tsx</summary>
+<summary>screen_HomeScreen.tsx(수정된 부분)</summary>
 <div markdown="1">
 
 ```javascript
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-```
-</div>
-</details>
+import AlbumCategory from '../components/AlbumCategory'
 
-<details>
-<summary>screen_HomeScreen.tsx</summary>
-<div markdown="1">
+const albumCategory = {
+  id:'1',
+  title:'Happy Vibes',
+  albums:[
+    {
+      id: '1',
+      imageUri: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
+      artistHeadline: 'Taylor Swift, Kygo Objective C, Avicii'
+    }, {
+      id: '2',
+      imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
+      artistHeadline: 'Post Malone, Drake, Eminem'
+    },
+    {
+      id: '3',
+      imageUri: 'https://images-na.ssl-images-amazon.com/images/I/61F66QURFyL.jpg',
+      artistHeadline: 'Journey, Escape, Avicii'
+    },
+    {
+      id: '4',
+      imageUri: 'https://i.pinimg.com/originals/a2/0d/37/a20d37791f8ad5cd54734cd3af559cc9.jpg',
+      artistHeadline: 'Bob Marley, Cardi B, Stas Mihailov'
+    },
+  ]
+};
 
-```javascript
-
-
-```javascript
+export default function HomeScreen() {
+  return(
+    <View style={styles.container}>
+      <AlbumCategory 
+      title={albumCategory.title} 
+      albums={albumCategory.albums}
+      />
+    </View>
+  );
+}
 
 ```
 </div>
