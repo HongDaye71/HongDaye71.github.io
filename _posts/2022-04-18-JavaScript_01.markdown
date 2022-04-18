@@ -1,0 +1,39 @@
+---
+layout: post
+title:  기술면접_JavaScript_01
+date:   2022-02-20 15:01:35 +0300
+image:  '/images/JavaScript.jpg'
+tags:   [JavaScript]
+---
+
+## 자바스크립트의 역사와 현재 그리고 미래<br/>
+### 부제 : 브라우저의 역사
+
+### Contents <br/>
+1. <br/>
+
+드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. 
+* [Tutorial Video](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
+
+___
+
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/JavaScript/01.png" alt="Project">
+    <img src="/images/Posting/JavaScript/02.png" alt="Project">
+  </div>
+  <em>Mosaic / Netscape  <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
+</div>
+
+1993년, UI요소가 요소가 더해진 첫 번째 웹 브라우저 Mosaic이 출시되었다. 개발팀을 이끌던 Marc Andreessen은 Netscape라는 회사를 설립하여 Mosaic을 만들었던 경험을 토대로 1994년, UI요소가 조금 더 추가된 Netscape Navigator 웹 브라우저를 출시한다. 이 당시에는 HTML과 CSS로 간단한 웹 페이지를 만들 수 있었는데, 스타일을 정의하는 CSS(Cascading Style Sheets) 외 HTML(Hypertext Markup Langauge)만을 사용한 만큼 텍스트에 링크를 걸어 페이지 간 이동만 가능하게 하는 매우 정적인 웹 페이지가 전부였다.
+
+
+
+
+
+
+
+
+
+
+
