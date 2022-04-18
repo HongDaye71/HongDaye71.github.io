@@ -11,6 +11,7 @@ tags:  [React Native]
 ## Contents<br/>
 1. Navigation의 종류와 구조<br/>
 2. Navigation 환경세팅<br/>
+3. Stack Navigator<br/>
 
 The Net Ninja 유투브 채널의 React Native Tutorial 강좌의 내용을 바탕으로 정리하는 포스팅입니다. 
 - 영상에 언급되지 않은 내용이 포함되어 있음
@@ -60,6 +61,8 @@ expo install react-native-screens react-native-safe-area-context //dependencies 
 [React Navigation Docs](https://reactnavigation.org/docs/getting-started)
 
 ___
+
+### Stack Navigator<br/>
 
 
 
