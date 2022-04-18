@@ -40,6 +40,7 @@ ___
     (1) blank : 처음부터 expo를 시작하고 싶을 때 선택<br/>
     (2) blank(TypeScript) : TypeScript 사용 시 선택<br/>
     (3) tabs(TypeScript) : NavigationTab과 같은 Tab사용 시 선택<br/>
+    
 [Click To View React Navigation Posting](https://hongdaye71.github.io/blog/reactnative-navigation-copy)
 
 ___
@@ -49,7 +50,7 @@ ___
 - types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
 - navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
 
-[Icoone download](https://icons.expo.fyi/)
+[Icon download](https://icons.expo.fyi/)
 
 <details>
 <summary>type.tsx</summary>
