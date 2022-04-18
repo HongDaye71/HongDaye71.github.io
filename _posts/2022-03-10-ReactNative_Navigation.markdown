@@ -2,68 +2,454 @@
 layout: post
 title:  React Native Study04_Navigation
 date:   2022-03-10 15:01:35 +0300
-image:  '/images/ReactNative_Navigation.png'
+image:  '/images/ReactNative_SpotifyProject.png'
 tags:  [React Native]
 ---
 
-# React Native_Navigation<br/>
+# React Native_Spotify Mobile App Clone
 
-## Contents<br/>
-1. Navigation의 종류와 구조<br/>
-2. Navigation 환경세팅<br/>
-3. Stack Navigator<br/>
+## Contents <br/>
+1. Initialise the expo project<br/>
+2. Bottom Tab Navigator<br/>
+3. Home Screen Setup<br/>
+4. Album Component<br/>
+5. Album Category Component<br/>
+6. Data :<br/>
+    - Album Categories : Array<br/>
+7. Album Scrren<br/>
+___
 
-The Net Ninja 유투브 채널의 React Native Tutorial 강좌의 내용을 바탕으로 정리하는 포스팅입니다. 
-- 영상에 언급되지 않은 내용이 포함되어 있음
-- 본 포스팅은 React Navigation Version 6.x를 기준으로 함
-
-* [Tutorial Video](https://www.youtube.com/watch?v=cS4PgI3zBzY)
+* notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
+* [notJust․dev 유투브채널 바로가기](https://www.youtube.com/channel/UCYSa_YLoJokZAwHhlwJntIA) <br/>
+* [Tutorial Video](https://www.youtube.com/watch?v=Ho41KNKvoBc&list=PLY3ncAV1dSVBejIDGrcbNRs148uHowYfx)<br/>
+* *작업단계 별 부연설명은 Source Code내 주석으로 작성*
+* Techinologies : <br/>
+    (1)Front End : React Native, Expo, TypeScript, React Navigation<br/>
+    (2)Backend End : AWS Amplify, AWS AppSync, GraphQL<br/>
 
 ___
 
-### Navigation의 종류와 구조 <br/>
-**React Navigation Library에서 지원하는 Navigation종류**<br/>
-  1) Stack Navigation : 일반적인 스크린 이동 <br/>
-  2) Tab Navigation : 탭으로 스크린 이동<br/>
-  3) Drawer Navigation : 드로어로 스크린 이동<br/>
+## 결과물
+<p><iframe src="" frameborder="0" allowfullscreen></iframe></p>
+[Source Code Download]()
 
-**Navigation Component**<br/>
-<img src="/images/Posting/ReactNative/Navigation/01.png" alt="Project" width="40%" height="40%">
+___ 
 
-  1) Screen Component : <br/>
-  화면으로 사용되는 컴포턴트로 name, component속성을 지정해 주어야 함<br/>
-    name : 화면이름<br/>
-    component : 화면으로 사용될 컴포넌트<br/>
-
-  2) Navigator Component : <br/>
-  화면을 관리하는 중간 관리자 역할로, 내비게이션을 구성하며 여러개의 Screen Component를 자식 Component로 갖음<br/>
-  
-  3) Navigation Container Component<br/>
-  Navigation의 계층 구조와 상태를 관리하는 Container역할을 하며, Navigation의 모든 구조를 감사는 최상위 Component<br/>
+### Initialise the expo project<br/>
+<img src="/images/Posting/ReactNative/Spotify/01.png" alt="Project" width="40%" height="40%">
+<img src="/images/Posting/ReactNative/Spotify/02.png" alt="Project" width="40%" height="40%">
+- tabs(TypeScript) template선택하여 프로젝트 생성<br/>
+    (1) blank : 처음부터 expo를 시작하고 싶을 때 선택<br/>
+    (2) blank(TypeScript) : TypeScript 사용 시 선택<br/>
+    (3) tabs(TypeScript) : NavigationTab과 같은 Tab사용 시 선택<br/>
+[Click To View React Navigation Posting](https://hongdaye71.github.io/blog/reactnative-navigation-copy)
 
 ___
 
-### Navigation 환경세팅<br/>
+### Bottom Tab Navigator <br/>
+<img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
+- types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
+- navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
 
-**Installation**<br/>
-1) React Native Project에 Navigation에 필요한 패키지 설치<br/>
-* Project Template : blank
+[Icoone download](https://icons.expo.fyi/)
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
 
 ```javascript
-npm install --save @react-navigation/native //react navigation libra
-npm install @react-navigation/stack //stack navigation library설치
-npm install @react-navigation/drawer //drawer navigation library설치
-npm install @react-navigation/bottom-tabs //bottom-tabs navigation library설치
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-expo install react-native-screens react-native-safe-area-context //dependencies 추가설치(호환되는 라이브러리들의 버전이 설치됨)
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+export type RootStackParamList = {
+  Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Modal: undefined;
+  NotFound: undefined;
+};
+
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
+  Screen
+>;
+
+export type RootTabParamList = {
+  Home: undefined;
+  Search: undefined;
+  Library: undefined;
+  Premium: undefined;
+};
+
+export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
+  BottomTabScreenProps<RootTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>;
 
 ```
-[React Navigation Docs](https://reactnavigation.org/docs/getting-started)
+</div>
+</details>
+
+<details>
+<summary>navigation_index.tsx(수정된 부분)</summary>
+<div markdown="1">
+
+```javascript
+/*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
+import { 
+  FontAwesome,
+  Entypo, 
+  EvilIcons, 
+  MaterialIcons , 
+  FontAwesome5 } 
+  from '@expo/vector-icons';
+
+/*화면상의 아이콘 및 텍스트 변경*/
+const BottomTab = createBottomTabNavigator<RootTabParamList>();
+
+function BottomTabNavigator() {
+  const colorScheme = useColorScheme();
+
+  return (
+    <BottomTab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: Colors[colorScheme].tint,
+      }}>
+      <BottomTab.Screen
+        name="Home"
+        component={TabOneScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Search"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Library"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Premium"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+    </BottomTab.Navigator>
+  );
+}
+```
+</div>
+</details>
 
 ___
 
-### Stack Navigator<br/>
+### HomeScreen Setup <br/>
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+- HomeScreen 생성 후 navigation_index.tsx의 Home Component변경
+
+<details>
+<summary>HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet } from 'react-native';
+
+import EditScreenInfo from '../components/EditScreenInfo';
+import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
+
+export default function TabOneScreen({ navigation }: RootTabScreenProps<'Home'>) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Home</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+
+```
+</div>
+</details>
+
+<details>
+<summary>navigation_index.tex(수정된 부분)</summary>
+<div markdown="1">
+
+```javascript
+/*HomeScreen import*/
+import HomeScreen from '../screens/HomeScreen';
+
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+```
+</div>
+</details>
+
+___
+
+### Album Component<br/>
+<img src="/images/Posting/ReactNative/Spotify/05.png" alt="Project" width="40%" height="40%">
+- Album 폴더 생성
+- Album_index.tsx : AlbumProps(id, imageUri, artistHeadline정보를 string 입력받음)를 사용하는 Album function생성
+- Album_styles.tsx : Album function style지정
+- screens_HomeScreen.tsx : Album function사용
+
+<details>
+<summary>Album_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
+
+export type AlbumProps = {
+    album : {
+        id : string;
+        imageUri : string;
+        artistHeadline : string;
+    }
+}
+
+const Album=(props:AlbumProps) => (
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.images}/>
+        <Text>{props.album.artistHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+</div>
+</details>
+
+<details>
+<summary>Album_styles.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+    container:{
+        width:200,
+    },
+    images:{
+        width:'100%',
+        height:200,
+    },
+    text:{
+        color:'grey',
+        marginTop:10,
+    }
+})
+
+export default styles;
+```
+</div>
+</details>
+
+
+<details>
+<summary>screens_HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+import Album from '../components/Album'
+
+const album = {
+  id:'1',
+  imageUri : 'https://user-images.githubusercontent.com/81608287/163757044-767912f2-5cdf-4553-b029-b47c67d82ce8.jpg',
+  artistHeadline :'Dennis Brown'
+}
+
+export default function HomeScreen() {
+  return(
+    <View style={styles.container}>
+      <Album album={album}/>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+
+```
+</div>
+</details>
+
+___
+
+### Album Category Component <br/>
+<img src="/images/Posting/ReactNative/Spotify/06.png" alt="Project" width="40%" height="40%">
+- AlbumProps를 types.tsx에 입력하여 타 스크립트에서 불러와 사용할 수 있도록 함
+- 기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)
+- screens_HomeScreen.tsx : Album -> AlbumCategory변경 (Album : 단일앨범 / AlbumCategory : 다수앨범 포함 카테고리 )
+
+<details>
+<summary>type.tsx(추가한 부분)</summary>
+<div markdown="1">
+
+```javascript
+export type Album = {
+  id : string;
+  imageUri : string;
+  artistHeadline : string;
+}
+```
+</div>
+</details>
+
+<details>
+<summary>Album_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
+import {Album} from '../../types';
+
+/*기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)*/
+export type AlbumProps = {
+    album : Album,
+}
+
+const Album=(props:AlbumProps) => (
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.images}/>
+        <Text style={styles.text}>{props.album.artistHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+</div>
+</details>
+
+<details>
+<summary>AlbumCategory_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Text} from 'react-native'
+import {Album} from '../../types';
+import styles from './styles';
+
+export type AlbumCategoryProps = {
+    title:string,
+    albums: [Album],
+}
+
+const AlbumCategory = (props:AlbumCategoryProps) => (
+    <View>
+        <Text style={styles.title}>{props.title}</Text>
+    </View>
+)
+
+export default AlbumCategory;
+```
+</div>
+</details>
+
+<details>
+<summary>AlbumCategory_styles.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+<details>
+<summary>screen_HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+
+```javascript
+
+```
+</div>
+</details>
+
+___
+
+### ---- <br/>
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
 
 
 
+___
 
+* App Clone목표 :
+* 느낀점 : 
+* 앞으로의 계획 : 
