@@ -42,15 +42,13 @@ ___
     (1) blank : 처음부터 expo를 시작하고 싶을 때 선택<br/>
     (2) blank(TypeScript) : TypeScript 사용 시 선택<br/>
     (3) tabs(TypeScript) : NavigationTab과 같은 Tab사용 시 선택<br/>
+[Click To View React Navigation Posting](https://hongdaye71.github.io/blog/reactnative-navigation-copy)
 
 ___
 
 ### Bottom Tab Navigator <br/>
-<img src="/images/Posting/ReactNative/Spotify/02.png" alt="Project" width="40%" height="40%">
-- Backdground Color : app.json script의 userInterfaceStyle변수변경<br/>
-- navigation_index.tsx에서 Home, Search, Your Library, Premium 버튼생성<br/>
-- screens folder에서 각 버튼 페이지 생성
-- types.tsx의 RootTabParamList에 각 버튼명 추가
+<img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
+
 
 
 <details>
