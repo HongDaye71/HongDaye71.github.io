@@ -11,14 +11,15 @@ tags:   [JavaScript]
 
 ### Contents <br/>
 1. Netscape Navigator와 JavaScript의 탄생<br/>
-2. 
+2. JScript와 Internet Explorer의 탄생<br/>
+3. ECMA International<br/>
 
 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. 
 * [Tutorial Video](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
 
 ___
 
-### Netscape Navigator와 JavaScript의 탄생
+### Netscape Navigator와 JavaScript의 탄생<br/>
 <div class="gallery-box">
   <div class="gallery">
     <img src="/images/Posting/JavaScript/01.png" alt="Project">
@@ -31,11 +32,22 @@ ___
 
 그리하여 1994년 9월, Scheme Script 언어를 변형한 JavaScript 언어와 함께 JavaScript engine이 추가된 Netscape가 출시된다. (이는 웹 개발자들이 JS를 사용해 웹 페이지를 만들게되면, Netscape Navigator 브라우저가 언어를 이해하고 실행하고자 하는 것에 알맞게 DOM요소들을 조작할 수 있게 되었음을 의미한다)
 
+___
 
-### JScript와 Internet Explorer의 탄생
-1995년 Microsoft는 Netscape를 통해 브라우저의 잠재성을 확인한 뒤, Netscape를 Reverse engineering하여 JavaScript를 약간 변형한 JScript와 함께 Internet Explorer를 출시한다.
+### JScript와 Internet Explorer의 탄생<br/>
+1995년 Microsoft는 Netscape를 통해 브라우저의 잠재성을 확인한 뒤, Netscape를 Reverse engineering하여 JavaScript를 약간 변형한 JScript와 함께 Internet Explorer를 출시한다. <br/>
 
+___
 
+### ECMA International<br/>
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Posting/JavaScript/03.png" alt="Project">
+    <img src="/images/Posting/JavaScript/04.png" alt="Project">
+  </div>
+  <em><a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
+</div>
+두 개의 서로다른 언어와 엔진을 사용하는 브라우저가 상용화 되면서 당시에는 웹 사이트 이용 시 "우리 사이트는 Netscape(or Internet Explorer)에 최적화 되어있으니 Netscape(or Internet Explorer)를 설치하세요" 라는 문구를 흔히 볼 수 있었다. 이는 사용자의 불편으로 이어졌고 Netscape사는 문제를 해결하기 위해 ECMA International 단체에 찾아가 JavaScript표준안을 만들것을 제안한다.
 
 
 
