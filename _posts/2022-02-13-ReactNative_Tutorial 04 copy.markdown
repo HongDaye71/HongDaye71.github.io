@@ -6,200 +6,178 @@ image:  '/images/ReactNative_SpotifyProject.png'
 tags:   [React Native, App Development]
 ---
 
-# React Native_TESLA Mobile App Clone
+# React Native_Spotify Mobile App Clone
 
 ## Contents <br/>
-1. Car Item Component<br/>
-  (1) Render the text<br/>
-  (2) Render the Background Image<br/>
-  (3) Create a Separate component for CarItem<br/>
-2. Button Component<br/>
-  (1) Create Separate Component<br/>
-  (2) Receive props / Style The button based on 'type' prop<br/>
-3. Finish Car Item Component
-  (1) Use buttons
-  (2) Implement props 
-
+1. Initialise the expo project<br/>
+2. Bottom Tab Navigator<br/>
+3. Home Screen Setup<br/>
+4. Album Component<br/>
+5. Album Category Component<br/>
+6. Data :<br/>
+    - Album Categories : Array<br/>
+7. Album Scrren<br/>
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
 * [notJust․dev 유투브채널 바로가기](https://www.youtube.com/channel/UCYSa_YLoJokZAwHhlwJntIA) <br/>
-* [Tutorial Video](https://www.youtube.com/watch?v=iQ_0Fd_N3Mk)<br/>
+* [Tutorial Video](https://www.youtube.com/watch?v=Ho41KNKvoBc&list=PLY3ncAV1dSVBejIDGrcbNRs148uHowYfx)<br/>
 * *작업단계 별 부연설명은 Source Code내 주석으로 작성*
-
+* Techinologies : <br/>
+    (1)Front End : React Native, Expo, TypeScript, React Navigation<br/>
+    (2)Backend End : AWS Amplify, AWS AppSync, GraphQL<br/>
+    
 ___
 
 ## 결과물
-<p><iframe src="https://www.youtube.com/embed/qIG1yNURnQ8" frameborder="0" allowfullscreen></iframe></p>
-[Source Code Download](https://github.com/HongDaye71/ReactNative-TeslaMobileApp-Clone)
+<p><iframe src="" frameborder="0" allowfullscreen></iframe></p>
+___ 
 
-### 1.1 Car Item Component (Render the text)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/01.png" alt="Project" width="40%" height="40%">
-<details>
-<summary>Source Code</summary>
-<div markdown="1">
+### Initialise the expo project<br/>
+<img src="/images/Posting/ReactNative/Spotify/01.png" alt="Project" width="40%" height="40%">
+<img src="/images/Posting/ReactNative/Spotify/02.png" alt="Project" width="40%" height="40%">
+- tabs(TypeScript) template선택하여 프로젝트 생성<br/>
+    (1) blank : 처음부터 expo를 시작하고 싶을 때 선택<br/>
+    (2) blank(TypeScript) : TypeScript 사용 시 선택<br/>
+    (3) tabs(TypeScript) : NavigationTab과 같은 Tab사용 시 선택<br/>
 
-```javascript
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.carContainer}>  
-        <View style={styles.titles}>
-          <Text style={styles.title}>Model S</Text>
-          <Text style={styles.subtitle}>Starting at $69,420</Text>
-      </View>
-      {/*<View></View> = Component를 Group으로 관리*/}
-      {/*style={styles.__} = 스타일 지정(스타일은 하단에서 설정))*/}
-      </View>
-
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  carContainer:{
-    width:'100%',
-    height:'100%',
-  },
-
-  titles:{
-    marginTop:'30%',
-    width:'100%',
-    alignItems:'center'
-  },
-
-  title:{
-    fontSize:40,
-    fontWeight:'500',
-  },
-
-  subtitle:{
-    fontSize:16,
-    color:'#5c5e62'
-  },
-});
-
-```
-
-</div>
-</details>
+[Click To View React Navigation Posting](https://hongdaye71.github.io/blog/reactnative-navigation-copy)
 
 ___
 
-### 1.2 Car Item Component(Render the Background Image)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/02.png" alt="Project" width="40%" height="40%">
+### Bottom Tab Navigator <br/>
+<img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
+- types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
+- navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
+
+[Icon download](https://icons.expo.fyi/)
+
 <details>
-<summary>Source Code</summary>
+<summary>type.tsx</summary>
 <div markdown="1">
 
 ```javascript
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-
-      <View style={styles.carContainer}>
-        <ImageBackground
-          source={require('../assets/images/ModelX.jpeg')}
-          style={styles.image}
-        />
-        
-        <View style={styles.titles}>
-          <Text style={styles.title}>Model S</Text>
-          <Text style={styles.subtitle}>Starting at $69.428</Text>
-        </View>
-      </View>
-
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  carContainer:{
-    width:'100%',
-    height:'100%',
-  },
-
-  titles:{
-    marginTop:'30%',
-    width:'100%',
-    alignItems:'center'
-  },
-
-  title:{
-    fontSize:40,
-    fontWeight:'500',
-  },
-
-  subtitle:{
-    fontSize:16,
-    color:'#5c5e62'
-  },
-
-  image : {
-    width:'100%',
-    height:'100%',
-    resizeMode:'cover',
-    position:'absolute',
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
   }
-});
+}
 
+export type RootStackParamList = {
+  Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Modal: undefined;
+  NotFound: undefined;
+};
+
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
+  Screen
+>;
+
+export type RootTabParamList = {
+  Home: undefined;
+  Search: undefined;
+  Library: undefined;
+  Premium: undefined;
+};
+
+export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
+  BottomTabScreenProps<RootTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>;
+
+```
+</div>
+</details>
+
+<details>
+<summary>navigation_index.tsx(수정된 부분)</summary>
+<div markdown="1">
+
+```javascript
+/*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
+import { 
+  FontAwesome,
+  Entypo, 
+  EvilIcons, 
+  MaterialIcons , 
+  FontAwesome5 } 
+  from '@expo/vector-icons';
+
+/*화면상의 아이콘 및 텍스트 변경*/
+const BottomTab = createBottomTabNavigator<RootTabParamList>();
+
+function BottomTabNavigator() {
+  const colorScheme = useColorScheme();
+
+  return (
+    <BottomTab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: Colors[colorScheme].tint,
+      }}>
+      <BottomTab.Screen
+        name="Home"
+        component={TabOneScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Search"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Library"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Premium"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+    </BottomTab.Navigator>
+  );
+}
 ```
 </div>
 </details>
 
 ___
 
-## 1.3 Car Item Component(Create a Separate component for CarItem)<br/>
-
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/ReactNative/TeslaProject/04.png" alt="Project">
-    <img src="/images/Posting/ReactNative/TeslaProject/05.png" alt="Project">
-    <img src="/images/Posting/ReactNative/TeslaProject/06.png" alt="Project">
-  </div>
-  <em>App.js / index.js / style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
-</div>
-
-- Separate Component 생성 시에 하나의 파일에서 다수 Component의 index & style source code를 작설할 경우, 코드가 지저분해 지므로 Car_Item폴더생성 후 index & style file 별도작성하여 App.js Script에서 사용<br/>
+### HomeScreen Setup <br/>
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+- HomeScreen 생성 후 navigation_index.tsx의 Home Component변경
 
 <details>
-<summary>App.js  Source Code</summary>
+<summary>HomeScreen.tsx</summary>
 <div markdown="1">
 
 ```javascript
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-import CarItem from './CarItem'; /*CarItem_index.js import*/
+import { StyleSheet } from 'react-native';
 
-export default function App() {
+import EditScreenInfo from '../components/EditScreenInfo';
+import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
+
+export default function TabOneScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
-
-      <CarItem /> {/*CarItem_index.js code사용*/}
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Home</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );
 }
@@ -207,9 +185,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
   },
 });
 
@@ -218,599 +204,82 @@ const styles = StyleSheet.create({
 </details>
 
 <details>
-<summary>CarItem_index.js Source Code</summary>
+<summary>navigation_index.tex(수정된 부분)</summary>
 <div markdown="1">
 
 ```javascript
-import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
-import styles from './styles'
+/*HomeScreen import*/
+import HomeScreen from '../screens/HomeScreen';
 
-const CarItem = (props) => {
-    return (
-        <View style={styles.carContainer}>
-            <ImageBackground
-                source={require('../assets/images/ModelX.jpeg')}
-                style={styles.image}
-            />
-        
-            <View style={styles.titles}>
-                <Text style={styles.title}>Model S</Text>
-                <Text style={styles.subtitle}>Starting at $69.428</Text>
-            </View>
-        </View>
-    );
-};
-
-export default CarItem;
-```
-</div>
-</details>
-
-<details>
-<summary>CarItem_styles.js Source Code</summary>
-<div markdown="1">
-
-```javascript
- import {StyleSheet} from 'react-native';
-
- const styles = StyleSheet.create({
-    carContainer:{
-        width:'100%',
-        height:'100%',
-      },
-    
-      titles:{
-        marginTop:'30%',
-        width:'100%',
-        alignItems:'center'
-      },
-    
-      title:{
-        fontSize:40,
-        fontWeight:'500',
-      },
-    
-      subtitle:{
-        fontSize:16,
-        color:'#5c5e62'
-      },
-      
-      image : {
-        width:'100%',
-        height:'100%',
-        resizeMode:'cover',
-        position:'absolute',
-      }
- });
-
- export default styles;
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
 ```
 </div>
 </details>
 
 ___
 
-## 2.1 Button Component(Create a separate component)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/07.png" alt="Project" width="40%" height="40%">
-
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/ReactNative/TeslaProject/08.png" alt="Project">
-    <img src="/images/Posting/ReactNative/TeslaProject/09.png" alt="Project">
-  </div>
-  <em>CarItem_index.js / StyleButton_index.js / StyleButton_style.js / <a href="https://unsplash.com/" target="_blank"></a></em>
-</div>
-
-- StyleButton Folder 생성 후 index & style file 별도 작성하여 CarItem_index.js에서 사용<br/>
+### Album Component<br/>
+<img src="/images/Posting/ReactNative/Spotify/05.png" alt="Project" width="40%" height="40%">
+- Album 폴더 생성
+- Album_index.tsx : AlbumProps(id, imageUri, artistHeadline정보를 string 입력받음)를 사용하는 Album function생성
+- Album_styles.tsx : Album function style지정
+- screens_HomeScreen.tsx : Album function사용
 
 <details>
-<summary>StyleButton Folder_index.js Source Code</summary>
+<summary>Album_index.tsx</summary>
 <div markdown="1">
 
 ```javascript
 import React from 'react';
-import {View, Text, Pressable} from 'react-native';
+import {View, Image, Text} from 'react-native';
 import styles from './styles';
 
-const StyleButton = (props) => {
-
-    return (
-        <View style={styles.container}>
-            <Pressable
-                style={styles.button}
-                onPress={()=> console.warn ('Hey there')}
-            >
-                <Text style={styles.text}>Custom Order</Text>
-            </Pressable>
-        </View>
-    );
-};
-
-export default StyleButton;
-
-```
-</div>
-</details>
-
-<details>
-<summary>StyleButton Folder_styles.js Source Code</summary>
-<div markdown="1">
-
-```javascript
-import {StyleSheet} from 'react-native';
-
-const styles = StyleSheet.create({
-    container: {
-        width:'100%',
-        padding:10,
-    },
-
-    button: {
-        height:40,
-        borderRadius:20, /*Button radius설정*/
-        justifyContent : 'center', /*vertical기준 : Text Center*/
-        alignItems :'center', /*Horizontal기준 : Text Center*/
-    },
-
-    text: {
-        fontSize:12,
-        fontWeight:'500',
-        textTransform:'uppercase', /*대문자 세팅*/
+export type AlbumProps = {
+    album : {
+        id : string;
+        imageUri : string;
+        artistHeadline : string;
     }
-});
-
-export default styles;
-```
-</div>
-</details>
-
-___
-
-## 2.2 Button Component(Receive props / Style The Button based on 'type' prop)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/10.png" alt="Project" width="40%" height="40%">
-
-- Props : Component간 데이터 공유를 위해 사용되는 객체<br/>
-- Button Background의 경우, 두 개 버튼의 색상이 다르기 때문에 Style.js에서 지정하지 않고 Props를 통해 별도지정(StyleButton Folder_index.js에서 Type에 따른 Style설정 후 CarItem Folder_index.js에서 type,content,onPress등 설정)<br/>
-
-<details>
-<summary>CarItem_index.js Source Code</summary>
-<div markdown="1">
-
-```javascript
-import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
-import StyleButton  from '../StyleButton';
-import styles from './styles'
-
-const CarItem = (props) => {
-    return (
-        <View style={styles.carContainer}>
-            <ImageBackground
-                source={require('../assets/images/ModelX.jpeg')}
-                style={styles.image}
-            />
-        
-            <View style={styles.titles}>
-                <Text style={styles.title}>Model S</Text>
-                <Text style={styles.subtitle}>Starting at $69.428</Text>
-            </View>
-
-            <StyleButton 
-                type='primary' 
-                content={"Custom Order"} 
-                onPress={()=>{
-                    console.warn("Custom Order was pressed")
-                }}
-            />
-            {/*Parameter : Type, Content, onPress시 출력 될 텍스트*/}
-            <StyleButton 
-                type='secondary' 
-                content={"Existing Inventory"} 
-                onPress={()=>{
-                    console.warn("Existing Inventory was pressed")
-                }}
-            />
-        </View>
-    );
-};
-
-export default CarItem;
-```
-</div>
-</details>
-
-<details>
-<summary>StyleButton Folder_index.js Source Code</summary>
-<div markdown="1">
-
-```javascript
-import React from 'react';
-import {View, Text, Pressable} from 'react-native';
-import styles from './styles';
-
-const StyleButton = (props) => {
-
-    const {type, content, onPress} = props;
-    {/*type, contet, onPress : CarItem_index.js에서 별도지정될 수 있도록 선언*/}
-
-    const backgroundColor = type === 'primary' ? '#171a20CC' : '#FFFFFFA6';
-    const textColor = type === 'primary' ? '#FFFFFFA6' : '#171a20CC';
-    /*Background Color, Text Color : CarItem_index.js에서 지정한 type에 따라 색상을 어떻게 설정할지 Setting*/
-
-    return (
-        <View style={styles.container}>
-            <Pressable
-                style={[styles.button, {backgroundColor : backgroundColor}]}
-                onPress={()=>onPress()}
-            >
-                <Text style={[styles.text, {color : textColor}]}>{content}</Text>
-            </Pressable>
-            {/*Background Color, Text Color, Content: 위에서 Setting한 type별 색상이 적용되도록 설정*/}
-        </View>
-    );
-};
-
-export default StyleButton;
-
-```
-</div>
-</details>
-
-___
-
-### 3.1 Finish Car Item Component (Use buttons)<br/>
-<img src="/images/Posting/ReactNative/TeslaProject/11.png" alt="Project" width="40%" height="40%">
-- 버튼 위치조정 (Style지정 후 CarItem_style.js에서 위치조정)
-- CarItem_index.js의 name, tagline, image 요소에 props적용 (앱 스크롤링 시, 화면이동 작업을 용이하게 하기위함)
-
-<details>
-<summary>CarItem_index.js</summary>
-<div markdown="1">
-
-```javascript
-import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
-import StyleButton  from '../StyleButton';
-import styles from './styles'
-
-const CarItem = (props) => {
-
-    const {name, tagline, taglineCTA, image} = props;
-    {/*name, tagline, image : App.js에서 별도 지정할 수 있도록 선언*/}
-
-    return (
-        <View style={styles.carContainer}>
-            {/*name, tagline, image : App.js에서 별도 지정할 수 있도록 설정*/}
-            <ImageBackground
-                source={image}
-                style={styles.image}
-            />
-        
-            <View style={styles.titles}>
-                <Text style={styles.title}>{name}</Text>
-                <Text style={styles.subtitle}>
-                    {tagline}&nbsp;
-                    <Text style={styles.subtitleCTA}>
-                        {/*Tochless Delivery 텍스트의 경우, 클릭 가능하도록 별도 스타일 지정*/}
-                        {taglineCTA}
-                    </Text>
-                    </Text>
-            </View>
-
-            <View style={styles.buttonsContainer}> 
-            {/*Button 위치조정을 위해 하나의 그룹으로 묶어준 뒤 style.js에서 작업*/}
-                <StyleButton 
-                    type='primary' 
-                    content={"Custom Order"} 
-                    onPress={()=>{
-                        console.warn("Custom Order was pressed")
-                    }}
-                />
-                <StyleButton 
-                    type='secondary' 
-                    content={"Existing Inventory"} 
-                    onPress={()=>{
-                        console.warn("Existing Inventory was pressed")
-                    }}
-                />
-            </View>
-        </View>
-    );
-};
-
-export default CarItem;
-
-```
-</div>
-</details>
-
-<details>
-<summary>CarItem_style.js</summary>
-<div markdown="1">
-
-```javascript
- import {StyleSheet} from 'react-native';
-
- const styles = StyleSheet.create({
-    carContainer:{
-        width:'100%',
-        height:'100%',
-      },
-    
-      titles:{
-        marginTop:'30%',
-        width:'100%',
-        alignItems:'center'
-      },
-    
-      title:{
-        fontSize:40,
-        fontWeight:'500',
-      },
-    
-      subtitle:{
-        fontSize:16,
-        color:'#5c5e62'
-      },
-
-      subtitleCTA:{
-        /*Tochless Delivery 텍스트의 경우, 클릭 가능하도록 별도 스타일 지정*/
-        textDecorationLine:'underline',
-      },
-      
-      image : {
-        width:'100%',
-        height:'100%',
-        resizeMode:'cover',
-        position:'absolute',
-      },
-
-      /*Button 위치조정*/
-      buttonsContainer: {
-        position: 'absolute',
-        bottom: 50,
-        width: '100%'
-      }
- });
-
- export default styles;
-```
-</div>
-</details>
-
-<details>
-<summary>App.js</summary>
-<div markdown="1">
-
-```javascript
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-import CarItem from './CarItem'; 
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-
-      <CarItem 
-      name={"Model X"}
-      tagline={"Order Online For"}
-      taglineCTA={"Touchless Delivery"}
-      image={require('./assets/images/ModelX.jpeg')}
-      /> 
-      {/*CarItem_index.js에서 name, tagline, image는 별도 지정하는 것으로 수정하였으므로 해당 스크립트에서 별도지정*/}
-
-
-      <StatusBar style="auto" />
-    </View>
-  );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Album=(props:AlbumProps) => (
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.images}/>
+        <Text>{props.album.artistHeadline}</Text>
+    </View>
+)
 
-```
-</div>
-</details>
-
-___
-
-### 3.2 Finish Car Item Component (Implement props)<br/>
-<p><iframe src="https://www.youtube.com/embed/qIG1yNURnQ8" frameborder="0" allowfullscreen></iframe></p>
-
-- CarList Folder 생성 후 car & index & style file 별도 작성하여 App.js에서 사용<br/>
-  - car.js : 스크롤다운 시 나타날 4개 페이지 내 정보<br/>
-  - index.js : car.js 내 한 개의 정보가 CarItem_index.js양식으로 하나씩 랜더링 되도록 코드작성<br/>
-
-<details>
-<summary>CarItem_index.js</summary>
-<div markdown="1">
-
-```javascript
-import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
-import StyleButton  from '../StyleButton';
-import styles from './styles'
-
-const CarItem = (props) => {
-
-    const {name, tagline, taglineCTA, image} = props.car;
-
-    return (
-        <View style={styles.carContainer}>
-            <ImageBackground
-                source={image}
-                style={styles.image}
-            />
-        
-            <View style={styles.titles}>
-                <Text style={styles.title}>{name}</Text>
-                <Text style={styles.subtitle}>
-                    {tagline}&nbsp;
-                    <Text style={styles.subtitleCTA}>
-                        {taglineCTA}
-                    </Text>
-                    </Text>
-            </View>
-
-            <View style={styles.buttonsContainer}> 
-
-                <StyleButton 
-                    type='primary' 
-                    content={"Custom Order"} 
-                    onPress={()=>{
-                        console.warn("Custom Order was pressed")
-                    }}
-                />
-                <StyleButton 
-                    type='secondary' 
-                    content={"Existing Inventory"} 
-                    onPress={()=>{
-                        console.warn("Existing Inventory was pressed")
-                    }}
-                />
-            </View>
-        </View>
-    );
-};
-
-export default CarItem;
-
+export default Album;
 ```
 </div>
 </details>
 
 <details>
-<summary>CarItem_style.js</summary>
+<summary>Album_styles.tsx</summary>
 <div markdown="1">
 
 ```javascript
- import {StyleSheet, Dimensions} from 'react-native';
-
- const styles = StyleSheet.create({
-    carContainer:{
-        width:'100%',
-        height: Dimensions.get('window').height, 
-        /**/
-      },
-    
-      titles:{
-        marginTop:'30%',
-        width:'100%',
-        alignItems:'center'
-      },
-    
-      title:{
-        fontSize:40,
-        fontWeight:'500',
-      },
-    
-      subtitle:{
-        fontSize:16,
-        color:'#5c5e62'
-      },
-
-      subtitleCTA:{
-        textDecorationLine:'underline',
-      },
-      
-      image : {
-        width:'100%',
-        height:'100%',
-        resizeMode:'cover',
-        position:'absolute',
-      },
-
-      buttonsContainer: {
-        position: 'absolute',
-        bottom: 50,
-        width: '100%'
-      }
- });
-
- export default styles;
-```
-</div>
-</details>
-
-<details>
-<summary>CarList_car.js</summary>
-<div markdown="1">
-
-```javascript
-export default [{
-  name: 'Model S',
-  tagline: 'Starting at $69,420',
-  image: require('../assets/images/ModelS.jpeg'),
-}, {
-  name: 'Model 3',
-  tagline: 'Order Online for',
-  taglineCTA: 'Touchless Delivery',
-  image: require('../assets/images/Model3.jpeg'),
-}, {
-  name: 'Model X',
-  tagline: 'Order Online for',
-  taglineCTA: 'Touchless Delivery',
-  image: require('../assets/images/ModelX.jpeg'),
-}, {
-  name: 'Model Y',
-  tagline: 'Order Online for',
-  taglineCTA: 'Touchless Delivery',
-  image: require('../assets/images/ModelY.jpeg'),
-}];
-
-```
-</div>
-</details>
-
-<details>
-<summary>CarList_index.js</summary>
-<div markdown="1">
-
-```javascript
-import React from 'react';
-import {View, FlatList} from 'react-native';
-
-import CarItem from '../CarItem';
-import styles from './styles';
-import cars from './cars';
-
-const CarsList = (props) => {
-    return (
-        <View style={styles.container}>
-            <FlatList
-            /*FlatList : 출력해야 하는 데이터 양이 많은 경우, 모든 데이터를 한 번에 렌더링 하지 않고 보여지는 부분 혹은 수동으로 설정한 양 만큼의 데이터만 렌더링 되도록 하는 Comonent*/
-                data={cars}
-                renderItem={({item}) => <CarItem car={item} />}
-            />
-        </View>
-    );
-};
-
-export default CarsList;
-```
-</div>
-</details>
-
-<details>
-<summary>CarList_style.js</summary>
-<div markdown="1">
-
-```javascript
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container:{
+        width:200,
+    },
+    images:{
         width:'100%',
+        height:200,
+    },
+    text:{
+        color:'grey',
+        marginTop:10,
     }
-});
+})
 
 export default styles;
 ```
@@ -819,21 +288,25 @@ export default styles;
 
 
 <details>
-<summary>App.js</summary>
+<summary>screens_HomeScreen.tsx</summary>
 <div markdown="1">
 
 ```javascript
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import CarsList from './CarsList'; 
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-export default function App() {
-  return (
+import Album from '../components/Album'
+
+const album = {
+  id:'1',
+  imageUri : 'https://user-images.githubusercontent.com/81608287/163757044-767912f2-5cdf-4553-b029-b47c67d82ce8.jpg',
+  artistHeadline :'Dennis Brown'
+}
+
+export default function HomeScreen() {
+  return(
     <View style={styles.container}>
-      <CarsList />
-      {/*기존 CarItem_index.js에서 가져오던 정보를 CarsList_index/js에서 가져오도록 수정 (다수 페이지 생성을 위함)*/}
-      <StatusBar style="auto" />
+      <Album album={album}/>
     </View>
   );
 }
@@ -841,13 +314,212 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
   },
 });
 
 ```
 </div>
 </details>
+
+___
+
+### Album Category Component <br/>
+<img src="/images/Posting/ReactNative/Spotify/06.png" alt="Project" width="40%" height="40%">
+- AlbumProps를 types.tsx에 입력하여 타 스크립트에서 불러와 사용할 수 있도록 함<br/>
+- 기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)<br/>
+- screens_HomeScreen.tsx : Album -> AlbumCategory변경 (Album : 단일앨범 / AlbumCategory : 다수앨범 포함 카테고리 )<br/>
+
+* FlatList : 많은 양의 리스트 아이템을 보여주고자 할 때 쓰이는 Component이다. Scroll View와 유사한 기능을 하나 동작 방식에 차이가 있다.<br/>
+  (1) ScrollView : 데이터가 화면에 보이지 않을 때 사용자가 Swipe를 통해 가려진 데이터를 볼 수 있도록 한다(출력해야 하는 데이터가 고정적이고 많지 않을 때 사용)<br/>
+  (2) FlatList : 모든 데이터를 한 번에 렌더링 하지 않고, 보여지는 부분 혹은 수동으로 설정한 양 만큼의 데이터만을 렌더링 한다. 사용자가 Swipe를 할 때 자동으로 다시 렌더링 한다. (데이터의 길이가 가변적이고 양을 예측할 수 없는 경우에 사용)<br/>
+
+  (3) FlaList Props :<br/>
+  - horizontal(boolean) : 리스트를 가로로 보여지게 하는 속성(default:false)<br/>
+  - keyExtractor : item에 고유의 키를 주는 속성 (ex. keyExtractor={( item ) => item.id} 을 통해 개별 앨범정보에 키 부여)<br/>
+  - data : FlatList의 소스를 담는 공간<br/>
+  - renderItem : data로 받은 소스의 item들을 통해 render를 시켜주는 콜백함수<br/>
+
+<details>
+<summary>type.tsx(추가한 부분)</summary>
+<div markdown="1">
+
+```javascript
+export type Album = {
+  id : string;
+  imageUri : string;
+  artistHeadline : string;
+}
+```
+</div>
+</details>
+
+<details>
+<summary>Album_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {View, Image, Text} from 'react-native';
+import styles from './styles';
+import {Album} from '../../types';
+
+/*기존 AlbumProps 변경 (id, imageUri, artistHeadline -> types.tsx의 Album import후 사용)*/
+export type AlbumProps = {
+    album : Album,
+}
+
+const Album=(props:AlbumProps) => (
+    <View style={styles.container}>
+        <Image source={{uri:props.album.imageUri}} style={styles.images}/>
+        <Text style={styles.text}>{props.album.artistHeadline}</Text>
+    </View>
+)
+
+export default Album;
+```
+</div>
+</details>
+
+<details>
+<summary>AlbumCategory_index.tsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import {FlatList, View, Text} from 'react-native'
+import {Album} from '../../types';
+import styles from './styles';
+import AlbumComponent from '../Album';
+
+export type AlbumCategoryProps = {
+    title: string,
+    albums: [Album],
+}
+
+const AlbumCategory = (props:AlbumCategoryProps) => (
+    <View>
+        <Text style={styles.title}>{props.title}</Text>
+        <FlatList
+            data ={props.albums}
+            renderItem = {({ item }) => <AlbumComponent album={item}/>}
+            keyExtractor={( item ) => item.id}
+            horizontal        
+        />
+    </View>
+)
+
+export default AlbumCategory;
+```
+</div>
+</details>
+
+<details>
+<summary>AlbumCategory_styles.tsx</summary>
+<div markdown="1">
+
+```javascript
+import {StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+
+    container : {
+        margin : 10,
+    },
+
+    title:{
+        color : 'white',
+        fontSize : 28,
+        fontWeight : 'bold',
+        margin:10
+    }
+})
+
+export default styles;
+```
+</div>
+</details>
+
+
+<details>
+<summary>screen_HomeScreen.tsx(수정된 부분)</summary>
+<div markdown="1">
+
+```javascript
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+import AlbumCategory from '../components/AlbumCategory'
+
+const albumCategory = {
+  id:'1',
+  title:'Happy Vibes',
+  albums:[
+    {
+      id: '1',
+      imageUri: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
+      artistHeadline: 'Taylor Swift, Kygo Objective C, Avicii'
+    }, {
+      id: '2',
+      imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
+      artistHeadline: 'Post Malone, Drake, Eminem'
+    },
+    {
+      id: '3',
+      imageUri: 'https://images-na.ssl-images-amazon.com/images/I/61F66QURFyL.jpg',
+      artistHeadline: 'Journey, Escape, Avicii'
+    },
+    {
+      id: '4',
+      imageUri: 'https://i.pinimg.com/originals/a2/0d/37/a20d37791f8ad5cd54734cd3af559cc9.jpg',
+      artistHeadline: 'Bob Marley, Cardi B, Stas Mihailov'
+    },
+  ]
+};
+
+export default function HomeScreen() {
+  return(
+    <View style={styles.container}>
+      <AlbumCategory 
+      title={albumCategory.title} 
+      albums={albumCategory.albums}
+      />
+    </View>
+  );
+}
+
+```
+</div>
+</details>
+
+___
+
+### ---- <br/>
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+___
+
+* App Clone목표 :
+* 느낀점 : 
+* 앞으로의 계획 : 
+
 
