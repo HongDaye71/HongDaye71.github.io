@@ -47,7 +47,7 @@ ___
 - types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
 - navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
 
-[Icon download](https://icons.expo.fyi/)
+[Icon expo](https://icons.expo.fyi/)
 
 <details>
 <summary>type.tsx</summary>
