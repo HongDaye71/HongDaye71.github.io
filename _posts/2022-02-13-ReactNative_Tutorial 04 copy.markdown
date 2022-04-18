@@ -48,7 +48,7 @@ ___
 - types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
 - navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
 
-[Icon expo](https://icons.expo.fyi/)
+[Icon](https://icons.expo.fyi/)
 
 <details>
 <summary>Source Code_type.tsx</summary>
@@ -95,9 +95,9 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 <summary>Source Code_navigation_index.tsx(수정된 부분)</summary>
 <div markdown="1">
 
-~~~javascript
-/*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
+```javascript
 import { 
+  /*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
   FontAwesome,
   Entypo, 
   EvilIcons, 
@@ -105,13 +105,13 @@ import {
   FontAwesome5 } 
   from '@expo/vector-icons';
 
-/*화면상의 아이콘 및 텍스트 변경*/
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
+    /*화면상의 아이콘 및 텍스트 변경*/
     <BottomTab.Navigator
       initialRouteName="Home"
       screenOptions={{
@@ -148,6 +148,7 @@ function BottomTabNavigator() {
     </BottomTab.Navigator>
   );
 }
-~~~
+
+```
 </div>
 </details>
