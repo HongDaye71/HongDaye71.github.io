@@ -126,3 +126,71 @@ function BottomTabNavigator() {
 </div>
 </details>
 
+___
+
+### HomeScreen Setup <br/>
+<img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
+- HomeScreen 생성 후 navigation_index.tsx의 Home Component변경
+
+<details>
+<summary>HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { StyleSheet } from 'react-native';
+
+import EditScreenInfo from '../components/EditScreenInfo';
+import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
+
+export default function TabOneScreen({ navigation }: RootTabScreenProps<'Home'>) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Home</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+
+```
+</div>
+</details>
+
+<details>
+<summary>navigation_index.tex(수정된 부분)</summary>
+<div markdown="1">
+
+```javascript
+/*HomeScreen import*/
+import HomeScreen from '../screens/HomeScreen';
+
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+```
+</div>
+</details>
+
+___
