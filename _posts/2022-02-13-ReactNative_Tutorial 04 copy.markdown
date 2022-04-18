@@ -28,3 +28,19 @@ ___
     (2)Backend End : AWS Amplify, AWS AppSync, GraphQL<br/>
     
 ___
+
+## 결과물
+<p><iframe src="" frameborder="0" allowfullscreen></iframe></p>
+___ 
+
+### Initialise the expo project<br/>
+<img src="/images/Posting/ReactNative/Spotify/01.png" alt="Project" width="40%" height="40%">
+<img src="/images/Posting/ReactNative/Spotify/02.png" alt="Project" width="40%" height="40%">
+- tabs(TypeScript) template선택하여 프로젝트 생성<br/>
+    (1) blank : 처음부터 expo를 시작하고 싶을 때 선택<br/>
+    (2) blank(TypeScript) : TypeScript 사용 시 선택<br/>
+    (3) tabs(TypeScript) : NavigationTab과 같은 Tab사용 시 선택<br/>
+
+[Click To View React Navigation Posting](https://hongdaye71.github.io/blog/reactnative-navigation-copy)
+
+___
