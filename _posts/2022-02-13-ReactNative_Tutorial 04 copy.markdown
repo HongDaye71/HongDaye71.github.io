@@ -42,5 +42,53 @@ ___
 
 ___
 
+### Bottom Tab Navigator <br/>
+<img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
+- types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
+- navigation_index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
+
+[Icon download](https://icons.expo.fyi/)
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
+
+```javascript
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+export type RootStackParamList = {
+  Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Modal: undefined;
+  NotFound: undefined;
+};
+
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
+  Screen
+>;
+
+export type RootTabParamList = {
+  Home: undefined;
+  Search: undefined;
+  Library: undefined;
+  Premium: undefined;
+};
+
+export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
+  BottomTabScreenProps<RootTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>;
+
+```
+</div>
+</details>
 
 
