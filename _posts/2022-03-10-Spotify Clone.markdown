@@ -426,6 +426,33 @@ export default AlbumCategory;
 </details>
 
 <details>
+<summary>AlbumCategory_styles.tsx</summary>
+<div markdown="1">
+
+```javascript
+import {StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+
+    container : {
+        margin : 10,
+    },
+
+    title:{
+        color : 'white',
+        fontSize : 28,
+        fontWeight : 'bold',
+        margin:10
+    }
+})
+
+export default styles;
+```
+</div>
+</details>
+
+
+<details>
 <summary>screen_HomeScreen.tsx(수정된 부분)</summary>
 <div markdown="1">
 
