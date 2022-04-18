@@ -112,7 +112,13 @@ function BottomTabNavigator() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
-
+      <BottomTab.Screen
+        name="Home"
+        component={TabOneScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
   );
 }
 ```
