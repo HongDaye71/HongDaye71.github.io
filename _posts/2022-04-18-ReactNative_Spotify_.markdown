@@ -31,8 +31,6 @@ ___
 
 ## 결과물
 <p><iframe src="" frameborder="0" allowfullscreen></iframe></p>
-[Source Code Download]()
-
 ___ 
 
 ### Initialise the expo project<br/>
