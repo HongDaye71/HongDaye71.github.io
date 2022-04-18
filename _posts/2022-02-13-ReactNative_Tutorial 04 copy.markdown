@@ -95,7 +95,7 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 <summary>Source Code_navigation_index.tsx(수정된 부분)</summary>
 <div markdown="1">
 
-```javascript
+~~~javascript
 /*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
 import { 
   FontAwesome,
@@ -148,6 +148,6 @@ function BottomTabNavigator() {
     </BottomTab.Navigator>
   );
 }
-```
+~~~
 </div>
 </details>
