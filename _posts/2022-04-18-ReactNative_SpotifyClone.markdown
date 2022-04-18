@@ -48,14 +48,110 @@ ___
 
 ### Bottom Tab Navigator <br/>
 <img src="/images/Posting/ReactNative/Spotify/03.png" alt="Project" width="40%" height="40%">
+- types.tsx : RootTabParamList수정 (TabOne/TabTwo -> Home/Search/Library/Premium)<br/>
+- index.tsx : BottomTabNavigator function수정 (아이콘 및 텍스트 수정) 
 
-
+[Icoone download](https://icons.expo.fyi/)
 
 <details>
-<summary>navigation_index.tsx (프로젝트 초기생성 후 수정된 부분)</summary>
+<summary>type.tsx</summary>
 <div markdown="1">
 
 ```javascript
+import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+export type RootStackParamList = {
+  Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Modal: undefined;
+  NotFound: undefined;
+};
+
+export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
+  RootStackParamList,
+  Screen
+>;
+
+export type RootTabParamList = {
+  Home: undefined;
+  Search: undefined;
+  Library: undefined;
+  Premium: undefined;
+};
+
+export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
+  BottomTabScreenProps<RootTabParamList, Screen>,
+  NativeStackScreenProps<RootStackParamList>
+>;
+
+```
+</div>
+</details>
+
+<details>
+<summary>navigation_index.tsx(초기 프로젝트에서 수정된 부분)</summary>
+<div markdown="1">
+
+```javascript
+/*Bottom Tab Navigator에서 사용할 아이콘 불러오기*/
+import { 
+  FontAwesome,
+  Entypo, 
+  EvilIcons, 
+  MaterialIcons , 
+  FontAwesome5 } 
+  from '@expo/vector-icons';
+
+/*화면상의 아이콘 및 텍스트 변경*/
+const BottomTab = createBottomTabNavigator<RootTabParamList>();
+
+function BottomTabNavigator() {
+  const colorScheme = useColorScheme();
+
+  return (
+    <BottomTab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: Colors[colorScheme].tint,
+      }}>
+      <BottomTab.Screen
+        name="Home"
+        component={TabOneScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Search"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Library"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Premium"
+        component={TabTwoScreen}
+        options={{
+          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={{marginBottom:-3}} color={color} />,
+        }}
+      />
+    </BottomTab.Navigator>
+  );
+}
 ```
 </div>
 </details>
