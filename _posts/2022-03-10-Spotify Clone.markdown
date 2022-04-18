@@ -345,6 +345,11 @@ ___
   (1) ScrollView : 데이터가 화면에 보이지 않을 때 사용자가 Swipe를 통해 가려진 데이터를 볼 수 있도록 한다(출력해야 하는 데이터가 고정적이고 많지 않을 때 사용)<br/>
   (2) FlatList : 모든 데이터를 한 번에 렌더링 하지 않고, 보여지는 부분 혹은 수동으로 설정한 양 만큼의 데이터만을 렌더링 한다. 사용자가 Swipe를 할 때 자동으로 다시 렌더링 한다. (데이터의 길이가 가변적이고 양을 예측할 수 없는 경우에 사용)<br/>
 
+  (3) FlaList Props :<br/>
+  - horizontal(boolean) : 리스트를 가로로 보여지게 하는 속성(default:false)<br/>
+  - keyExtractor : item에 고유의 키를 주는 속성 (ex. keyExtractor={( item ) => item.id} 을 통해 개별 앨범정보에 키 부여)<br/>
+  - data : FlatList의 소스를 담는 공간<br/>
+  - renderItem : data로 받은 소스의 item들을 통해 render를 시켜주는 콜백함수<br/>
 
 <details>
 <summary>type.tsx(추가한 부분)</summary>
