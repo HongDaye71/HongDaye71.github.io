@@ -30,8 +30,7 @@ ___
 
 ___
 
-나의 경우, 위 방법을 모두 시도해보았으나 문제가 해결되지 않아 반나절을 허비했다. 
-
+나의 경우, 위 방법을 모두 시도해보았으나 문제가 해결되지 않아 반나절을 허비했다. <br/>
 Github_repository의 pages build fail message를 확인하지 않은 탓이였다. <br/>
 
 아래 이미지에 표기해둔 순서대로 error message를 확인해본 결과, 아래와 같은 문제로 포스팅이 게시되지 않는 것을 확인했다.<br/>
@@ -46,14 +45,13 @@ Jekyll에서 사용되는 liquid는 {% raw %}{{, }}{% endraw %}를 escape 문자
 
 ### 해결방법
 <img src="/images/Posting/Etc/02.png" alt="Project">
-
-중괄호 앞 뒤로 raw와 endraw를 추가한다.
+<br/>중괄호 앞 뒤로 raw와 endraw를 추가한다.
 
 ___
 
 ### 참고자료<br>
-1. jekyll-post-not-generated
-2. github-pages-are-not-updating
-3. jekyll-not-generating-posts
+1. [jekyll-post-not-generated](https://stackoverflow.com/questions/30625044/jekyll-post-not-generated)
+2. [github-pages-are-not-updating](https://stackoverflow.com/questions/20422279/github-pages-are-not-updating)
+3. [jekyll-not-generating-posts](https://stackoverflow.com/questions/16990138/jekyll-not-generating-posts)
 4. [[Github Blog]깃허브 블로그 포스팅 게시 안됨 해결](https://devyuseon.github.io/github%20blog/githubblog-post-not-shown/)
 5. [[Github블로그/Jekyll] Liquid Exception: Liquid syntax error 해결](https://iamheesoo.github.io/blog/gitblog-sol-jekyll02)
