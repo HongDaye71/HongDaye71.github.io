@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  깃허브 블로그_포스팅 게시이슈_원인과 해결방법
+title:  GitBlog Posting Issue_원인과 해결방법
 date:   2022-04-17 12:38:35 +0300
 image:  '/images/GitHub.png'
 tags:   [Etc]
