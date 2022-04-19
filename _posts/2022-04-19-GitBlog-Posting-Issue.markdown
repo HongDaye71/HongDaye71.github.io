@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  Jekyll post not generated Issue_Solution
+title:  깃허브 블로그_포스팅 게시이슈_원인과 해결방법
 date:   2022-04-17 12:38:35 +0300
 image:  '/images/GitHub.png'
 tags:   [Etc]
 ---
 
-### :bomb: 문제상황 <br/>
+## 문제상황 <br/>
 _post에 .md파일을 추가했으나 로컬 서버에만 업데이트 될 뿐, 깃허브 블로그에 포스팅이 게시되지 않음 <br/>
 
-### 해결방법<br/>
+___
+
+## 해결방법<br/>
 **기본적인 부분이 잘못되지 않았는지 확인**<br/>
 1. YEAR-MONTH-DAY-title.md 파일 제목 형식확인<br/>
 2. 포스팅 날짜가 오기입 되지 않았는지 확인 (파일명과 포스팅 내부 date가 다르지 않은지)<br/>
@@ -27,22 +29,22 @@ _post에 .md파일을 추가했으나 로컬 서버에만 업데이트 될 뿐, 
 
 ___
 
-*나의 경우, 위 방법을 모두 시도해보았으나 문제가 해결되지 않아 반나절을 허비했다.*
-*Github_repository의 pages build fail message를 확인하지 않은 탓이였다*
+나의 경우, 위 방법을 모두 시도해보았으나 문제가 해결되지 않아 반나절을 허비했다. <br/>
+Github_repository의 pages build fail message를 확인하지 않은 탓이였다. 아래 이미지에 표기해둔 순서대로 error message를 확인해본 결과, 아래와 같은 문제로 포스팅이 게시되지 않는 것을 확인했다.<br/>
 
-<img src="/images/Posting/Etc/01.png" alt="Project" width="40%" height="40%">
+<img src="/images/Posting/Etc/01.png" alt="Project">
 
-위 이미지에 표기해둔 순서대로 error message를 확인해본 결과, 아래와 같은 문제로 포스팅이 게시되지 않는 것을 확인했다.
+**에러 메세지** <br/>
+Liquid Exception: Liquid syntax error<br/>
 
-**에러 메세지** 
-Liquid Exception: Liquid syntax error
+**원인**<br/>
+Jekyll에서 사용되는 liquid는 {% raw %}{{, }}{% endraw %}를 escape 문자로 사용하는데, md문서에 {% raw %}{{{% endraw %}, {% raw %}}}{% endraw %}가 있는 경우 에러 메시지를 출력한다.<br/>
 
-**원인**
-Jekyll에서 사용되는 liquid는 {% raw %}{{ 와 }}{% endraw %}를 escape 문자로 사용하는데, md문서에 {% raw %}{{{% endraw %}나 {% raw %}}}{% endraw %}가 있는 경우 에러 메시지를 출력한다.
-
+**해결방법**
+<img src="/images/Posting/Etc/02.png" alt="Project">
+중괄호 앞 뒤로 raw와 endraw를 추가한다.
 
 ___
-
 
 **참고자료**<br>
 1. jekyll-post-not-generated
@@ -50,5 +52,18 @@ ___
 3. jekyll-not-generating-posts
 4. [[Github Blog]깃허브 블로그 포스팅 게시 안됨 해결](https://devyuseon.github.io/github%20blog/githubblog-post-not-shown/)
 5. [[Github블로그/Jekyll] Liquid Exception: Liquid syntax error 해결](https://iamheesoo.github.io/blog/gitblog-sol-jekyll02)
+
+
+
+
+
+~~~JavaScript
+      <BottomTab.Screen
+        name="Library"
+        component={TabTwoScreen}
+        options={% raw %}{{
+          tabBarIcon: ({ color }) => <MaterialIcons name="library-music"/>,
+          }}{% endraw %}
+~~~
 
 
