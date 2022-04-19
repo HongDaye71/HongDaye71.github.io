@@ -4,7 +4,6 @@ title:  기술면접_JavaScript_01
 date:   2022-04-17 12:38:35 +0300
 image:  '/images/JavaScript.jpg'
 tags:   [JavaScript]
-published: true
 ---
 
 ## 자바스크립트의 역사와 현재 그리고 미래<br/>
@@ -14,6 +13,9 @@ published: true
 1. Netscape Navigator와 JavaScript의 탄생<br/>
 2. JScript와 Internet Explorer의 탄생<br/>
 3. ECMA International<br/>
+4. Firefox의 탄생<br/>
+5. JavaScript Library의 탄생<br/>
+6. Chrome과 ECMAScript5의 탄생<br/>
 
 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. 
 * [Tutorial Video](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
@@ -33,9 +35,12 @@ ___
 
 그리하여 1994년 9월, Scheme Script 언어를 변형한 JavaScript 언어와 함께 JavaScript engine이 추가된 Netscape가 출시된다. (이는 웹 개발자들이 JS를 사용해 웹 페이지를 만들게되면, Netscape Navigator 브라우저가 언어를 이해하고 실행하고자 하는 것에 알맞게 DOM요소들을 조작할 수 있게 되었음을 의미한다)
 
+* DOM(Document Object Model) : 웹 페이지에 대한 인터페이스로 여러 프로그램들이 페이지의 콘텐츠 및 구조, 스타일을 읽고 조작할 수 있도록 API를 제공한다.
+
 ___
 
 ### JScript와 Internet Explorer의 탄생<br/>
+<img src="/images/Posting/JavaScript/05.jpg" alt="Project">
 1995년 Microsoft는 Netscape를 통해 브라우저의 잠재성을 확인한 뒤, Netscape를 Reverse engineering하여 JavaScript를 약간 변형한 JScript와 함께 Internet Explorer를 출시한다. <br/>
 
 ___
@@ -49,14 +54,30 @@ ___
   <em><a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
 
-두 개의 서로다른 언어와 엔진을 사용하는 브라우저가 상용화 되면서 당시에는 웹 사이트 이용 시 "우리 사이트는 Netscape(or Internet Explorer)에 최적화 되어있으니 Netscape(or Internet Explorer)를 설치하세요" 라는 문구를 흔히 볼 수 있었다. 이는 사용자의 불편으로 이어졌고 Netscape사는 문제를 해결하기 위해 ECMA International 단체에 찾아가 JavaScript표준안을 만들것을 제안하였고, 1997년 7월 ECMAScript 1이 출시되었다.
+두 개의 서로다른 언어와 엔진을 사용하는 브라우저가 상용화 되면서 당시에는 웹 사이트 이용 시 "우리 사이트는 Netscape(or Internet Explorer)에 최적화 되어있으니 Netscape(or Internet Explorer)를 설치하세요" 라는 문구를 흔히 볼 수 있었다. 이는 사용자의 불편으로 이어졌고 Netscape사는 문제를 해결하기 위해 ECMA International 단체에 찾아가 JavaScript표준안을 만들것을 제안하였고, 1997년 7월 ECMAScript 1이 출시되었다. 이후 ECMAScript4까지 다양한 버전이 출시되었으나 2000년, Internet Explorer의 점유율이 95%에 달하면서 Microsoft사는 더이상 ECMA표준을 따르지 않겠다는 의사를 밝혔고, 이 때를 기점으로 표준화 진행이 더뎌지게 되었다.
 
 * ECMAScript : JavaScript 표준규격으로 변수 및 함수 정의 등 문법사항들을 정리한 문서 
 
+___
 
+### Firefox의 탄생<br/>
+<img src="/images/Posting/JavaScript/06.jpg" alt="Project">
+2004년 Mozilla사는 Firefox를 출시하며 ECMA International 단체에 찾아가 자신들의 프로그래밍 언어와 엔진인 ActionScript3와 Tarmarin으로 표준화를 다시 진행해 볼 것을 제안한다. 이로 인해 표준화를 두고 Mozilla, Microsoft, Netscape 3사가 신경전을 벌이게 된다.<br/>
 
 ___
 
-* DOM(Document Object Model) : 웹 페이지에 대한 인터페이스로 여러 프로그램들이 페이지의 콘텐츠 및 구조, 스타일을 읽고 조작할 수 있도록 API를 제공한다.
+### JavaScript Library<br/>
+3사가 신경전을 벌이는 동안에도 시장에는 많은 브라우저들이 출시되었고, 개발자 수요가 많아짐에 따라 다양한 브라우저에서 동작하는 웹 페이지를 만드는 것에 불만을 갖는 커뮤니티가 형성된다. 그리고 해당 커뮤니티들 사이에서 jQuery, dojo, mootools와 같이 서로 다른 브라우저와의 호환이 가능한 APIs를 제공하는 라이브러리들이 만들어진다. <br/>
+
+___
+
+### Chrome과 ECMAScript5의 탄생<br/>
+<img src="/images/Posting/JavaScript/07.png" alt="Project">
+2008년, Google에서 JIT(just-in-time compilation)엔진이 포함된 Chrome브라우저를 출시한다. JavaScript 실행속도가 월등히 빠른 JIT로 인해 Mozilla, Microsoft, Netscape 3사는 경각심을 느끼게 되고 2008년 7월, Google을 포함한 4사가 표준화에 대해 논의하게 된다.<br/>
+
+그 결과 2009년, ECMAScript5가 출시되었으며 이후 2019년까지 ECMAScript 10까지 발전되었다.<br/>
+현재는 모든 브라우저가 ECMAScript의 표준을 따르고 있기 때문에 더이상 jQuery, dojo, mootools와 같은 라이브러리의 도움이 필수적이지 않다.
+
+___
 
 
