@@ -2,7 +2,7 @@
 layout: post
 title:  기술면접_JavaScript_01
 date:   2022-04-17 12:38:35 +0300
-image:  '/images/JavaScript.png'
+image:  '/images/JavaScript.jpg'
 tags:   [JavaScript]
 published: true
 ---
