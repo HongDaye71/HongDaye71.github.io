@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  [Github블로그/Jekyll] 포스팅 이슈_해결방법
+title:  Github블로그 포스팅이슈_해결방법
 date:   2022-04-17 12:38:35 +0300
 image:  '/images/GitHub.png'
 tags:   [Etc]
