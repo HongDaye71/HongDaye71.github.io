@@ -117,36 +117,26 @@ function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      screenOptions={% raw %}{{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}{% endraw %}>
+      screenOptions={% raw %}{{tabBarActiveTintColor: Colors[colorScheme].tint,}}{% endraw %}>
       <BottomTab.Screen
         name="Home"
         component={TabOneScreen}
-        options={% raw %}{{
-          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,
-        }}{% endraw %}
+        options={% raw %}{{tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,}}{% endraw %}
       />
       <BottomTab.Screen
         name="Search"
         component={TabTwoScreen}
-        options={% raw %}{{
-          tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,
-        }}{% endraw %}
+        options={% raw %}{{tabBarIcon: ({ color }) => <EvilIcons name="search" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,}}{% endraw %}
       />
       <BottomTab.Screen
         name="Library"
         component={TabTwoScreen}
-        options={% raw %}{{
-          tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,
-        }}{% endraw %}
+        options={% raw %}{{tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,}}{% endraw %}
       />
       <BottomTab.Screen
         name="Premium"
         component={TabTwoScreen}
-        options={% raw %}{{
-          tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,
-        }}{% endraw %}
+        options={% raw %}{{tabBarIcon: ({ color }) => <FontAwesome5 name="spotify" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,}}{% endraw %}
       />
     </BottomTab.Navigator>
   );
@@ -215,8 +205,7 @@ import HomeScreen from '../screens/HomeScreen';
         name="Home"
         component={HomeScreen}
         options={% raw %}{{
-          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,
-        }}{% endraw %}
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} style={% raw %}{{marginBottom:-3}}{% endraw %} color={color} />,}}{% endraw %}
       />
 ```
 </div>
