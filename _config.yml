@@ -3,7 +3,6 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://HongDaye71.github.io" # the base hostname & protocol for your site, e.g. http://example.com or https://avenco.netlify.app
 
-future: true
 
 #-------------------------------
 # Build Settings
@@ -13,6 +12,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll/tagging
+  - jemoji
 
 paginate: 6
 paginate_path: "/blog/page/:num"
