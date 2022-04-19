@@ -8,14 +8,13 @@ tags:   [Etc]
 
 <img src="/images/Posting/Etc/03.png" alt="Project">
 <br/>
-:octocat:
 
-## :octocat: 문제상황 <br/>
+## :collision: 문제상황 <br/>
 _post에 .md파일을 추가했으나 로컬 서버에만 업데이트 될 뿐, 깃허브 블로그에 포스팅이 게시되지 않음 <br/>
 
 ___
 
-## 해결방법<br/>
+## :page_with_curl: 해결방법<br/>
 **기본적인 부분이 잘못되지 않았는지 확인**<br/>
 [ x ] YEAR-MONTH-DAY-title.md 파일 제목 형식확인<br/>
 2. 포스팅 날짜가 오기입 되지 않았는지 확인 (파일명과 포스팅 내부 date가 다르지 않은지)<br/>
@@ -52,7 +51,7 @@ Jekyll에서 사용되는 liquid는 {% raw %}{{, }}{% endraw %}를 escape 문자
 
 ___
 
-### 참고자료<br>
+### :books: 참고자료<br>
 1. [jekyll-post-not-generated](https://stackoverflow.com/questions/30625044/jekyll-post-not-generated)
 2. [github-pages-are-not-updating](https://stackoverflow.com/questions/20422279/github-pages-are-not-updating)
 3. [jekyll-not-generating-posts](https://stackoverflow.com/questions/16990138/jekyll-not-generating-posts)
