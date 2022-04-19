@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  React Native Study04_Navigation
+title:  React Native Study03_Navigation
 date:   2022-03-10 15:01:35 +0300
 image:  '/images/ReactNative_Navigation.png'
 tags:  [React Native]
