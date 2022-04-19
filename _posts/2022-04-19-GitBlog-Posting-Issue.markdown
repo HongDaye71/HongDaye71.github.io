@@ -8,16 +8,15 @@ tags:   [Etc]
 
 <img src="/images/Posting/Etc/03.png" alt="Project">
 <br/>
-:+1:
 
-## :octocat: 문제상황 <br/>
+## 문제상황 <br/>
 _post에 .md파일을 추가했으나 로컬 서버에만 업데이트 될 뿐, 깃허브 블로그에 포스팅이 게시되지 않음 <br/>
 
 ___
 
 ## 해결방법<br/>
 **기본적인 부분이 잘못되지 않았는지 확인**<br/>
-1. YEAR-MONTH-DAY-title.md 파일 제목 형식확인<br/>
+- [ ] YEAR-MONTH-DAY-title.md 파일 제목 형식확인<br/>
 2. 포스팅 날짜가 오기입 되지 않았는지 확인 (파일명과 포스팅 내부 date가 다르지 않은지)<br/>
 3. _post 폴더에 맞게 위치해 있는지 확인<br/><br/>
 
