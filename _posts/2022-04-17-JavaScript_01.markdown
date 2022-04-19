@@ -5,6 +5,7 @@ date:   2022-04-17 12:38:35 +0300
 image:  '/images/JavaScript.jpg'
 tags:   [JavaScript]
 ---
+<br/>
 
 ## 자바스크립트의 역사와 현재 그리고 미래<br/>
 ### 부제 : 브라우저의 역사
@@ -19,7 +20,7 @@ ___
 5. JavaScript Library의 탄생<br/>
 6. Chrome과 ECMAScript5의 탄생<br/>
 
-드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
+*드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
 * [Tutorial Video](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)<br/>
 
