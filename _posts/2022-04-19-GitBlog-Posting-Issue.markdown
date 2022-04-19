@@ -12,6 +12,10 @@ tags:   [Etc]
 ## 문제상황 <br/>
 _post에 .md파일을 추가했으나 로컬 서버에만 업데이트 될 뿐, 깃허브 블로그에 포스팅이 게시되지 않음 <br/>
 
+GitHub supports emoji! 
+:+1: :sparkles: :camel: :tada: 
+:rocket: :metal: :octocat:
+
 ___
 
 ## 해결방법<br/>
