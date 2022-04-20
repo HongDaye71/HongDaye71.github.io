@@ -17,6 +17,9 @@ tags:  [React Native]
 6. Data :<br/>
     - Album Categories : Array<br/>
 7. Album Scrren<br/>
+8. Home Screen<br/>
+9. Navigation to Album Screen<br/>
+10. Album Scrren - Song List<br/>
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
@@ -511,7 +514,209 @@ export default function HomeScreen() {
 
 ___
 
-### ---- <br/>
+### Home Screen <br/>
+<img src="/images/Posting/ReactNative/Spotify/07.png" alt="Project" width="40%" height="40%">
+- 앨범정보를 HomeScreen.tsx에 저장하지 않고, albumbumCategories.ts 파일에 별도저장<br/>
+
+<details>
+<summary>albumbumCategories.ts</summary>
+<div markdown="1">
+
+```javascript
+export default [{
+    id: '1',
+    title: 'Happy Vibes',
+    albums: [
+      {
+        id: '1',
+        imageUri: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
+        artistsHeadline: 'Taylor Swift, Kygo Objective C, Avicii'
+      }, {
+        id: '2',
+        imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
+        artistsHeadline: 'Post Malone, Drake, Eminem'
+      },
+      {
+        id: '3',
+        imageUri: 'https://images-na.ssl-images-amazon.com/images/I/61F66QURFyL.jpg',
+        artistsHeadline: 'Journey, Escape, Avicii'
+      },
+      {
+        id: '4',
+        imageUri: 'https://i.pinimg.com/originals/a2/0d/37/a20d37791f8ad5cd54734cd3af559cc9.jpg',
+        artistsHeadline: 'Bob Marley, Cardi B, Stas Mihailov'
+      },
+    ]
+  }, {
+    id: '2',
+    title: 'Popular Playlists',
+    albums: [
+      {
+        id: '5',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164179481-f14d8b74-ade8-4cc0-be99-642b0d04b745.jpg',
+        artistsHeadline: 'Black Match'
+      }, {
+        id: '6',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164178197-baa4ed0f-a0f1-486e-8681-1ff6ae17ecbe.png',
+        artistsHeadline: 'Bruno Mars'
+      },
+      {
+        id: '7',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164178414-37069212-9d42-4d80-b53a-c0c57b9ec27e.jpg',
+        artistsHeadline: 'Lauv'
+      },
+    ]
+  },{
+    id: '3',
+    title: 'Shows to try',
+    albums: [
+      {
+        id: '8',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164178562-74b4c793-6ce0-4c94-a779-e3702e2a60a2.jpg',
+        artistsHeadline: 'Betta Lemme'
+      }, {
+        id: '9',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164178803-76329fd2-fc24-4892-a6bb-84f34a4b4ae2.jpg',
+        artistsHeadline: 'Milk & Bone, Alex Lustig'
+      },
+      {
+        id: '10',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164179050-384577aa-adee-4429-9907-7bc20cd7de2e.jpg',
+        artistsHeadline: 'The Greeting Committee'
+      },
+    ]
+  }, {
+    id: '4',
+    title: 'Workout',
+    albums: [
+      {
+        id: '11',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164179218-9e3810a7-1ae0-4b29-9bb2-f484d7614a15.jpg',
+        artistsHeadline: 'Peter Manos'
+      }, {
+        id: '12',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164177887-f618f57b-be43-4d2d-a687-5b01fdb3acb4.jpg',
+        artistsHeadline: 'Barrie'
+      },
+      {
+        id: '13',
+        imageUri: 'https://user-images.githubusercontent.com/81608287/164179319-eff98448-f098-42b0-80f2-e9bc17e531c4.jpg',
+        artistsHeadline: 'William Bell'
+      },
+    ]
+  },
+  ]
+```
+</div>
+</details>
+
+<details>
+<summary>HomeScreen.tsx</summary>
+<div markdown="1">
+
+```javascript
+import * as React from 'react';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
+
+import AlbumCategory from '../components/AlbumCategory'
+import albumCategories from '../data/albumCategories';
+
+export default function HomeScreen() {
+  return(
+    <View style={styles.container}>
+      <FlatList 
+        data={albumCategories}
+        /*renderItem will be one Albumcategory*/
+        renderItem={({item}) => (
+          <AlbumCategory 
+            title={item.title}
+            albums={item.albums}
+            keyExtractor={( item ) => item.id}
+          />
+          )}
+      
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
+});
+
+```
+</div>
+</details>
+
+___
+
+###  Navigation to Album Screen <br/>
+<img src="/images/Posting/ReactNative/Spotify/08.png" alt="Project" width="40%" height="40%">
+- AlbumScreen.tsx생성
+- BottomTabNavigator.tsx / index.tsx수정 (초기 파일생성 시, default code가 튜토리얼과 상이하여 동일하게 변경)
+- BottomTabNavigator.tsx의 TabOne Navigator()에 AlbumScreen추가
+
+<details>
+<summary>BottomTabNavigator.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+<details>
+<summary>index.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+<details>
+<summary>Album Screen</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+___
+
+###  Album Scrren - Song List <br/>
+<img src="/images/Posting/ReactNative/Spotify/09.png" alt="Project" width="40%" height="40%">
+
+<details>
+<summary>type.tsx</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+___
+
+###  ___ <br/>
 <img src="/images/Posting/ReactNative/Spotify/04.png" alt="Project" width="40%" height="40%">
 
 <details>
@@ -524,7 +729,6 @@ ___
 </div>
 </details>
 ___
-
 * App Clone목표 :
 * 느낀점 : 
 * 앞으로의 계획 : 
