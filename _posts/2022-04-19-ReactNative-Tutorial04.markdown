@@ -20,6 +20,7 @@ tags:  [React Native]
 8. Home Screen<br/>
 9. Navigation to Album Screen<br/>
 10. Album Scrren - Song List<br/>
+
 ___
 
 * notJust․dev 유투브 채널의 React Native Tutorial 영상을 바탕으로 공부한 내용을 정리하는 포스팅입니다.<br/>
@@ -666,8 +667,9 @@ ___
 ###  Navigation to Album Screen <br/>
 <img src="/images/Posting/ReactNative/Spotify/08.png" alt="Project" width="40%" height="40%">
 - AlbumScreen.tsx생성
-- BottomTabNavigator.tsx / index.tsx수정 (초기 파일생성 시, default code가 튜토리얼과 상이하여 동일하게 변경)
-- BottomTabNavigator.tsx의 TabOne Navigator()에 AlbumScreen추가
+- BottomTabNavigator.tsx / index.tsx : 초기 파일생성 시, default code가 튜토리얼과 상이하여 동일하게 변경
+- BottomTabNavigator.tsx : TabOne Navigator()에 AlbumScreen추가
+- Album_index.tsx : Home화면에서 앨범 클릭 시 Album Screen페이지로 이동하도록 수정
 
 <details>
 <summary>BottomTabNavigator.tsx</summary>
@@ -691,6 +693,16 @@ ___
 
 <details>
 <summary>Album Screen</summary>
+<div markdown="1">
+
+```javascript
+
+```
+</div>
+</details>
+
+<details>
+<summary>Album_index.tsx</summary>
 <div markdown="1">
 
 ```javascript
