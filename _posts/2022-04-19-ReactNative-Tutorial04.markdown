@@ -666,10 +666,18 @@ ___
 
 ###  Navigation to Album Screen <br/>
 <img src="/images/Posting/ReactNative/Spotify/08.png" alt="Project" width="40%" height="40%">
-- AlbumScreen.tsx생성
-- BottomTabNavigator.tsx / index.tsx : 초기 파일생성 시, default code가 튜토리얼과 상이하여 동일하게 변경
-- BottomTabNavigator.tsx : TabOne Navigator()에 AlbumScreen추가
+
+- AlbumScreen.tsx생성<br/>
+- BottomTabNavigator.tsx / index.tsx : 초기 파일생성 시, default code가 튜토리얼과 상이하여 동일하게 변경<br/>
+- BottomTabNavigator.tsx : TabOne Navigator()에 AlbumScreen추가<br/><br/>
 - Album_index.tsx : Home화면에서 앨범 클릭 시 Album Screen페이지로 이동하도록 수정
+
+- 오류가 발생했던 부분<br/>
+  스크립트 : Album_index.tsx<br/>
+  코드부분 : `navigation.navigate('AlbumScreen')`<br/>
+  메시지 : The action 'NAVIGATE' with payload {"name":"AlbumScreen"} was not handled by any navigator<br/>
+  원인 : 
+
 
 <details>
 <summary>BottomTabNavigator.tsx</summary>
