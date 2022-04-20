@@ -78,8 +78,8 @@ ___
 
 4. head태그 내 JavaScript파일포함(defer사용) :<br/>
   * 출력과정 : HTML코드를 한 줄씩 파싱하며 script태그가 나타났을 시 js파일을 병렬다운 (다운 중에도 HTML코드 파싱진행/HTML코드 파싱이 완료된 후 js실행)<br/>
-  * 장점 : js파일 다운로드 시간절약 및 async단점보완 
-  
+  * 장점 : js파일 다운로드 시간절약 및 async단점보완 <br/>
+
 ___
 
 * [JavaScript공식사이트](https://developer.mozilla.org/ko/)
