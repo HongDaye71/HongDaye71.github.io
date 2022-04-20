@@ -13,9 +13,10 @@ ___
 
 ### Contents <br/>
 1. Hello World! 출력<br/>
+2. HTML과 JavaScript파일연결<br/>
 
 
-*드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
+* 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
 * [Tutorial Video](https://www.youtube.com/watch?v=tJieVCgGzhs&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=2)<br/>
 
@@ -37,10 +38,15 @@ ___
 
 1. `<script src="main.js"></script>` 입력하여 .js파일 연결<br/>
 2. Open with Live Server를 통해 브라우저 확인<br/>
+  * [Open with Live Server 설정](https://stajun.tistory.com/entry/Visual-Studio-Code-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%84%9C%EB%B2%84Live-Server-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)<br/>
 3. 개발자 도구에서 Hello World! 정상출력 확인<br/>
+  * node.js/web APIS 모두 console.log에 대한 API를 가지고 있으므로 정상출력
+  * web APIS : 웹 서버 또는 웹 브라우저를 위한 API(Application Programming Interface)
+  * [console.spec](console.spec.whatwg.org)
+
 
 * html기본구성 코드 자동출력 : ! 입력 후 Tab 더블클릭<br/>
-* [Open with Live Server 설정](https://stajun.tistory.com/entry/Visual-Studio-Code-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%84%9C%EB%B2%84Live-Server-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)<br/>
+
 
 ___
 
