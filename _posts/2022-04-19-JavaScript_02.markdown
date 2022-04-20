@@ -14,6 +14,7 @@ ___
 ### Contents <br/>
 1. Hello World! 출력<br/>
 2. HTML과 JavaScript파일연결<br/>
+3. HTML에서 JavaScript를 효율적으로 연결하는 방법<br/>
 
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
@@ -47,8 +48,31 @@ ___
 
 * html기본구성 코드 자동출력 : ! 입력 후 Tab 더블클릭<br/>
 
-
 ___
 
+### HTML에서 JavaScript를 효율적으로 연결하는 방법<br/>
+<img src="/images/Posting/JavaScript/11.png" alt="Project">
 
+1. head태그 내 JavaScript파일포함 :<br/>
+  * 출력과정 : HTML코드를 한 줄씩 파싱하며 script태그가 나타났을 시 .js파일을 다운 (다운 중에는 HTML코드 파싱중단)<br/>
+  * 단점 : .js파일의 사이즈가 클 수록 웹 사이트 출력에 오랜 시간이 소요됨<br/>
+
+
+<img src="/images/Posting/JavaScript/12.png" alt="Project">
+
+2. body태그 끝 부분에 JavaScript파일포함 :<br/>
+  * 출력과정 : HTML코드를 모두 파싱한 뒤, 웹 페이지가 준비되면 .js파일을 다운<br/>
+  * 장점 : 기본적인 HTML코드 정보를 빠르게 전달<br/>
+  * 단점 : 의미있는 컨텐츠가 .js파일에 포함되어 있는 경우 부적절<br/>
+
+
+<img src="/images/Posting/JavaScript/13.png" alt="Project">
+
+3. head태그 내 JavaScript파일포함(async사용) :<br/>
+  * 출력과정 : HTML코드를 한 줄씩 파싱하며 script태그가 나타났을 시 .js파일을 병렬다운 (다운 중에도 HTML코드 파싱진행/다운완료 시 파싱 일시중지하여 .js실행)<br/>
+  * 장점 : .js파일 다운로드 시간절약<br/>
+  * 단점 : 
+___
+
+* [JavaScript공식사이트](https://developer.mozilla.org/ko/)
 
