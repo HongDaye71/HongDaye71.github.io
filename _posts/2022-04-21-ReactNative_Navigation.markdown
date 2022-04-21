@@ -28,8 +28,8 @@ React Native Navigation은 React Native와 함께 사용되는 하나의 모듈�
 2. expo = 41 (사용하는 경우)<br/>
 3. typescript = 4.1.0 (사용하는 경우)<br/>
 
-**Installation**
-React Native project 내 패키지 설치
+**Installation**<br/>
+React Native project 내 패키지 설치<br/>
 
 ```javascript
 npm install @react-navigation/native
@@ -37,8 +37,8 @@ expo install react-native-screens react-native-safe-area-context //install versi
 npm install react-native-screens react-native-safe-area-context
 ```
 
-**Wrapping your app in NavigationContainer**
-전체 앱을 NavigationContainer로 Wrapping 
+**Wrapping your app in NavigationContainer**<br/>
+전체 앱을 NavigationContainer로 Wrapping <br/>
 
 ```javascript
 /*index.js 혹은 App.js와 같은 entry file Wrapping*/
