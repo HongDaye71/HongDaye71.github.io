@@ -57,7 +57,7 @@ ___
 
 ### :fire: Hello React Navigation<br/>
 
-Web browser : {% raw %}<a>{% endraw%}태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)<br/>
+Web browser : a 태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)<br/>
 
 React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 이동구현  
   * 한 개의 Stack Navigator만을 사용할 경우
@@ -66,14 +66,13 @@ React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 
 
 **Installing the native stack navigator**<br/>
 React Native project 내 설치<br/>
-
 ```javascript
 npm install @react-navigation/native-stack
 ```
 
-**Creating a native stack navigator**
+**<br/>Creating a native stack navigator<br/>**
 <img src="/images/Posting/ReactNative/Navigation/01.png" alt="Project" width="40%" height="40%">
-createNativeStackNavigator : Screen, Navigator properties를 포함하는 function
+createNativeStackNavigator : Screen, Navigator properties를 포함하는 function<br/>
 
 <details>
 <summary>App.js</summary>
@@ -115,9 +114,8 @@ export default App;
 </div>
 </details>
 
-___
 
-**Configuring the navigator**<br/>
+**<br/>Configuring the navigator<br/>**
 Stack이 두 개의 루트(Home, Details)를 갖도록 코드추가<br/>
 
 <details>
@@ -169,8 +167,7 @@ export default App;
 </div>
 </details>
 
-
-
+___
 
 ### Appendix<br/>
 Navigation 외 발생했던 문제들 :
