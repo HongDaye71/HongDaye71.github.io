@@ -30,14 +30,13 @@ React Native Navigation은 React Native와 함께 사용되는 하나의 모듈�
 
 **Installation**<br/>
 React Native project 내 패키지 설치<br/>
-
 ```javascript
 npm install @react-navigation/native
 expo install react-native-screens react-native-safe-area-context //install versions of library
 npm install react-native-screens react-native-safe-area-context
 ```
 
-**Wrapping your app in NavigationContainer**<br/>
+**<br/>Wrapping your app in NavigationContainer**<br/>
 전체 앱을 NavigationContainer로 Wrapping <br/>
 
 ```javascript
@@ -64,11 +63,13 @@ React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 
     - Web browser와의 공통점 : 개념적으로 Web browser와 동일하게 스크린 이동구현<br/>
     - Web browser와의 차이점 : Animation 혹은 gesture를 통해 스크린 이동구현 가능<br/>
 
+
 **Installing the native stack navigator**<br/>
 React Native project 내 설치<br/>
 ```javascript
 npm install @react-navigation/native-stack
 ```
+
 
 **<br/>Creating a native stack navigator<br/>**
 <img src="/images/Posting/ReactNative/Navigation/01.png" alt="Project" width="40%" height="40%">
