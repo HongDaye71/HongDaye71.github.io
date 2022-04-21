@@ -24,9 +24,9 @@ ___
 React Native Navigation은 React Native와 함께 사용되는 하나의 모듈이다. 웹이나 앱에서 스크린 이동을 구현하기 위해 사용된다.<br/>
 
 **Minimum requirements**<br/>
-react-native = 0.63.0<br/>
-expo = 41 (사용하는 경우)<br/>
-typescript = 4.1.0 (사용하는 경우)<br/>
+1. react-native = 0.63.0<br/>
+2. expo = 41 (사용하는 경우)<br/>
+3. typescript = 4.1.0 (사용하는 경우)<br/>
 
 **Installation**
 React Native project 내 패키지 설치
@@ -57,5 +57,6 @@ ___
 
 ### :fire: Hello React Navigation<br/>
 
-웹 브라우저 : <a>태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)
+Web browser : <a>태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)<br/>
 
+React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 이동구현 (앱에서 한 개의 Stack Navigator만을 사용할 경우, 개념적으로 Web browser와 동일하게 스크린 이동구현)<br/>
