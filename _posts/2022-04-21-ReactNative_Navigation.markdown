@@ -63,3 +63,46 @@ React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 
   * 한 개의 Stack Navigator만을 사용할 경우
     - Web browser와의 공통점 : 개념적으로 Web browser와 동일하게 스크린 이동구현<br/>
     - Web browser와의 차이점 : Animation 혹은 gesture를 통해 스크린 이동구현 가능<br/>
+
+**Installing the native stack navigator**<br/>
+React Native project 내 설치<br/>
+
+```javascript
+npm install @react-navigation/native-stack
+```
+
+**Creating a native stack navigator**
+createNativeStackNavigator : Screen, Navigator properties를 포함하는 function
+
+```javascript
+{ % raw % }
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItem: 'center', justifyContent: 'center'}}>
+      <Text>HomeScreen</Text>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+//const : 변수선언 키워드로 ES6이후, var/let/const가 사용됨
+
+function App() {
+  return (
+    <NavigationContainer>
+      {/*NavigationContainer is a component which manages our navigation tree and contains the navigation state. This component mush wrap all navigators structure*/}
+      <Stack.Navigator>
+        <Stack.Screen name = "Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+{ % endraw % }
+```
