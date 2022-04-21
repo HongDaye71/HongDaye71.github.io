@@ -24,7 +24,7 @@ ___
 ___
 
 ### :bell: Variable<br/>
-1. let(Mutable data type) <br/>
+**let(Mutable data type)** <br/>
   - 변수생성 키워드로 ES6에서 추가됨<br/>
 
 ```javascript
@@ -41,13 +41,13 @@ console.log(name_);
 */
 ```
 
-2. constant(Mutable data type)<br/>
+**constant(Mutable data type)**<br/>
   - 한 번 할당하면 값이 변하지 않는 변수선언 키워드로 let사용 시, 포인터가 가리키는 메모리 영역의 데이터 값을 변경할 수 있으나 constant는 포인터가 잠겨있어 값 할당 이후에는 데이터를 변경할 수 없음 <br/>
   - 장점 : <br/>
     (1) security: 해커가 임의로 데이터값을 변경할 수 없음<br/>
     (2) thread safety: 앱 실행 시 프로세스가 동작하고, 그 안에서 다수의 스레드가 프로세스 동작을 효율적으로 만듬. 하지만 데이터 변경 시 두 개 이상의 스레드가 동시에 변수에 접근할 수 있다는 위험요소가 있음. constant는 이를 방지함.<br/>
 
-3. var<br/>
+**var**<br/>
   - ES6전 변수생성 키워드로 현재는 사용하지 않음<br/>
     이유 : 변수 선언 전에 값을 할당할 수 있으며, 값 할당 전 출력까지 가능하여 지나치게 유연하다는 단점이 있음. 이렇게 어디서 변수를 선언했는지와 무관하게 선언을 가장 위로 올려주는 것을 *var hoisting*이라고 함. 또한 var에서는 Blockscope을 사용할 수 없음(괄호 안에 코드를 작성하여도 어디에서나 내용에 접근할 수 있음) <br/>
 
@@ -70,10 +70,12 @@ console.log(blockScope);
 ___
 
 ### Variable Types <br/>
-1. Primitive: single item을 말하며 number, string, boolean, null, undefiend, symbol가 포함되어 있음<br/>
-2. Object: single item을 묶어 box container로 관리하는 것을 말하며 function, first-class function이 포함되어 있음<br/>
+**Primitive**
+  single item을 말하며 number, string, boolean, null, undefiend, symbol가 포함되어 있음<br/>
 
-* first-class function : function을 변수에 지정
+**Object**
+  single item을 묶어 box container로 관리하는 것을 말하며 function, first-class function이 포함되어 있음<br/>
+  * first-class function : function을 변수에 지정
 
 
 
