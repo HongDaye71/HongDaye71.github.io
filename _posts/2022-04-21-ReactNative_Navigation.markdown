@@ -59,4 +59,7 @@ ___
 
 Web browser : {% raw %}<a>{% endraw%}태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)<br/>
 
-React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 이동구현 (앱에서 한 개의 Stack Navigator만을 사용할 경우, 개념적으로 Web browser와 동일하게 스크린 이동구현)<br/>
+React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 이동구현  
+  * 한 개의 Stack Navigator만을 사용할 경우
+    - Web browser와의 공통점 : 개념적으로 Web browser와 동일하게 스크린 이동구현<br/>
+    - Web browser와의 차이점 : Animation 혹은 gesture를 통해 스크린 이동구현 가능<br/>
