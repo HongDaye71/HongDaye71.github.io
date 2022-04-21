@@ -57,6 +57,6 @@ ___
 
 ### :fire: Hello React Navigation<br/>
 
-Web browser : <a>태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)<br/>
+Web browser : {% raw %}<a>{% endraw%}태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)<br/>
 
 React Native : Stack Navigator를 통해 Navigation History관리 및 스크린 이동구현 (앱에서 한 개의 Stack Navigator만을 사용할 경우, 개념적으로 Web browser와 동일하게 스크린 이동구현)<br/>
