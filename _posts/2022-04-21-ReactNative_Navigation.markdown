@@ -56,3 +56,6 @@ export default function App() {
 ___
 
 ### :fire: Hello React Navigation<br/>
+
+웹 브라우저 : <a>태그를 통해 스크린 이동구현 (ex. When the user presses the back button, the browser pops the item from the top of the history stack)
+
