@@ -72,7 +72,12 @@ npm install @react-navigation/native-stack
 ```
 
 **Creating a native stack navigator**
+<img src="/images/Posting/ReactNative/Navigation/01.png" alt="Project" width="40%" height="40%">
 createNativeStackNavigator : Screen, Navigator properties를 포함하는 function
+
+<details>
+<summary>App.js</summary>
+<div markdown="1">
 
 ```javascript
 { % raw % }
@@ -84,6 +89,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItem: 'center', justifyContent: 'center'}}>
+      {/*flex: 비율을 통해 크기설정(ex. 1:전체화면에서 1의 비율차지 / 1:1 전체 화면에서 반반 만큼의 공간차지)*/}
       <Text>HomeScreen</Text>
     </View>
   );
@@ -106,3 +112,71 @@ function App() {
 export default App;
 { % endraw % }
 ```
+</div>
+</details>
+
+___
+
+**Configuring the navigator**<br/>
+Stack이 두 개의 루트(Home, Details)를 갖도록 코드추가<br/>
+
+<details>
+<summary>App.js</summary>
+<div markdown="1">
+
+```javascript
+{ % raw % }
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+function DetailScreen() {
+  return(
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItem: 'center', justifyContent: 'center'}}>
+      {/*flex: 비율을 통해 크기설정(ex. 1:전체화면에서 1의 비율차지 / 1:1 전체 화면에서 반반 만큼의 공간차지)*/}
+      <Text>HomeScreen</Text>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+//const : 변수선언 키워드로 ES6이후, var/let/const가 사용됨
+
+function App() {
+  return (
+    <NavigationContainer>
+      {/*NavigationContainer is a component which manages our navigation tree and contains the navigation state. This component mush wrap all navigators structure*/}
+      <Stack.Navigator>
+        <Stack.Screen name = "Home" component={HomeScreen} />
+        <Stack.Screen name = "Details" component={DetailScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+{ % endraw % }
+```
+</div>
+</details>
+
+
+
+
+### Appendix<br/>
+Navigation 외 발생했던 문제들 :
+1. Android emulator reload failed 
+  오류 : warn No apps connected. Sending "reload" to all React Native apps failed
+  원인 : 
+    1. 기기연결 불안정
+  해결 : 
+    1. adb reverse tcp:8081 tcp:8081 (연결 재설정)
