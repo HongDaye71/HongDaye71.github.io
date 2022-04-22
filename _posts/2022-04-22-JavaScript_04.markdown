@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  기술면접_JavaScript_04
+title:  기술면접_JavaScript_04_05
 date:   2022-04-22 12:38:35 +0300
 image:  '/images/JavaScript.jpg'
 tags:   [JavaScript]
@@ -13,21 +13,21 @@ ___
 
 ### Contents <br/>
 1. operator<br/>
-2. <br/>
-3. <br/>
-4. <br/>
+2. if/for/loop <br/>
+3.  <br/>
+4.  <br/>
 
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
-* [Tutorial Video](https://www.youtube.com/watch?v=YBjufjBaxHo&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=4)<br/>
-
+* [Tutorial Video_04](https://www.youtube.com/watch?v=YBjufjBaxHo&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=4)<br/>
+* [Tutorial Video_05](https://www.youtube.com/watch?v=e_lU39U-5bQ&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=5)<br/>
 ___
 
 ### :bell: operator<br/>
 
 <details>
-<summary>operator</summary>
+<summary>Click to view operator types</summary>
 <div markdown="1">
 
 ```javascript
@@ -78,11 +78,11 @@ function check() {
 console.log(`or : ${value1 || value2 || check()}`);
 console.log(`or : ${value1 || value2 || check()}`);
 /*
-or operator
+or 
 출력결과 : true
 주의할 점 : or연산자는 첫 번째 조건이 true인 경우, 뒤에 조건은 더 보지 않고 tru출력. 따라서 check()처럼 비교적 연산량이 많은 조건은 뒤에 배치하는 것이 효율적임
 
-and operator
+and 
 출력결과 : false
 주의할 점 : and연산자는 첫 번째 조건이 false인 경우, 뒤에 조건은 더 보지 않고 false출력.따라서 check()처럼 비교적 연산량이 많은 조건은 뒤에 배치하는 것이 효율적임
 */
@@ -102,6 +102,54 @@ console.log(stringFive +== numberFive)
 출력결과 : false
 이유 : ===는 strict eaulity로 type conversion을 사용하기 않기 때문에 값과 type을 모두 확인
 주의할 점 : 동일한 single item으로 이루어진 두 개의 object가 존재하더라도 서로 다른 메모리 주소를 참조하고 있기 때문에 obejct equlity는 false로 출력
+*/
+
+```
+</div>
+</details>
+
+### :bell: operator<br/>
+
+<details>
+<summary>Click to view if/for/loop operator</summary>
+<div markdown="1">
+
+```javascript
+//1. if 
+const name = 'ellie';
+
+if (name=='ellie'); {
+  console.log('Welcome, Ellie!');}
+  else if (name == 'coder') {
+    console.log('You are amazing coder');}
+  else {
+    console.log('unknown')}
+
+
+//2. Teranry operator (if문을 보다 간단하게 사용)
+console.log(name === 'ellie' ? 'yes':'no')
+//true인 경우 왼쪽 값 출력 / false인 경우 오른쪽 값 출력
+
+
+//3. Switch operator
+const browser = 'IE';
+switch (browser){
+  case 'IE' :
+    console.log('go away!');
+    break;
+  case 'Chrome' :
+    console.log('Chrome');
+    break;
+  case 'Firefox':
+    console.log('Firefox');
+    breakl
+}
+/*
+switch문과 if문의 차이 :
+if문은 if를 만날 때 마다 조건문을 만족하는지 확인하기 위해 메모리상에서 명령어를 읽어옴
+switch문은 처음 입력값을 확인할 때에만 메모리상에서 명령어를 읽어옴
+
+즉, 조건이 많은 경우에는 switch문을 사용하는 것이 if문 대비 cpu를 효율적으로 사용하게 함
 */
 
 ```
