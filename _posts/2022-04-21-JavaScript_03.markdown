@@ -46,10 +46,11 @@ console.log(name_);
 #### <br/>constant(Mutable data type)<br/>
   - only read
   - 한 번 할당하면 값이 변하지 않는 변수선언 키워드로 let사용 시, 포인터가 가리키는 메모리 영역의 데이터 값을 변경할 수 있으나 constant는 포인터가 잠겨있어 값 할당 이후에는 데이터를 변경할 수 없음 <br/>
-  
+
   - 장점 : <br/>
     (1) security: 해커가 임의로 데이터값을 변경할 수 없음<br/>
     (2) thread safety: 앱 실행 시 프로세스가 동작하고, 그 안에서 다수의 스레드가 프로세스 동작을 효율적으로 만듬. 하지만 데이터 변경 시 두 개 이상의 스레드가 동시에 변수에 접근할 수 있다는 위험요소가 있음. constant는 이를 방지함.<br/>
+    (3) 데이터 값을 지속적으로 변경해야 하는 경우가 아니라면, Immutable Type의 constant를 사용하는 것이 바람직함<br/>
 
 #### <br/>var<br/>
   - ES6전 변수생성 키워드로 현재는 사용하지 않음<br/>
@@ -77,11 +78,13 @@ ___
 
 ### :bell: Variable Types <br/>
 #### Primitive<br/>
-  single item을 말하며 number, string, boolean, null, undefiend, symbol가 포함되어 있음<br/>
+  - single item을 말하며 number, string, boolean, null, undefiend, symbol가 포함되어 있음<br/>
+  - single item이 메모리에 direct로 저장됨 (const사용 시, 수정불가)
   
 #### Object<br/>
-  single item을 묶어 box container로 관리하는 것을 말하며 function, first-class function이 포함되어 있음<br/>
-  * first-class function : function을 변수에 지정<br/>
+  - single item을 묶어 box container로 관리하는 것을 말하며 function, first-class function이 포함되어 있음<br/>
+    * first-class function : function을 변수에 지정<br/>
+  - box contaier가 single item주소를 참조하여 메모리에 저장됨 (const사용 시, single item을 가리키는 포인터는 잠금되지 않으므로 수정가능)
 
 * JavaScript는 Type이 동적으로 할당되기 때문에 변수선언 시 Type을 명시하지 않아도 됨<br/>
 

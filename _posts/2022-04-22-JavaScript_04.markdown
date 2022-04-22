@@ -1,0 +1,33 @@
+---
+layout: post
+title:  기술면접_JavaScript_04
+date:   2022-04-22 12:38:35 +0300
+image:  '/images/JavaScript.jpg'
+tags:   [JavaScript]
+---
+<br/>
+
+## 코딩의 기본|operator,if,for loop<br/>
+
+___
+
+### Contents <br/>
+1. <br/>
+2. <br/>
+3. <br/>
+4. <br/>
+
+
+* 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
+* 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
+* [Tutorial Video](https://www.youtube.com/watch?v=YBjufjBaxHo&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=4)<br/>
+
+___
+
+### :bell: Variable<br/>
+#### 
+
+```javascript
+
+```
+
