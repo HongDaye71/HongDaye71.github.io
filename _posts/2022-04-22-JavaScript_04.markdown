@@ -96,11 +96,12 @@ console.log(stringFive +== numberFive)
 /*
 ==
 출력결과 : true
-이유 : ==는 lose eqauplity로 type conversion을 통해 검사하기 때문에 stirng 5와 number 5가 같다는 결과 
+이유 : ==는 lose eqauplity로 type conversion을 통해 검사하기 때문에 stirng 5와 number 5가 같다는 결과출력
 
 ===
 출력결과 : false
 이유 : ===는 strict eaulity로 type conversion을 사용하기 않기 때문에 값과 type을 모두 확인
+주의할 점 : 동일한 single item으로 이루어진 두 개의 object가 존재하더라도 서로 다른 메모리 주소를 참조하고 있기 때문에 obejct equlity는 false로 출력
 */
 
 ```
