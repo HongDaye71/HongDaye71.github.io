@@ -15,6 +15,7 @@ ___
 1. Variable<br/>
 2. Block scope / Global scope<br/>
 3. Variable Types<br/>
+4. Dynamic typing<br/>
 
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
@@ -71,11 +72,98 @@ ___
 
 ### Variable Types <br/>
 **Primitive**
-  single item을 말하며 number, string, boolean, null, undefiend, symbol가 포함되어 있음<br/>
-
+single item을 말하며 number, string, boolean, null, undefiend, symbol가 포함되어 있음<br/>
+  
 **Object**
-  single item을 묶어 box container로 관리하는 것을 말하며 function, first-class function이 포함되어 있음<br/>
-  * first-class function : function을 변수에 지정
+single item을 묶어 box container로 관리하는 것을 말하며 function, first-class function이 포함되어 있음<br/>
+* first-class function : function을 변수에 지정<br/>
+
+* JavaScript는 Type이 동적으로 할당되기 때문에 변수선언 시 Type을 명시하지 않아도 됨<br/>
+
+<details>
+<summary>개별Type 부연설명</summary>
+<div markdown="1">
+
+```javascript
+// 1. number
+/*
+JavaScript 숫자범위 : (-2**53) ~ 2**53
+BigInt : 숫자범위를 넘어가는 경우 끝에 n을 붙여 확장(일부 부라우저 지원)
+*/
 
 
+// 2. string
+const name_ = 'Daye'
+console.log('Hello ' + name_) 
+console.log(`Hello ${name_}`) 
+/*
+template literals :
+`${}`사용 시, 다수의 string과 변수를 함께 작성할 때에 매번 +로 이어붙이는 번거로움을 줄일 수 있음 
+*/
+
+
+// 3. boolean
+/*
+false : 0, null(Empty상태), undefined(값이 지정되지 않은상태), Nan
+true : any other value
+*/
+
+
+// 4. symbol (create unique identifiers for objects)
+const symbol1 = Symbol('id');
+const symbol2 = Symbol('id');
+
+const gSymbol1 = Symbol.for('id');
+const gSymbol2 = Symbol.for('id');
+/*
+Symbol('id'); : symbol1, symbol2에 서로다른 고유식별자 생성
+Symbol.for('id'); : gSymbol1, gSymbol2에 동일한 고유식별자 생성
+출력 : symbol1.description과 같이 description을 추가하여 string변환 후 출력해야 함
+*/
+
+
+```
+</div>
+</details>
+
+___
+
+### Dynamic typing: dynamically typed language<br/>
+
+정적언어 (Statically Typed Language)<br/>
+- 컴파일 시간에 변수의 타입이 결정되는 언어<br/>
+  * 컴파일 시에 타입에 대한 정보를 결정하기 때문에 속도가 빠르고, 타입오류로 인한 문제점을 초기에 발견할 수 있음<br/>
+- 대표적으로 C, C++, Java등이 있음<br/>
+
+동적언어 (Dynamically Typed Language)<br/>
+- 런타임에 타입이 결정되는 언어 <br/>
+  * 런타임까지 타입에 대한 결정을 끌고 갈 수 있기 때문에 선택의 여지가 많다는 장점이 있으나, 실행도중 타입오류가 발생할 수 있음<br/>
+  <details>
+  <summary>타입오류 예시</summary>
+  <div markdown="1">
+
+  ```javascript
+  //동적언어는 개인이 프로토타입을 빠르게 만들기에는 적절하나, 다수의 개발자가 규모있는 프로젝트를 진행할 때에 아래와 같은 오류가 발생할 수 있음
+
+  let text = 'hello';
+  console.log(text.charAt(0));
+  text = 1;
+  console.log(text.charAt(0));
+
+  /*
+  과정 :
+  1. 개발자1이 text변수에 hello값을 넣음
+  2. 개발자1이 text변수의 첫 번째 문자index를 출력함 
+  3. 오류가 발생하지 않음
+  4. 개발자2가 text변수에 숫자 1을 넣음
+  5. 개발자3이 text변수명을 보고 string이라고 예상 후 첫 번째 문자index를 출력함
+  6. 오류발생
+
+  해결책 : TypeScript(JavaScript위에 Type이 올려진 언어)
+  */
+  ```
+  </div>
+  </details>
+
+- 대표적으로 JavaScript, Ruby, Python등이 있음<br/>
 
