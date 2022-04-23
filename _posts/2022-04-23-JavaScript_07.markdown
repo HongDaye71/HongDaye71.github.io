@@ -107,6 +107,20 @@ ___
 Object를 고유하게 복제해야 하는 경우 사용
 
 ```javascript
+//아래와 같이 복제 시, user2는 새로운 메모리 영역을 할당받기는 하지만 user1이 참조하는 ref(single item메모리 영역 주소)를 동일하게 참조하여 user2에서 값을 변경할 경우, user1에서도 값이 변경됨
+const user1 = {name: 'ellie', age: '20'}
+const user2 = user;
+user2.name = 'coder';
+
+//user1의 property를 가진 고유한 user3를 만들고자 할 때에는 아래 두 가지 방법으로 작성할 수 있음
+//1번 방법
+const user3 = {};
+for (key in user1){
+  user3[key] = user1[key];
+}
+//2번 방법
+const user4 = {};
+Object.assign(user4, user);
 ```
 
 
