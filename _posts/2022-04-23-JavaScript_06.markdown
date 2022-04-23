@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  기술면접_JavaScript_04_05
+title:  기술면접_JavaScript_06
 date:   2022-04-22 12:38:35 +0300
 image:  '/images/JavaScript.jpg'
 tags:   [JavaScript]
@@ -12,6 +12,8 @@ tags:   [JavaScript]
 ### Contents <br/>
 1. Class/Object란?<br/>
 2. Getter and Setters<br/>
+3. Fields<br/>
+4. Static<br/>
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
@@ -92,6 +94,41 @@ class User{
   */
 
 const user1 = new User('Steve', 'Job', -1); // age오기입
+```
+
+___
+
+### :bell: Fields (public, private) <br/>
+puclie: 외부에서 접근가능<br/>
+private: 클래스 내부에서만 접근가능<br/>
+
+```javascript
+class Experiment {
+  publicField = 2; 
+  #privateField = 0;
+}
+```
+___
+
+### :bell: Static properties and methods <br/>
+데이터와 무관하게 반복적으로 사용될 값이나 method의 경우, static을 통해 고정<br/>
+
+```javascript
+class Article{
+  static publisher = 'Dream Coding';
+  contructor(articleNumber) {
+    this.articleNumber = altercleNumber;
+  }
+
+  static printPublisher() {
+    console.log(Article.publisher);
+  }
+}
+
+const article1 = new Article(1);
+console.log(article1.publisher); //static은 object가 아닌 class에 할당된 것이므로 해당 코드는 오류출력
+console.log(Article.publisher);
+}
 ```
 
 ___
