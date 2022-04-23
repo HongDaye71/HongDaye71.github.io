@@ -11,7 +11,7 @@ tags:   [JavaScript]
 
 ### Contents <br/>
 1. Class/Object란?<br/>
-2. <br/>
+2. Getter and Setters<br/>
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
@@ -21,8 +21,96 @@ ___
 
 ### :bell: Class/Object란? <br/>
 Class : 관련있는 변수와 함수를 묶어놓은 것으로 fields와 method로 이루어져 있음<br/>
-  * Data class : fields로만 이루어진 클래스<br/>
+  * Data class: fields로만 이루어진 클래스<br/>
   * 클래스 자체에는 데이터가 포함되어 있지 않고, 해당 class에 들어올 수 있는 데이터 타입만을 명시(template 역할)<br/>
   * 정의만을 한 것으로 메모리 영역을 할당받지 않음<br/>
-Object : class라는 template에 데이터를 입력하여 만든 Instance<br/>
+  * added in ES6<br/>
+Object: class라는 template에 데이터를 입력하여 만든 Instance<br/>
   * 메모리 영역을 할당받음<br/>
+
+  ```javascript
+  //1. Class declarations
+  class Person {
+    //constructor
+    constructor (name, age){
+      //field
+      this.name = name;
+      this.age = age;
+    }
+
+    //method
+    speak() {
+      console.log(`${this.name} : hello!`)
+      //this : 생성될 오브젝트
+    }
+
+    //2. Object
+    const ellie = new Person('ellie', 20)
+  }
+  ```
+
+  ___
+
+### :bell: Getter and Setters <br/>
+Getter(획득자) : 프로퍼티를 읽고자 할 때 실행<br/>
+  - ex. 자판기에서 음료수의 개수<br/>
+Setter(설정자) : 프로퍼티에 값을 할당하고자 할 때 실행<br/>
+  - ex. 자판기에서 음료수의 개수가 -1로 오기입 되었을 때 이를 수정하거나 오류임을 알려주는 대체값<br/>
+
+* [JavaScript Property란?](https://negabaro.github.io/archive/js-property)<br/>
+* private property: 외부에서 접근 및 변경할 수 없는 프로퍼티 (ex. 자판기에서 음료의 개수는 소비자가 임의로 수정할 수 없으므로 private설정해야 하며 이를 Encapsulation(캡슐화)이라 함)<br/>
+
+```javascript
+class User{
+  constructor(firstName, lastName, age){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  //Getter
+  get age() {
+    return this._age;
+  }
+
+  //Setter
+  set age(value) {
+    if (value <0) {
+      throw Error ('age can not be negative'); 
+    }
+    this._age = value; 
+    //value : user가 age에 입력한 값
+    //age property사 오기입 되었을 때, 위와 같이 오류메시지를 출력하지 않고 아래와 같이 대체값으로 자동수정할 수도 있음
+    //this._age = value < 0? 0 : value
+  }
+
+  /*
+  Getter, Setter의 age변수를 _age로 설정하는 이유 :
+  1. Getter/Setter가 정의되면, this.age = age;는 메모리 데이터를 읽어오지 않고 Getter/Setter를 호출함 
+  2. 1번과 같은 과정을 거치기 때문에 Setter안 this._age = value; 코드 또한 메모리의 값을 읽어오지 않고 Setter를 호출함
+  3. Getter, Setter의 age변수를 _age로 변경하지 않으면, Setter안에서 코드가 무한루프에 빠지게 됨
+  */
+
+const user1 = new User('Steve', 'Job', -1); // age오기입
+```
+
+___
+
+### Appendix <br/>
+Procedural language(절차지향): 
+- 정의: 일련의 처리 절차를 정해진 문법에 따라 순서대로 기술하는 프로그래밍 방법<br/>
+- 특징: TOP-DOWN 접근방식 / 전체의 기능을 하나의 함수로 구현하여 프로그램의 시작부터 순차적으로 코드실행<br/>
+- 사용언어: C언어<br/>
+- 장점 : 빠른 실행속도 / 적은 개발 비용 및 시간<br/>
+- 단점 : 버그 발생 시 디버깅의 어려움 / 순서변경 시 실행의 어려움<br/>
+
+Object-Oreiented language(객체지향): <br/>
+- 정의: 프로그램을 다수의 독립적인 객체로 만든 후 서로 상호작용하도록 하응 방법<br/>
+- 특징: 
+  - 추상화: 공통의 속성 및 기능을 묶어 이름을 붙이는 것<br/>
+  - 캡슐화: 객체의 변수 및 Method를 외부에서 수정할 수 없도록 하는 것<br/>
+  - 상속: 부모클래스의 변수와 Method를 자식이 상속받는 것 
+  - 다형성: 하나의 객체가 여러 개의 Type을 가질 수 있는 것<br/>
+- 사용언어: JavaScript, Phthon<br/>
+- 장점 : 생산성 향상 / 높은 코드 재사용성 / 유지보수 용이<br/>
+- 단점: 느린 실행속도(다수의 객체를 합한 뒤 실행해야 하므로) / 높은 개발 비용 및 시간<br/>
