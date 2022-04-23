@@ -26,8 +26,9 @@ ___
 Class : 관련있는 변수와 함수를 묶어놓은 것으로 fields와 method로 이루어져 있음<br/>
   * Data class: fields로만 이루어진 클래스<br/>
   * 클래스 자체에는 데이터가 포함되어 있지 않고, 해당 class에 들어올 수 있는 데이터 타입만을 명시(template 역할)<br/>
-  * 정의만을 한 것으로 메모리 영역을 할당받지 않음<br/>
+  * class는 정의만을 한 것으로 메모리 영역을 할당받지 않음<br/>
   * added in ES6<br/>
+
 Object: class라는 template에 데이터를 입력하여 만든 Instance<br/>
   * 메모리 영역을 할당받음<br/>
 
@@ -135,6 +136,22 @@ console.log(Article.publisher);
 ___
 
 ### :bell: 상속과 다양성 <br/>
+Inheritance : a way for one class to extend another class<br/>
+
+```javascript
+class Shape {
+  constructor(width, height, color){
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
+
+  draw() {
+    console.log(`drawing ${this.color} color of`)
+  }
+
+}
+```
 ___
 
 ### Appendix <br/>
