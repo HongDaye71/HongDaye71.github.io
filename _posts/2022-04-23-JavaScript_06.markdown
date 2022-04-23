@@ -210,3 +210,5 @@ Object-Oreiented language(객체지향): <br/>
 - 사용언어: JavaScript, Phthon<br/>
 - 장점 : 생산성 향상 / 높은 코드 재사용성 / 유지보수 용이<br/>
 - 단점: 느린 실행속도(다수의 객체를 합한 뒤 실행해야 하므로) / 높은 개발 비용 및 시간<br/>
+
+* [JavaScript Reference](https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=6)
