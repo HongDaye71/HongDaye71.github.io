@@ -215,21 +215,20 @@ function log(message : string){
 3. Parameters<br/>
 - premitive parameter : passed by value<br/>
 - object parameter : passed by reference<br/>
+- default parameters : 사용자가 param을 입력하지 않았을 때, 대체값(added in ES6)<br/>
+- rest parameters : 배열형태(added in ES6)<br/>
+
 [참고자료](https://hongdaye71.github.io/blog/javascript-03)<br/>
 
 ```javascript
-//object parameter에 function을 적용하였을 때, 출력과정
-
-//code : 
+//1. object parameter에 function을 적용하였을 때, 출력과정
 function changeName(obj) {
     obj.name = 'coder';
 }
-
 const ellie = {
     name : 'ellie',
     age : '20'
 }
-
 changeName(ellie)
 console.log(ellie)
 
@@ -242,7 +241,25 @@ console.log(ellie)
 5. reference중 name의 데이터 값 변경
 */
 
+
+//2. default parameters
+//from = 'unknown' : 사용자가 from parameter값을 지정하지 않은 경우, 오류가 아닌 unkown대체출력
+function showMessage(message, from = 'unkown'){
+  console.log(`${message} by ${from}`)
+}
+showMessage(Hi!);
+
+
+//3. rest parameters
+// ... : 배열형태의 parameter를 받음
+function printAll(...all){
+  for (let i = 0; i < arg.length; i++) {
+    console.log(arg[i])
+  }
+}
+print All('dream', 'coding', 'ellie')
 ```
+
 
 
 
