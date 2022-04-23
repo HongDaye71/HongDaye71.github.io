@@ -7,7 +7,7 @@ tags:   [JavaScript]
 ---
 <br/>
 
-## 코딩의 기본 | Operator, Function<br/>
+## 코딩의 기본 | Operator,Function<br/>
 
 ### Contents <br/>
 1. Operator(type/if/for/loop)<br/>

@@ -1,0 +1,28 @@
+---
+layout: post
+title:  기술면접_JavaScript_04_05
+date:   2022-04-22 12:38:35 +0300
+image:  '/images/JavaScript.jpg'
+tags:   [JavaScript]
+---
+<br/>
+
+## 프론트엔드 개발자 입문 | Class,Object<br/>
+
+### Contents <br/>
+1. Class/Object란?<br/>
+2. <br/>
+
+* 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
+* 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
+* [Tutorial Video_06](https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=6)<br/>
+
+___
+
+### :bell: Class/Object란? <br/>
+Class : 관련있는 변수와 함수를 묶어놓은 것으로 fields와 method로 이루어져 있음<br/>
+  * Data class : fields로만 이루어진 클래스<br/>
+  * 클래스 자체에는 데이터가 포함되어 있지 않고, 해당 class에 들어올 수 있는 데이터 타입만을 명시(template 역할)<br/>
+  * 정의만을 한 것으로 메모리 영역을 할당받지 않음<br/>
+Object : class라는 template에 데이터를 입력하여 만든 Instance<br/>
+  * 메모리 영역을 할당받음<br/>
