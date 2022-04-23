@@ -12,8 +12,8 @@ tags:   [JavaScript]
 ___
 
 ### Contents <br/>
-1. operator<br/>
-2. if/for/loop <br/>
+1. Operator(type/if/for/loop)<br/>
+2. Function<br/>
 3.  <br/>
 4.  <br/>
 
@@ -22,6 +22,7 @@ ___
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
 * [Tutorial Video_04](https://www.youtube.com/watch?v=YBjufjBaxHo&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=4)<br/>
 * [Tutorial Video_05](https://www.youtube.com/watch?v=e_lU39U-5bQ&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=5)<br/>
+
 ___
 
 ### :bell: operator<br/>
@@ -108,8 +109,6 @@ console.log(stringFive +== numberFive)
 </div>
 </details>
 
-### :bell: operator<br/>
-
 <details>
 <summary>Click to view if/for/loop operator</summary>
 <div markdown="1">
@@ -154,11 +153,13 @@ switch문은 처음 입력값을 확인할 때에만 메모리상에서 명령�
 
 
 //4. while loop
+//조건문이 맞는 경우에만 실행하고자 할 때 사용
 let i = 3;
 while (i > 0) {
   console.log(`while: ${i}`)
   i--;
 }
+
 
 //5. do while loop
 //블럭 먼저 실행 후 조건이 맞는지 확인
@@ -168,7 +169,54 @@ do {
   i--;
 } while (i > 0);
 
+
+//6. for loop (begin; consition; step;)
+for (i=3; i>0; i=i-2){
+  console.log('inline varable declaratoin')
+}
+
 ```
 </div>
 </details>
 
+___
+
+### :bell: Function<br/>
+
+1. Function이란?<br/>
+- 프로그램에서 필수적인 Building block<br/>
+- 여러번 재 사용이 가능한 SubProgram<br/>
+- 값을 계산하거나 특정 Task 수행<br/>
+
+2. Function delcaration<br/>
+- ```function name(param1, param2) {body... return;}```<br/>
+- function은 가능한 한 가지의 기능만 하도록 작성<br/>
+- function name은 가능한 동사로 지정<br/>
+
+```javaScript
+//function예시
+function print(message){
+  console.log(`message :  ${message}`)
+}
+
+print('Hello World!')
+
+//동일한 function을 TypeScript로 작성(param or return type명시필요)
+function log(message : string){
+    console.log(`message :  ${message}`)
+  }
+  
+  log('Hello World!')
+```
+
+* [TypeScript Playgrond](https://www.typescriptlang.org/play?#code/PTAEHUFMBsGMHsC2lQBd5oBYoCoE8AHSAZVgCcBLA1UABWgEM8BzM+AVwDsATAGiwoBnUENANQAd0gAjQRVSQAUCEmYKsTKGYUAbpGF4OY0BoadYKdJMoL+gzAzIoz3UNEiPOofEVKVqAHSKymAAmkYI7NCuqGqcANag8ABmIjQUXrFOKBJMggBcISGgoAC0oACCbvCwDKgU8JkY7p7ehCTkVDQS2E6gnPCxGcwmZqDSTgzxxWWVoASMFmgYkAAeRJTInN3ymj4d-jSCeNsMq-wuoPaOltigAKoASgAywhK7SbGQZIIz5VWCFzSeCrZagNYbChbHaxUDcCjJZLfSDbExIAgUdxkUBIursJzCFJtXydajBBCcQQ0MwAUVWDEQC0gADVHBQGNJ3KAALygABEAAkYNAMOB4GRonzFBTBPB3AERcwABS0+mM9ysygc9wASmCKhwzQ8ZC8iHFzmB7BoXzcZmY7AYzEg-Fg0HUiQ58D0Ii8fLpDKZgj5SWxfPADlQAHJhAA5SASPlBFQAeS+ZHegmdWkgR1QjgUrmkeFATjNOmGWH0KAQiGhwkuNok4uiIgMHGxCyYrA4PCCimSXFg9Ua1WVyEEgKdoHyV1QlE4zB1AG9FCUSjK5ZAFfBlQADceTlAz0AAEiXB8dkAAvru9SUr6vQI-FUrI0LoCKIM3uABCSN30AgA)
+
+<details>
+<summary>Click to view operator types</summary>
+<div markdown="1">
+
+</div>
+</details>
+
+
+ 
