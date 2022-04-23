@@ -8,6 +8,7 @@ tags:   [JavaScript]
 <br/>
 
 ## 코딩의 기본 | operator/if/for/loop<br/>
+## 코딩의 기본 | fucntion<br/>
 
 ___
 
