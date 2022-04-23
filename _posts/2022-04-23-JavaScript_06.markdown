@@ -15,6 +15,7 @@ tags:   [JavaScript]
 3. Fields<br/>
 4. Static<br/>
 5. 상속과 다양성<br/>
+6. Class checking <br/>
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
@@ -23,13 +24,15 @@ tags:   [JavaScript]
 ___
 
 ### :bell: Class/Object란? <br/>
-Class : 관련있는 변수와 함수를 묶어놓은 것으로 fields와 method로 이루어져 있음<br/>
+**Class**
+  * 관련있는 변수와 함수를 묶어놓은 것으로 fields와 method로 이루어져 있음<br/>
   * Data class: fields로만 이루어진 클래스<br/>
   * 클래스 자체에는 데이터가 포함되어 있지 않고, 해당 class에 들어올 수 있는 데이터 타입만을 명시(template 역할)<br/>
   * class는 정의만을 한 것으로 메모리 영역을 할당받지 않음<br/>
   * added in ES6<br/>
 
-Object: class라는 template에 데이터를 입력하여 만든 Instance<br/>
+**Object**
+  * class라는 template에 데이터를 입력하여 만든 Instance<br/>
   * 메모리 영역을 할당받음<br/>
 
   ```javascript
@@ -56,10 +59,12 @@ Object: class라는 template에 데이터를 입력하여 만든 Instance<br/>
   ___
 
 ### :bell: Getter and Setters <br/>
-Getter(획득자) : 프로퍼티를 읽고자 할 때 실행<br/>
+**Getter(획득자)** 
+  - 프로퍼티를 읽고자 할 때 실행<br/>
   - ex. 자판기에서 음료수의 개수<br/>
-  
-Setter(설정자) : 프로퍼티에 값을 할당하고자 할 때 실행<br/>
+
+**Setter(설정자)**
+  - 프로퍼티에 값을 할당하고자 할 때 실행<br/>
   - ex. 자판기에서 음료수의 개수가 -1로 오기입 되었을 때 이를 수정하거나 오류임을 알려주는 대체값<br/>
 
 * [JavaScript Property란?](https://negabaro.github.io/archive/js-property)<br/>
@@ -137,7 +142,13 @@ console.log(Article.publisher);
 ___
 
 ### :bell: 상속과 다양성 <br/>
-Inheritance : a way for one class to extend another class<br/>
+**Inheritance(상속)**<br/>
+  - a way for one class to extend another class<br/>
+  - 두 개 이상의 클래스에서 공통되는 내용이 있을 경우, extends를 통해 상속하여 반복사용<br/>
+  - 오류발생 시 수정이 용이하다는 장점이 있음<br/>
+
+**OverWriting(다양성)**
+  - 상속 후 필요한 함수만 재 정의하여 사용할 수 있음<br/>
 
 ```javascript
 class Shape {
@@ -151,8 +162,34 @@ class Shape {
     console.log(`drawing ${this.color} color of`)
   }
 
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Rectangle extends Shape {}
+//Inheritance : extends를 통해 새로운 Rectangle클래스에 기존 Shape클래스 내용을 포함
+
+class Trianle extends Shape {
+  getArea() {
+    return (this.width * this.height / 2);
+  }
+}
+//OverWriting : 필요한 함수만 재 정의해서 사용할 수 있음. 
+//extends를 통해 Shape클래스 내용을 포함 후 getArea함수에서 /2 추가하여 재정의 (기존 getArea함수의 내용은 사라짐. 만약 기존 함수의 내용도 유지하고 싶다면, getArea()안에 super.getArea()를 작성하면 됨)
 }
 ```
+
+___
+
+### :bell: Class checking: instanceOf <br/>
+instanceOf를 통해 오브젝트가 특정 클래스의 인스턴스인지 확인<br/>
+
+```javascript
+console.log(rectangle instanceof Rectangle);
+//rectangle이 Rectangle class의 instance인지 확인
+```
+
 ___
 
 ### Appendix <br/>
