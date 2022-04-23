@@ -193,7 +193,7 @@ ___
 - function은 가능한 한 가지의 기능만 하도록 작성<br/>
 - function name은 가능한 동사로 지정<br/>
 
-```javaScript
+```javascript
 //function예시
 function print(message){
   console.log(`message :  ${message}`)
