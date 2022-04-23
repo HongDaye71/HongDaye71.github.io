@@ -178,12 +178,12 @@ ___
 
 ### :bell: Function<br/>
 
-1. Function이란?<br/>
+**Function이란?**<br/>
 - 프로그램에서 필수적인 Building block<br/>
 - 여러번 재 사용이 가능한 SubProgram<br/>
 - 값을 계산하거나 특정 Task 수행<br/><br/>
 
-2. Function delcaration<br/>
+**Function delcaration**<br/>
 - 형식 :<br/>
   ```function name(param1, param2) {body... return;}```<br/>
   * return이 작성되지 않은 경우 = return undefined
@@ -206,7 +206,7 @@ function log(message : string){
   log('Hello World!')
 ```
 
-<br/>3. Parameters<br/>
+**<br/>Parameters<br/>**
 - premitive parameter : passed by value<br/>
 - object parameter : passed by reference<br/>
 - default parameters : 사용자가 param을 입력하지 않았을 때, 대체값(added in ES6)<br/>
@@ -254,7 +254,7 @@ function printAll(...all){
 print All('dream', 'coding', 'ellie')
 ```
 
-<br/>4. Function expression<br/>
+**<br/>Function expression<br/>**
 - anonymous function : function에 이름을 지정하지 않은 것 (함수를 선언함과 동시에 변수에 할당)<br/>
 - named function : function에 이름을 지정한 것<br/>
 
@@ -272,7 +272,7 @@ const print = function print() {
 print();
 ```
 
-<br/>5. Callback function<br/>
+**<br/>Callback function<br/>**
 - parameter로 함수를 전달받아, 함수의 내부에서 실행되는 함수(실행 시, parameter값에 따라 특정함수 실행)
   * [함수(function)란 무엇일까?](https://hanamon.kr/javascript-%ED%95%A8%EC%88%98-%EA%B8%B0%EC%B4%88/)
 
@@ -300,7 +300,7 @@ const printNo = function() {
 */
 ```
 
-<br/>5. Arrow Function<br/>
+**<br/>Arrow Function<br/>**
 - Function exprression대비 함수를 간결하게 만들어 줌<br/>
 - Arrow Fucntion은 anonymouse function임<br/>
 
