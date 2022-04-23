@@ -12,6 +12,9 @@ tags:   [JavaScript]
 ### Contents <br/>
 1. Literals and properties<br/>
 2. Computed properties<br/>
+3. in operator<br/>
+4. for..in/for..of<br/>
+5. Cloning<br/>
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
@@ -67,4 +70,45 @@ printValue(ellie, 'name')
 ```
 
 ___
+
+### :bell: in operator <br/>
+Property existence check (key in obj)<br/>
+
+```javascript
+const ellie = { name: 'ellie', age: 4};
+
+console.log('name' in ellie);
+```
+
+___
+
+### :bell: for..in/for..of<br/>
+
+```javascript
+//for..in
+//오브젝트가 가진 모든 key들이 블럭을 돌 때마다 key변수에 할당되며 출력
+const ellie = { name: 'ellie', age: 4, hasJob: true};
+for (key in ellie) {
+  console.log(key)
+}
+
+//for..of
+//배열이 가진 모든 값들이 블럭을 돌 때마다 value에 할당되며 출력
+//기존 for(let i =0; i < array.length; i++>) 방식대비 효율적
+const array = [1,2,3,4,5]
+for (value of array){
+  console.log()
+}
+```
+
+___
+
+### :bell: Cloning<br/>
+Object를 고유하게 복제해야 하는 경우 사용
+
+```javascript
+```
+
+
+
 
