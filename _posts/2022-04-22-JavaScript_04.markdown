@@ -20,7 +20,7 @@ tags:   [JavaScript]
 
 ___
 
-### :bell: operator<br/>
+### :bell: Operator<br/>
 
 <details>
 <summary>Click to view operator types</summary>
@@ -105,7 +105,7 @@ console.log(stringFive +== numberFive)
 </details>
 
 <details>
-<summary>Click to view if/for/loop operator</summary>
+<summary>Click to view if/ for/ loop operator</summary>
 <div markdown="1">
 
 ```javascript
