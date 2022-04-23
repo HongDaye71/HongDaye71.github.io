@@ -217,7 +217,7 @@ function log(message : string){
 - object parameter : passed by reference<br/>
 [참고자료](https://hongdaye71.github.io/blog/javascript-03)<br/>
 
-```javaScript
+```javascript
 //object parameter에 function을 적용하였을 때, 출력과정
 
 //code : 
