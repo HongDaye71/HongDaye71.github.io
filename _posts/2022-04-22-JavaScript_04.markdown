@@ -211,6 +211,44 @@ function log(message : string){
 
 * [TypeScript Playgrond](https://www.typescriptlang.org/play?#code/PTAEHUFMBsGMHsC2lQBd5oBYoCoE8AHSAZVgCcBLA1UABWgEM8BzM+AVwDsATAGiwoBnUENANQAd0gAjQRVSQAUCEmYKsTKGYUAbpGF4OY0BoadYKdJMoL+gzAzIoz3UNEiPOofEVKVqAHSKymAAmkYI7NCuqGqcANag8ABmIjQUXrFOKBJMggBcISGgoAC0oACCbvCwDKgU8JkY7p7ehCTkVDQS2E6gnPCxGcwmZqDSTgzxxWWVoASMFmgYkAAeRJTInN3ymj4d-jSCeNsMq-wuoPaOltigAKoASgAywhK7SbGQZIIz5VWCFzSeCrZagNYbChbHaxUDcCjJZLfSDbExIAgUdxkUBIursJzCFJtXydajBBCcQQ0MwAUVWDEQC0gADVHBQGNJ3KAALygABEAAkYNAMOB4GRonzFBTBPB3AERcwABS0+mM9ysygc9wASmCKhwzQ8ZC8iHFzmB7BoXzcZmY7AYzEg-Fg0HUiQ58D0Ii8fLpDKZgj5SWxfPADlQAHJhAA5SASPlBFQAeS+ZHegmdWkgR1QjgUrmkeFATjNOmGWH0KAQiGhwkuNok4uiIgMHGxCyYrA4PCCimSXFg9Ua1WVyEEgKdoHyV1QlE4zB1AG9FCUSjK5ZAFfBlQADceTlAz0AAEiXB8dkAAvru9SUr6vQI-FUrI0LoCKIM3uABCSN30AgA)
 
+
+3. Parameters<br/>
+- premitive parameter : passed by value<br/>
+- object parameter : passed by reference<br/>
+[참고자료](https://hongdaye71.github.io/blog/javascript-03)<br/>
+
+```javaScript
+//object parameter에 function을 적용하였을 때, 출력과정
+
+//code : 
+function changeName(obj) {
+    obj.name = 'coder';
+}
+
+const ellie = {
+    name : 'ellie',
+    age : '20'
+}
+
+changeName(ellie)
+console.log(ellie)
+
+/*
+과정 :
+1. name을 'coder'로 변경하는 function생성
+2. ellie parameter생성 
+3. ellie는 object parameter이므로 메모리에는 single items(name,age)의 주소를 참조하는 reference가 저장됨
+4. ellie parameter에 function적용
+5. reference중 name의 데이터 값 변경
+*/
+
+```
+
+
+
+
+
+
 <details>
 <summary>Click to view operator types</summary>
 <div markdown="1">
