@@ -1,0 +1,70 @@
+---
+layout: post
+title:  기술면접_JavaScript_07
+date:   2022-04-22 12:38:35 +0300
+image:  '/images/JavaScript.jpg'
+tags:   [JavaScript]
+---
+<br/>
+
+## 프론트엔드 개발자 입문 | Object<br/>
+
+### Contents <br/>
+1. Literals and properties<br/>
+2. Computed properties<br/>
+
+* 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
+* 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
+* [Tutorial Video_07](https://www.youtube.com/watch?v=1Lbr29tzAA8&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=7)<br/>
+
+___
+
+### :bell: Literals and properties <br/>
+- Object는 Key와 Value로 이루어져 있으며 생성방법에는 object literal과 object constructor이 있음<br/>
+  - key: 접근 가능한 프로퍼티(ex.name)<br/>
+  - value: 프로퍼티가 가지고 있는 값(ex.ellie)<br/>
+
+```javascript
+//object literal
+const obj1 = {};
+
+//object constructor (class를 사용하며 생성하는 방법)
+const obj2 = new Object();
+
+
+//etc. 
+const ellie = { name: 'ellie', age: 4};
+//JavaScript는 동적언어로 object정의 후 property를 추가 및 삭제할 수 있음 (비권장)
+ellie.hasJob = true; 
+delete ellie.hasJob; 
+
+```
+
+___
+
+### :bell: Computed properties <br/>
+- Object안 변수 접근에는 아래 두 가지 방법이 있음
+
+```javascript
+//1. dot을 사용하는 방법
+console.log(ellie.name)
+
+//2. Computed properties
+console.log(ellie['name'])
+
+
+//사용하는 경우
+const ellie = { name: 'ellie', age: 4};
+function printValue(obj, key) {
+  //printValue : object에 있는 key에 상응하는 value출력
+  console.log(obj.key); //1번 방법
+  console.log(obj[key]); //2번 방법
+}
+printValue(ellie, 'name')
+//1번 방법 사용 시 undefined출력 (key는 사용자가 runtime에 입력하는 것으로 현재 미정)
+//2번 방법 사용 시 ellie출력 (computed properties사용 시, key값을 현재 모르더라도 값 출력가능)
+//*대부분의 경우, dot방법을 사용하는 것이 적절
+```
+
+___
+
