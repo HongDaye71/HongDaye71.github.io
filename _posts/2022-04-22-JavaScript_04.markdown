@@ -7,8 +7,8 @@ tags:   [JavaScript]
 ---
 <br/>
 
-## 코딩의 기본 | operator<br/>
-## 코딩의 기본 | fucntion<br/>
+## 코딩의 기본 | Operator<br/>
+## 코딩의 기본 | Function<br/>
 
 ___
 
