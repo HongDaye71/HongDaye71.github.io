@@ -184,7 +184,8 @@ ___
 - 값을 계산하거나 특정 Task 수행<br/><br/>
 
 2. Function delcaration<br/>
-- ```function name(param1, param2) {body... return;}```<br/>
+- 형식 :<br/>
+  ```function name(param1, param2) {body... return;}```<br/>
   * return이 작성되지 않은 경우 = return undefined
 - function은 가능한 한 가지의 기능만 하도록 작성<br/>
 - function name은 가능한 동사로 지정<br/>
@@ -205,10 +206,7 @@ function log(message : string){
   log('Hello World!')
 ```
 
-  * [TypeScript Playgrond](https://www.typescriptlang.org/play?#code/PTAEHUFMBsGMHsC2lQBd5oBYoCoE8AHSAZVgCcBLA1UABWgEM8BzM+AVwDsATAGiwoBnUENANQAd0gAjQRVSQAUCEmYKsTKGYUAbpGF4OY0BoadYKdJMoL+gzAzIoz3UNEiPOofEVKVqAHSKymAAmkYI7NCuqGqcANag8ABmIjQUXrFOKBJMggBcISGgoAC0oACCbvCwDKgU8JkY7p7ehCTkVDQS2E6gnPCxGcwmZqDSTgzxxWWVoASMFmgYkAAeRJTInN3ymj4d-jSCeNsMq-wuoPaOltigAKoASgAywhK7SbGQZIIz5VWCFzSeCrZagNYbChbHaxUDcCjJZLfSDbExIAgUdxkUBIursJzCFJtXydajBBCcQQ0MwAUVWDEQC0gADVHBQGNJ3KAALygABEAAkYNAMOB4GRonzFBTBPB3AERcwABS0+mM9ysygc9wASmCKhwzQ8ZC8iHFzmB7BoXzcZmY7AYzEg-Fg0HUiQ58D0Ii8fLpDKZgj5SWxfPADlQAHJhAA5SASPlBFQAeS+ZHegmdWkgR1QjgUrmkeFATjNOmGWH0KAQiGhwkuNok4uiIgMHGxCyYrA4PCCimSXFg9Ua1WVyEEgKdoHyV1QlE4zB1AG9FCUSjK5ZAFfBlQADceTlAz0AAEiXB8dkAAvru9SUr6vQI-FUrI0LoCKIM3uABCSN30AgA)<br/>
-
-
-3. Parameters<br/>
+<br/>3. Parameters<br/>
 - premitive parameter : passed by value<br/>
 - object parameter : passed by reference<br/>
 - default parameters : 사용자가 param을 입력하지 않았을 때, 대체값(added in ES6)<br/>
