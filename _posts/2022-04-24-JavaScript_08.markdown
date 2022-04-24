@@ -127,6 +127,8 @@ const result2 = array.slice(0.2) //기존 배열의 복사본에서 0-2 index삭
 
 
 /*-----------------------------------------------------------------------------------*/
+
+
 class Student {
   constructor(name, age, enrolled, score) {
     this.name = name;
