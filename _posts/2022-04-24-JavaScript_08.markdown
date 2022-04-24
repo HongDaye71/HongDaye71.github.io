@@ -26,11 +26,10 @@ ___
 **배열이란?**<br/>
 배열은 일반적으로 동일한 타입의 자료를 담는 자료구조 (동적언어인 JavaScript의 경우, 다양한 타입의 자료를 담을 수 있으나 권장되지 않음) <br/>
 
+**생성·추가·삭제**
 <details>
 <summary>Click to view how to declaration·deletion·addition</summary>
 <div markdown="1">
-
-**생성·추가·삭제**
 
 ```javascript
 /*1. declaration의 두 가지 방법*/
