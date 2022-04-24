@@ -73,7 +73,17 @@ fruits.shift('orange', 'strawberry')
 fruits.splice(1,2)
 
 
-//6. Copy
+//6. Combine two arrays
+const fruits1 = ['apple','banana','pear']; 
+const fruits2 = ['lemon','cherry'];
+const newFruits = fruits1.concat(fruits2);
+
+
+//7. Searching 
+const fruits = ['apple','banana','pear','apple']; 
+console.log(fruits.indexOf('apple')); //value의 index searching
+console.log(fruits.LastindexOf('apple')); //중복된value가 존재할 경우, 마지막의 index searching
+console.log(fruits.includes('apple')); //array에 value포함여부 확인
 
 ```
 
