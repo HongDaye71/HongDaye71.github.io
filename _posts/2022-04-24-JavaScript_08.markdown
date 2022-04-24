@@ -181,7 +181,16 @@ const result = students.map((student) => student.score);
 
 
 /*8. heck if there is a student with the score lower than 50*/
+const result = student.some((student) => student.score < 50); //한 명이라도 50점 이하가 있다면 true
+const result = student.every((student) => student.score < 50); //전체가 50점 이하라면 true
 
+
+
+/*9. compute student's average score*/
+const result = students.reduce((previous, current) => {
+  return previous + current.score; 
+},0) //0: initial value / reduce: 콜백함수는 배열안 모든 요소마다 호출되며 누적값을 출력
+console.log(result/students.length);
 ```
 
 </div>
