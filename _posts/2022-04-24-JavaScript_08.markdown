@@ -38,10 +38,12 @@ const array1 = new Array();
 const array2 = [1,2];
 
 
+
 /*2. index position*/
 const fruits = ['apple','banana','pear']; 
 console.log(fruits[0]); //apple출력 
 console.log(fruits[fruits.length -1]); //pear출력 
+
 
 
 /*3. Looping over an array의 세 가지 방법*/
@@ -60,6 +62,7 @@ fruits.forEach(function (fruit, index, array) {
   console.log('he'); //출력결과 : 세 개의 'he'출력 
 
 
+
 /*4. Addition*/
 const fruits = ['apple','banana','pear']; 
 //push: add an item to the end
@@ -68,6 +71,8 @@ fruits.push('orange', 'strawberry')
 fruits.unshift('orange', 'strawberry')
 //splice: remove then add an item by index position (요소가 삭제된 자리에 value추가)
 fruits.splice(1,2,'mango')
+
+
 
 /*5. Deletion*/
 //pop: remove an item from the end
@@ -78,10 +83,12 @@ fruits.shift('orange', 'strawberry')
 fruits.splice(1,2)
 
 
+
 /*6. Combine two arrays*/
 const fruits1 = ['apple','banana','pear']; 
 const fruits2 = ['lemon','cherry'];
 const newFruits = fruits1.concat(fruits2);
+
 
 
 /*7. Searching*/
@@ -110,14 +117,17 @@ const fruits = ['apples', 'banana', 'orange'];
 const result = fruits.join(); //optional: 괄호 안separator입력
 
 
+
 /*2. Make an array out of a string*/
 const fruits = ['apples', 'banana', 'orange'];
 const result = fruits.split(,); //parameter: separator / optinal : 괄호 안 limit입력
 
 
+
 /*3. Make this array look like this: [5,4,3,2,1]*/
 const array = [1,2,3,4,5]
 const result = array.reverse();
+
 
 
 /*4. Make new array without the first two elements*/
