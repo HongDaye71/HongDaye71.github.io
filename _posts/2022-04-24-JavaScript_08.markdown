@@ -172,20 +172,18 @@ const result = students.map((student) => student.score);
 
 
 
+//check if there is a student with the score lower than 50
 
 ```
 
 </div>
 </details>
 
-* Callback 
-
-
 ___
 
 ### Appendix<br/>
 - Callback함수<br/>
-  정의 : 다른 함수에 매개변수로 넘겨준 함수로 넘겨받은 함수는 때가 되면 나중에 호출(called back)함<br/>
+  정의 : 다른 함수에 매개변수로 넘겨준 함수로, 넘겨받은 함수는 때가 되면 나중에 호출<br/>
   용도 : 순차적으로 코드를 실행하고자 할 때에 사용<br/>
   예시 : <br/>
   ```javascript
