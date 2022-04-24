@@ -109,13 +109,16 @@ ___
 const fruits = ['apples', 'banana', 'orange'];
 const result = fruits.join(); //optional: 괄호 안separator입력
 
+
 //make an array out of a string
 const fruits = ['apples', 'banana', 'orange'];
 const result = fruits.split(,); //parameter: separator / optinal : 괄호 안 limit입력
 
+
 //make this array look like this: [5,4,3,2,1]
 const array = [1,2,3,4,5]
 const result = array.reverse();
+
 
 //make new array without the first two elements
 const array = [1,2,3,4,5]
@@ -140,6 +143,7 @@ const students = [
   new Student('E', 29, true, 88)
 ];
 
+
 //find a student with the score 90
 const result = students.find(function(student, index){
   console.log(student, index) 
@@ -152,12 +156,20 @@ const result = student.find(student) => student.score ===90;
 cosole.log (result);
 
 
+
 //make an array of enrolled students
 const result = students.filter(function(student){
   return student.enrolled === true;  
 });
 //위 코드를 Arrow function으로 작성
 const result = students.filter((student) => student.enrolled)
+
+
+
+//make an array containing only the student's scores (reuslt should be [45, 80, 90, 66, 88])
+const result = students.map((student) => student.score); 
+//mapping: 배열 안 개별요소를 다른것으로 변환 (위 코드에서는 name,age,enrolled,score를 포함하고 있는 sutdent를 받아 student.score로 변환해준 것)
+
 
 
 
