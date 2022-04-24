@@ -32,7 +32,48 @@ ___
 const array1 = new Array();
 const array2 = [1,2];
 
+
 //2. index position
+const fruits = ['apple','banana','pear']; 
+console.log(fruits[0]); //apple출력 
+console.log(fruits[fruits.length -1]); //pear출력 
+
+
+//3. Looping over an array의 세 가지 방법
+const fruits = ['apple','banana','pear']; 
+//for
+fot (let i=0; i<fruits.length; i++){
+  console.log(fruits[i])
+}
+//for of (배열이 가진 모든 값들이 블럭을 돌 때마다 value에 할당되며 출력)
+for (let fruit of fruits){
+  cosole.log(fruit);
+}
+//forEach (for문과 마찬가지로 반복적인 기능을 수행할 때 사용하며 전달한 콜백함수를 value마다 호출(parameter: value, index, array))
+fruits.forEach(function (fruit, index, array) {
+  console.log(fruit); //출력결과 : apple, banana, pear
+  console.log('he'); //출력결과 : 세 개의 'he'출력 
+
+
+//4. Addition
+const fruits = ['apple','banana','pear']; 
+//push: add an item to the end
+fruits.push('orange', 'strawberry')
+//unshift: add an item to the beginning (slower than pop: add후 요소이동이 필요함으로)
+fruits.unshift('orange', 'strawberry')
+
+//5. Deletion
+//pop: remove an item from the end
+fruits.pop('orange', 'strawberry')
+//shift: remove an item from the beginning (slower than push: delete후 요소이동이 필요함으로)
+fruits.shift('orange', 'strawberry')
+
+
+//6. Copy
+});
+
+
+
 
 ```
 
