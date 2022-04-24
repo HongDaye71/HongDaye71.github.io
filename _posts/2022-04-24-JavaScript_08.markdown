@@ -158,14 +158,11 @@ const students = [
 
 /*5. Find a student with the score 90*/
 const result = students.find(function(student, index){
-  console.log(student, index) 
-  //students에는 다섯개의 index가 포함되어 있으므로 다섯개 정보 출력
-  return student.score === 90; 
-  //score가 90인 첫 번째 value출력
+  console.log(student, index) //students에는 다섯개의 index가 포함되어 있으므로 다섯개 정보 출력
+  return student.score === 90; //score가 90인 첫 번째 value출력
 }); 
-//위 코드를 Arrow function으로 작성(콜백함수는 anonymous이므로 Arrow function사용가능)
+//위 코드를 Arrow function으로 작성
 const result = student.find(student) => student.score ===90;
-cosole.log (result);
 
 
 
