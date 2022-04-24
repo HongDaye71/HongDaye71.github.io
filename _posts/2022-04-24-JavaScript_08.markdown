@@ -191,6 +191,7 @@ const result = students.reduce((previous, current) => {
   return previous + current.score; 
 },0) //0: initial value / reduce: 콜백함수는 배열안 모든 요소마다 호출되며 누적값을 출력
 console.log(result/students.length);
+
 ```
 
 </div>
