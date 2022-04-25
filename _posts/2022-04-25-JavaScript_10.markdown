@@ -15,7 +15,8 @@ tags:   [JavaScript]
   1.2 Callback이란?<br/>
   1.3 Callback hell<br/>
 2. Promise<br/>
-  -
+  2.1 Promise란?<br/>
+
 3. Async/Await<br/>
   -
 
@@ -75,7 +76,7 @@ setTimeout(() => console.log('1초 후 실행되는 코드'), 1000)
 * Sync callback : 즉각적으로 실행되는 콜백함수 <br/>
   (ex.setTimeout에서 delayTime을 지정하지 않은 경우)<br/>
 * Async callback : 실행시간을 예측할 수 없는 콜백함수 <br/>
-  (ex.setTimeout에서 delayTime을 지정한 경우)<br/>
+  (ex.A수업의 수강인원이 모두 채워진 경우, 강의를 오픈하고 수강생에게 관련링크를 전달하는 경우)<br/>
 
 ___
 
@@ -152,6 +153,58 @@ class UserStorage {
 </div>
 </details>
 
+___
 
+
+### :bell: Promise<br/>
+#### 2.1 Promise란?<br/>
+- JavaScript에 내장되어 있는 오브젝트로 비동기를 간편하게 진행할 수 있도록 함<br/>
+- 정해진 기능을 수행 후, 정상적으로 기능이 수행되었는지 혹은 오류가 발생하였는지에 대한 내용 전달<br/>
+- Promise는 생성된 순간, 즉각적으로 실행됨<br/>
+
+**Promise State**<br/>
+프로세스가 기능을 수행중인지 혹은 수행을 성공(실패)하였는지에 대한 상태<br/>
+1. pending : 기능 수행중<br/>
+2. fulfilled : 기능 수행성공<br/>
+3. rejected : 기능 수행실패<br/>
+
+**Producer vs Consumer**<br/>
+producer : 데이터 제공자 (원하는 기능을 수행하여 해당하는 데이터 생성)<br/>
+```javascript
+const promise = new Promise((resolve, reject) => {
+  // doing some heavy work(ex.서버에서 데이터를 받아오는 등의 작업을 말하며, 이를 동기적으로 실행할 경우 비효율적이므로 Promise를 사용하여 비동기적으로 실행하도록 함)
+  console.log('doing something...');
+
+  //1. Wizaed of Oz: 실제 서버를 이용하는 것과 같은 효과를 주기위해 setTimeout사용
+  //2. resolve or reject사용
+  serTimeout(() => {
+    resolve('ellie') //기능수행에 성공할 경우 출력
+  },2000);
+
+  setTimeout(() => {
+    reject(new Error('no network')) //기능수행에 실패할 경우 출력
+  },2000);
+
+});
+```
+consumer : 데이터 사용자 (원하는 데이터 소비)<br/>
+  - then, catch, finally를 통해 값을 받아올 수 있음<br/>
+```javascript
+promise
+  //then: 성공할 경우, value(resolve에서 정의)에서 값을 받아와 출력
+  .then((value) => {
+    console.log(value);
+  })
+
+  //catch: 실패할 경우, 오류메세지 출력
+  .catch(error => {
+    console.log(error);
+  })
+
+  //finally: 성공,실패 여부와 무관하게 출력
+  .finally(() => {
+    console.log('finally');
+  })
+```
 
 
