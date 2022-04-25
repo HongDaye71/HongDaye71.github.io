@@ -30,7 +30,7 @@ ___
 ### :bell: Callback<br/>
 #### 1.1 sync/async<br/>
 **synchronous**<br/>
-  - 한 개의 작업이 실행되는 동안 다른 작업은 멈춘 상태로 유지하고 자신의 차례를 기다리는 것<br/>
+  - 한 개의 작업이 실행되는 동안 다른 작업은 멈춘 상태로 유지하고 차례를 기다리는 것<br/>
   - JavaScript는 동기언어로 hoising이 된 이후 순차적으로 코드를 실행<br/>
     * hoisting: var, function declaration이 자동적으로 제일 상단에 위치하게 되는 것<br/>
   ```javascript
@@ -73,7 +73,10 @@ setTimeout(() => console.log('1초 후 실행되는 코드'), 1000)
 
 
 #### 1.3 Callback hell<br/>
-콜백함수를 반복사용하여 코드의 들여쓰기 수준이 감당하기 힘들 정도로 깊어지는 현상. 여기서 반복사용은 하나의 콜백함수 안에서 계속해서 콜백을 반복하는 것을 말함.
+정의 : 콜백함수를 반복사용하여 코드의 들여쓰기 수준이 감당하기 힘들 정도로 깊어지는 현상. 여기서 반복사용은 하나의 콜백함수 안에서 계속해서 콜백을 반복하는 것을 말함.<br/>
+문제 : <br/>
+  1. 코드의 가독성이 떨어짐<br/>
+  2. 오류 디버깅이 어려움<br/>
 
 <details>
 <summary>Callback hell example</summary>
