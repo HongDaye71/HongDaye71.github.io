@@ -1,89 +1,40 @@
 ---
 layout: post
-title:  기술면접_JavaScript_10
+title:  기술면접_JavaScript_11-13
 date:   2022-04-25 12:38:35 +0300
 image:  '/images/JavaScript.jpg'
 tags:   [JavaScript]
 ---
 <br/>
 
-## 프론트엔드 개발자 입문 | JSON<br/>
+## 프론트엔드 개발자 입문(비동기처리) | Callback,Promise,Async,Await<br/>
 
 ### Contents <br/>
-1. JSON파일이란?<br/>
-2. 파일변환<br/>
-
+1. Callback<br/>
+  (1) sync/async<br/>
+2. Promise<br/>
+  -
+3. Async/Await<br/>
+  -
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
 * 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
-* [Tutorial Video_10](https://www.youtube.com/watch?v=FN_D4Ihs3LE&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=10)<br/>
+* [Tutorial Video_11](https://www.youtube.com/watch?v=s1vpVCrT8f4&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=11)<br/>
+* [Tutorial Video_12](https://www.youtube.com/watch?v=JB_yU6Oe2eE&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=12)<br/>
+* [Tutorial Video_13](https://www.youtube.com/watch?v=aoQSOZfz3vQ&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=13)<br/>
 
 ___
 
-### :bell: JSON파일이란? <br/>
-**HTTP(Hypertext Transfer Protocol)**
-  - 브라우저위에서 동작하고 있는 웹 등의 클라이언트가 서버와 통신할 수 있는 방법정의<br/>
-  - 클라이언트가 서버에 데이터를 요청할 수 있고, 서버가 이에 응답할 수 있음<br/>
-  - Hypyertext에는 링크,문서,이미지 등이 모두 포함됨 <br/>
+### :bell: Callback_sync/async<br/>
+**synchronous**<br/>
+  - 한 개의 작업이 실행되는 동안 다른 작업은 멈춘 상태로 유지하고 자신의 차례를 기다리는 것<br/>
+  - JavaScript는 동기언어로 hoising이 된 이후 순차적으로 코드를 실행<br/>
+    * hoisting: var, function declaration이 자동적으로 제일 상단에 위치하게 되는 것<br/>
+    ```javascript
+    ```
 
-**JSON(JavaScript Object Notation)**<br/>
-  - HTTP를 이용하여 서버와 통신할 수 있는 방법<br/>
-  - 자바스크립트 오브젝트 표기법이란 뜻으로 서버와 클라이언트 통신 시 데이터를 손쉽게 표기해서 전달할 수 있는 장점이 있음 (ex.날씨,교통 - 정보 등 서버 데이터를 클라이언트에 표기하는 등 네트워크를 통해 데이터를 전송할 때 유용)<br/>
-  - Key와 Value로 이루어져 있음<br/>
-  - 프로그래밍 언어나 플랫폼에 무관하게 사용할 수 있음<br/>
-
-___
-
-### :bell: 파일변환 <br/>
-**Object to JSON(오브젝트를 JSON파일로 변환)**<br/>
-- stringfy API를 통해 변환가능<br/>
-- 오브젝트 내 함수나 Symbol과 같이 JavaScript에만 존재하는 데이터 타입은 변환되지 않음<br/>
-
-```javascript
-//stringfy(obj)
-const rabbit = {
-  name: 'tori',
-  color: 'white',
-  size: null,
-  brithDate: new Date(),
-  jump: () => {
-    console.log(`${name} can jump!`)
-  }
-}
-
-json = JSON.stringify(rabbit);
-console.log(json)
+**asynchronous**<br/>
+  - 다수의 작업이 동시에 진행되는 것<br/>
+  - 코드의 실행순서를 예측할 수 없음<br/>
 
 
-//stringfy(obj): 콜백함수를 사용하여 위 코드 대비 변환을 통제하는 경우
-json = JSON.stringify(rabbit, ["name"]); //rabbit obj의 특정 Property만 변환하고자 하는 경우 사용
-
-json = JSON.stringify(rabbit, (key, value) => { //rabbit obj의 특정 Property의 값을 변경하여 변환하고자 하는 경우 사용
-  return key == 'name' ? 'ellie' : value;
-}); 
-```
-
-**<br/>JSON to Object(JSON파일을 오브젝트로 변환)**<br/>
-- parse API를 통해 변환가능<br/>
-- 오브젝트 내 함수나 Symbol과 같이 JavaScript에만 존재하는 데이터 타입은 JSON으로 변환되지 않았으므로 해당 JSON파일을 Obejct로 변환할 경우, 해당 데이터 타입은 포함되어 있지 않음<br/>
-
-```javascript
-//parse(json)
-json = JSON.stringify(rabbit);
-const obj = JSON.parse(json) //변환하고자 하는 JSON파일을 전달
-```
-
-### Appendix<br/>
-**JSON관련 사이트**<br/>
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/Posting/JavaScript/15.png" alt="Project">
-    <img src="/images/Posting/JavaScript/16.png" alt="Project">
-    <img src="/images/Posting/JavaScript/17.png" alt="Project">
-  </div>
-  <em>JSON Diff/JSON Beautifier/JSON Parser <a href="https://unsplash.com/" target="_blank"></a></em>
-</div>
-1. JSON Diff: 서버에서 첫 번째로 받아온 데이터와 두 번째로 받아온 데이터의 어느 부분이 다른지 확인가능<br/>
-2. JSON Beautifier: 서버에서 받아온 JSON파일의 포맷이 망가져 있을 경우사용<br/>
-3. JSON Parser: JSON파일을 Object형태로 출력<br/>
-4. JSON Validator: JSON파일 내 error debug<br/>
