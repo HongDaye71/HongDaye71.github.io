@@ -21,7 +21,7 @@ tags:   [JavaScript]
 ___
 
 ### :bell: JSON파일이란? <br/>
-**HTTP(Hypertext Transfer Protocol)**ㅍ
+**HTTP(Hypertext Transfer Protocol)**
   - 브라우저위에서 동작하고 있는 웹 등의 클라이언트가 서버와 통신할 수 있는 방법정의<br/>
   - 클라이언트가 서버에 데이터를 요청할 수 있고, 서버가 이에 응답할 수 있음<br/>
   - Hypyertext에는 링크,문서,이미지 등이 모두 포함됨 <br/>
@@ -53,6 +53,24 @@ const rabbit = {
 
 json = JSON.stringify(rabbit);
 console.log(json)
+
+
+//stringfy(obj): 콜백함수를 사용하여 위 코드 대비 변환을 통제하는 경우
+json = JSON.stringify(rabbit, ["name"]); //rabbit obj의 특정 Property만 변환하고자 하는 경우 사용
+
+json = JSON.stringify(rabbit, (key, value) => { //rabbit obj의 특정 Property의 값을 변경하여 변환하고자 하는 경우 사용
+  return key == 'name' ? 'ellie' : value;
+}); 
+```
+
+**JSON to Object(JSON파일을 오브젝트로 변환)**<br/>
+- parse API를 통해 변환가능<br/>
+- 오브젝트 내 함수나 Symbol과 같이 JavaScript에만 존재하는 데이터 타입은 JSON으로 변환되지 않았으므로 해당 JSON파일을 Obejct로 변환할 경우, 해당 데이터 타입은 포함되어 있지 않음<br/>
+
+```javascript
+//parse(json)
+json = JSON.stringify(rabbit);
+const obj = JSON.parse(json) //변환하고자 하는 JSON파일을 전달
 ```
 
 
