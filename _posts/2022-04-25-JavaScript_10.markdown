@@ -11,7 +11,7 @@ tags:   [JavaScript]
 
 ### Contents <br/>
 1. Callback<br/>
-  (1) sync/async<br/>
+  1.1 sync/async<br/>
 2. Promise<br/>
   -
 3. Async/Await<br/>
