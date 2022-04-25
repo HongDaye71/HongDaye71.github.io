@@ -127,23 +127,23 @@ class UserStorage {
   const password = prompt('enter your password');
 
   //userStorage 사용하여 로그인
-  userStorage.loginUser(
+  userStorage.loginUser( 
     id, 
     password, 
-    user => {
+    user => { //1st Callback
       userStorage.getRoles(
         user,
-        userWithRole => {
+        userWithRole => { //2nd Callback
           alert(
             `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`
           );
         },
-        error => {
+        error => { //3rd Callback
           console.log(error);
         }
       );
     },
-    error => {
+    error => { //4th Callback
       console.log(error);
     }
 );
