@@ -1,0 +1,24 @@
+---
+layout: post
+title:  기술면접_JavaScript_10
+date:   2022-04-25 12:38:35 +0300
+image:  '/images/JavaScript.jpg'
+tags:   [JavaScript]
+---
+<br/>
+
+## 프론트엔드 개발자 입문 | JSON<br/>
+
+### Contents <br/>
+1. JSON파일이란?<br/>
+
+
+* 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
+* 영상에서 언급되지 않은 내용이 포함되어 있음<br/>
+* [Tutorial Video_10](https://www.youtube.com/watch?v=FN_D4Ihs3LE&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=10)<br/>
+
+___
+
+### :bell: JSON파일이란? <br/>
+JSON은(JavaScript Object Notation) 자바스크립트 오브젝트 표기법이란 뜻으로 서버와 클라이언트 통신 시 데이터를 손쉽게 표기해서 전달할 수 있는 장점이 있다. (ex.날씨,교통 정보 등 서버 데이터를 클아이언트(웹,앱)에 표기)
+
