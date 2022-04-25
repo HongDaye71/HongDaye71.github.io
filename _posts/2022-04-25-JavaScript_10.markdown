@@ -42,9 +42,13 @@ ___
 #### 1.2 Callback이란?<br/>
   정의 : 다른 함수에 매개변수로 넘겨준 함수로, 넘겨받은 함수는 때가 되면 나중에 호출<br/>
   ```javascript
+  //setTimeout은 콜백함수로 실행되며 지금 당장 실행되지 않고 필요한 때에 callback(호출)하여 사용
   setTimeout(function(){
     console.log('1초 후 실행되는 코드')
-  }, 1000) //setTimeout은 콜백함수로 실행되며 지금 당장 실행되지 않고 필요한 때에 callback(호출)하여 사용
+  }, 1000) 
+
+  //콜백함수는 anonymous로 Arrow function을 통해 표기가능
+  setTimeout(() => console.log('1초 후 실행되는 코드'), 1000)
   ```
   
 
