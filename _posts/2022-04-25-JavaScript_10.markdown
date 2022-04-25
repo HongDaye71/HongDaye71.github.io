@@ -11,6 +11,7 @@ tags:   [JavaScript]
 
 ### Contents <br/>
 1. JSON파일이란?<br/>
+2. 파일변환<br/>
 
 
 * 드림코딩 유투브 채널의 JavaScript 기초강의 내용을 바탕으로 정리하는 포스팅입니다. <br/>
@@ -20,5 +21,38 @@ tags:   [JavaScript]
 ___
 
 ### :bell: JSON파일이란? <br/>
-JSON은(JavaScript Object Notation) 자바스크립트 오브젝트 표기법이란 뜻으로 서버와 클라이언트 통신 시 데이터를 손쉽게 표기해서 전달할 수 있는 장점이 있다. (ex.날씨,교통 정보 등 서버 데이터를 클아이언트(웹,앱)에 표기)
+**HTTP(Hypertext Transfer Protocol)**ㅍ
+  - 브라우저위에서 동작하고 있는 웹 등의 클라이언트가 서버와 통신할 수 있는 방법정의<br/>
+  - 클라이언트가 서버에 데이터를 요청할 수 있고, 서버가 이에 응답할 수 있음<br/>
+  - Hypyertext에는 링크,문서,이미지 등이 모두 포함됨 <br/>
+
+**JSON(JavaScript Object Notation)**<br/>
+  - HTTP를 이용하여 서버와 통신할 수 있는 방법<br/>
+  - 자바스크립트 오브젝트 표기법이란 뜻으로 서버와 클라이언트 통신 시 데이터를 손쉽게 표기해서 전달할 수 있는 장점이 있음 (ex.날씨,교통 - 정보 등 서버 데이터를 클라이언트에 표기하는 등 네트워크를 통해 데이터를 전송할 때 유용)<br/>
+  - Key와 Value로 이루어져 있음<br/>
+  - 프로그래밍 언어나 플랫폼에 무관하게 사용할 수 있음<br/>
+
+___
+
+### :bell: 파일변환 <br/>
+**Object to JSON(오브젝트를 JSON파일로 변환)**<br/>
+- stringfy API를 통해 변환가능<br/>
+- 오브젝트 내 함수나 Symbol과 같이 JavaScript에만 존재하는 데이터 타입은 변환되지 않음<br/>
+
+```javascript
+//stringfy(obj)
+const rabbit = {
+  name: 'tori',
+  color: 'white',
+  size: null,
+  brithDate: new Date(),
+  jump: () => {
+    console.log(`${name} can jump!`)
+  }
+}
+
+json = JSON.stringify(rabbit);
+console.log(json)
+```
+
 
