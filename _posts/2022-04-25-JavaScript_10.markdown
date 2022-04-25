@@ -257,6 +257,7 @@ gethen()
   .then(meal => console.log(meal))
   .catch(console.log);
 ```
+<br/>
 
 <details>
 <summary>Callback hell -> Promise</summary>
