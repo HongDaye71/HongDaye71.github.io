@@ -63,7 +63,7 @@ json = JSON.stringify(rabbit, (key, value) => { //rabbit obj의 특정 Property�
 }); 
 ```
 
-**JSON to Object(JSON파일을 오브젝트로 변환)**<br/>
+**<br/>JSON to Object(JSON파일을 오브젝트로 변환)**<br/>
 - parse API를 통해 변환가능<br/>
 - 오브젝트 내 함수나 Symbol과 같이 JavaScript에만 존재하는 데이터 타입은 JSON으로 변환되지 않았으므로 해당 JSON파일을 Obejct로 변환할 경우, 해당 데이터 타입은 포함되어 있지 않음<br/>
 
