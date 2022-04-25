@@ -65,6 +65,7 @@ ___
 
 #### <br/>1.2 Callback이란?<br/>
 다른 함수에 매개변수로 넘겨준 함수로, 넘겨받은 함수는 때가 되면 나중에 호출<br/>
+
 ```javascript
 {% raw %}
 //setTimeout은 콜백함수로 실행되며 지금 당장 실행되지 않고 필요한 때에 callback(호출)하여 사용
@@ -123,7 +124,6 @@ class UserStorage {
   }
 }
 
-
   /*---------------------------------------------------------*/
 
   const userStorage = new UserStorage(); //userStorage class delaration
@@ -177,6 +177,7 @@ ___
 producer : 데이터 제공자 (원하는 기능을 수행하여 해당하는 데이터 생성)<br/>
 
 ```javascript
+
 { % raw % }
 const promise = new Promise((resolve, reject) => {
   // doing some heavy work(ex.서버에서 데이터를 받아오는 등의 작업을 말하며, 이를 동기적으로 실행할 경우 비효율적이므로 Promise를 사용하여 비동기적으로 실행하도록 함)
@@ -234,7 +235,7 @@ const fetchNumber = new Promise((resolve, reject) => {
 fetchNumber
   .then(num => num * 2)
   .then(num => console.log(num));
-  { % endraw % }
+{ % endraw % }
 ```
 
 ___
