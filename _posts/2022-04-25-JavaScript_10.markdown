@@ -79,8 +79,9 @@ const obj = JSON.parse(json) //변환하고자 하는 JSON파일을 전달
   <div class="gallery">
     <img src="/images/Posting/JavaScript/15.png" alt="Project">
     <img src="/images/Posting/JavaScript/16.png" alt="Project">
+    <img src="/images/Posting/JavaScript/17.png" alt="Project">
   </div>
-  <em>JSON Diff/JSON Beautifier/ <a href="https://unsplash.com/" target="_blank">하루시작, 알림이</a></em>
+  <em>JSON Diff/JSON Beautifier/JSON Parser <a href="https://unsplash.com/" target="_blank"></a></em>
 </div>
 1. JSON Diff: 서버에서 첫 번째로 받아온 데이터와 두 번째로 받아온 데이터의 어느 부분이 다른지 확인가능<br/>
 2. JSON Beautifier: 서버에서 받아온 JSON파일의 포맷이 망가져 있을 경우사용<br/>
