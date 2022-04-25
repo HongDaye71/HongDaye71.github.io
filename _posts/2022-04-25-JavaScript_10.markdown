@@ -230,7 +230,8 @@ fetchNumber
 ___
 
 **Promise chaining error handling**<br/>
-다수의 Promise생성 시, reject/catch를 통해 어느 부분에서 오류가 발생했는지 확인 <br/>
+- 다수의 Promise생성 시, reject/catch를 통해 어느 부분에서 오류가 발생했는지 확인 <br/>
+- catch(error => {})를 통해 오류 대체값 설정<br/>
 
 ```javascript
 //Producer
@@ -251,10 +252,12 @@ const cook = egg =>
 //Consumer
 gethen()
   .then(getEgg)
+  .catch(error => {
+    return 'alternate';
+  })
   .then(egg => cook(egg))
   .then(meal => console.log(meal))
   .catch(console.log);
-
 ```
 
 
