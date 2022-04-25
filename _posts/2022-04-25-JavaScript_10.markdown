@@ -168,8 +168,11 @@ ___
 2. fulfilled : 기능 수행성공<br/>
 3. rejected : 기능 수행실패<br/>
 
+___
+
 **Producer vs Consumer**<br/>
 producer : 데이터 제공자 (원하는 기능을 수행하여 해당하는 데이터 생성)<br/>
+
 ```javascript
 const promise = new Promise((resolve, reject) => {
   // doing some heavy work(ex.서버에서 데이터를 받아오는 등의 작업을 말하며, 이를 동기적으로 실행할 경우 비효율적이므로 Promise를 사용하여 비동기적으로 실행하도록 함)
@@ -187,8 +190,10 @@ const promise = new Promise((resolve, reject) => {
 
 });
 ```
-consumer : 데이터 사용자 (원하는 데이터 소비)<br/>
+
+<br/>consumer : 데이터 사용자 (원하는 데이터 소비)<br/>
   - then, catch, finally를 통해 값을 받아올 수 있음<br/>
+
 ```javascript
 promise
   //then: 성공할 경우, value(resolve에서 정의)에서 값을 받아와 출력
@@ -206,5 +211,51 @@ promise
     console.log('finally');
   })
 ```
+
+___
+
+**Promise chaining**<br/>
+It allows you to chain on another then call which will run when the second promise is fulfilled<br/>
+
+```javascript
+const fetchNumber = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(1), 1000);
+});
+
+fetchNumber
+  .then(num => num * 2)
+  .then(num => console.log(num));
+```
+
+___
+
+**Promise chaining error handling**<br/>
+다수의 Promise생성 시, reject/catch를 통해 어느 부분에서 오류가 발생했는지 확인 <br/>
+
+```javascript
+//Producer
+const gethen = () =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve('hen'), 1000)
+})
+const getEgg = hen =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => reject(new Error (`error! ${hen} -> egg`)), 1000)
+})
+const cook = egg =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve(`${egg} -> fired egg`), 1000)
+})
+
+
+//Consumer
+gethen()
+  .then(getEgg)
+  .then(egg => cook(egg))
+  .then(meal => console.log(meal))
+  .catch(console.log);
+
+```
+
 
 
