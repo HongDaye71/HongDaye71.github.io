@@ -49,6 +49,7 @@ console.log("3rd");
   - 코드의 실행순서를 예측할 수 없음<br/>
 
 ```javascript
+{% raw %}
 console.log("1st");
 setTimeout(()=>{
   console.log("2nd");
@@ -57,6 +58,7 @@ console.log("3rd");
 
 //출력결과: 1st,3rd,2nd
 //위 코드는 동기언이인 JavaScript를 비동기적으로 처리한 것
+{ % endraw % }
 ```
 
 ___
@@ -175,6 +177,7 @@ ___
 producer : 데이터 제공자 (원하는 기능을 수행하여 해당하는 데이터 생성)<br/>
 
 ```javascript
+{% raw %}
 const promise = new Promise((resolve, reject) => {
   // doing some heavy work(ex.서버에서 데이터를 받아오는 등의 작업을 말하며, 이를 동기적으로 실행할 경우 비효율적이므로 Promise를 사용하여 비동기적으로 실행하도록 함)
   console.log('doing something...');
@@ -190,12 +193,14 @@ const promise = new Promise((resolve, reject) => {
   },2000);
 
 });
+{ % endraw % }
 ```
 
 <br/>consumer : 데이터 사용자 (원하는 데이터 소비)<br/>
   - then, catch, finally를 통해 값을 받아올 수 있음<br/>
 
 ```javascript
+{% raw %}
 promise
   //then: 성공할 경우, value(resolve에서 정의)에서 값을 받아와 출력
   .then((value) => {
@@ -211,6 +216,7 @@ promise
   .finally(() => {
     console.log('finally');
   })
+{ % endraw % }
 ```
 
 ___
@@ -220,6 +226,7 @@ ___
 It allows you to chain on another then call which will run when the second promise is fulfilled<br/>
 
 ```javascript
+{% raw %}
 const fetchNumber = new Promise((resolve, reject) => {
   setTimeout(() => resolve(1), 1000);
 });
@@ -227,6 +234,7 @@ const fetchNumber = new Promise((resolve, reject) => {
 fetchNumber
   .then(num => num * 2)
   .then(num => console.log(num));
+  { % endraw % }
 ```
 
 ___
@@ -236,6 +244,7 @@ ___
 - catch(error => {})를 통해 오류 대체값 설정<br/>
 
 ```javascript
+{% raw %}
 //Producer
 const gethen = () =>
   new Promise((resolve, reject) => {
@@ -260,6 +269,7 @@ gethen()
   .then(egg => cook(egg))
   .then(meal => console.log(meal))
   .catch(console.log);
+{ % endraw % }
 ```
 
 <details>
@@ -267,6 +277,7 @@ gethen()
 <div markdown="1">
 
 ```javascript
+{% raw %}
 class UserStorage {
   loginUser(id, password) {
     return new Promise((resolve, reject) => {
@@ -306,6 +317,7 @@ userStorage
   //위 코드의 경우, user= > 생략: 콜백함수 전달 시, 받아오는 value를 통해 다른함수를 바로 호출하는 경우, 생략가능
   .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
   .catch(console.log);
+{ % endraw % }
 ```
 
 </div>
