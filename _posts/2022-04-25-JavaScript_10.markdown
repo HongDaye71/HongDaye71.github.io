@@ -260,5 +260,53 @@ gethen()
   .catch(console.log);
 ```
 
+<details>
+<summary>Callback hell -> Promise</summary>
+<div markdown="1">
+
+```javascript
+class UserStorage {
+  loginUser(id, password) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (
+          (id === 'ellie' && password == 'dream') ||
+          (id === 'coder' && password == 'academy')
+        ) {
+            resolve(id);
+        } else {
+            reject(new Erorr('not found'));
+        }
+      }, 2000);
+    });
+  }
+
+  getRoles(user){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (user === 'ellie') {
+          resolve({ name: 'ellie', role: 'admin' });
+        } else {
+          reject(new Error('no access'));
+        }
+      }, 1000);
+    })
+  }
+}
+
+const userStorage = new UserStorage(); 
+const id = prompt('enter your id');
+const password = prompt('enter your password');
+
+userStorage
+  .loginUser(id, password) //userStorage에 id,pw전달
+  .then(userStorage.getRoles) //loginUser에서 resolve일 경우, user를 받아와서 getRoles호출
+  //위 코드의 경우, user= > 생략: 콜백함수 전달 시, 받아오는 value를 통해 다른함수를 바로 호출하는 경우, 생략가능
+  .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
+  .catch(console.log);
+```
+
+</div>
+</details>
 
 
