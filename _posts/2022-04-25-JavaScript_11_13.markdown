@@ -73,9 +73,8 @@ setTimeout(function(){
 setTimeout(() => console.log('1초 후 실행되는 코드'), 1000)
 ```
 * Sync callback : 즉각적으로 실행되는 콜백함수 <br/>
-  (ex.setTimeout에서 delayTime을 지정하지 않은 경우)<br/>
 * Async callback : 실행시간을 예측할 수 없는 콜백함수 <br/>
-  (ex.A수업의 수강인원이 모두 채워진 경우, 강의를 오픈하고 수강생에게 관련링크를 전달하는 경우)<br/>
+  (ex.수강인원이 모두 채워진 경우, 강의를 오픈하고 수강생에게 관련링크를 전달)<br/>
 
 ___
 
