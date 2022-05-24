@@ -37,3 +37,11 @@ ___
 ### 4. Github Desktop을 통한 프로젝트 관리<br/>
 (1) 상단 툴바에 Add local repository클릭<br/>
 (2) 변경사항 저장이 필요한 경우, branch에 대한 설명을 작성하여 commit to main<br/>
+
+### 5. 이전 시점으로 돌아가기<br/>
+(1) brach확인<br/>
+  ```git log```
+(2) 이전 시점으로 돌아가기(해당 시점이후 작업 삭제)<br/>
+  ```git reset "log일련번호 6자리"```
+(2) 이전 시점으로 돌아가기(해당 시점이후 작업 유지)<br/>
+  ```git revert "log일련번호 6자리"```
