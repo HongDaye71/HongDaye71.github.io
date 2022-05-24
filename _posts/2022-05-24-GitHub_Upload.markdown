@@ -2,7 +2,7 @@
 layout: post
 title:  프로젝트를 Git으로 관리하는 법
 date:   2022-05-24 12:38:35 +0300
-image:  '/images/JavaScript.jpg'
+image:  '/images/GitHub.png'
 tags:   [GitHub]
 ---
 <br/>
