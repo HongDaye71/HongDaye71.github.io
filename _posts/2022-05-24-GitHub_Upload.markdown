@@ -22,6 +22,7 @@ ___
   ```
 (3) 숨긴파일 보기를 통해 프로젝트 폴더 내 .git 폴더가 생긴 것을 확인<br/>
 
+
 ### 2. 현재시점 저장<br/>
 (1) 타임캡슐에 담기지 않은 파일목록 확인<br/>
   ```git status```
@@ -30,13 +31,16 @@ ___
 (3) 타입캡슐을 Github에 포함<br/>
   ```git commit -m "설명"```
 
+
 ### 3. 프로젝트 공유를 위한 Github업로드<br/>
 (1) Github에서 repository생성<br/>
 (2) …or push an existing repository from the command line의 코드블럭을 복사하여 Visual Studio내 cmd에 입력<br/>
 
+
 ### 4. Github Desktop을 통한 프로젝트 관리<br/>
 (1) 상단 툴바에 Add local repository클릭<br/>
 (2) 변경사항 저장이 필요한 경우, branch에 대한 설명을 작성하여 commit to main<br/>
+
 
 ### 5. 이전 시점으로 돌아가기<br/>
 (1) brach확인<br/>
