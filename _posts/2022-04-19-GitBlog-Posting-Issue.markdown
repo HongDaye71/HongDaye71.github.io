@@ -3,7 +3,7 @@ layout: post
 title:  Github블로그 포스팅이슈_해결방법
 date:   2022-04-17 12:38:35 +0300
 image:  '/images/GitHub.png'
-tags:   [Etc]
+tags:   [GitHub]
 ---
 
 <img src="/images/Posting/Etc/03.png" alt="Project">
