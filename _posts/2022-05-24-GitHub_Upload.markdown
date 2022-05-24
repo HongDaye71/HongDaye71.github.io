@@ -50,4 +50,6 @@ ___
 (2) 이전 시점으로 돌아가기(해당 시점이후 작업 유지)<br/>
   ```git revert "log일련번호 6자리"```
 
+___
+
 *[Git Branch](https://goddaehee.tistory.com/274)
