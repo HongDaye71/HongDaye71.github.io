@@ -15,7 +15,7 @@ ___
 ### 1. Eempty Repository생성<br/>
 (1) Visual Studio에서 Ctrl + ` 클릭<br/>
 (2) 작업중인 폴더가 Git의 관리 하에 들어가도록 함<br/>
-  ```
+  ```javascript
   git init
   git config --global user.name "내 이름" 입력
   git config --global user.email "메일주소" 입력
@@ -24,12 +24,11 @@ ___
 
 
 ### 2. 현재시점 저장<br/>
-(1) 타임캡슐에 담기지 않은 파일목록 확인<br/>
-  ```git status```
-(2) 파일목록을 타임캡슐에 포함<br/>
-  ```git add -A```
-(3) 타입캡슐을 Github에 포함<br/>
-  ```git commit -m "설명"```
+```javascript
+git status //1.타임캡슐에 담기지 않은 파일목록 확인
+git add -A //2.파일목록을 타임캡슐에 포함
+git commit -m "설명" //3.타입캡슐을 Github에 포함
+```
 
 
 ### 3. 프로젝트 공유를 위한 Github업로드<br/>
@@ -43,13 +42,11 @@ ___
 
 
 ### 5. 이전 시점으로 돌아가기<br/>
-(1) brach확인<br/>
-  ```git log```
-(2) 이전 시점으로 돌아가기(해당 시점이후 작업 삭제)<br/>
-  ```git reset "log일련번호 6자리"```
-(2) 이전 시점으로 돌아가기(해당 시점이후 작업 유지)<br/>
-  ```git revert "log일련번호 6자리"```
-
+```javascript
+git log //brach확인
+git reset "log일련번호 6자리" //이전 시점으로 돌아가기(해당 시점이후 작업 삭제)
+git revert "log일련번호 6자리" //이전 시점으로 돌아가기(해당 시점이후 작업 유지)
+```
 ___
 
 *[Git Branch](https://goddaehee.tistory.com/274)
