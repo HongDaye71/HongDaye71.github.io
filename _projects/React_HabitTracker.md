@@ -1,7 +1,7 @@
 ---
 title: Habit Tracker
 date: 2021-05-27 08:00:35 +0300
-subtitle: COMAS INTERACTIVE / Manager
+subtitle: React Mini-Project
 image: '/images/HabitTracker.png'
 ---
 
@@ -24,6 +24,7 @@ From May 25, 2022 to May 27, 2022 <br/>
 * HTML
 * CSS
 * JavaScript
+* JavaScript XML
 
 ___
 
