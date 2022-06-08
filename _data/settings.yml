@@ -51,28 +51,28 @@ projects__settings:
 #-------------------------------
 # Testimonials Section
 
-#testimonial__title: My Happy <span class="text-span">Clients</span> # Add a 'text-span' class to highlight text.
+testimonial__title: My Happy <span class="text-span">Clients</span> # Add a 'text-span' class to highlight text.
 
-#testimonial-items:
- # - name: "Zaire Baptista"
-  #  image: "/images/client-1.jpg"
-  #  designation : "Traveler"
-  #  content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in #laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
+testimonial-items:
+  - name: "Zaire Baptista"
+    image: "/images/client-1.jpg"
+    designation : "Traveler"
+    content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
 
-  #- name: "Ann Philips"
-  #  image: "/images/client-2.jpg"
-  #  designation : "Designer"
- #   content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in #laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
+  - name: "Ann Philips"
+    image: "/images/client-2.jpg"
+    designation : "Designer"
+    content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
 
- # - name: "Roger Bergson"
-  #  image: "/images/client-3.jpg"
-  #  designation : "CEO, Founder"
-  #  content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in #laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
+  - name: "Roger Bergson"
+    image: "/images/client-3.jpg"
+    designation : "CEO, Founder"
+    content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
 
- # - name: "Julie Arnold"
-  #  image: "/images/client-4.jpg"
-   # designation : "Full stack developer"
-   # content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in #laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
+  - name: "Julie Arnold"
+    image: "/images/client-4.jpg"
+    designation : "Full stack developer"
+    content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
 
 
 #-------------------------------
