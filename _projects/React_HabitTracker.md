@@ -1,27 +1,37 @@
 ---
-title: Advertisement
-date: 2021-01-25 08:00:35 +0300
+title: Habit Tracker
+date: 2021-05-27 08:00:35 +0300
 subtitle: COMAS INTERACTIVE / Manager
-image: '/images/project-8.jpg'
+image: '/images/HabitTracker.png'
 ---
 
-<img src="/images/Project/Ad_COMAS/01.png" alt="Project">
+## :mag_right: Habit Tracker <br/>
 
+___
 
+## Description
+Habit Tracker is a Website where you can write and record personal habits<br/>
 
-In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+## Development Period <br/>
+#### Period<br/>
+From May 25, 2022 to May 27, 2022 <br/>
 
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/project-6.jpg" alt="Project">
-    <img src="/images/project-5.jpg" alt="Project">
-    <img src="/images/project-7.jpg" alt="Project">
-  </div>
-  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div>
+## Development Environment & Period <br/>
+### Environment<br/>
+* React
 
-Praeteritis, inquit, gaudeo. Praeteritis, inquit, gaudeo. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Scientiam pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem. Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae. Ita ne hoc quidem modo paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis.
+#### Technology<br/>
+* HTML
+* CSS
+* JavaScript
 
-<p><iframe src="https://www.youtube.com/embed/QyQ85DEVpbc" frameborder="0" allowfullscreen></iframe></p>
+___
 
-Defecerit Sed isti ipsi, qui voluptate et dolore omnia metiuntur, nonne clamant sapienti plus semper adesse quod velit quam quod nolit? Quae quidem sapientes sequuntur duce natura tamquam videntes; Quod enim dissolutum sit, id esse sine sensu, quod autem sine sensu. Sunt omnia Longum est enim ad omnia respondere, quae a te dicta sunt. Nam cui proposito sit conservatio sui, necesse est huic partes quoque sui caras suo genere laudabiles servari.
+## Example Video <br/>
+<p><iframe src="https://www.youtube.com/embed/wWpwLyAiibo" frameborder="0" allowfullscreen></iframe></p>
+
+___
+
+## Etc
+* This project is based on the contents of the Dream coding's React tutorial<br/>
+* [Github](https://github.com/HongDaye71/JS_CatchTheCarrot)<br/>

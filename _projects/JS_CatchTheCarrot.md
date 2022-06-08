@@ -1,6 +1,6 @@
 ---
 title: Catch the carrot
-date: 2021-01-25 07:20:35 +0300
+date: 2022-05-7 07:20:35 +0300
 subtitle: JavaScript Project (Mini-game)
 image: '/images/CatchTheCarrot.png'
 ---
