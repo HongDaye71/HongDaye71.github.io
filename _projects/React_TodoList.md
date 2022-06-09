@@ -1,23 +1,41 @@
 ---
-title: Advertisement
-date: 2021-01-25 07:50:35 +0300
-subtitle: Undergraduate
-image: '/images/project-4.png'
+title: To Do List
+date: 2021-06-8 07:50:35 +0300
+subtitle: React Mini-Project
+image: '/images/Todoist.png'
 ---
 
-In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+## :+1: To Do List <br/>
 
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/project-5.jpg" alt="Project">
-    <img src="/images/project-8.jpg" alt="Project">
-    <img src="/images/project-7.jpg" alt="Project">
-  </div>
-  <em>Projects / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div>
+___
 
-Praeteritis, inquit, gaudeo. Praeteritis, inquit, gaudeo. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Scientiam pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem. Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae. Ita ne hoc quidem modo paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis.
+## Description
+To Do List is a website where you can write and record your montly and daily goals <br/>
 
-<p><iframe src="https://www.youtube.com/embed/QyQ85DEVpbc" frameborder="0" allowfullscreen></iframe></p>
+## Development Period <br/>
+#### Period<br/>
+From June 1, 2022 to June 8, 2022 <br/>
 
-Defecerit Sed isti ipsi, qui voluptate et dolore omnia metiuntur, nonne clamant sapienti plus semper adesse quod velit quam quod nolit? Quae quidem sapientes sequuntur duce natura tamquam videntes; Quod enim dissolutum sit, id esse sine sensu, quod autem sine sensu. Sunt omnia Longum est enim ad omnia respondere, quae a te dicta sunt. Nam cui proposito sit conservatio sui, necesse est huic partes quoque sui caras suo genere laudabiles servari.
+## Development Environment & Period <br/>
+### Environment<br/>
+* React
+
+#### Technology<br/>
+* HTML
+* CSS
+* JavaScript
+* JavaScript XML
+
+## Features
+* Add(Delete) your montly and daily goals
+* Record completion rate
+
+___
+
+## Example Video <br/>
+<p><iframe src="https://www.youtube.com/embed/PKCAdfOaz_I" frameborder="0" allowfullscreen></iframe></p>
+
+___
+
+## Etc
+* [Github](https://github.com/HongDaye71/JS_CatchTheCarrot)<br/>

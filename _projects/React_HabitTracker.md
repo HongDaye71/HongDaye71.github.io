@@ -35,4 +35,4 @@ ___
 
 ## Etc
 * This project is based on the contents of the Dream coding's React tutorial<br/>
-* [Github](https://github.com/HongDaye71/JS_CatchTheCarrot)<br/>
+* [Github](https://github.com/HongDaye71/React_HabitTracker)<br/>
