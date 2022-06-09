@@ -5,7 +5,7 @@ subtitle: React Mini-Project
 image: '/images/Todoist.png'
 ---
 
-## :+1: To Do List <br/>
+# :+1: To Do List <br/>
 
 ___
 
@@ -38,4 +38,4 @@ ___
 ___
 
 ## Etc
-* [Github](https://github.com/HongDaye71/JS_CatchTheCarrot)<br/>
+* [Github](https://github.com/HongDaye71/React_TodoList)<br/>

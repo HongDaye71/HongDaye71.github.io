@@ -5,7 +5,7 @@ subtitle: React Mini-Project
 image: '/images/HabitTracker.png'
 ---
 
-## :mag_right: Habit Tracker <br/>
+# :mag_right: Habit Tracker <br/>
 
 ___
 

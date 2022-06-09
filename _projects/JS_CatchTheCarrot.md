@@ -5,7 +5,7 @@ subtitle: JavaScript Mini-Project
 image: '/images/CatchTheCarrot.png'
 ---
 
-## :carrot: Catch the carrot <br/>
+# :carrot: Catch the carrot <br/>
 
 ___
 
