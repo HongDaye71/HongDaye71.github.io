@@ -74,7 +74,12 @@ ___
   rewired는 eject 없이 CRA의 설정을 커스터마이징을 할 수 있도록 하는 라이브러리이다.<br/>
 
 * <span style='background-color:#fff5b1'>react-app-rewired 사용방법</span><br/>
-(1) yarn add --dev customize-cra / yarn add --dev react-app-rewired<br/>
+(1) 라이브러리 설치
+```
+yarn add --dev customize-cra
+yarn add --dev react-app-rewired
+```
+
 (2) package.json에 있는 script수정<br/>
 
 ```
