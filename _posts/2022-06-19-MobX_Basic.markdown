@@ -32,7 +32,7 @@ Flux는 데이터 흐름을 한 방향으로 유지하기 위해 설계된 App �
 #### 4. MVC와 Flux의 차이<br/>
 MVC는 App을 Model,View,Controller로 분리하며 View와 Model사이에 양방향 데이터 이동이 가능하다. MVC는 자신의 역할에 집중할 수 있으며 단순하고 직관적이라는 장점이 있다. 하지만 프로젝트가 커질 경우 Model과 View의 전후관계를 따지기가 힘들어 데이터 관리가 어려워진다. 객체지향 프로그래밍에서 MVC사용 시 발생하는 문제를 해결하기 위해 Flux 디자인 패턴이 나오게 되었다.<br/><br/>
 
-<img src="/images/Posting/MobX/MVC_Flux.png" alt="Project" title="Model(로직과 관련된 모든 데이터를 포함), View(사용자에게 데이터를 표현하거나 유저와 상호작용을 처리), Controller(모델과 뷰 구성요소간의 인터페이스 (ex. 클릭이벤트 발생 시 컨트롤러를 통해 Model에 해당 데이터 반영))">
+<img src="/images/Posting/MobX/MVC_Flux.png" alt="Model(로직과 관련된 모든 데이터를 포함), View(사용자에게 데이터를 표현하거나 유저와 상호작용을 처리), Controller(모델과 뷰 구성요소간의 인터페이스 (ex. 클릭이벤트 발생 시 컨트롤러를 통해 Model에 해당 데이터 반영))">
 
 ___
 
