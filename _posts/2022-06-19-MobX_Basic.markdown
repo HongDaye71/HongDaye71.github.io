@@ -81,7 +81,75 @@ ___
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",}
     ```
+  (3) 루트폴더에 config-overrides.js추가
+    ```
+    const { 
+      addDecoratorsLegacy, // decorator를 사용할 수 있도록 해주는 config
+      disableEsLint,
+      override,
+    } = require("customize-cra");
 
+    // 사용자 정의 웹팩 설정
+    module.exports = {
+      webpack: override(
+        disableEsLint(),
+        addDecoratorsLegacy()
+      ),
+    };
+    ```
+3. 실습을 위한 기본 템플릿 설정
+<details>
+<summary>App.js</summary>
+<div markdown="1">
+
+```javascript
+import React, { Component } from 'react';
+import CounterComponent from './component/CounterComponent';
+
+class App extends Component {
+  render(){
+    return (
+      <div>
+        <CounterComponent />
+      </div>
+  );
+  }
+}
+
+export default App;
+```
+</div>
+</details>
+
+<details>
+<summary>CounterComponent.js</summary>
+<div markdown="1">
+
+```javascript
+import React, { Component } from 'react';
+import { Button, Box } from '@material-ui/core';
+
+class CounterComponent extends Component {
+
+  render(){
+    return(
+      <div>
+        <Button variant='contained' color='primary' size='large'> - </Button>        
+        
+        <Box component='span' m={5}> 0 </Box>
+        
+        <Button variant='contained' color='primary' size='large'> + </Button>
+      </div>
+    )
+  }
+}
+
+export default CounterComponent;
+```
+</div>
+</details>
+
+[실습을 위한 템플릿 자료(출처: 나무소리)](https://github.com/namoosori/reactwithmobx)
   
   
 
