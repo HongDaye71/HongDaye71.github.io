@@ -71,7 +71,7 @@ ___
 (1) eject사용:<br/>
   eject(숨겨져 있던 웹팩 등의 설정을 보여주며 커스터마이징 가능하도록 한다)을 통해 CRA로 생성된 프로젝트를 커스터마이징 할 수 있으나 One Build Dependency(패키지 설치 및 삭제 시 패키지 간 연결 자동관리)의 장점을 잃게 되는 등의 문제가 발생한다.<br/>
 (2) react-app-rewired사용:<br/>
-  react-app-rewired는 eject 없이 CRA의 설정을 커스터마이징을 할 수 있도록 하는 라이브러리 이다.<br/>
+  rewired는 eject 없이 CRA의 설정을 커스터마이징을 할 수 있도록 하는 라이브러리이다.<br/>
 
 * <span style='background-color:#fff5b1'>react-app-rewired 사용방법</span><br/>
 (1) yarn add --dev customize-cra / yarn add --dev react-app-rewired<br/>
