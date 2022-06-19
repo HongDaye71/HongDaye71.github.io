@@ -60,7 +60,6 @@ ___
 
 1. yarn create react-app "project name"<br/>
 2. CRA를 통해 프로젝트 생성 시, 데코레이터 사용이 불가능 함으로 별도설정 필요<br/>
-
 * <span style='background-color:#fff5b1'>CRA 프로젝트 커스터마이징 방법</span><br/>
 (1) eject사용:<br/>
   eject(숨겨져 있던 웹팩, 바벨 등의 설정을 보여주며 커스터마이징 가능하도록 하며 되돌릴 수 없다)을 통해 CRA로 생성된 프로젝트를 커스터마이징 할 수 있으나 One Build Dependency(패키지 설치 및 삭제 시 패키지 간 연결 자동관리)의 장점을 잃게 되는 등의 문제가 발생한다.<br/>
@@ -71,20 +70,15 @@ ___
 (1) yarn add --dev customize-cra / yarn add --dev react-app-rewired<br/>
 (2) package.json에 있는 script수정<br/>
 
-```javascript
+```
   "scripts": {
   "start": "react-app-rewired start",
   "build": "react-app-rewired build",
   "test": "react-app-rewired test --env=jsdom",
   "eject": "react-scripts eject",}
 ```
-</div>
-</details>
 
 (3) 루트폴더에 config-overrides.js추가
-<details>
-<summary>config-overrides.js</summary>
-<div markdown="1">
 
 ```javascript
   const { 
