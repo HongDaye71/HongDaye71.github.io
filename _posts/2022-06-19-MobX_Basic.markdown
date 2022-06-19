@@ -45,16 +45,16 @@ ___
 #### 1. MobX개요 <br/>
 - MobX를 이용하면 Component의 State를 Store라는 별도의 영역에서 관리한다.<br/>
 - MobX 적용을 위해서는 mobx.js와 mobx-react.js 라이브러리가 필요하다.<br/>
-  * <span style='background-color:#fff5b1'>mobx:</span> Store관리를 위한 라이브러리로 observable, action등의 모듈로 구성되어 있음<br/>
-  * <span style='background-color:#fff5b1'>mobx-react:</span> Store의 데이터를 React에 적용시키기 위한 라이브러리로 observer등의 모듈로 구성되어 있음<br/>
+  * <span style='background-color:#f6f8fa'>mobx:</span> Store관리를 위한 라이브러리로 observable, action등의 모듈로 구성되어 있음<br/>
+  * <span style='background-color:#f6f8fa'>mobx-react:</span> Store의 데이터를 React에 적용시키기 위한 라이브러리로 observer등의 모듈로 구성되어 있음<br/>
 
 - MobX는 다수의 Store를 관리할 수 있다.<br/>
 - MobX가 제공하는 대표적인 API는 observable, action, observer, computed, inject 이며 API사용은 데코레이터(@)를 이용하는 것이 일반적이다.<br/>
-  * <span style='background-color:#fff5b1'>observable:</span> 추적 가능한 state정의<br/>
-  * <span style='background-color:#fff5b1'>action:</span> state를 변경하는 메소드<br/>
-  * <span style='background-color:#fff5b1'>observer:</span> observable을 통해 관리되는 state를 react component에 적용<br/>
-  * <span style='background-color:#fff5b1'>computed:</span> state와 cahce로부터 새로운 결과를 반환<br/>
-  * <span style='background-color:#fff5b1'>inject:</span> store를 props에 넣어 component에서 props를 통해 store에 접근할 수 있도록 함<br/>
+  * <span style='background-color:#f6f8fa'>observable:</span> 추적 가능한 state정의<br/>
+  * <span style='background-color:#f6f8fa'>action:</span> state를 변경하는 메소드<br/>
+  * <span style='background-color:#f6f8fa'>observer:</span> observable을 통해 관리되는 state를 react component에 적용<br/>
+  * <span style='background-color:#f6f8fa'>computed:</span> state와 cahce로부터 새로운 결과를 반환<br/>
+  * <span style='background-color:#f6f8fa'>inject:</span> store를 props에 넣어 component에서 props를 통해 store에 접근할 수 있도록 함<br/>
 
 - MobX 라이브러리는 TypeScript가 적용되어 있다.<br/>
 
@@ -63,8 +63,26 @@ ___
 ## 예제실습<br/>
 실습 프로젝트: 버튼클릭을 통해 화면 내 숫자를 증가 및 감소하는 페이지 생성<br/>
 
-1. mobx, mobx-react 라이브러리 설치<br/>
-2. 데코레이터 사용을 위한 VS설정<br/>
+1. yarn create react-app "project name"<br/>
+2. CRA를 통해 프로젝트 생성 시, 데코레이터 사용이 불가능 함으로 별도설정 필요<br/>
+  * <span style='background-color:#fff5b1'>CRA 프로젝트 커스터마이징 방법</span><br/>
+  (1) eject사용:
+    (숨겨져 있던 웹팩, 바벨 등의 설정을 보여주며 커스터마이징 가능하도록 함. eject은 되돌릴 수 없음)을 통해 CRA로 생성된 프로젝트를 커스터마이징 할 수 있으나 One Build Dependency(패키지 설치 및 삭제 시 패키지 간 연결 자동관리)의 장점을 잃게 되는 등의 문제가 발생한다.<br/>
+  (2) react-app-rewired사용:
+    react-app-rewired는 eject 없이 CRA의 설정을 커스터마이징을 할 수 있도록 하는 라이브러리 이다.<br/>
+
+  * <span style='background-color:#fff5b1'>react-app-rewired 사용방법</span><br/>
+  (1) yarn add --dev customize-cra / yarn add --dev react-app-rewired<br/>
+  (2) package.json에 있는 script수정<br/>
+    ```
+    "scripts": {
+	  "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",}
+    ```
+
+  
   
 
 ___
