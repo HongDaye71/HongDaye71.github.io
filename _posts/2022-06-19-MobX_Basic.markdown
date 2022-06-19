@@ -47,8 +47,8 @@ ___
 #### 1. MobX개요 <br/>
 - MobX를 이용하면 Component의 State를 Store라는 별도의 영역에서 관리한다.<br/>
 - MobX 적용을 위해서는 mobx.js와 mobx-react.js 라이브러리가 필요하다.<br/>
-  * <span style='background-color:#fff5b1'>mobx:</span> Store관리를 위한 라이브러리로 observable, action등의 모듈로 구성되어 있음<br/>
-  * <span style='background-color:#fff5b1'>mobx-react:</span> Store의 데이터를 React에 적용시키기 위한 라이브러리로 observer등의 모듈로 구성되어 있음<br/>
+  ###### * <span style='background-color:#fff5b1'>mobx:</span> Store관리를 위한 라이브러리로 observable, action등의 모듈로 구성되어 있음<br/>
+  ###### * <span style='background-color:#fff5b1'>mobx-react:</span> Store의 데이터를 React에 적용시키기 위한 라이브러리로 observer등의 모듈로 구성되어 있음<br/>
 
 - MobX는 다수의 Store를 관리할 수 있다.<br/>
 - MobX가 제공하는 대표적인 API는 observable, action, observer, computed, inject 이며 API사용은 데코레이터(@)를 이용하는 것이 일반적이다.<br/>
@@ -57,7 +57,7 @@ ___
   * <span style='background-color:#fff5b1'>observer:</span> observable을 통해 관리되는 state를 react component에 적용<br/>
   * <span style='background-color:#fff5b1'>computed:</span> state와 cahce로부터 새로운 결과를 반환<br/>
   * <span style='background-color:#fff5b1'>inject:</span> store를 props에 넣어 component에서 props를 통해 store에 접근할 수 있도록 함<br/>
-  
+
 - MobX 라이브러리는 TypeScript가 적용되어 있다.<br/>
 
 
