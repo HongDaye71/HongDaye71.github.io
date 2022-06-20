@@ -69,39 +69,79 @@ ___
 
 * <span style='background-color:#fff5b1'>react-app-rewired 사용방법</span><br/>
 
-(1) 라이브러리 설치
+(1) rewired Library 설치
 
 ```
 yarn add --dev customize-cra
 yarn add --dev react-app-rewired
 ```
 
-(2) package.json에 있는 script수정<br/>
+(2) package.json 수정<br/>
 
 ```
-  "scripts": {
-  "start": "react-app-rewired start",
-  "build": "react-app-rewired build",
-  "test": "react-app-rewired test --env=jsdom",
-  "eject": "react-scripts eject",}
+"scripts": {
+	"start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+}
 ```
 
 (3) 루트폴더에 config-overrides.js추가<br/>
 
-```javascript
-  const { 
-    addDecoratorsLegacy, // decorator를 사용할 수 있도록 해주는 config
-    disableEsLint,
-    override,
-  } = require("customize-cra");
+```
+const { 
+  addDecoratorsLegacy, // decorator를 사용할 수 있도록 해주는 config
+  disableEsLint,
+  override,
+} = require("customize-cra");
 
-  // 사용자 정의 웹팩 설정
-  module.exports = {
-    webpack: override(
+// 사용자 정의 웹팩 설정
+module.exports = {
+  webpack: override(
       disableEsLint(),
       addDecoratorsLegacy()
-    ),
-  };
+  ),
+};
+```
+
+(4) MobX 사용을 위한 플러그인 등 설치
+
+```
+// babel 플러그인 설치
+yarn add --dev @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties
+
+// 추가적인 es7 데코레이터 설치
+yarn add --dev core-decorators
+
+// mobx 설치
+yarn add mobx mobx-react
+```
+
+(5) package.json에 babel 플러그인 추가
+
+```
+...
+"babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  }
+ ...
 ```
 
 3. 실습을 위한 기본 UI템플릿 설정
