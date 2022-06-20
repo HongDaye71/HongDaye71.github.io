@@ -304,6 +304,100 @@ Provider로 제공되는 Store 중 counterStore를 컴포넌트가 사용할 수
 </div>
 </details>
 
+<br/>
+
+#### 5. 숫자의 증가 및 감소 구현
+
+<details>
+<summary>CounterStore.js</summary>
+<div markdown="1">
+
+```javascript
+import { observable, action, makeObservable } from 'mobx';
+
+class CounterStore {
+
+    constructor() {
+        makeObservable(this);
+    }
+
+    @observable
+    _count = 5;
+
+    get count() {
+        return this._count;
+    }
+
+    @action
+    increment() {
+        this._count ++;
+    }
+
+    @action
+    decrement() {
+        this._count --;
+    }
+}
+
+export default new CounterStore;
+
+/*
+@action: 
+observable data는 action이 붙은 method에서 변경되어야 한다.
+
+get: 
+get method 통해 observable data를 외부에 제공하게 되면, 컴포넌트에서 props와 같이 사용가능
+-> before: CounterStore._count / after: CounterStore.count
+*/
+```
+</div>
+</details>
+
+<details>
+<summary>CounterComponent.js</summary>
+<div markdown="1">
+
+```javascript
+import React, { Component } from 'react';
+import { Button, Box } from '@material-ui/core';
+import { inject, observer } from 'mobx-react'
+
+@inject('counterStore')
+@observer
+class CounterComponent extends Component {
+
+  render(){
+
+    const { counterStore } = this.props;
+
+    return(
+      <div>
+        <Button 
+          onClick={() => counterStore.decrement()}
+          variant='contained' color='primary' size='large'> - </Button>        
+        
+        <Box component='span' m={5}> {counterStore.count} </Box>
+        
+        <Button 
+          onClick={() => counterStore.increment()}
+          variant='contained' color='primary' size='large'> + </Button>
+      </div>
+    )
+  }
+}
+
+export default CounterComponent;
+
+/*
+@inject('counterStore'): 
+Provider로 제공되는 Store 중 counterStore를 컴포넌트가 사용할 수 있는 형태로 Props에 주입
+
+@observer:
+setState와 비슷한 개념으로 observable을 통해 관리되는 state를 react component에 적용
+*/
+```
+</div>
+</details>
 ___
 
 #### Etc. <br/>
