@@ -198,7 +198,8 @@ export default CounterComponent;
 </div>
 </details>
 
-<br/>4. Store생성 및 Observable 변수생성
+<br/>
+4. Store생성 및 Observable 변수생성
 
 <details>
 <summary>CounterStore.js</summary>
