@@ -59,14 +59,7 @@ ___
 #### 실습 프로젝트: 버튼클릭을 통해 화면 내 숫자를 증가 및 감소하는 페이지 생성<br/>
 
 1. yarn create react-app "project name"<br/>
-2. CRA를 통해 프로젝트 생성 시, 데코레이터 사용이 불가능 함으로 별도설정 필요<br/>
-3. 실습을 위한 기본 UI템플릿 설정
-4. Store생성 및 Observable 변수생성
-
-  
-<details>
-<summary>2번의 별도설정 확인</summary>
-<div markdown="1">
+2. mobX 및 Decorator사용을 위한 환경설정<br/>
 
 * <span style='background-color:#fff5b1'>CRA 프로젝트 커스터마이징 방법</span><br/>
 (1) eject사용:<br/>
@@ -110,12 +103,8 @@ yarn add --dev react-app-rewired
     ),
   };
 ```
-</div>
-</details>
 
-<details>
-<summary>3번의 기본 템플릿 설정</summary>
-<div markdown="1">
+3. 실습을 위한 기본 UI템플릿 설정
 
 <details>
 <summary>App.js</summary>
@@ -168,12 +157,7 @@ export default CounterComponent;
 </div>
 </details>
 
-</div>
-</details>
-
-<details>
-<summary>4번의 Store, Observable 변수생성 확인</summary>
-<div markdown="1">
+4. Store생성 및 Observable 변수생성
 
 <details>
 <summary>CounterStore.js</summary>
@@ -238,7 +222,13 @@ Store는 컴포넌트에서 사용 가능하도록 Provider를 통해 App 하위
 </div>
 </details>
 
+<details>
+<summary>CounterComponent.js</summary>
+<div markdown="1">
 
+```javascript
+
+```
 </div>
 </details>
 
