@@ -19,7 +19,7 @@ tags:   [MobX]
 
 ___
 
-## MobX-Flux의 이해<br/>
+## :mag: MobX-Flux의 이해<br/>
 #### 1. MobX란? 
 MobX는 전역 상태 라이브러리로 모든 상태변화를 자동으로 추적하는 역할을 한다.<br/><br/>
 
@@ -36,7 +36,7 @@ MVC는 App을 Model,View,Controller로 분리하며 View와 Model사이에 양�
 
 ___
 
-## MobX구조<br/>
+##  :pushpin: MobX구조<br/>
 #### 1. MobX개요 <br/>
 - MobX를 이용하면 Component의 State를 Store라는 별도의 영역에서 관리한다.<br/>
 - MobX 적용을 위해서는 mobx.js와 mobx-react.js 라이브러리가 필요하다.<br/>
@@ -55,7 +55,7 @@ ___
 
 ___
 
-## 예제실습<br/>
+## :bell: 예제실습<br/>
 #### 실습 프로젝트: 버튼클릭을 통해 화면 내 숫자를 증가 및 감소하는 페이지 생성<br/>
 
 1. yarn create react-app "project name"<br/>
