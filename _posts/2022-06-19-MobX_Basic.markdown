@@ -60,7 +60,8 @@ ___
 
 1. yarn create react-app "project name"<br/>
 2. CRA를 통해 프로젝트 생성 시, 데코레이터 사용이 불가능 함으로 별도설정 필요<br/>
-3. 실습을 위한 기본 템플릿 설정
+3. 실습을 위한 기본 UI템플릿 설정
+4. Store생성 및 Observable 변수생성
 
   
 <details>
@@ -74,7 +75,9 @@ ___
   rewired는 eject 없이 CRA의 설정을 커스터마이징을 할 수 있도록 하는 라이브러리이다.<br/>
 
 * <span style='background-color:#fff5b1'>react-app-rewired 사용방법</span><br/>
+
 (1) 라이브러리 설치
+
 ```
 yarn add --dev customize-cra
 yarn add --dev react-app-rewired
@@ -164,6 +167,77 @@ export default CounterComponent;
 ```
 </div>
 </details>
+
+</div>
+</details>
+
+<details>
+<summary>4번의 Store, Observable 변수생성 확인</summary>
+<div markdown="1">
+
+<details>
+<summary>CounterStore.js</summary>
+<div markdown="1">
+
+```javascript
+import { observable } from 'mobx';
+
+class CounterStore {
+    @observable
+    _count = 5
+}
+
+export default new CounterStore;
+
+/*
+1. _count를 store에서 관리할 수 있도록 observable함수의 변수로 할당
+    -> 아래 코드를 데코레이터를 통해 작성하면 위 코드와 같이 표현됨
+        class CounterStore {
+            observable ({
+                _count = 5,
+            });
+        }
+
+2. 데코레이터는 js표준이 아님으로 별도설정 필요
+    -> Code - Preferences - settings - experimental decorators검색 - enable체크
+
+3. export시에는 new를 붙여 state사용 시 매번 new를 통해 변수를 새로 생성하지 않도록 작성
+*/
+```
+</div>
+</details>
+
+<details>
+<summary>index.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { Provider } from 'mobx-react'
+import CounterStore from './store/CounterStore';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Provider counterStore={CounterStore}>
+    <App />
+  </Provider>
+);
+
+reportWebVitals();
+
+/*
+Store는 컴포넌트에서 사용 가능하도록 Provider를 통해 App 하위에 있는 모든 컴포넌트가 Store를 props와 같이 사용할 수 있도록 설정
+
+* Provider: MobX와 React연결
+*/
+```
+</div>
+</details>
+
 
 </div>
 </details>
