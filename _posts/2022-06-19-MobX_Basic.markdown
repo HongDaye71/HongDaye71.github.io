@@ -56,10 +56,10 @@ ___
 ___
 
 ## :bell: 예제실습<br/>
-#### 실습 프로젝트: 버튼클릭을 통해 화면 내 숫자를 증가 및 감소하는 페이지 생성<br/>
+#### *실습 프로젝트: 버튼클릭을 통해 화면 내 숫자를 증가 및 감소하는 페이지 생성*<br/>
 
-1. yarn create react-app "project name"<br/>
-2. mobX 및 Decorator사용을 위한 환경설정<br/>
+#### 1. yarn create react-app "project name"<br/>
+#### 2. mobX 및 Decorator사용을 위한 환경설정<br/>
 
 * <span style='background-color:#fff5b1'>CRA 프로젝트 커스터마이징 방법</span><br/>
 (1) eject사용:<br/>
@@ -145,7 +145,8 @@ yarn add mobx mobx-react
  ```
 
 <br/>
-3. 실습을 위한 기본 UI템플릿 설정
+
+#### 3. 실습을 위한 기본 UI템플릿 설정
 
 <details>
 <summary>App.js</summary>
@@ -199,7 +200,8 @@ export default CounterComponent;
 </details>
 
 <br/>
-4. Store생성 및 Observable 변수생성
+
+#### 4. Store생성 및 Observable 변수생성
 
 <details>
 <summary>CounterStore.js</summary>
