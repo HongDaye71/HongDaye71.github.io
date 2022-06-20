@@ -87,7 +87,7 @@ yarn add --dev react-app-rewired
 }
 ```
 
-(3) 루트폴더에 config-overrides.js추가<br/>
+<br/>(3) 루트폴더에 config-overrides.js추가
 
 ```
 const { 
@@ -105,7 +105,7 @@ module.exports = {
 };
 ```
 
-(4) MobX 사용을 위한 플러그인 등 설치
+<br/>(4) MobX 사용을 위한 플러그인 등 설치
 
 ```
 // babel 플러그인 설치
@@ -118,7 +118,7 @@ yarn add --dev core-decorators
 yarn add mobx mobx-react
 ```
 
-(5) package.json에 babel 플러그인 추가
+<br/>(5) package.json에 babel 플러그인 추가
 
 ```
 ...
@@ -142,8 +142,9 @@ yarn add mobx mobx-react
     ]
   }
  ...
-```
+ ```
 
+<br/>
 3. 실습을 위한 기본 UI템플릿 설정
 
 <details>
@@ -197,7 +198,7 @@ export default CounterComponent;
 </div>
 </details>
 
-4. Store생성 및 Observable 변수생성
+<br/>4. Store생성 및 Observable 변수생성
 
 <details>
 <summary>CounterStore.js</summary>
