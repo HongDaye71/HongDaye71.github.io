@@ -76,7 +76,7 @@ yarn add --dev customize-cra
 yarn add --dev react-app-rewired
 ```
 
-(2) package.json 수정<br/>
+<br/>(2) package.json 수정
 
 ```
 "scripts": {
