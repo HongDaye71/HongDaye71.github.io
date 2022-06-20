@@ -267,7 +267,35 @@ Store는 컴포넌트에서 사용 가능하도록 Provider를 통해 App 하위
 <div markdown="1">
 
 ```javascript
+import React, { Component } from 'react';
+import { Button, Box } from '@material-ui/core';
+import { inject } from 'mobx-react'
 
+@inject('counterStore')
+class CounterComponent extends Component {
+
+  render(){
+
+    const { counterStore } = this.props;
+
+    return(
+      <div>
+        <Button variant='contained' color='primary' size='large'> - </Button>        
+        
+        <Box component='span' m={5}> {counterStore._count} </Box>
+        
+        <Button variant='contained' color='primary' size='large'> + </Button>
+      </div>
+    )
+  }
+}
+
+export default CounterComponent;
+
+/*
+@inject('counterStore'): 
+Provider로 제공되는 Store 중 counterStore를 컴포넌트가 사용할 수 있는 형태로 Props에 주입
+*/
 ```
 </div>
 </details>
