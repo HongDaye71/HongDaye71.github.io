@@ -6,7 +6,9 @@ image: '/images/YoutubeClone.png'
 ---
 
 # :closed_book: Youtube Clone <br/>
-
+본 프로젝트는 아래의 두 가지 단계로 진행되었습니다.<br/>
+1. 드림코딩의 리액트 강의를 바탕으로 Youtube Clone Coding진행<br/>
+2. 1번 프로젝트에 mobX 상태관리 라이브러리 적용<br/>
 ___
 
 ## Description
@@ -26,6 +28,7 @@ From June 16, 2022 to June 17, 2022 <br/>
 * CSS
 * JavaScript
 * JavaScript XML
+* mobX
 
 ## Features
 * Watch popular videos in real time using the YouTube API
@@ -40,3 +43,5 @@ ___
 
 ## Etc
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
+* [Github(MobX)](https://github.com/HongDaye71/MobX_YoutubeClone)<br/>
+* [Youtube Clone Posting]()<br/>
