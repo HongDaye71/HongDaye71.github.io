@@ -44,4 +44,4 @@ ___
 ## Etc
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
 * [Github(MobX)](https://github.com/HongDaye71/MobX_YoutubeClone)<br/>
-* [Youtube Clone Posting]()<br/>
+* [MobX-React|Youtube Clone](https://hongdaye71.github.io/blog/mobx-youtubeclone)<br/>
