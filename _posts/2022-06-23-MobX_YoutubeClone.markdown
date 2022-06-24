@@ -523,7 +523,7 @@ ___
 GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT <br/>
 
 원인: <br/>
-PC에 광고차단 확장프로그램이 설치되어 있는 경우, 비디오 재생 시 GET요청을 차단하여 발생하는 오류<br/>
+광고차단 확장프로그램이 설치되어 있는 경우, 비디오 재생 시 GET요청을 차단하여 발생<br/>
 
 #### :mag_right: Source Code. <br/>
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
