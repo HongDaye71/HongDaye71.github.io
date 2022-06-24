@@ -21,7 +21,7 @@ tags:   [MobX]
 
 ___
 
-## :star: 소개<br/>
+## :star: 1. 소개<br/>
 리액트를 사용해서 프론트 개발을 할 때에는 클래스형과 함수형 컴포넌트를 사용할 수 있다. 과거에는 함수형 컴포넌트에서 상태관리 및 라이프사이클 메소드가 제공되지 않았기 때문에 클래스 컴포넌트를 주로 사용했으나 2019년 v16.8부터 리액트에서 함수형 컴포넌트에 훅(hook)을 지원해주면서 현재는 공식 문서에서 함수형 컴포넌트와 훅을 함께 사용할 것을 권장하고 있다. 개발자들 또한 클래스 보다는 함수형 컴포넌트를 사용하는데, 이유는 아래와 같다.<br/>
 
 1. <span style='background-color:#fff5b1'>코드가 간결하다</span> <br/>
@@ -120,7 +120,7 @@ function DeleteComment(props) {
 
 ___
 
-## :closed_book: Youtube Clone Project<br/>
+## :closed_book: 2. Youtube Clone Project<br/>
 기존의 Youtube Clone Project는 아래와 같은 기능 및 구조를 갖는다<br/>
 
 <span style='background-color:#fff5b1'>Project Features</span> <br/>
@@ -144,7 +144,7 @@ ___
     VideoItem: VideoList를 구성하는 VideoItem HTML생성<br>
     VideoList: videos를 VideoItem에 전달하여 비디오 목록 생성<br>
 
-(5) App에서 SearchHeader() ,VideoDetail(), VideoList()에 상태 및 상태변경 메소드 전달<br>
+(5) App에서 SearchHeader() ,VideoDetail(), VideoList()에 상태 및 상태관리 메소드 전달<br>
 
 <details>
 <summary>Source Code</summary>
@@ -395,33 +395,75 @@ export default VideoList;
 
 ___
 
-## :books: Youtube Clone Project에 MobX적용
-## :mag: Video Store생성<br/>
-- Observable Data를 관리하는 Video Store생성 후 MostPopular, SelectVideo와 같은 Function을 이동시킴
+## :books: 3. Youtube Clone Project에 MobX적용
+## :mag: 3.1 Video Store생성<br/>
+1. observable data를 관리하는 VideoStore생성 후, 기존 App에 위치해 있던 상태 및 상태관리 메소드 이동
+2. 본 포스팅에서는 데코레이터를 사용하지 않기 때문에 클래스가 아닌 객체 형태와 메소드로 스토어를 작성하고 observable API로 감싸준다
+3. fetch Web APIs사용을 위해 기존 App에 위치해있던 youtube 생성코드 이동 
+4. observable data는 action이나 runInAction을 통해 변경되어야 함으로 state변경이 이루어지는 부분은 runInAction API로 감싸준다
+    * action vs runInAction: action API는 첫 번째로 불리는 awit코드 전까지만 실행된다. 이후 await의 return값에 의해 observable값을 변경하려면 다른 action으로 감싸야 한다. runInAction을 사용하면 불필요한 action함수 생성을 줄이면서 좀 더 가독성 높은 비동기 코드를 만들 수 있다.
+
+
+```javascript
+import { runInAction, observable } from 'mobx';
+import Youtube from '../service/youtube';
+
+const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
+
+const videoStore = observable({
+    videos : [],
+    selectedVideo : null,
+
+    mountMostPopular() {
+            youtube
+            .mostPopular()
+            .then(result => runInAction((() => {this.videos = result})))
+    },
+
+    mountSelectVideo(event) {
+        runInAction((() => {
+            this.selectedVideo = event
+        }))
+    },  
+
+    mountSearch(query) {
+        youtube
+        .search(query)
+        .then(videos => runInAction((() => {this.videos = videos})))
+        runInAction((() => {this.setSelectedVideo = null}));
+    }
+});
+
+export { videoStore };
+```
+
+
+- Observable Data를 관리하는 VideoStore생성 후 MostPopular, SelectVideo와 같은 Function을 이동시킴
 - youtube도 이동시킴
 - 데코레이터를 사용하지 않기 때문에 --함 (runInAction제외)
 
 ```javascript
 ```
 
-* [MobX 기초정리]()<br/>
+<span style="color:#808080">*MobX APIs에 대한 설명은 MobX 기초정리 포스팅에서 확인 가능합니다*</span>
+[MobX 기초정리 포스팅](https://hongdaye71.github.io/blog/mobx-basic)
 포스팅 흐름 참고: https://hyeok999.github.io/2020/04/16/mobx-hooks-market/#a3
 
 ___
 
-## :mag: Store생성<br/>
+## :mag: 3.2 Store생성<br/>
 - 폴더에 생길 모든 스토어들을 한 곳을 통해서 불러들이게끔 하기 위해서 custom Hook을 다음과 같이 작성 (현재 프로젝트에서는 반드시 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것이 좋음)
 
 ```javascript
 ```
 ___
 
-## :mag: Observable Data사용<br/>
+## :mag: 3.3 Observable Data사용<br/>
 - App에서 Observable Data 사용
 
 ___
 
-## :mag: Warning, Error수정<br/>
+## :mag: 3.4 Warning, Error수정<br/>
 - 아래와 같은 경고문구 발생 / 해결과정
 since strict-mode is enabled, changing (observed) observable values without using an action is not allowed 
 
@@ -435,7 +477,15 @@ ___
 #### Etc. <br/>
 * 메소드와 함수의 차이점<br/>
     (1) 함수는 메소드를 아우르는 포괄적인 용어이다<br/>
-    (2) 함수는 객체로부터 독립적이며, 메소드는 객체에 종속적이다ㅍ
+    (2) 함수는 객체로부터 독립적이며, 메소드는 객체에 종속적이다<br/>
     (3) 메소드는 아래 두 가지 포인트에서 함수와 다르다<br/>
         - 메소드는 호출된 객체에 암시적으로 전달된다<br/>
         - 메소드는 클래스 안에 있는 데이터를 조작할 수 있다<br/>
+
+* async/await: 작업의 순차성을 강제해주는 것으로 아래와 같이 사용될 수 있다 <br/>
+```javascript
+async function getApple() {
+  await delay(3000);	//3초 기다리고 실행
+  return "apple";
+}
+````
