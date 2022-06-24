@@ -403,7 +403,6 @@ ___
 4. observable data는 action이나 runInAction을 통해 변경되어야 함으로 state변경이 이루어지는 부분은 runInAction API로 감싸준다
     * action vs runInAction: action API는 첫 번째로 불리는 awit코드 전까지만 실행된다. 이후 await의 return값에 의해 observable값을 변경하려면 다른 action으로 감싸야 한다. runInAction을 사용하면 불필요한 action함수 생성을 줄이면서 좀 더 가독성 높은 비동기 코드를 만들 수 있다.
 
-
 ```javascript
 import { runInAction, observable } from 'mobx';
 import Youtube from '../service/youtube';
@@ -437,17 +436,7 @@ const videoStore = observable({
 export { videoStore };
 ```
 
-
-- Observable Data를 관리하는 VideoStore생성 후 MostPopular, SelectVideo와 같은 Function을 이동시킴
-- youtube도 이동시킴
-- 데코레이터를 사용하지 않기 때문에 --함 (runInAction제외)
-
-```javascript
-```
-
-<span style="color:#808080">*MobX APIs에 대한 설명은 MobX 기초정리 포스팅에서 확인 가능합니다*</span>
-[MobX 기초정리 포스팅](https://hongdaye71.github.io/blog/mobx-basic)
-포스팅 흐름 참고: https://hyeok999.github.io/2020/04/16/mobx-hooks-market/#a3
+[MobX|기초정리 포스팅](https://hongdaye71.github.io/blog/mobx-basic)
 
 ___
 
