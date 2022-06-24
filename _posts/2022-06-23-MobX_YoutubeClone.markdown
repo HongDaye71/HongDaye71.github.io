@@ -462,7 +462,7 @@ App에서 Observable Data 사용<br/>
 
 1. useStore를 videoStore라는 이름으로 호출<br/>
 2. 비디오 검색, 선택 등의 액션이 발생했을 때 videoStore의 mostPopular(),search() 호출<br/>
-3. 함수 컴포넌트에서 Observer를 사용하는 방법은 아래와 같음
+3. 함수 컴포넌트에서 Observer를 사용하는 방법은 아래와 같음<br/>
     (1) useObserver import<br/>
     (2) return시 useObserver반환<br/>
 
