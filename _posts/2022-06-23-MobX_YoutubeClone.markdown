@@ -117,6 +117,7 @@ function DeleteComment(props) {
 위와 같은 이유로 작성자 또한 프로젝트 진행 시 함수형 컴포넌트를 주로 사용하고자 한다. 하지만 이번에 MobX를 공부하면서 대부분의 예제들이 클래스기반의 데코레이터를 사용하는 것을 확인했다. 따라서 본 포스팅에서는 데코레이터를 사용하지 않고 함수형 컴포넌트에 MobX를 적용하는 과정을 다뤄본다. MobX를 적용할 예제로는 드림코딩의 리액트 강의에서 다루어진 Youtube Clone Project를 사용한다.
 
 *작성자는 주니어 개발자 입니다. 미흡한 부분이 많으니 잘못된 점은 지적 부탁드립니다*
+
 ___
 
 ## :closed_book: Youtube Clone Project<br/>
@@ -394,6 +395,7 @@ export default VideoList;
 
 ___
 
+## :books: Youtube Clone Project에 MobX적용
 ## :mag: Video Store생성<br/>
 - Observable Data를 관리하는 Video Store생성 후 MostPopular, SelectVideo와 같은 Function을 이동시킴
 - youtube도 이동시킴
