@@ -7,7 +7,7 @@ tags:   [MobX]
 ---
 <br/>
 
-# MobX-React|Youtube Clone<br/>
+# MobX-React | Youtube Clone<br/>
 ## Contents <br/>
 1. 소개<br/>
 2. Youtube Clone Project구조<br/>
