@@ -435,6 +435,7 @@ const videoStore = observable({
 
 export { videoStore };
 ```
+<br/>
 
 [MobX|기초정리 포스팅](https://hongdaye71.github.io/blog/mobx-basic)
 
