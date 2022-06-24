@@ -444,8 +444,9 @@ export { videoStore };
 ___
 
 ### :mag: 3.2 useStore생성<br/>
-1. 스토어 폴더에 생길 모든 store들을 한 곳에 불러들이게끔 하기 위해 Custom hook을 다음과 같이 작성(현재 한 개의 store를 사용함으로 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것을 권장)
-    * Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
+1. 스토어 폴더에 생길 모든 store들을 한 곳에 불러들이게끔 하기 위해 Custom hook을 다음과 같이 작성
+    * 현재는 한 개의 스토어를 사용함으로 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것을 권장
+        * Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
 
 ```javascript
 import { videoStore } from './videoStore';
