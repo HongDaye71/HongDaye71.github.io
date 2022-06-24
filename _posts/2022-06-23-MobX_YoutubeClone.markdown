@@ -397,7 +397,7 @@ ___
 
 ## :books: 3. Youtube Clone Project에 MobX적용
 ## :mag: 3.1 Video Store생성<br/>
-1. observable data를 관리하는 VideoStore생성 후, 기존 App에 위치해 있던 상태 및 상태관리 메소드 이동
+1. observable data를 관리하는 videoStore생성 후, 기존 App에 위치해 있던 상태 및 상태관리 메소드 이동
 2. 본 포스팅에서는 데코레이터를 사용하지 않기 때문에 클래스가 아닌 객체 형태와 메소드로 스토어를 작성하고 observable API로 감싸준다
 3. fetch Web APIs사용을 위해 기존 App에 위치해있던 youtube 생성코드 이동 
 4. observable data는 action이나 runInAction을 통해 변경되어야 함으로 state변경이 이루어지는 부분은 runInAction API로 감싸준다
@@ -440,11 +440,20 @@ export { videoStore };
 
 ___
 
-## :mag: 3.2 Store생성<br/>
-- 폴더에 생길 모든 스토어들을 한 곳을 통해서 불러들이게끔 하기 위해서 custom Hook을 다음과 같이 작성 (현재 프로젝트에서는 반드시 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것이 좋음)
+## :mag: 3.2 useStore생성<br/>
+1. 스토어 폴더에 생길 모든 store들을 한 곳에 불러들이게끔 하기 위해 Custom hook을 다음과 같이 작성(현재 한 개의 store를 사용함으로 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것을 권장)
+    * Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
 
 ```javascript
+import { videoStore } from './videoStore';
+
+const useStore = () => {
+    return { videoStore };
+};
+
+export default useStore;
 ```
+
 ___
 
 ## :mag: 3.3 Observable Data사용<br/>
