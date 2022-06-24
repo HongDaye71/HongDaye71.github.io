@@ -442,8 +442,9 @@ export { videoStore };
 ___
 
 ### :mag: 3.2 useStore생성<br/>
-스토어 폴더에 생길 모든 store들을 한 곳에 불러들이게끔 하기 위해 Custom hook을 다음과 같이 작성(현재는 한 개의 스토어를 사용함으로 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것을 권장) <br/>
-    * Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
+스토어 폴더에 생길 모든 store들을 한 곳에 불러들이게끔 하기 위해 Custom hook을 다음과 같이 작성<br/>
+
+* Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
 
 ```javascript
 import { videoStore } from './videoStore';
@@ -463,8 +464,8 @@ App에서 Observable Data 사용<br/>
 1. useStore를 videoStore라는 이름으로 호출<br/>
 2. 비디오 검색, 선택 등의 액션이 발생했을 때 videoStore의 mostPopular(),search() 호출<br/>
 3. 함수 컴포넌트에서 Observer를 사용하는 방법은 아래와 같음
-    - useObserver import<br/>
-    - return시 useObserver반환<br/>
+    (1) useObserver import<br/>
+    (2) return시 useObserver반환<br/>
 
 ```javascript
 import { useEffect, useCallback } from 'react';
