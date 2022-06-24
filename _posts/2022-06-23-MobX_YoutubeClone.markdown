@@ -116,7 +116,7 @@ function DeleteComment(props) {
 
 위와 같은 이유로 작성자 또한 프로젝트 진행 시 함수형 컴포넌트를 주로 사용하고자 한다. 하지만 이번에 MobX를 공부하면서 대부분의 예제들이 클래스기반의 데코레이터를 사용하는 것을 확인했다. 따라서 본 포스팅에서는 데코레이터를 사용하지 않고 함수형 컴포넌트에 MobX를 적용하는 과정을 다뤄본다. MobX를 적용할 예제로는 드림코딩의 리액트 강의에서 다루어진 Youtube Clone Project를 사용한다.
 
-<span style="color:#808080">*작성자는 주니어 개발자 입니다. 미흡한 부분이 많으니 잘못된 점은 지적 부탁드립니다*</span>
+<span style="color:#D3D3D3">*작성자는 주니어 개발자 입니다. 미흡한 부분이 많으니 잘못된 점은 지적 부탁드립니다*</span>
 
 ___
 
@@ -402,7 +402,7 @@ ___
 3. 본 포스팅에서는 데코레이터를 사용하지 않으므로 클래스가 아닌 객체 형태와 메소드로 스토어를 작성하고 observable API로 감싸줌
 3. fetch Web APIs사용을 위해 기존 App에 위치해있던 youtube 생성코드 이동 
 4. observable data는 action이나 runInAction을 통해 변경되어야 함으로 state변경이 이루어지는 부분은 runInAction API로 감싸줌
-    * <span style="color:#808080">action vs runInAction: <br/>
+    * <span style="color:#D3D3D3">action vs runInAction: <br/>
     action API는 첫 번째로 불리는 awit코드 전까지만 실행된다. 이후 await의 return값에 의해 observable값을 변경하려면 다른 action으로 감싸야 한다. runInAction을 사용하면 불필요한 action함수 생성을 줄이면서 좀 더 가독성 높은 비동기 코드를 만들 수 있다</span>
 
 ```javascript
@@ -438,8 +438,6 @@ const videoStore = observable({
 export { videoStore };
 ```
 <br/>
-
-[MobX 기초정리 포스팅](https://hongdaye71.github.io/blog/mobx-basic)
 
 ___
 
