@@ -113,12 +113,44 @@ function DeleteComment(props) {
 
 <br/>
 
-위와 같은 이유로 작성자 또한 프로젝트 진행 시 함수형 컴포넌트를 주로 사용하고자 한다. 하지만 이번에 MobX를 공부하면서 대부분의 예제들이 클래스기반의 데코레이터를 사용하는 것을 확인했다. 따라서 본 포스팅에서는 데코레이터를 사용하지 않고 함수형 컴포넌트에 MobX를 적용하는 과정을 다뤄본다.
+위와 같은 이유로 작성자 또한 프로젝트 진행 시 함수형 컴포넌트를 주로 사용하고자 한다. 하지만 이번에 MobX를 공부하면서 대부분의 예제들이 클래스기반의 데코레이터를 사용하는 것을 확인했다. 따라서 본 포스팅에서는 데코레이터를 사용하지 않고 함수형 컴포넌트에 MobX를 적용하는 과정을 다뤄본다. MobX를 적용할 예제로는 드림코딩의 리액트 강의에서 다루어진 Youtube Clone Project를 사용한다.
 
 *작성자는 주니어 개발자 입니다. 미흡한 부분이 많으니 잘못된 점은 지적 부탁드립니다*
 ___
 
-## :mag: Youtube Clone Project구조<br/>
+## :closed_book: Youtube Clone Project<br/>
+기존의 Youtube Clone Project는 아래와 같은 기능 및 구조를 갖는다<br/>
+
+<span style='background-color:#fff5b1'>Project Features</span> <br/>
+(1) Watch popular videos in real time using the YouTube API<br/>
+(2) Search a video using the YouTube API<br/>
+
+<span style='background-color:#fff5b1'>Project Structure</span> <br/>
+(1) App에서 useState를 통해 videos,selectedVideo 상태관리<br/>
+    videos: 시작페이지와 비디오 검색 및 시청 시 렌더링되는 비디오 목록<br/>
+    selectedVideo: 클릭된 비디오 값<br/>
+
+(2) Youtube파일 생성 후 mostPopular(),search() fetch Web APIs작성<br/>
+    mostPopular(): 인기있는 비디오 25개 목록을 받아오는 API fetch<br/>
+    search(): 검색한 키워드에 맞추어 비디오 목록을 받아오는 API fetch<br/>
+
+(3) App에서 mostPopular(),search()를 통해 videos,selectedVideo 상태변경<br/>
+
+(4) SearchHeader, VideoDetail, VideoItem, VideoList 함수생성<br>
+    SearchHeader: 비디오 검색창 HTML생성, 검색키워드를 search함수에 저장<br>
+    VideoDetail: 비디오 재생화면 HTML생성<br>
+    VideoItem: VideoList를 구성하는 VideoItem HTML생성<br>
+    VideoList: videos를 VideoItem에 전달하여 비디오 목록 생성<br>
+
+(5) App에서 SearchHeader,VideoDetail, VideoList에 상태 및 상태변경 메소드 전달
+
+
+
+
+
+*소스코드는 하단의 깃허브 링크를 통해 확인가능*
+
+
 - 기존의 Youtube Clone Project는 --한 구조로 되어있음
 - 현재는 상태가 많지 않아 굳이 MobX를 통해 관리하지 않아도 되지만, 후에 프로젝트가 복잡해지면 props로 -- 하는 것은 -- 하다는 문제가 있음
 
@@ -159,3 +191,11 @@ ___
 #### Source Code. <br/>
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
 * [Github(MobX)](https://github.com/HongDaye71/MobX_YoutubeClone)<br/>
+
+#### Etc. <br/>
+* 메소드와 함수의 차이점<br/>
+    (1) 함수는 메소드를 아우르는 포괄적인 용어이다<br/>
+    (2) 함수는 객체로부터 독립적이며, 메소드는 객체에 종속적이다ㅍ
+    (3) 메소드는 아래 두 가지 포인트에서 함수와 다르다<br/>
+        - 메소드는 호출된 객체에 암시적으로 전달된다<br/>
+        - 메소드는 클래스 안에 있는 데이터를 조작할 수 있다<br/>
