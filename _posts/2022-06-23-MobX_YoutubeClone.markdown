@@ -92,7 +92,7 @@ function DeleteComment(props) {
 //Class Component
 class DeleteComment extends React.Component {
   showAlert = () => {
-    alert(`${this.props.user}`의 댓글을 삭제합니다.);
+    alert(`${this.props.user}`의 계정을 삭제합니다.);
   };
 
   handleClick = () => {
@@ -106,7 +106,12 @@ class DeleteComment extends React.Component {
 ```
 
 <br/>
-    클래스형 컴포넌트의 실행과정을 아래와 같다.
+    클래스형 컴포넌트의 실행과정을 아래와 같다<br/>
+    (1) Kich란 계정에서 삭제 버튼을 클릭하여 this.handleClick()을 실행시킨다<br/>
+    (2) handleClick()은 콜백함수로 5초 뒤 showAlert()를 실행시킨다<br/>
+    (3) 이때 5초가 지나기 전에 Kitty의 프로필로 들어가면 this.props.user는 Kitty로 변경된다<br/>
+    (4) 따라서 showAlert()는 의도치 않게 업데이트된 this.props.user (Kitty)를 가지고 실행된다<br/>
+    (5) 사용자는 Kich계정을 삭제했으나, Kitty의 계정을 삭제했다는 안내창을 받게된다<br/>
 
 
 
