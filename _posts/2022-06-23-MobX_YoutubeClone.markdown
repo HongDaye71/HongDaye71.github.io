@@ -63,8 +63,8 @@ class App extends Component{
     }
 }
 ```
-
 <br/>
+
 
 2. <span style='background-color:#fff5b1'>함수형 컴포넌트는 렌더링 결과를 보장받는다</span> <br/>
     함수형 컴포넌트는 immutable하지만, 클래스 컴포넌트는 this를 사용하기 때문에 mutable하다. 아래 예제는 this의 변경 가능한 특징으로 인해 발생할 수 있는 문제이다. 
@@ -112,6 +112,8 @@ class DeleteComment extends React.Component {
     (3) 이때 5초가 지나기 전에 Kitty의 프로필로 들어가면 this.props.user는 Kitty로 변경된다<br/>
     (4) 따라서 showAlert()는 의도치 않게 업데이트된 this.props.user (Kitty)를 가지고 실행된다<br/>
     (5) 사용자는 Kich계정을 삭제했으나, Kitty의 계정을 삭제했다는 안내창을 받게된다<br/>
+
+    * 비동기 함수인 콜백함수가 실행되는 순간 showAlert()는 this에 묶여 고정된 porps를 갖지못한 불안한 상태를 가지게 되는 것이다
 
 
 
