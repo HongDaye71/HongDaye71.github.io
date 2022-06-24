@@ -38,6 +38,7 @@ function App() {
     );
 }
 ```
+<br/>
 
 ```javascript
 //Class Component
@@ -56,7 +57,9 @@ class App extends Component{
 }
 ```
 
-2. 
+<br/>
+2. 클래스형 컴포넌트 대비 메모리 소모량이 적다.<br/>
+3. 
 
 
 
