@@ -396,12 +396,14 @@ export default VideoList;
 ___
 
 ## :books: 3. Youtube Clone Project에 MobX적용
-## :mag: 3.1 Video Store생성<br/>
-1. observable data를 관리하는 videoStore생성 후, 기존 App에 위치해 있던 상태 및 상태관리 메소드 이동
-2. 본 포스팅에서는 데코레이터를 사용하지 않기 때문에 클래스가 아닌 객체 형태와 메소드로 스토어를 작성하고 observable API로 감싸준다
+### :mag: 3.1 Video Store생성<br/>
+1. observable data를 관리하는 videoStore생성
+2. 기존 App에 위치해 있던 상태 및 상태관리 메소드 이동
+3. 본 포스팅에서는 데코레이터를 사용하지 않으므로 클래스가 아닌 객체 형태와 메소드로 스토어를 작성하고 observable API로 감싸줌
 3. fetch Web APIs사용을 위해 기존 App에 위치해있던 youtube 생성코드 이동 
-4. observable data는 action이나 runInAction을 통해 변경되어야 함으로 state변경이 이루어지는 부분은 runInAction API로 감싸준다
-    * action vs runInAction: action API는 첫 번째로 불리는 awit코드 전까지만 실행된다. 이후 await의 return값에 의해 observable값을 변경하려면 다른 action으로 감싸야 한다. runInAction을 사용하면 불필요한 action함수 생성을 줄이면서 좀 더 가독성 높은 비동기 코드를 만들 수 있다.
+4. observable data는 action이나 runInAction을 통해 변경되어야 함으로 state변경이 이루어지는 부분은 runInAction API로 감싸줌
+    * <span style="color:#808080">action vs runInAction: <br/>
+    action API는 첫 번째로 불리는 awit코드 전까지만 실행된다. 이후 await의 return값에 의해 observable값을 변경하려면 다른 action으로 감싸야 한다. runInAction을 사용하면 불필요한 action함수 생성을 줄이면서 좀 더 가독성 높은 비동기 코드를 만들 수 있다</span>
 
 ```javascript
 import { runInAction, observable } from 'mobx';
@@ -441,7 +443,7 @@ export { videoStore };
 
 ___
 
-## :mag: 3.2 useStore생성<br/>
+### :mag: 3.2 useStore생성<br/>
 1. 스토어 폴더에 생길 모든 store들을 한 곳에 불러들이게끔 하기 위해 Custom hook을 다음과 같이 작성(현재 한 개의 store를 사용함으로 필요하지 않으나 프로젝트가 커질경우 이와 같이 관리하는 것을 권장)
     * Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
 
@@ -457,16 +459,64 @@ export default useStore;
 
 ___
 
-## :mag: 3.3 Observable Data사용<br/>
-- App에서 Observable Data 사용
+### :mag: 3.3 Observable Data사용<br/>
+1. App에서 Observable Data 사용
+
+```javascript
+import { useEffect, useCallback } from 'react';
+import styles from './app.module.css';
+import SearchHeader from './components/search_header/search_header';
+import VideoList from './components/video_list/video_list';
+import VideoDetail from './components/video_detail/video_detail';
+import { useObserver  } from 'mobx-react';
+import useStore from './store/store';
+
+function App() {
+  const { videoStore } = useStore();
+
+  useEffect(()=> {
+    videoStore.mountMostPopular();
+  }, []);
+
+  const selectVideo = video => {
+    videoStore.mountSelectVideo(video);
+  }
+
+  const search = useCallback(query => {
+      videoStore.mountSearch(query);
+      videoStore.mountMostPopular();
+      videoStore.mountSelectVideo(null);
+  },[]);
+
+  return useObserver(() => (
+    <div className={styles.app}>
+    <SearchHeader onSearch={search}/> 
+    <section className={styles.content}>
+    {videoStore.selectedVideo && (
+      <div className={styles.detail}>
+        <VideoDetail video={videoStore.selectedVideo} />
+      </div>
+    )}
+      <div className={styles.list}>
+        <VideoList 
+          videos={videoStore.videos} 
+          onVideoClick={selectVideo}
+          display={videoStore.selectedVideo ? 'list' : 'grid'}
+        />
+      </div>
+    </section>
+  </div>
+  ))
+}
+
+export default App;
+```
 
 ___
 
 ## :mag: 3.4 Warning, Error수정<br/>
-- 아래와 같은 경고문구 발생 / 해결과정
-since strict-mode is enabled, changing (observed) observable values without using an action is not allowed 
-
 - 영상 클릭시 오류 발생 / 원인
+
 ___
 
 #### Source Code. <br/>
