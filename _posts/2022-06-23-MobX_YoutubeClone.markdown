@@ -15,7 +15,6 @@ tags:   [MobX]
     1. Video Store생성<br/>
     2. Store생성<br/>
     3. Observable Data사용<br/>
-    4. Warning, Error수정<br/>
 
 * 본 포스팅은 드림코딩의 리액트 강의에서 다루어진 Youtube Clone Project에 MobX 상태관리 라이브러리를 적용하는 과정을 다룹니다
 
@@ -519,10 +518,9 @@ export default App;
 
 ___
 
-## :mag: 3.4 Warning, Error수정<br/>
-- 영상 클릭시 오류 발생 / 원인
-
-___
+#### Project Eror <br/>
+오류메세지: www-embed-player.js:792 GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT
+원인: PC에 광고차단 확장프로그램이 설치되어 있는 경우, 비디오 재생 시 GET요청을 차단하여 발생하는 오류
 
 #### Source Code. <br/>
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
