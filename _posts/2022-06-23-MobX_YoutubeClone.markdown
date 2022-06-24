@@ -11,10 +11,11 @@ tags:   [MobX]
 ## Contents <br/>
 1. 소개<br/>
 2. Youtube Clone Project구조<br/>
-3. Video Store생성<br/>
-4. Store생성<br/>
-5. Observable Data사용<br/>
-6. Warning, Error수정<br/>
+3. Youtube Clone Project에 MobX적용<br/>
+    1. Video Store생성<br/>
+    2. Store생성<br/>
+    3. Observable Data사용<br/>
+    4. Warning, Error수정<br/>
 
 * 본 포스팅은 드림코딩의 리액트 강의에서 다루어진 Youtube Clone Project에 MobX 상태관리 라이브러리를 적용하는 과정을 다룹니다
 
@@ -386,15 +387,10 @@ export default VideoList;
 </div>
 </details>
 
-
 </div>
 </details>
 
 *전체 소스코드는 하단의 깃허브 링크를 통해 확인가능*
-
-
-- 기존의 Youtube Clone Project는 --한 구조로 되어있음
-- 현재는 상태가 많지 않아 굳이 MobX를 통해 관리하지 않아도 되지만, 후에 프로젝트가 복잡해지면 props로 -- 하는 것은 -- 하다는 문제가 있음
 
 ___
 
