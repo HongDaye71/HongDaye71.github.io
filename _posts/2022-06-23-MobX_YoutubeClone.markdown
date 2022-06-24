@@ -518,15 +518,15 @@ export default App;
 
 ___
 
-#### Project Eror <br/>
+#### :no_entry_sign: Project Eror <br/>
 오류메세지: GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT <br/>
 원인: PC에 광고차단 확장프로그램이 설치되어 있는 경우, 비디오 재생 시 GET요청을 차단하여 발생하는 오류
 
-#### Source Code. <br/>
+#### :mag_right: Source Code. <br/>
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
 * [Github(MobX)](https://github.com/HongDaye71/MobX_YoutubeClone)<br/>
 
-#### Etc. <br/>
+#### :grey_question: Etc. <br/>
 * 메소드와 함수의 차이점<br/>
     (1) 함수는 메소드를 아우르는 포괄적인 용어이다<br/>
     (2) 함수는 객체로부터 독립적이며, 메소드는 객체에 종속적이다<br/>
