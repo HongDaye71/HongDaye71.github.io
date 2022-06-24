@@ -21,11 +21,10 @@ tags:   [MobX]
 ___
 
 ## :star: 소개<br/>
-리액트를 사용해서 프론트 개발을 할 때에는 클래스형과 함수형 컴포넌트를 사용할 수 있다. 과거에는 함수형 컴포넌트에서 상태관리 및 라이프사이클 메소드가 제공되지 않았기 때문에 클래스 컴포넌트를 주로 사용했으나 2019년 v16.8부터 리액트에서 함수형 컴포넌트에 훅(hook)을 지원해주면서 현재는 공식 문서에서 함수형 컴포넌트와 훅을 함께 사용할 것을 권장하고 있다. <br/>
+리액트를 사용해서 프론트 개발을 할 때에는 클래스형과 함수형 컴포넌트를 사용할 수 있다. 과거에는 함수형 컴포넌트에서 상태관리 및 라이프사이클 메소드가 제공되지 않았기 때문에 클래스 컴포넌트를 주로 사용했으나 2019년 v16.8부터 리액트에서 함수형 컴포넌트에 훅(hook)을 지원해주면서 현재는 공식 문서에서 함수형 컴포넌트와 훅을 함께 사용할 것을 권장하고 있다. 개발자들 또한 클래스 보다는 함수형 컴포넌트를 사용하는데, 이유는 아래와 같다.<br/>
 
-개발자들 또한 클래스형 보다는 함수형 컴포넌트를 사용하는데, 이유는 아래와 같다.<br/>
-1. 코드가 간결하다 <br/>
-    -> 아래 예제코드에서 확인할 수 있듯이 클래스형 컴포넌트는 class 및 render() 선언, Component상속(extend) 등 선언 방식부터 함수형 컴포넌트에 비해 작성할 코드가 많다.
+1. <span style='background-color:#fff5b1'>코드가 간결하다</span> <br/>
+    클래스 컴포넌트는 클래스와 렌더함수 선언 및 extend를 통한 컴포넌트 상속 등 선언 방식부터 함수형 컴포넌트에 비해 작성할 코드가 많다.
 
 ```javascript
 //Function Component
@@ -34,7 +33,11 @@ import { useState} from 'react';
 function App() {
     const [state, setState] = useState([]);
     return(
-
+        <div>
+            <OtherFunction
+                state={state}>
+            />
+        </div>
     );
 }
 ```
@@ -51,15 +54,62 @@ class App extends Component{
     
     render() {
         return (
-
+        <div>
+            <OtherFunction
+                state={this.state.state}>
+            />
+        </div>
         );
     }
 }
 ```
 
 <br/>
-2. 클래스형 컴포넌트 대비 메모리 소모량이 적다.<br/>
-3. 
+
+2. <span style='background-color:#fff5b1'>함수형 컴포넌트는 렌더링 결과를 보장받는다</span> <br/>
+    함수형 컴포넌트는 immutable하지만, 클래스 컴포넌트는 this를 사용하기 때문에 mutable하다. 아래 예제는 this의 변경 가능한 특징으로 인해 발생할 수 있는 문제이다. 
+
+```javascript
+//Function Component
+function DeleteComment(props) {
+  const showAlert = () => {
+    alert(`${props.user}`의 댓글을 삭제합니다.);
+  };
+
+  const handleClick = () => {
+    setTimeout(showAlert, 5000);
+  };
+
+  return (
+    <button onClick={handleClick}>삭제</button>
+  );
+}
+```
+
+<br/>
+
+```javascript
+//Class Component
+class DeleteComment extends React.Component {
+  showAlert = () => {
+    alert(`${this.props.user}`의 댓글을 삭제합니다.);
+  };
+
+  handleClick = () => {
+    setTimeout(this.showAlert, 5000);
+  };
+  render() {
+  return (
+    <button onClick={this.handleClick}>삭제</button>
+  )};
+}
+```
+
+<br/>
+    클래스형 컴포넌트의 실행과정을 아래와 같다.
+
+
+
 
 
 
