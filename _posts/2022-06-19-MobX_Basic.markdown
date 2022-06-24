@@ -152,7 +152,7 @@ yarn add mobx mobx-react
 <summary>App.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { Component } from 'react';
 import CounterComponent from './component/CounterComponent';
 
@@ -175,7 +175,7 @@ export default App;
 <summary>CounterComponent.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { Component } from 'react';
 import { Button, Box } from '@material-ui/core';
 
@@ -207,7 +207,7 @@ export default CounterComponent;
 <summary>CounterStore.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import { observable } from 'mobx';
 
 class CounterStore {
@@ -239,7 +239,7 @@ export default new CounterStore;
 <summary>index.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -270,7 +270,7 @@ Store는 컴포넌트에서 사용 가능하도록 Provider를 통해 App 하위
 <summary>CounterComponent.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { Component } from 'react';
 import { Button, Box } from '@material-ui/core';
 import { inject } from 'mobx-react'
@@ -312,7 +312,7 @@ Provider로 제공되는 Store 중 counterStore를 컴포넌트가 사용할 수
 <summary>CounterStore.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import { observable, action, makeObservable } from 'mobx';
 
 class CounterStore {
@@ -357,7 +357,7 @@ get method 통해 observable data를 외부에 제공하게 되면, 컴포넌트
 <summary>CounterComponent.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { Component } from 'react';
 import { Button, Box } from '@material-ui/core';
 import { inject, observer } from 'mobx-react'

@@ -26,7 +26,7 @@ ___
 1. <span style='background-color:#fff5b1'>코드가 간결하다</span> <br/>
     클래스 컴포넌트는 클래스와 렌더함수 선언 및 extend를 통한 컴포넌트 상속 등 선언 방식부터 함수형 컴포넌트에 비해 작성할 코드가 많다.
 
-```javascript
+```
 //Class Component
 import React, {Component} from 'react'
 
@@ -47,7 +47,7 @@ class App extends Component{
 ```
 <br/>
 
-```javascript
+```
 //Function Component
 import { useState} from 'react';
 
@@ -76,7 +76,7 @@ function App() {
 
     * 비동기 함수인 콜백함수가 실행되는 순간 showAlert()는 this에 묶여 고정된 porps를 갖지못한 불안한 상태를 가지게 되는 것이다
 
-```javascript
+```
 //Class Component
 class DeleteComment extends React.Component {
   showAlert = () => {
@@ -94,7 +94,7 @@ class DeleteComment extends React.Component {
 ```
 <br/>
 
-```javascript
+```
 //Function Component
 function DeleteComment(props) {
   const showAlert = () => {
@@ -153,7 +153,7 @@ ___
 <summary>App.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import { useState, useEffect, useCallback } from 'react';
 import styles from './app.module.css';
 import SearchHeader from './components/search_header/search_header';
@@ -212,7 +212,7 @@ export default App;
 <summary>youtube.js</summary>
 <div markdown="1">
 
-```javascript
+```
 class Youtube {
     constructor(key) {
         this.key = key;
@@ -249,7 +249,7 @@ export default Youtube;
 <summary>search_header.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import styles from './search_header.module.css'
 import React, {useRef} from 'react';
 
@@ -300,7 +300,7 @@ export default SearchHeader;
 <summary>video_detail.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import styles from './video_detail.module.css'
 
@@ -332,7 +332,7 @@ export default videoDetail;
 <summary>video_item.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import styles from './video_item.module.css';
 
@@ -364,7 +364,7 @@ export default VideoItem;
 <summary>video_list.js</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import VideoItem from '../video_item/video_item';
 import styles from './video_list.module.css';
@@ -404,7 +404,7 @@ ___
     * <span style="color:#D3D3D3">action vs runInAction: <br/>
     action API는 첫 번째로 불리는 awit코드 전까지만 실행된다. 이후 await의 return값에 의해 observable값을 변경하려면 다른 action으로 감싸야 한다. runInAction을 사용하면 불필요한 action함수 생성을 줄이면서 좀 더 가독성 높은 비동기 코드를 만들 수 있다</span>
 
-```javascript
+```
 import { runInAction, observable } from 'mobx';
 import Youtube from '../service/youtube';
 
@@ -445,7 +445,7 @@ ___
 
 * Custom hook: 개발자가 직접 만든 hook으로 반복되는 메서드를 하나로 묶어 사용한다. Custom Hook의 이름은 use로 시작해야 한다.
 
-```javascript
+```
 import { videoStore } from './videoStore';
 
 const useStore = () => {
@@ -466,7 +466,7 @@ App에서 Observable Data 사용<br/>
     (1) useObserver import<br/>
     (2) return시 useObserver반환<br/>
 
-```javascript
+```
 import { useEffect, useCallback } from 'react';
 import styles from './app.module.css';
 import SearchHeader from './components/search_header/search_header';
@@ -535,7 +535,7 @@ ___
         - 메소드는 클래스 안에 있는 데이터를 조작할 수 있다<br/>
 
 * async/await: 작업의 순차성을 강제해주는 것으로 아래와 같이 사용될 수 있다 <br/>
-```javascript
+```
 async function getApple() {
   await delay(3000);	//3초 기다리고 실행
   return "apple";
