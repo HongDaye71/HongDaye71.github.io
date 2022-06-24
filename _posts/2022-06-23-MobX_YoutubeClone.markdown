@@ -136,19 +136,261 @@ ___
 
 (3) App에서 mostPopular(),search()를 통해 videos,selectedVideo 상태변경<br/>
 
-(4) SearchHeader, VideoDetail, VideoItem, VideoList 함수생성<br>
+(4) SearchHeader(), VideoDetail(), VideoItem(), VideoList() 생성<br>
     SearchHeader: 비디오 검색창 HTML생성, 검색키워드를 search함수에 저장<br>
     VideoDetail: 비디오 재생화면 HTML생성<br>
     VideoItem: VideoList를 구성하는 VideoItem HTML생성<br>
     VideoList: videos를 VideoItem에 전달하여 비디오 목록 생성<br>
 
-(5) App에서 SearchHeader,VideoDetail, VideoList에 상태 및 상태변경 메소드 전달
+(5) App에서 SearchHeader() ,VideoDetail(), VideoList()에 상태 및 상태변경 메소드 전달<br>
+
+<details>
+<summary>Source Code</summary>
+<div markdown="1">
+
+<details>
+<summary>App.jsx</summary>
+<div markdown="1">
+
+```javascript
+import { useState, useEffect, useCallback } from 'react';
+import styles from './app.module.css';
+import SearchHeader from './components/search_header/search_header';
+import VideoList from './components/video_list/video_list';
+import VideoDetail from './components/video_detail/video_detail';
+
+function App({ youtube }) {
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const selectVideo = video => {
+    setSelectedVideo(video);
+  }
+  
+  const search = useCallback(query => {
+    youtube
+      .search(query)
+      .then(videos => 
+        setVideos(videos));
+        setSelectedVideo(null);
+  },[]);
+
+  useEffect(()=> {
+    youtube
+      .mostPopular()
+      .then(videos => setVideos(videos));
+  }, []);
+
+  return (
+  <div className={styles.app}>
+    <SearchHeader onSearch={search}/> 
+    <section className={styles.content}>
+    {selectedVideo && (
+      <div className={styles.detail}>
+        <VideoDetail video={selectedVideo} />
+      </div>
+    )}
+      <div className={styles.list}>
+        <VideoList 
+          videos={videos} 
+          onVideoClick={selectVideo}
+          display={selectedVideo ? 'list' : 'grid'}
+        />
+      </div>
+    </section>
+  </div>
+  );
+}
+
+export default App;
+```
+</div>
+</details>
+
+<details>
+<summary>youtube.js</summary>
+<div markdown="1">
+
+```javascript
+class Youtube {
+    constructor(key) {
+        this.key = key;
+        this.getRequestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+    }
+
+    async mostPopular() {          
+        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${this.key}`, this.getRequestOptions);
+        const result_1 = await response.json();
+        return result_1.items; 
+    }
+
+    async search(query) {
+        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=${this.key}`, this.getRequestOptions);
+        const result_1 = await response.json();
+        return result_1.items.map(item => ({ ...item, id: item.id.videoId }));
+        /*
+        key warning error: 
+        search api사용 시, id가 오브젝트 형태로 들어가있어 비디오가 고유의 key를 갖지 않는다는 warning message가 출력됨
+        따라서 setVideos를 통해 result.items을 videos에 넣기 전, item복사 후 id를 추가하는 별도 작업 필요
+        */
+    }
+}
+
+export default Youtube;
+```
+</div>
+</details>
+
+<details>
+<summary>search_header.js</summary>
+<div markdown="1">
+
+```javascript
+import styles from './search_header.module.css'
+import React, {useRef} from 'react';
+
+const SearchHeader = React.memo (({ onSearch }) => {
+    const inputRef = useRef();
+
+    const handleSearch = () => {
+        const value = inputRef.current.value;
+        onSearch(value); //검색 이벤트가 발생하면, onSearch 콜백함수 및 검색된 결과값 호출
+    }
+
+    const onClick = () => {
+        handleSearch();
+    };
+
+    const onKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
+
+    return (
+    <header className={styles.header}>
+        <div className={styles.logo}>
+            <img className={styles.img} src="./images/logo.png" alt="logo" />
+            <h1 className={styles.title}>Youtube</h1>
+        </div>
+        <input
+            ref={inputRef} 
+            className={styles.input} 
+            type="search" 
+            placeholder='Search...' 
+            onKeyPress={onKeyPress} 
+        />
+        <button className={styles.button} type="submit" onClick={onClick}>
+            <img className={styles.buttonImg}src="./images/search.png" alt="search" />
+        </button>
+    </header>
+    );
+});
+
+export default SearchHeader;
+```
+</div>
+</details>
+
+<details>
+<summary>video_detail.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import styles from './video_detail.module.css'
+
+const videoDetail = ({video}) => (
+    <section className={styles.detail}>
+        <iframe 
+            className={styles.video}
+            type="text/html" 
+            title="youtube video player"
+            width="100%" 
+            height="500px"
+            src={`https://www.youtube.com/embed/${video.id}`}
+            frameBorder="0" 
+            allowFullScreen>
+        </iframe>
+        <h2>{video.snippet.title}</h2>
+        <h3>{video.snippet.channeltitle}</h3>
+        <pre className={styles.description}>{video.snippet.description}</pre>
+    </section>
+);
+
+export default videoDetail;
+
+```
+</div>
+</details>
+
+<details>
+<summary>video_item.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import styles from './video_item.module.css';
+
+const VideoItem = React.memo(({video, video: {snippet}, onVideoClick, display}) => {
+    const displayType = display === 'list' ? styles.list : styles.grid;
+
+    return (
+    <li className={`${styles.container} ${displayType}`} onClick={()=> onVideoClick(video)}>
+        <div className={styles.video}>
+            <img 
+                className={styles.thumbnails}
+                src={snippet.thumbnails.medium.url} 
+                alt="video thumbnail"/>
+            <div>
+            <p className={styles.title}>{snippet.title}</p>
+            <p className={styles.channel}>{snippet.channelTitle}</p>
+            </div>
+        </div>
+    </li>
+    );
+});
+
+export default VideoItem;
+```
+</div>
+</details>
+
+<details>
+<summary>video_list.js</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import VideoItem from '../video_item/video_item';
+import styles from './video_list.module.css';
+
+const VideoList = ({videos, onVideoClick, display}) => (
+    <ul className={styles.videos}>
+    {videos.map(video => (
+        <VideoItem 
+            key={video.id} 
+            video={video} 
+            onVideoClick={onVideoClick}
+            display={display}
+        />
+    ))}
+    </ul>
+    );
+
+export default VideoList;
+```
+</div>
+</details>
 
 
+</div>
+</details>
 
-
-
-*소스코드는 하단의 깃허브 링크를 통해 확인가능*
+*전체 소스코드는 하단의 깃허브 링크를 통해 확인가능*
 
 
 - 기존의 Youtube Clone Project는 --한 구조로 되어있음
