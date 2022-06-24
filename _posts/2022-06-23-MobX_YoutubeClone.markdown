@@ -20,7 +20,53 @@ tags:   [MobX]
 
 ___
 
-## :mag: 소개<br/>
+## :star: 소개<br/>
+리액트를 사용해서 프론트 개발을 할 때에는 클래스형과 함수형 컴포넌트를 사용할 수 있다. 과거에는 함수형 컴포넌트에서 상태관리 및 라이프사이클 메소드가 제공되지 않았기 때문에 클래스 컴포넌트를 주로 사용했으나 2019년 v16.8부터 리액트에서 함수형 컴포넌트에 훅(hook)을 지원해주면서 현재는 공식 문서에서 함수형 컴포넌트와 훅을 함께 사용할 것을 권장하고 있다. <br/>
+
+개발자들 또한 클래스형 보다는 함수형 컴포넌트를 사용하는데, 이유는 아래와 같다.<br/>
+1. 코드가 간결하다 <br/>
+    -> 아래 예제코드에서 확인할 수 있듯이 클래스형 컴포넌트는 class 및 render() 선언, Component상속(extend) 등 선언 방식부터 함수형 컴포넌트에 비해 작성할 코드가 많다.
+
+```javascript
+//Function Component
+import { useState} from 'react';
+
+function App() {
+    const [state, setState] = useState([]);
+    return(
+
+    );
+}
+```
+
+```javascript
+//Class Component
+import React, {Component} from 'react'
+
+class App extends Component{
+    state = {
+        state: null,
+    };
+    
+    render() {
+        return (
+
+        );
+    }
+}
+```
+
+2. 
+
+
+
+
+
+
+
+MobX를 공부하면서 대부분의 예제들이 클래스기반의 데코레이터를 사용하는 것을 확인했습니다. 
+
+
 - 현재는 클래스 컴포넌트 + 데코레이터를 다루는 예제가 많음
 - 클래스 컴포넌트의 단점 / 데코레이터는 클래스 컴포넌트에서만 사용 가능하다는 점 /데코레이터가 레거시라는 점
 - 따라서 본 포스팅에서는 데코레이터를 사용하지 않고 Function Component에 MobX를 적용해 보도록 함
