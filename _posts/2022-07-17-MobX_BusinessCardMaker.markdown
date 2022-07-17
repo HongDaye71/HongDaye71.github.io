@@ -2,7 +2,7 @@
 layout: post
 title:  MobX-React | Business Card Maker
 date:   2022-05-24 12:38:35 +0300
-image:  '/images/Card-Maker.png'
+image:  '/images/MobX.png'
 tags:   [MobX]
 ---
 <br/>
