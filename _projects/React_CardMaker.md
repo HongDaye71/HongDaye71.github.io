@@ -42,7 +42,7 @@ From July 1, 2022 to July 17, 2022 <br/>
 ___
 
 ## Example Video <br/>
-<p><iframe src="https://www.youtube.com/embed/JhVRhdTtp14" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe src="https://www.youtube.com/embed/4afFVE3bv7Q" frameborder="0" allowfullscreen></iframe></p>
 
 ___
 
