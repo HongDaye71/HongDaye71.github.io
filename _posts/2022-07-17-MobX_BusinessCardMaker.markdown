@@ -22,3 +22,8 @@ ___
 <span style="color:#D3D3D3">*작성자는 주니어 개발자 입니다. 미흡한 부분이 많으니 잘못된 점은 지적 부탁드립니다*</span>
 
 [데코레이터를 사용하지 않고 MobX를 적용하는 이유](https://hongdaye71.github.io/blog/mobx-youtubeclone)
+
+___
+
+## :card_index: 2. Business Card Maker Project구조<br/>
+
