@@ -1,6 +1,6 @@
 ---
 title: To Do List
-date: 2021-06-8 07:50:35 +0300
+date: 2022-06-08 07:50:35 +0300
 subtitle: React Mini-Project
 image: '/images/Todoist.png'
 ---

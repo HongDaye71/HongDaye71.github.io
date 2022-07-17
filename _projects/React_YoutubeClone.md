@@ -1,6 +1,6 @@
 ---
 title: Youtube Clone
-date: 2021-06-17 07:50:35 +0300
+date: 2022-06-17 07:50:35 +0300
 subtitle: React Mini-Project
 image: '/images/YoutubeClone.png'
 ---
@@ -28,7 +28,7 @@ From June 16, 2022 to June 17, 2022 <br/>
 * CSS
 * JavaScript
 * JavaScript XML
-* mobX
+* MobX
 
 ## Features
 * Watch popular videos in real time using the YouTube API
@@ -44,4 +44,4 @@ ___
 ## Etc
 * [Github](https://github.com/HongDaye71/YoutubeClone)<br/>
 * [Github(MobX)](https://github.com/HongDaye71/MobX_YoutubeClone)<br/>
-* [MobX-React|Youtube Clone](https://hongdaye71.github.io/blog/mobx-youtubeclone)<br/>
+* [Posting|MobX-React|Youtube Clone](https://hongdaye71.github.io/blog/mobx-youtubeclone)<br/>

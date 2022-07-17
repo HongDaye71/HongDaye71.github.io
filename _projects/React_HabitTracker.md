@@ -1,6 +1,6 @@
 ---
 title: Habit Tracker
-date: 2021-05-27 08:00:35 +0300
+date: 2022-05-27 08:00:35 +0300
 subtitle: React Mini-Project
 image: '/images/HabitTracker.png'
 ---
