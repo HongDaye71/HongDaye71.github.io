@@ -62,7 +62,7 @@ ___
 <summary>auth_service.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import firebase from 'firebase';
 import firebaseApp from './firebase'
 
@@ -92,7 +92,7 @@ export default AuthService
 <summary>login.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { useEffect } from 'react';
 import Footer from '../footer/footer';
 import Header from '../header/header';
@@ -165,7 +165,7 @@ export default Login;
 <summary>maker.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import { useState } from 'react';
 import Header from '../header/header'
 import Footer from '../footer/footer'
@@ -254,7 +254,7 @@ export default Maker;
 <summary>editor.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import CardAddForm from '../card_add_form/card_add_form';
 import Card_edit_form from '../card_edit_form/card_edit_form';
@@ -283,7 +283,7 @@ export default Editor;
 <summary>card_edit_form.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { useRef } from 'react';
 import Button from '../button/button';
 import styles from './card_edit_form.module.css'
@@ -355,7 +355,7 @@ export default Card_edit_form;
 <summary>card_add_form.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import React, { useRef, useState } from 'react';
 import Button from '../button/button';
 import styles from './card_add_form.module.css'
@@ -425,7 +425,7 @@ export default CardAddForm;
 <summary>preview.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import styles from './preview.module.css';
 import Card from '../card/card';
@@ -451,7 +451,7 @@ export default Preview;
 <summary>card.jsx</summary>
 <div markdown="1">
 
-```javascript
+```
 import React from 'react';
 import styles from './card.module.css'
 
