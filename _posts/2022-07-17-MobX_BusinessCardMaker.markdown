@@ -52,9 +52,9 @@ ___
 
 <span style='background-color:#fff5b1'>Source Code Structure</span> <br/>
 <span style='background-color:#f6f8fa'>Login Page</span><br/>
-1. AuthService Component 생성 (Firebase의 로그인 관련 API기능 포함)
-2. 최상위 Component에서부터 AuthService를 prop으로 전달
-3. Login Component는 AuthService를 사용하여 로그인화면 구현
+AuthService Component 생성 (Firebase의 로그인 관련 API기능 포함)<br/>
+최상위 Component에서부터 AuthService를 prop으로 전달<br/>
+Login Component는 AuthService를 사용하여 로그인화면 구현<br/>
 
 <details>
 <summary>auth_service.jsx</summary>
@@ -148,17 +148,15 @@ export default Login;
 <br/>
 
 <span style='background-color:#f6f8fa'>Main Page<span>
+*Card Maker*<br/>
+Maker에서 cards, userId 상태생성 및 카드추가, 삭제기능 생성하여 Editor에 props로 전달<br/>
+Editor는 위 props를 Card_edit_form과 CardAddForm에 map을 통해 전달<br/>
+Card_edit_form와 CardAddForm은 전달받은 props를 통해 Card Maker UI생성<br/>
 
-[Card Maker] <br/>
-1. Maker에서 cards, userId 상태생성 및 카드추가, 삭제기능 생성하여 Editor에 props로 전달<br/>
-2. Editor는 위 props를 Card_edit_form과 CardAddForm에 map을 통해 전달<br/>
-3. Card_edit_form와 CardAddForm은 전달받은 props를 통해 Card Maker UI생성<br/>
-
-[Card Preview] <br/>
-1. Maker에서 Preview에 cards를 props로 전달<br/>
-2. Preview는 위 props를 Card에 map을 통해 전달<br/>
-3. Cards는 전달받은 props를 통해 Card Preview UI생성<br/>
-
+*Card Preview*<br/>
+Maker에서 Preview에 cards를 props로 전달<br/>
+Preview는 위 props를 Card에 map을 통해 전달<br/>
+Cards는 전달받은 props를 통해 Card Preview UI생성<br/>
 
 <details>
 <summary>maker.jsx</summary>
@@ -492,11 +490,13 @@ export default Card;
 </div>
 </details>
 
+<br/>
+
 *전체 소스코드는 하단의 깃허브 링크를 통해 확인가능*
 
 ___
 
 ## :books: 3. Business Card Maker에 MobX적용
 ### :mag: 3.1 useState를 통해 생성한 로컬변수를 전역변수로 변경<br/>
-
+기존의 예제는 Maker에서 cards, userId, 카드추가, 삭제기능을 생성하여 Editor와 Preview에 props로 전달한다. 이후 Editor와 Preview는 Card_edit_form, CardAddForm, Card에 다시 props를 전달한다.  
 
