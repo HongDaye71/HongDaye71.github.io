@@ -13,7 +13,7 @@ tags:   [MobX]
 2. Business Card Maker 구조<br/>
 3. Business Card Maker에 MobX적용<br/>
     1. useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
-    2. prop 전달 최소화<br/>
+    2. props 전달 최소화<br/>
 
 ___
 
@@ -498,10 +498,11 @@ export default Card;
 ___
 
 ## :books: 3. Business Card Maker에 MobX적용
-### :mag: 3.1 useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
 기존의 예제는 Maker에서 cards, userId, 카드추가, 삭제기능을 생성하여 Editor와 Preview에 props로 전달한다. 이후 Editor와 Preview는 Card_edit_form, CardAddForm, Card에 다시 props를 전달한다. 이와같이 props를 반복적으로 전달하여 사용할 경우, 데이터 공유가 필요한 경우에 제약이 발생할 뿐만 아니라 프로젝트의 규모가 커질수록 최하위 컴포넌트에 prop 한 개를 전달하기 위해 최상위 컴포넌트에서 부터 반복적으로 prop을 전달하는 코드가 추가되어 코드 가독성이 떨어진다.
 
-따라서 기존에 Maker에서 지역변수로 관리하던 cards, userId, 카드추가, 삭제기능을 MobX를 통해 전역변수로 관리하고자 한다. 추가로 Login에서 지역변수로 관리하던 userId 또한 전역변수로 관리한다.
+따라서 기존에 Maker에서 지역변수로 관리하던 cards, userId, 카드추가, 삭제기능을 MobX를 통해 전역변수로 관리하고자 한다. 추가로 Login에서 지역변수로 관리하던 userId 또한 전역변수로 관리하고자 한다. 
+
+### :mag: 3.1 useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
 
 <span style='background-color:#fff5b1'>Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성<span>
 
@@ -541,7 +542,7 @@ export { makerStore };
 
 <br/>
 
-<span style='background-color:#fff5b1'>Store Folder 내 LoginStore생성하여 userId 관리<span>
+<span style='background-color:#fff5b1'>Store Folder 내 LoginStore생성하여 userId 관리<span> <br/>
 
 ```
 import { runInAction, observable  } from "mobx";
@@ -577,8 +578,10 @@ export default useStore;
 
 <br/>
 
+### :mag: 3.2 props 전달 최소화<br/>
+
 <span style='background-color:#fff5b1'>Editor에서 MakerStore에 접근하여 cards, userId, 카드추가, 삭제기능을 Card_edit_form, CardAddForm에 전달<span><br/>
-<span style="color:#D3D3D3">Card_edit_form, CardAddForm에서 MakerStore에 접근하는 경우, props를 전달하는 과정을 한 단 계 더 줄일 수 있으나 Editor에서 map을 통해 개별 컴포넌트에 cards, userId, 카드추가, 삭제기능을 부여해야 함으로 위와같이 작성하였다.<span>
+<span style="color:#D3D3D3">Card_edit_form, CardAddForm에서 MakerStore에 접근하면 props를 전달하는 과정을 한 단계 더 줄일 수 있으나 Editor에서 map을 통해 개별 컴포넌트에 cards, userId, 카드추가, 삭제기능을 부여해야 함으로 위와같이 작성하였다.<span>
 
 ```
 import React from 'react';
