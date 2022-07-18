@@ -149,3 +149,350 @@ export default Login;
 </details>
 
 
+(2) Main Page<br/>
+  코드구조 (Card Maker): <br/>
+  - Maker에서 cards, userId 상태생성 및 카드추가, 삭제기능 생성하여 Editor에 props로 전달<br/>
+  - Editor는 위 props를 Card_edit_form과 CardAddForm에 map을 통해 전달<br/>
+  - Card_edit_form와 CardAddForm은 전달받은 props를 통해 Card Maker UI생성<br/>
+
+  코드구조 (Card Preview): <br/>
+  - Maker에서 Preview에 cards를 props로 전달<br/>
+  - Preview는 위 props를 Card에 map을 통해 전달<br/>
+  - Cards는 전달받은 props를 통해 Card Preview UI생성<br/>
+
+
+<details>
+<summary>maker.jsx</summary>
+<div markdown="1">
+
+```javascript
+import { useState } from 'react';
+import Header from '../header/header'
+import Footer from '../footer/footer'
+import React, { useEffect } from 'react';
+import styles from './maker.module.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Editor from '../editor/editor';
+import Preview from '../preview/preview';
+
+const Maker = ({ FileInput, authService, cardRepository }) => {
+    const location = useLocation();
+    const [cards, setCards] = useState({});
+    const [userId, setUserId] = useState(location.state.id);
+
+    const navigate = useNavigate();
+
+    const onLogout = () => {
+        authService.logout();
+    };
+
+    //사용자 아이디 변경시 마다 DB정보 업데이트
+    useEffect(() => {
+        if(!userId) {
+            return;
+        }
+        const stopSync = cardRepository.syncCards(userId, cards => {
+            setCards(cards);
+        })
+        return () => stopSync();
+    }, [userId]);
+
+    //로그인 구현
+    useEffect(() => {
+        authService.onAuthChange(user => {
+            if(user) {
+
+            } else {
+                navigate('/');
+            }
+        });
+    });
+
+    //카드생성
+    const createOrUpdateCard = card => {
+        setCards(cards => {
+            const updated = { ...cards };
+            updated[card.id] = card; 
+            return updated; 
+            });
+        cardRepository.saveCard(userId, card); 
+    }
+
+    //카드삭제
+    const deleteCard = card => {
+        setCards(cards => {
+            const updated = { ...cards };
+            delete updated[card.id] 
+            return updated; 
+            });
+        cardRepository.removeCard(userId, card);
+    }
+
+    return(
+        <section className={styles.maker}>
+            <Header onLogout={onLogout}/>
+            <div className={styles.container}>
+                <Editor 
+                    FileInput={FileInput}
+                    cards={cards} 
+                    addCard={createOrUpdateCard} 
+                    updateCard={createOrUpdateCard} 
+                    deleteCard={deleteCard}/>
+                <Preview cards={cards}/>
+            </div>
+            <Footer />
+        </section>
+    )
+}
+
+export default Maker;
+```
+</div>
+</details>
+
+<details>
+<summary>editor.jsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import CardAddForm from '../card_add_form/card_add_form';
+import Card_edit_form from '../card_edit_form/card_edit_form';
+import styles from './editor.module.css'
+
+const Editor = ({ FileInput, cards, addCard, updateCard, deleteCard }) => 
+    <section className={styles.editor}>
+        <h1 className={styles.title}>Card Maker</h1>
+        {Object.keys(cards).map(key => (
+            <Card_edit_form 
+            key={key} 
+            FileInput={FileInput}
+            card={cards[key]} 
+            updateCard={updateCard} 
+            deleteCard={deleteCard}/>
+        ))}
+        <CardAddForm FileInput={FileInput} onAdd={addCard}/>
+    </section>
+
+export default Editor;
+```
+</div>
+</details>
+
+<details>
+<summary>card_edit_form.jsx</summary>
+<div markdown="1">
+
+```javascript
+import React, { useRef } from 'react';
+import Button from '../button/button';
+import styles from './card_edit_form.module.css'
+
+const Card_edit_form = ({ FileInput, card, updateCard, deleteCard }) => {
+    const nameRef = useRef();
+    const companyRef = useRef();
+    const themeRef = useRef();
+    const titleRef = useRef();
+    const emailRef = useRef();
+    const messageRef = useRef();
+
+    const {
+        name,
+        company,
+        theme,
+        title,
+        email,
+        message,
+        fileName,
+    } = card;
+    
+    const onFileChange = file => {
+        updateCard({
+            ...card,
+            fileName: file.name,
+            fileURL: file.url,
+        })
+    }
+    
+    const onChange = (event) => {
+        if (event.currentTarget == null) {
+            return;
+        }
+        event.preventDefault();
+        updateCard({ 
+            ...card, /
+            [event.currentTarget.name]: event.currentTarget.value,})}
+
+    const onSubmit = (event) => {deleteCard(card);}
+
+    return (
+        <form className={styles.form}>
+            <input className={styles.input} type="text" name="name" ref={nameRef} value={name} onChange={onChange}/>
+            <input className={styles.input} type="text" name="company" ref={companyRef} value={company} onChange={onChange}/>
+            <select className={styles.select} name="theme" ref={themeRef} value={theme} onChange={onChange}>
+                <option value="light">light</option>
+                <option value="dark">dark</option>
+                <option value="colorful">colorful</option>
+            </select>
+            <input className={styles.input} type="text" name="title" ref={titleRef} value={title} onChange={onChange}/>
+            <input className={styles.input} type="text" name="email" ref={emailRef} value={email} onChange={onChange}/>
+            <textarea className={styles.textarea} name="message" ref={messageRef} value={message} onChange={onChange}></textarea>
+            <div className={styles.fileInput}>
+                <FileInput name={fileName} onFileChange={onFileChange}/>
+            </div>
+            <Button name='Delete' onClick={onSubmit} />
+        </form>
+    );
+};
+
+export default Card_edit_form;
+
+```
+</div>
+</details>
+
+<details>
+<summary>card_add_form.jsx</summary>
+<div markdown="1">
+
+```javascript
+import React, { useRef, useState } from 'react';
+import Button from '../button/button';
+import styles from './card_add_form.module.css'
+
+const CardAddForm = ({ FileInput, onAdd }) => {
+    const formRef = useRef();
+    const nameRef = useRef();
+    const companyRef = useRef();
+    const themeRef = useRef();
+    const titleRef = useRef();
+    const emailRef = useRef();
+    const messageRef = useRef();
+    const [file, setFile] = useState({ fileName: null, fileURL: null });
+
+    const onFileChange = file => {
+        setFile({
+            fileName: file.name,
+            fileURL: file.url,
+        });
+    }
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        const card = {
+            id: Date.now(),
+            name : nameRef.current.value || '',
+            company : companyRef.current.value || '',
+            theme : themeRef.current.value,
+            title : titleRef.current.value || '',
+            email : emailRef.current.value || '',
+            message : messageRef.current.value || '',
+            fileName: file.fileName || '',
+            fileURL: file.fileURL || '',
+        };
+        formRef.current.reset(); 
+        setFile({ fileName: null, fileURL: null })
+        onAdd(card);
+    }
+
+    return (
+        <form ref={formRef} className={styles.form}>
+            <input ref={nameRef} className={styles.input} type="text" name="name" placeholder="Name" />
+            <input ref={companyRef} className={styles.input} type="text" name="company" placeholder="Company" />
+            <select  ref={themeRef} className={styles.select} name="theme" placeholder="Theme">
+                <option placeholder="light">light</option>
+                <option placeholder="dark">dark</option>
+                <option placeholder="colorful">colorful</option>
+            </select>
+            <input ref={titleRef} className={styles.input} type="text" name="title" placeholder="Title" />
+            <input ref={emailRef} className={styles.input} type="text" name="email" placeholder="Email" />
+            <textarea ref={messageRef} className={styles.textarea} name="message" placeholder="Message"></textarea>
+            <div className={styles.fileInput}>
+                <FileInput name={file.fileName} onFileChange={onFileChange}/>
+            </div>
+            <Button name='Add' onClick={onSubmit} />
+        </form>
+    );
+};
+
+export default CardAddForm;
+```
+</div>
+</details>
+
+
+<details>
+<summary>preview.jsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import styles from './preview.module.css';
+import Card from '../card/card';
+
+const Preview = ({ cards }) => 
+    <section className={styles.preview}>
+        <h1 className={styles.title}>Card Preview</h1>
+        <ul className={styles.cards}>
+            {Object.keys(cards).map(key => (
+                <Card             
+                key={key} 
+                card={cards[key]}  />
+            ))}
+        </ul>
+    </section>
+
+export default Preview;
+```
+</div>
+</details>
+
+<details>
+<summary>card.jsx</summary>
+<div markdown="1">
+
+```javascript
+import React from 'react';
+import styles from './card.module.css'
+
+const DEFAULT_IMAGE = '/images/default_logo.png'
+
+const Card = ({ card }) => {
+    const {name, company, title, email, message, theme, fileName, fileURL} = card;
+    const url = fileURL || DEFAULT_IMAGE; //fileURL이 없다면 DEFAULT_IMAGE사용
+
+    return(
+        <li className={`${styles.card} ${getStyles(theme)}`}>
+            <img className={styles.avatar} src={url} alt="profile photo" />
+            <div className={styles.info}>
+                <h1 className={styles.name}>{name}</h1>
+                <p className={styles.company}>{company}</p>
+                <p className={styles.title}>{title}</p>
+                <p className={styles.email}>{email}</p>
+                <p className={styles.message}>{message}</p>
+            </div>
+        </li>
+    );
+};
+
+function getStyles(theme) {
+    switch (theme) {
+        case 'dark':
+            return styles.dark;
+        case 'light':
+            return styles.light;
+        case 'colorful':
+            return styles.colorful;
+        default:
+            throw new Error(`unkown theme: ${theme}`);
+    }
+}
+
+export default Card;
+```
+</div>
+</details>
+
+
+
+
