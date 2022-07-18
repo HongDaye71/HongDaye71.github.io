@@ -14,6 +14,7 @@ tags:   [MobX]
 3. Business Card Maker에 MobX적용<br/>
     1. useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
     2. props 전달 최소화<br/>
+    3. props 전달을 유지하는 컴포넌트와 이유<br/>
 
 ___
 
@@ -629,5 +630,55 @@ const Editor = ({ FileInput, cardRepository }) => {
 
 export default Editor;
 ```
+
+### :mag: 3.3 props 전달을 유지하는 컴포넌트와 이유<br/>
+기존 프로젝트는 Maker에서 Editor와 Preview에 props를 전달한다. 따라서 props전달을 최소화 하기 위해 Preview도 Editor와 마찬가지로 직접 MakerStore에 접근하도록 하고자 하였으나 아래와 같은 이유로 Maker에서 props를 전달받는 것을 유지하였다.
+
+<details>
+<summary>maker.jsx (기존코드 / props전달부분)</summary>
+<div markdown="1">
+
+```
+return(
+    <section className={styles.maker}>
+        <Header onLogout={onLogout}/>
+        <div className={styles.container}>
+            <Editor 
+                FileInput={FileInput}
+                cards={cards} 
+                addCard={createOrUpdateCard} 
+                updateCard={createOrUpdateCard} 
+                deleteCard={deleteCard}/>
+            <Preview cards={cards}/>
+        </div>
+        <Footer />
+    </section>
+```
+</div>
+</details>
+
+<details>
+<summary>maker.jsx (MobX적용코드 / props전달부분)</summary>
+<div markdown="1">
+
+```
+return(
+    <section className={styles.maker}>
+        <Header onLogout={onLogout}/>
+        <div className={styles.container}>
+            <Editor 
+                FileInput={FileInput}
+                cardRepository={cardRepository} />
+            <Preview /> //Preview에서 MakerStore에 직접 접근한다고 가정했을 때
+        </div>
+        <Footer />
+    </section>
+```
+</div>
+</details>
+
+Preview에서 MakerStore에 직접 접근하는 경우, 페이지 UI전체를 렌더링하는 Maker에서 Preview에 전달하는 props가 모두 사라지게 된다. 따라서 cards에 업데이트가 발생하여도 Maker는 Preview에 업데이트 사항이 없는 것으로 간주하고 해당 컴포넌트를 rerendering하지 않는다. Eitor의 경우, 여전히 cardRepository를 props로 전달받기 때문에 업데이트 발생 시 마다 rerendering되지만 Preview는 Header, Footer와 동일하게 취급되어 mount이후 rerendering이 발생하지 않는 것이다. <br/>
+
+위와 같은 이유로 Preview는 직접 MakerStore에 접근하는 대신, Maker에서 props를 전달받는 것을 유지하도록 하였다.
 
 
