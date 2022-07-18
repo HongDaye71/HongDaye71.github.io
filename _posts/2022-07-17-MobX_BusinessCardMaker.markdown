@@ -35,6 +35,26 @@ ___
 (4) Upload image (Using Cloudinary)<br/>
 
 <span style='background-color:#fff5b1'>Project Structure</span> <br/>
+(1) Login Page<br/>
+  페이지목적: 사용자 로그인<br/>
+  세부기능: Google, Github 로그인 연동 (Firebase사용) / 로그인 혹은 PC에 기존 로그인 정보가 남아있는 경우 React Router를 통해 Main Page이동<br/>
+
+(2) Main Page<br/>
+  - Headerv
+  세부기능: 사용자 로그아웃<br/>
+  - Card Maker<br/>
+  페이지목적: 이름, 회사, 이메일, 사진 등 명함 디자인에 필요한 사용자 정보 입력<br/>
+  세부기능: 명함생성 및 삭제 / 동일 아이디로 로그인 시 사용자 정보유지(Firebase사용)<br/>
+  - Card Preview<br/>
+  페이지목적: Card Maker에서 입력된 정보를 바탕으로 명함 디자인 샘플출력<br/>
+  새부기능: 동일 아이디로 로그인 시 명함 디자인 정보유지(Firebase사용)<br/>
+  - Footer<br/>
+
+
+
+
+
+
 (1) App에서 useState를 통해 videos,selectedVideo 상태관리<br/>
     videos: 시작페이지와 비디오 검색 및 시청 시 렌더링되는 비디오 목록<br/>
     selectedVideo: 클릭된 비디오 값<br/>
