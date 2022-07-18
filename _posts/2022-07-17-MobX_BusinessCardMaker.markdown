@@ -43,7 +43,7 @@ ___
   페이지목적: 사용자 로그인<br/>
   세부기능: Google, Github 로그인 연동 (Firebase사용) / 로그인 혹은 PC에 기존 로그인 정보가 남아있는 경우 React Router를 통해 Main Page이동<br/>
 
-**Main Page**
+**Main Page**<br/>
   *Card Maker*<br/>
   페이지목적: 이름, 회사, 이메일, 사진 등 명함 디자인에 필요한 사용자 정보 입력<br/>
   세부기능: 명함생성 및 삭제 / 동일 아이디로 로그인 시 사용자 정보유지(Firebase사용)<br/>
@@ -53,11 +53,10 @@ ___
 
 <span style='background-color:#fff5b1'>Source Code Structure</span> <br/>
 
-(1) Login Page<br/>
-  코드구조: 
-  - AuthService Component 생성 (Firebase의 로그인 관련 API기능 포함 / API기능은 service폴더 내 관리)
-  - 최상위 Component에서부터 AuthService를 prop으로 전달
-  - Login Component는 AuthService를 사용하여 로그인화면 구현
+**Login Page** <br/>
+1. AuthService Component 생성 (Firebase의 로그인 관련 API기능 포함 / API기능은 service폴더 내 관리)
+2. 최상위 Component에서부터 AuthService를 prop으로 전달
+3. Login Component는 AuthService를 사용하여 로그인화면 구현
 
 <details>
 <summary>auth_service.jsx</summary>
@@ -149,16 +148,16 @@ export default Login;
 </details>
 
 
-(2) Main Page<br/>
-  코드구조 (Card Maker): <br/>
-  - Maker에서 cards, userId 상태생성 및 카드추가, 삭제기능 생성하여 Editor에 props로 전달<br/>
-  - Editor는 위 props를 Card_edit_form과 CardAddForm에 map을 통해 전달<br/>
-  - Card_edit_form와 CardAddForm은 전달받은 props를 통해 Card Maker UI생성<br/>
+**Main Page**<br/>
+*Card Maker* <br/>
+1. Maker에서 cards, userId 상태생성 및 카드추가, 삭제기능 생성하여 Editor에 props로 전달<br/>
+2. Editor는 위 props를 Card_edit_form과 CardAddForm에 map을 통해 전달<br/>
+3. Card_edit_form와 CardAddForm은 전달받은 props를 통해 Card Maker UI생성<br/>
 
-  코드구조 (Card Preview): <br/>
-  - Maker에서 Preview에 cards를 props로 전달<br/>
-  - Preview는 위 props를 Card에 map을 통해 전달<br/>
-  - Cards는 전달받은 props를 통해 Card Preview UI생성<br/>
+*Card Preview* <br/>
+1. Maker에서 Preview에 cards를 props로 전달<br/>
+2. Preview는 위 props를 Card에 map을 통해 전달<br/>
+3. Cards는 전달받은 props를 통해 Card Preview UI생성<br/>
 
 
 <details>
