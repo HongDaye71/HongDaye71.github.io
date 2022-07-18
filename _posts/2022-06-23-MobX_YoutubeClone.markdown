@@ -518,7 +518,7 @@ export default App;
 
 ___
 
-#### :no_entry_sign: Project Eror <br/>
+#### :no_entry_sign: Project Error <br/>
 오류메세지: <br/>
 GET https://googleads.g.doubleclick.net/pagead/id net::ERR_UNSAFE_REDIRECT <br/>
 
