@@ -503,7 +503,7 @@ ___
 
 따라서 기존에 Maker에서 지역변수로 관리하던 cards, userId, 카드추가, 삭제기능을 MobX를 통해 전역변수로 관리하고자 한다. 추가로 Login에서 지역변수로 관리하던 userId 또한 전역변수로 관리한다.
 
-1. Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성
+<span style='background-color:#fff5b1'>Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성<span>
 
 ```
 import { runInAction, observable  } from "mobx";
@@ -541,7 +541,8 @@ export { makerStore };
 
 <br/>
 
-2. Store Folder 내 LoginStore생성하여 userId 관리
+<span style='background-color:#fff5b1'>Store Folder 내 LoginStore생성하여 userId 관리<span>
+
 ```
 import { runInAction, observable  } from "mobx";
 
@@ -561,7 +562,7 @@ export { loginStore };
 
 <br/>
 
-3. Store Folder에 생길 모든 store들을 한 곳에서 사용하도록 함
+<span style='background-color:#fff5b1'> Store Folder에 생길 모든 store들을 한 곳에서 사용하도록 함<span>
 
 ```
 import { makerStore } from "./makerStore";
@@ -576,4 +577,51 @@ export default useStore;
 
 <br/>
 
-4. 
+<span style='background-color:#fff5b1'>Editor에서 MakerStore에 접근하여 cards, userId, 카드추가, 삭제기능을 Card_edit_form, CardAddForm에 전달<span><br/>
+
+
+```
+import React from 'react';
+import CardAddForm from '../card_add_form/card_add_form';
+import Card_edit_form from '../card_edit_form/card_edit_form';
+import styles from './editor.module.css'
+import { useObserver  } from 'mobx-react';
+import useStore from '../../store/store';
+
+const Editor = ({ FileInput, cardRepository }) => {
+    const { makerStore } = useStore();
+    const { loginStore } = useStore();
+    const cards = makerStore.cards;
+
+    //카드생성 및 업데이트 
+    const createOrUpdateCard = card => {
+        makerStore.createOrUpdateCard(card);
+        cardRepository.saveCard(loginStore.id, card); 
+    }
+
+    //카드삭제
+    const deleteCard = card => {
+        makerStore.deleteCard(card);
+        cardRepository.removeCard(loginStore.id, card);
+    }
+
+    return useObserver(() => (
+    <section className={styles.editor}>
+        <h1 className={styles.title}>Card Maker</h1>
+        {Object.keys(cards).map(key => (
+            <Card_edit_form 
+            key={key} 
+            FileInput={FileInput}
+            card={cards[key]} 
+            updateCard={createOrUpdateCard} 
+            deleteCard={deleteCard}/>
+        ))}
+        <CardAddForm 
+            FileInput={FileInput} 
+            cardRepository={cardRepository}/>
+    </section>
+    ))
+}
+
+export default Editor;
+```
