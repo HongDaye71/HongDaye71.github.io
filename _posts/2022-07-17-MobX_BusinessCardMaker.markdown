@@ -12,7 +12,7 @@ tags:   [MobX]
 1. 소개<br/>
 2. Business Card Maker 구조<br/>
 3. Business Card Maker에 MobX적용<br/>
-    1. useState를 통해 생성한 로컬변수를 전역변수로 변경<br/>
+    1. useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
     2. prop 전달 최소화<br/>
 
 ___
@@ -497,6 +497,82 @@ export default Card;
 ___
 
 ## :books: 3. Business Card Maker에 MobX적용
-### :mag: 3.1 useState를 통해 생성한 로컬변수를 전역변수로 변경<br/>
-기존의 예제는 Maker에서 cards, userId, 카드추가, 삭제기능을 생성하여 Editor와 Preview에 props로 전달한다. 이후 Editor와 Preview는 Card_edit_form, CardAddForm, Card에 다시 props를 전달한다.  
+### :mag: 3.1 useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
+기존의 예제는 Maker에서 cards, userId, 카드추가, 삭제기능을 생성하여 Editor와 Preview에 props로 전달한다. 이후 Editor와 Preview는 Card_edit_form, CardAddForm, Card에 다시 props를 전달한다. 이와같이 props를 반복적으로 전달하여 사용할 경우, 데이터 공유가 필요한 경우에 제약이 발생할 뿐만 아니라 프로젝트의 규모가 커질수록 최하위 컴포넌트에 prop 한 개를 전달하기 위해 최상위 컴포넌트에서 부터 반복적으로 prop을 전달하는 코드가 추가되어 코드 가독성이 떨어진다.
 
+따라서 기존에 Maker에서 지역변수로 관리하던 cards, userId, 카드추가, 삭제기능을 MobX를 통해 전역변수로 관리하고자 한다. 추가로 Login에서 지역변수로 관리하던 userId 또한 전역변수로 관리한다.
+
+1. Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성
+
+```
+import { runInAction, observable  } from "mobx";
+
+const makerStore = observable({
+    cards : {}, 
+    userId : '',
+
+    createOrUpdateCard (card) {
+        runInAction(() => {
+            const updated = { ...this.cards };
+            updated[card.id] = card; 
+            this.cards = updated
+        })
+    },
+
+    deleteCard (card) {
+        runInAction(() => {
+            const updated = { ...this.cards };
+            delete updated[card.id] 
+            this.cards = updated
+        })
+    },
+    
+    stopSync (cards) {
+        this.cards = cards
+        console.log(this.cards)
+    },
+
+    
+});
+
+export { makerStore };
+```
+
+<br/>
+
+2. Store Folder 내 LoginStore생성하여 userId 관리
+```
+import { runInAction, observable  } from "mobx";
+
+const loginStore = observable({
+    id : '',
+    
+    setLoginStore (event) {
+        runInAction(() => {
+            this.id = event
+        })
+    },
+
+});
+
+export { loginStore };
+```
+
+<br/>
+
+3. Store Folder에 생길 모든 store들을 한 곳에서 사용하도록 함
+
+```
+import { makerStore } from "./makerStore";
+import { loginStore } from "./loginStore";
+
+const useStore = () => {
+    return { makerStore, loginStore }
+};
+
+export default useStore;
+```
+
+<br/>
+
+4. 
