@@ -680,9 +680,13 @@ return(
 </div>
 </details>
 
+<br/>
+
 Preview에서 MakerStore에 직접 접근하는 경우, 페이지 UI전체를 렌더링하는 Maker에서 Preview에 전달하는 props가 모두 사라지게 된다. 따라서 cards에 업데이트가 발생하여도 Maker는 Preview에 업데이트 사항이 없는 것으로 간주하고 해당 컴포넌트를 rerendering하지 않는다. Eitor의 경우, 여전히 cardRepository를 props로 전달받기 때문에 업데이트 발생 시 마다 rerendering되지만 Preview는 Header, Footer와 동일하게 취급되어 mount이후 rerendering이 발생하지 않는 것이다. <br/>
 
 위와 같은 이유로 Preview는 직접 MakerStore에 접근하는 대신, Maker에서 props를 전달받는 것을 유지하도록 하였다.<br/>
+
+<br/>
 
 <span style='background-color:#f6f8fa'>Loading Spinner<span><br/>
 위에서 언급되지 않은 부분이지만, 사용자가 명함 제작을 위한 이미지 추가 시 업로드가 완료되기 까지 로딩스피너가 출력된다. 스피너는 업로드 중에만 출력되어야 함으로 bollean 변수를 선언하여 true인 경우 스피너가 출력되도록 하였다. 
