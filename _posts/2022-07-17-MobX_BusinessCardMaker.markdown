@@ -12,7 +12,7 @@ tags:   [MobX]
 1. 소개<br/>
 2. Business Card Maker 구조<br/>
 3. Business Card Maker에 MobX적용<br/>
-    1. useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
+    1. useState를 통해 생성한 지역상태를 전역상태로 변경<br/>
     2. props 전달 최소화<br/>
     3. props 전달을 유지하는 컴포넌트와 이유<br/>
 
@@ -23,7 +23,7 @@ ___
 
 데코레이터를 사용하지 않고 함수형 컴포넌트에 MobX를 적용하는 과정을 다룹니다. <br/>
 
-MobX를 적용할 예제로는 드림코딩의 리액트 강의에서 다루어진 Business Card Maker를 사용하며 MobX적용 전 프로젝트 구조를 먼저 설명하고, 로컬변수를 전역변수로 변경하는 과정을 작성한 뒤에 props전달을 최소화 하는 과정에서 MobX API를 사용한 부분과 사용하지 않은 부분, 그리고 그 이유를 작성하고자 합니다.
+MobX를 적용할 예제로는 드림코딩의 리액트 강의에서 다루어진 Business Card Maker를 사용하며 MobX적용 전 프로젝트 구조를 먼저 설명하고, 지역상태를 전역상태로 변경하는 과정을 작성한 뒤에 props전달을 최소화 하는 과정에서 MobX API를 사용한 부분과 사용하지 않은 부분, 그리고 그 이유를 작성하고자 합니다.
 
 <span style="color:#D3D3D3">*작성자는 주니어 개발자 입니다. 미흡한 부분이 많으니 잘못된 점은 지적 부탁드립니다*</span>
 
@@ -500,9 +500,9 @@ ___
 ## :books: 3. Business Card Maker에 MobX적용
 기존의 예제는 Maker에서 cards, userId, 카드추가, 삭제기능을 생성하여 Editor와 Preview에 props로 전달한다. 이후 Editor와 Preview는 Card_edit_form, CardAddForm, Card에 다시 props를 전달한다. 이와같이 props를 반복적으로 전달하여 사용할 경우, 데이터 공유가 필요한 경우에 제약이 발생할 뿐만 아니라 프로젝트의 규모가 커질수록 최하위 컴포넌트에 prop 한 개를 전달하기 위해 최상위 컴포넌트에서 부터 반복적으로 prop을 전달하는 코드가 추가되어 코드 가독성이 떨어진다.
 
-따라서 기존에 Maker에서 지역변수로 관리하던 cards, userId, 카드추가, 삭제기능을 MobX를 통해 전역변수로 관리하고자 한다. 추가로 Login에서 지역변수로 관리하던 userId 또한 전역변수로 관리하고자 한다. 
+따라서 기존에 Maker에서 지역상태로 관리하던 cards, userId, 카드추가, 삭제기능을 MobX를 통해 전역상태로 관리하고자 한다. 추가로 Login에서 지역상태로 관리하던 userId 또한 전역상태로 관리하고자 한다. 
 
-### :mag: 3.1 useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
+### :mag: 3.1 useState를 통해 생성한 지역상태를 전역상태로 변경<br/>
 
 <span style='background-color:#f6f8fa'>Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성<span>
 
@@ -690,9 +690,9 @@ Preview에서 MakerStore에 직접 접근하는 경우, 페이지 UI전체를 �
 
 <span style='background-color:#f6f8fa'>Loading Spinner<span><br/>
 
-위에서 언급되지 않은 부분이지만, 사용자가 명함 제작을 위한 이미지 추가 시 업로드가 완료되기 까지 로딩스피너가 출력된다. 스피너는 업로드 중에만 출력되어야 함으로 bollean 변수를 선언하여 true인 경우 스피너가 출력되도록 하였다. 
+위에서 언급되지 않은 부분이지만, 사용자가 명함 제작을 위한 이미지 추가 시 업로드가 완료되기 까지 로딩스피너가 출력된다. 스피너는 업로드 중에만 출력되어야 함으로 bollean 상태를 선언하여 true인 경우 스피너가 출력되도록 하였다. 
 
-해당 지역변수 또한 전역으로 관리하고자 하였으나, 전역으로 관리하는 경우 개별 카드 컴포넌트에 변수가 할당되지 않아 한 개 카드에 이미지 업로드 시 전체 카드에 스피너가 출력되는 문제가 발생했다. 따라서 해당 상태변수는 지역변수로 유지하였다.
+해당 지역상태 또한 전역으로 관리하고자 하였으나, 전역으로 관리하는 경우 개별 카드 컴포넌트에 상태가 할당되지 않아 한 개 카드에 이미지 업로드 시 전체 카드에 스피너가 출력되는 문제가 발생했다. 따라서 해당 상태는 지역상태로 유지하였다.
 
 ```
 import React, { useRef, useState }from 'react';
