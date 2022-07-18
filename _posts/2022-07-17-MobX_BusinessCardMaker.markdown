@@ -43,7 +43,7 @@ ___
   세부기능: Google, Github 로그인 연동 (Firebase사용) / 로그인 혹은 PC에 기존 로그인 정보가 남아있는 경우 React Router를 통해 Main Page이동<br/>
 
 (2) Main Page<br/>
-  - Headerv
+  - Header
   세부기능: 사용자 로그아웃<br/>
   - Card Maker<br/>
   페이지목적: 이름, 회사, 이메일, 사진 등 명함 디자인에 필요한 사용자 정보 입력<br/>
@@ -53,26 +53,101 @@ ___
   새부기능: 동일 아이디로 로그인 시 명함 디자인 정보유지(Firebase사용)<br/>
   - Footer<br/>
 
+<span style='background-color:#fff5b1'>Source Code Structure</span> <br/>
 
+(1) Login Page<br/>
+  코드구조: 
+  - AuthService Component 생성 (Firebase의 로그인 관련 API기능 포함 / API기능은 service폴더 내 관리)
+  - 최상위 Component에서부터 AuthService를 prop으로 전달
+  - Login Component는 AuthService를 사용하여 로그인화면 구현
 
+<details>
+<summary>auth_service.jsx</summary>
+<div markdown="1">
 
+```javascript
+import firebase from 'firebase';
+import firebaseApp from './firebase'
 
+class AuthService {
+    login(providerName) {
+        const authProvider = new firebase.auth[`${providerName}AuthProvider`]();
+        return firebaseApp.auth().signInWithPopup(authProvider);
+    }
 
-(1) App에서 useState를 통해 videos,selectedVideo 상태관리<br/>
-    videos: 시작페이지와 비디오 검색 및 시청 시 렌더링되는 비디오 목록<br/>
-    selectedVideo: 클릭된 비디오 값<br/>
+    logout() {
+        firebase.auth().signOut();
+    }
 
-(2) Youtube파일 생성 후 mostPopular(),search() fetch Web APIs작성<br/>
-    mostPopular(): 인기있는 비디오 25개 목록을 받아오는 API fetch<br/>
-    search(): 검색한 키워드에 맞추어 비디오 목록을 받아오는 API fetch<br/>
+    onAuthChange(onUserChanged) {
+        firebase.auth().onAuthStateChanged(user => {
+            onUserChanged(user);
+        })
+    }
+}
 
-(3) App에서 mostPopular(),search()를 통해 videos,selectedVideo 상태변경<br/>
+export default AuthService
+```
+</div>
+</details>
 
-(4) SearchHeader(), VideoDetail(), VideoItem(), VideoList() 생성<br>
-    SearchHeader: 비디오 검색창 HTML생성, 검색키워드를 search함수에 저장<br>
-    VideoDetail: 비디오 재생화면 HTML생성<br>
-    VideoItem: VideoList를 구성하는 VideoItem HTML생성<br>
-    VideoList: videos를 VideoItem에 전달하여 비디오 목록 생성<br>
+<details>
+<summary>login.jsx</summary>
+<div markdown="1">
 
-(5) App에서 SearchHeader() ,VideoDetail(), VideoList()에 상태 및 상태관리 메소드 전달<br>
+```javascript
+import React, { useEffect } from 'react';
+import Footer from '../footer/footer';
+import Header from '../header/header';
+import styles from './login.module.css';
+import { useNavigate } from 'react-router-dom';
+
+const Login = ({ authService }) => {
+  const navigate = useNavigate();
+  const goToMaker = (userId) => {
+    navigate(
+      '/maker', 
+      { state: {id: userId} });
+  }
+
+  //사용자 정보변경이 발생하거나, 기존 로그인 정보가 남아있는 경우 MainPage이동 (사용자 아이디 전달)
+  useEffect(() => {
+    authService.onAuthChange(
+      user => {user && goToMaker(user.id) 
+    })
+  })
+
+  //로그인 시 MainPage이동 (사용자 아이디 전달)
+  const onLogin = event => {
+    authService 
+      .login(event.currentTarget.textContent) 
+      .then(data => goToMaker(data.user.uid));
+  };
+
+  return (
+    <section className={styles.login}>
+      <Header />
+      <section>
+        <h1>Login</h1>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>Google</button>
+          </li>
+          <li className={styles.item}>
+            <button className={styles.button} onClick={onLogin}>
+              Github
+            </button>
+          </li>
+        </ul>
+      </section>
+      <Footer />
+    </section>
+  );
+};
+
+export default Login;
+```
+</div>
+</details>
+
 
