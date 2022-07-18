@@ -631,6 +631,8 @@ const Editor = ({ FileInput, cardRepository }) => {
 export default Editor;
 ```
 
+<br/>
+
 ### :mag: 3.3 props 전달을 유지하는 컴포넌트와 이유<br/>
 <span style='background-color:#f6f8fa'>Preview<span><br/>
 기존 프로젝트는 Maker에서 Editor와 Preview에 props를 전달한다. 따라서 props전달을 최소화 하기 위해 Preview도 Editor와 마찬가지로 직접 MakerStore에 접근하도록 하고자 하였으나 아래와 같은 이유로 Maker에서 props를 전달받는 것을 유지하였다.
@@ -683,7 +685,58 @@ Preview에서 MakerStore에 직접 접근하는 경우, 페이지 UI전체를 �
 위와 같은 이유로 Preview는 직접 MakerStore에 접근하는 대신, Maker에서 props를 전달받는 것을 유지하도록 하였다.<br/>
 
 <span style='background-color:#f6f8fa'>Loading Spinner<span><br/>
-위에서 언급되지 않은 부분이지만, 
+위에서 언급되지 않은 부분이지만, 사용자가 명함 제작을 위한 이미지 추가 시 업로드가 완료되기 까지 로딩스피너가 출력된다. 스피너는 업로드 중에만 출력되어야 함으로 bollean 변수를 선언하여 true인 경우 스피너가 출력되도록 하였다. 
+
+해당 지역변수 또한 전역으로 관리하고자 하였으나, 전역으로 관리하는 경우 개별 카드 컴포넌트에 변수가 할당되지 않아 한 개 카드에 이미지 업로드 시 전체 카드에 스피너가 출력되는 문제가 발생했다. 따라서 해당 상태변수는 지역변수로 유지하였다.
+
+```
+import React, { useRef, useState }from 'react';
+import styles from './image_file_input.module.css';
+import { useObserver  } from 'mobx-react';
+
+const Image_file_input = ({ imageUploader, name, onFileChange }) => {
+    const inputRef = useRef();
+    const [loading, setLoading] = useState(false); //boolean state
+
+    const onButtonClick = (event) => {
+        event.preventDefault();
+        inputRef.current.click();
+    }
+
+    const onChange = async event => {
+        setLoading(true);
+        const uploaded = await imageUploader.upload(event.target.files[0]); 
+        setLoading(false);
+
+        onFileChange({
+            name: uploaded.original_filename,
+            url: uploaded.url,
+        })
+    };
+
+    return <div className={styles.container}>
+        <input 
+            ref={inputRef}
+            className={styles.input} 
+            type="file" 
+            accept="image/*" 
+            name="file" 
+            onChange={onChange}/>
+
+        { !loading && 
+            <button 
+                className={`${styles.button} ${name ? styles.pink: styles.grey}`} 
+                onClick={onButtonClick}> 
+                {name || 'No file'} 
+            </button> }
+        { loading && 
+            <div className={styles.loading}></div>}
+    </div>
+};
+
+export default Image_file_input;
+
+```
 
 ___
 
