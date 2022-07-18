@@ -578,7 +578,7 @@ export default useStore;
 <br/>
 
 <span style='background-color:#fff5b1'>Editor에서 MakerStore에 접근하여 cards, userId, 카드추가, 삭제기능을 Card_edit_form, CardAddForm에 전달<span><br/>
-
+<span style="color:#D3D3D3">Card_edit_form, CardAddForm에서 MakerStore에 접근하는 경우, props를 전달하는 과정을 한 단 계 더 줄일 수 있으나 Editor에서 map을 통해 개별 컴포넌트에 cards, userId, 카드추가, 삭제기능을 부여해야 함으로 위와같이 작성하였다.<span>
 
 ```
 import React from 'react';
