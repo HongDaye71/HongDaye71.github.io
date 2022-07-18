@@ -147,6 +147,7 @@ export default Login;
 </div>
 </details>
 
+<br/>
 
 **Main Page**<br/>
 *Card Maker* <br/>
