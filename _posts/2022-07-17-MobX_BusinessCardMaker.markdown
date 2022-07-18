@@ -148,6 +148,7 @@ export default Login;
 <br/>
 
 <span style='background-color:#f6f8fa'>Main Page<span>
+
 *Card Maker*<br/>
 Maker에서 cards, userId 상태생성 및 카드추가, 삭제기능 생성하여 Editor에 props로 전달<br/>
 Editor는 위 props를 Card_edit_form과 CardAddForm에 map을 통해 전달<br/>
