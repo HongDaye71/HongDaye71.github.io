@@ -505,7 +505,7 @@ ___
 
 ### :mag: 3.1 useState를 통해 생성한 지역변수를 전역변수로 변경<br/>
 
-<span style='background-color:#fff5b1'>Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성<span>
+<span style='background-color:#f6f8fa'>Store Folder 내 MakerStore생성하여 cards, userId, 카드추가, 삭제기능 작성<span>
 
 ```
 import { runInAction, observable  } from "mobx";
@@ -543,7 +543,7 @@ export { makerStore };
 
 <br/>
 
-<span style='background-color:#fff5b1'>Store Folder 내 LoginStore생성하여 userId 관리<span> <br/>
+<span style='background-color:#f6f8fa'>Store Folder 내 LoginStore생성하여 userId 관리<span> <br/>
 
 ```
 import { runInAction, observable  } from "mobx";
@@ -564,7 +564,7 @@ export { loginStore };
 
 <br/>
 
-<span style='background-color:#fff5b1'> Store Folder에 생길 모든 store들을 한 곳에서 사용하도록 함<span>
+<span style='background-color:#f6f8fa'> Store Folder에 생길 모든 store들을 한 곳에서 사용하도록 함<span>
 
 ```
 import { makerStore } from "./makerStore";
@@ -581,7 +581,7 @@ export default useStore;
 
 ### :mag: 3.2 props 전달 최소화<br/>
 
-<span style='background-color:#fff5b1'>Editor에서 MakerStore에 접근하여 cards, userId, 카드추가, 삭제기능을 Card_edit_form, CardAddForm에 전달<span><br/>
+<span style='background-color:#f6f8fa'>Editor에서 MakerStore에 접근하여 cards, userId, 카드추가, 삭제기능을 Card_edit_form, CardAddForm에 전달<span><br/>
 
 *Card_edit_form, CardAddForm에서 MakerStore에 접근하면 props를 전달하는 과정을 한 단계 더 줄일 수 있으나 Editor에서 map을 통해 개별 컴포넌트에 cards, userId, 카드추가, 삭제기능을 부여해야 함으로 위와같이 작성하였다*
 
@@ -632,6 +632,7 @@ export default Editor;
 ```
 
 ### :mag: 3.3 props 전달을 유지하는 컴포넌트와 이유<br/>
+<span style='background-color:#f6f8fa'>Preview<span><br/>
 기존 프로젝트는 Maker에서 Editor와 Preview에 props를 전달한다. 따라서 props전달을 최소화 하기 위해 Preview도 Editor와 마찬가지로 직접 MakerStore에 접근하도록 하고자 하였으나 아래와 같은 이유로 Maker에서 props를 전달받는 것을 유지하였다.
 
 <details>
@@ -679,6 +680,17 @@ return(
 
 Preview에서 MakerStore에 직접 접근하는 경우, 페이지 UI전체를 렌더링하는 Maker에서 Preview에 전달하는 props가 모두 사라지게 된다. 따라서 cards에 업데이트가 발생하여도 Maker는 Preview에 업데이트 사항이 없는 것으로 간주하고 해당 컴포넌트를 rerendering하지 않는다. Eitor의 경우, 여전히 cardRepository를 props로 전달받기 때문에 업데이트 발생 시 마다 rerendering되지만 Preview는 Header, Footer와 동일하게 취급되어 mount이후 rerendering이 발생하지 않는 것이다. <br/>
 
-위와 같은 이유로 Preview는 직접 MakerStore에 접근하는 대신, Maker에서 props를 전달받는 것을 유지하도록 하였다.
+위와 같은 이유로 Preview는 직접 MakerStore에 접근하는 대신, Maker에서 props를 전달받는 것을 유지하도록 하였다.<br/>
+
+<span style='background-color:#f6f8fa'>Loading Spinner<span><br/>
+위에서 언급되지 않은 부분이지만, 
+
+___
+
+
+#### :mag_right: Source Code. <br/>
+* [Github](https://github.com/HongDaye71/React_BusinessCard)<br/>
+* [Github(MobX)](https://github.com/HongDaye71/mobX_BusinessCard)<br/>
+
 
 
