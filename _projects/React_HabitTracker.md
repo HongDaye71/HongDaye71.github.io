@@ -16,7 +16,7 @@ Habit Tracker is a Website where you can write and record personal habits<br/>
 #### Period<br/>
 From May 25, 2022 to May 27, 2022 <br/>
 
-## Development Environment & Period <br/>
+## Development Environment & Technology <br/>
 ### Environment<br/>
 * React
 

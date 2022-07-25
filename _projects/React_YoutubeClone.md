@@ -19,7 +19,7 @@ Youtube clone build with React
 #### Period<br/>
 From June 16, 2022 to June 17, 2022 <br/>
 
-## Development Environment & Period <br/>
+## Development Environment & Technology <br/>
 ### Environment<br/>
 * React
 

@@ -16,7 +16,7 @@ To Do List is a website where you can write and record your montly and daily goa
 #### Period<br/>
 From June 1, 2022 to June 8, 2022 <br/>
 
-## Development Environment & Period <br/>
+## Development Environment & Technology <br/>
 ### Environment<br/>
 * React
 

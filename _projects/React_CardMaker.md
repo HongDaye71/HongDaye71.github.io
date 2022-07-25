@@ -20,7 +20,7 @@ Business Card Maker is a web site that designs business cards based on the infor
 #### Period<br/>
 From July 1, 2022 to July 17, 2022 <br/>
 
-## Development Environment & Period <br/>
+## Development Environment & Technology <br/>
 ### Environment<br/>
 * React
 
