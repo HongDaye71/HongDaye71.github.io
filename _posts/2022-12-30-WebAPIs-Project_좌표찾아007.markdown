@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  React/좌표찾아007
+title:  WebAPIs/좌표찾아007
 date:   2022-08-11 12:38:35 +0300
-image:  '/images/React/좌표찾아007.jpg'
+image:  '/images/Posting/React/좌표찾아007.jpg'
 tags:   [Programmers]
 ---
 
-# React Project - 좌표찾아007
+# WebAPIs Project - 좌표찾아007
 
 ## Description <br/>
-* 리액트를 기반으로 윈도우 내 마우스 좌표를 출력하는 웹서비스 구현<br/>
+* WebAPIs를 기반으로 윈도우 내 마우스 좌표를 출력하는 웹서비스 구현<br/>
 * 좌표는 가로,세로 선과 함께 마우스를 따라 이동함<br/>
 
 ___
@@ -105,13 +105,50 @@ body {
     transform: translate(20px, 20px);
 }
 ```
+</div>
+</details>
+
 1. <span style='background-color: #fff5b1'>transform: translate(-50%, -50%);</span></br>
 자신을 기준으로 자신이 가진 가로, 세로 너비의 몇 퍼센트만큼 어느 방향으로 이동할지 설정
 * transform : Flash, JavaScript를 사용하지 않고 요소를 애니메이션 하거나 상호작용의 효과를 적용하고자 할 때에 사용</br>
 * translate : X,Y축을 따라 지정된 거리만큼 요소를 이동시킬 때 사용 (Y축은 생략할 수 있으며 자동으로 0값이 설정됨 / translateX, translateY 함수존재) </br>
+
 ___
 
+<details>
+<summary>JavaScript</summary>
+<div markdown="1">
 
+```JavaScript
+const horizontal = document.querySelector('.horizontal');
+const vertical = document.querySelector('.vertical');
+const target = document.querySelector('.target');
+const tag = document.querySelector('.tag');
+
+document.addEventListener('mousemove', (event)=> {
+    const x = event.clientX;
+    const y = event.clientY;
+    console.log(`${x} ${y}`);
+
+    vertical.style.left = `${x}px`;
+    horizontal.style.top = `${y}px`;
+    target.style.left = `${x}px`;
+    target.style.top = `${y}px`;
+    tag.style.left = `${x}px`;
+    tag.style.top = `${y}px`;
+    tag.innerHTML = `${x}px, ${y}px`;
+});
+```
+
+</div>
+</details>
+
+1. <span style='background-color: #fff5b1'>transform: translate(-50%, -50%);</span></br>
+자신을 기준으로 자신이 가진 가로, 세로 너비의 몇 퍼센트만큼 어느 방향으로 이동할지 설정
+
+___
+
+[Github]()
 
 
 
