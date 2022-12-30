@@ -8,17 +8,9 @@ tags:   [Programmers]
 
 # React Project - 좌표찾아007
 
-## Contents <br/>
-1. Car Item Component<br/>
-  (1) Render the text<br/>
-  (2) Render the Background Image<br/>
-  (3) Create a Separate component for CarItem<br/>
-2. Button Component<br/>
-  (1) Create Separate Component<br/>
-  (2) Receive props / Style The button based on 'type' prop<br/>
-3. Finish Car Item Component
-  (1) Use buttons
-  (2) Implement props 
+## Description <br/>
+* 리액트를 기반으로 윈도우 내 마우스 좌표를 출력하는 웹서비스 구현<br/>
+* 좌표는 가로,세로 선과 함께 마우스를 따라 이동함<br/>
 
 ___
 
@@ -31,7 +23,7 @@ ___
 <summary>HTML</summary>
 <div markdown="1">
 
-```javascript
+```HTML
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +57,59 @@ HTML문서의 문자 인코딩 방식을 명시함. 유니코드(Unicode)를 위
 
 3. <span style='background-color: #fff5b1'>클래스 자동생성</span></br>
 .Line.horizontal 입력 후 Tab키를 클릭하면 자동생성 됨 (img태그로 target클래스를 생성하고 싶은 경우, img.target 입력 후 Tab키를 클릭)
+
+4. <span style='background-color: #fff5b1'>코드설명</span></br>
+웹서비스를 구성하는 가로 선, 세로 선, 이미지, 좌표텍스트 클래스 생성
+
+___
+
+<details>
+<summary>CSS<summary>
+<div markdown="1">
+
+```CSS
+body {
+    background-color: black;
+}
+
+.Line {
+    position: absolute;
+    background-color: white;
+}
+
+.horizontal {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.vertical {
+    height: 100%;
+    width: 1px;
+    left: 50%;
+}
+
+.target {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tag {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    transform: translate(20px, 20px);
+}
+```
+1. <span style='background-color: #fff5b1'>transform: translate(-50%, -50%);</span></br>
+자신을 기준으로 자신이 가진 가로, 세로 너비의 몇 퍼센트만큼 어느 방향으로 이동할지 설정
+* transform : Flash, JavaScript를 사용하지 않고 요소를 애니메이션 하거나 상호작용의 효과를 적용하고자 할 때에 사용</br>
+* translate : X,Y축을 따라 지정된 거리만큼 요소를 이동시킬 때 사용 (Y축은 생략할 수 있으며 자동으로 0값이 설정됨 / translateX, translateY 함수존재) </br>
+___
 
 
 
