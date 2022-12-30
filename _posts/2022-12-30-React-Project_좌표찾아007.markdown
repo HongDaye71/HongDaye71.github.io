@@ -56,14 +56,15 @@ ___
 </div>
 </details>
 
-1. ```<meta charset="문자셋">``` :
+1. <span style='background-color: #fff5b1'>meta charset="문자셋"</span></br>
 HTML문서의 문자 인코딩 방식을 명시함. 유니코드(Unicode)를 위한 문자셋인 UTF-8이 일반적으로 사용됨 
 * 유니코드 : 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 산업 표준
 
-2. ```<mera name='viewport'>``` :
+2. <span style='background-color: #fff5b1'>meta name='viewport'</span></br>
 현재 사용자가 보고 있는 컴퓨터 화면의 영역을 나타냄
 
-3. 클래스 생성 시 .Line.horizontal 입력 후 Tab키를 클릭하면 자동생성 됨 (img태그로 target클래스를 생성하고 싶은 경우, img.target 입력 후 Tab키를 클릭)
+3. <span style='background-color: #fff5b1'>클래스 자동생성</span></br>
+.Line.horizontal 입력 후 Tab키를 클릭하면 자동생성 됨 (img태그로 target클래스를 생성하고 싶은 경우, img.target 입력 후 Tab키를 클릭)
 
 
 
