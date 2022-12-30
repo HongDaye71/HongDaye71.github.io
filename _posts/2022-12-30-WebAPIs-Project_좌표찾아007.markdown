@@ -143,12 +143,15 @@ document.addEventListener('mousemove', (event)=> {
 </div>
 </details>
 
-1. <span style='background-color: #fff5b1'>transform: translate(-50%, -50%);</span></br>
-자신을 기준으로 자신이 가진 가로, 세로 너비의 몇 퍼센트만큼 어느 방향으로 이동할지 설정
+1. <span style='background-color: #fff5b1'>const horizontal = document.querySelector('.horizontal');</span></br>
+
+2. <span style='background-color: #fff5b1'>WebAPIs_mousemove</span></br>
+
+3. <span style='background-color: #fff5b1'>tag.innerHTML</span></br>
 
 ___
 
-[Github]()
+[Github](https://github.com/HongDaye71/WebAPIs_Coordinate/tree/main)
 
 
 
