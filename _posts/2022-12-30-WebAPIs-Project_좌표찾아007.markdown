@@ -2,7 +2,7 @@
 layout: post
 title:  WebAPIs/좌표찾아007
 date:   2022-08-11 12:38:35 +0300
-image:  '/images/Posting/React/coordinateImg.png'
+image:  '/images/Posting/React/coordinateImg.jpg'
 tags:   [Programmers]
 ---
 
