@@ -2,7 +2,7 @@
 layout: post
 title:  React/좌표찾아007
 date:   2022-08-11 12:38:35 +0300
-image:  '/images/Programmers.jpg'
+image:  '/images/React/좌표찾아007.jpg'
 tags:   [Programmers]
 ---
 
@@ -56,7 +56,7 @@ ___
 </div>
 </details>
 
-1. <meta charset="문자셋"> :
+1. ```<meta charset="문자셋">``` :
 HTML문서의 문자 인코딩 방식을 명시함. 유니코드(Unicode)를 위한 문자셋인 UTF-8이 일반적으로 사용됨 
 * 유니코드 : 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 산업 표준
 
