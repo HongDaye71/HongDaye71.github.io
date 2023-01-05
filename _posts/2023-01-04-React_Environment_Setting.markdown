@@ -46,3 +46,9 @@ ___
     1. 폴더생성 : 터미널에 mkdir foldername 입력
     2. 폴더접근 : cd foldername 입력
     3. 프로젝트생성 : yarn create react-app projectname 입력
+    4. 프로젝트접근 : cd projectname 입력
+    5. 프로젝트실행 : yarn start (yarn build, yarn test, yarn eject..등 존재)
+    6. 개발시작 : code .입력 후 visual studio에서 개발시작 
+
+
+ 
