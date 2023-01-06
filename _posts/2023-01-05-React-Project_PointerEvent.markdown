@@ -2,7 +2,7 @@
 layout: post
 title:  React/MouseMoveEvent
 date:   2023-01-05 12:38:35 +0300
-image:  '/images/Posting/React/TodoList.png'
+image:  '/images/Posting/React/PointerEvent.png'
 tags:   [React]
 ---
 
