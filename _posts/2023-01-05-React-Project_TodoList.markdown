@@ -187,6 +187,7 @@ export default function AddTodo({ onAdd }) {
 * props전달 : onAdd={handleAdd} 자식에게 전달한 onAdd가 실행되면 handleAdd실행</br>
 * 화살표 함수 : const change = function(event) {return console.log(event)} 와 같은 코드를 아래와 같이 변경할 수 있게 함 const change = (event) => {return console.log}</br>
 * ... : 펼침 연산자(Spread operator)로 배열 또는 객체의 모든 값을 복사할 수 있음</br>
+* 고유한 아이디 : uuid패키지 설치를 통해 아이디부여 가능 (yarn add uuid)</br>
 ___
 
 [Git]()
