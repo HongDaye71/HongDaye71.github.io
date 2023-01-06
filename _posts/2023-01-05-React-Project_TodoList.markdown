@@ -71,10 +71,10 @@ export default function TodoList() {
     </section>
 }
 
-
 ```
 </div>
 </details>
+
 
 1. Components 폴더생성 <br/>
 2. TodoList 폴더생성 - TodoList 파일생성 <br/>
@@ -97,6 +97,96 @@ export default function TodoList() {
     <p>상품이 실제 이미지와 다를 수 있습니다</p>
 </section>
 ```
+___
+
+### 2. 추가하기 구현하기
+
+<details>
+<summary>TodoList.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+import React, {useState} from 'react';
+import AddTodo from '../AddTodo/AddTodo';
+
+export default function TodoList() {
+    const [todos, setTodos] = useState([
+        {id: '123', text: '장보기', status: 'active'},
+        {id: '124', text: '공부하기', status: 'active'}
+        ])
+    const handleAdd = (todo) => {
+        setTodos([...todos, todo])
+    }
+
+    return <section> 
+        <ul>
+            {
+                todos.map((item) => (
+                    <li key={item.id}>{item.text}</li>
+                ))
+                <AddTodo onAdd={handleAdd}/>
+            }
+        </ul>
+    </section>
+}
+
+```
+</div>
+</details>
+
+<details>
+<summary>AddTodo.jsx</summary>
+<div markdown="1">
+
+```javaScript
+import React, {useState} from 'react';
+
+export default function AddTodo({ onAdd }) {
+    const [text, setText] = useState();
+    const handleChange = (e) => setText(e.target.value)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(text.trim().length === 0) {
+            return;
+        }
+        onAdd({id: '고유한값', text: text, status: 'active'});
+        setText('');
+    }
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type='text'
+                placeholder='AddTodo'
+                value='text'
+                onChange={handleChange}
+            />
+        <button>Add<button>
+        </form>
+    )
+}
+
+
+```
+</div>
+</details>
+
+
+1. AddTodo폴더생성 - AddTodo 파일생성 </br>
+2. TodoList에서 AddTodo 컴포넌트 출력 
+3. AddTodo 컴포넌트에 onAdd라는 이름으로 props전달 - onAdd가 실행될 경우 handleAdd 함수실행</br>
+    * handleAdd : 추가된 리스트가 있는 경우, 기존의 todos목록에 리스트 추가</br>
+4. AddTodo에서 onAdd를 props로 전달받음 </br>
+5. form태그를 통해 리스트를 입력받음</br>
+6. form태그에 입력이 있을 경우, text에 값 저장</br>
+7. form태그의 값이 제출될 경우, onAdd에 값 전달</br>
+
+* handleAdd와 같은 함수는 return문 밖에 작성</br>
+* 컴포넌트를 import할 때에는 import componentName from 'path' 입력</br>
+* props전달 : onAdd={handleAdd} 자식에게 전달한 onAdd가 실행되면 handleAdd실행</br>
+* 화살표 함수 : const change = function(event) {return console.log(event)} 와 같은 코드를 아래와 같이 변경할 수 있게 함 const change = (event) => {return console.log}</br>
+* ... : 펼침 연산자(Spread operator)로 배열 또는 객체의 모든 값을 복사할 수 있음</br>
 ___
 
 [Git]()
