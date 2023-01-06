@@ -38,7 +38,7 @@ export default function App() {
             setX(event.clientX);
             setY(event.clientY);
         }}>
-            <div className = 'pointer' style={{transform: `translate(${x}px, ${y}px)`}}/>
+            <div className = 'pointer' style={% raw %}{{transform: `translate(${x}px, ${y}px)`}}{% endraw %} />
         </div>
     )
 }
