@@ -75,8 +75,9 @@ export default function TodoList() {
 </div>
 </details>
 
+</br>
 
-</br>1. Components 폴더생성 <br/>
+1. Components 폴더생성 <br/>
 2. TodoList 폴더생성 - TodoList 파일생성 <br/>
     - PostCSS를 통해 컴포넌트별로 스타일이 적용될 예정으로 App을 구성하는 요소를 별도 컴포넌트로 관리 <br/>
 3. App에서 TodoList컴포넌트 출력 <br/>
@@ -173,8 +174,9 @@ export default function AddTodo({ onAdd }) {
 </div>
 </details>
 
+</br>
 
-</br>1. AddTodo폴더생성 - AddTodo 파일생성 </br>
+1. AddTodo폴더생성 - AddTodo 파일생성 </br>
 2. TodoList에서 AddTodo 컴포넌트 출력 
 3. AddTodo 컴포넌트에 onAdd라는 이름으로 props전달 - onAdd가 실행될 경우 handleAdd 함수실행</br>
     * handleAdd : 추가된 리스트가 있는 경우, 기존의 todos목록에 리스트 추가</br>
@@ -192,6 +194,100 @@ export default function AddTodo({ onAdd }) {
 
 ___
 
+### 3. 삭제하기 구현하기
+
+<details>
+<summary>TodoList.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+import React, {useState} from 'react';
+import AddTodo from '../AddTodo/AddTodo';
+import Todo from '../Todo/Todo';
+
+export default function TodoList() {
+    const [todos, setTodos] = useState([
+        {id: '123', text: '장보기', status: 'active'},
+        {id: '124', text: '공부하기', status: 'active'}
+        ])
+    const handleAdd = (todo) => {setTodos([...todos, todo])}
+    const handleUpdate = (updated) => 
+        setTodos.map((t) => t.id === updated.id ? updated : t)
+
+    return <section> 
+        <ul>
+            {
+                todos.map((item) => (
+                    <Todo 
+                      key={item.id}
+                      todo={item}
+                      onUpdate={handleUpdate}
+                      onDelete={handleDelete}
+                    />
+                ))
+                <AddTodo onAdd={handleAdd}/>
+            }
+        </ul>
+    </section>
+}
+
+```
+</div>
+</details>
+
+<details>
+<summary>Todo.jsx</summary>
+<div markdown="1">
+
+```javaScript
+import React, {useState} from 'react';
+import {FaTrashAlt} from 'react-icons/fa'
+
+export default function Todo({todo, onUpdate, onDelete}) {
+    const {text} = todo;
+    const handleChange = (e) => {
+        const status = e.target.checked ? 'completed' : 'active';
+        onUpdate({...todo, status:status});
+    } 
+    const handleDelete = () => onDelete(todo)
+
+    return (
+        <li>
+          <input
+            type='checkbox'
+            id='checkbox'
+            onChange={handleChange}
+            />
+          <label htmlFor='checkbox'>{text}</label>
+          <button onClick={handleDelete}>
+            <FaTrashAlt/>
+          </button>
+        </li>
+    )
+}
+
+```
+</div>
+</details>
+
+
+</br>
+
+1. Todo폴더생성 - Todo파일생성 <br/>
+2. 기존에는 `<li>`를 통해 Todos의 목록을 출력하였으나, 업데이트와 삭제기능 구현을 위해 코드수정 필요 - Todo컴포넌트를 통해 업데이트와 삭제기능 구현 <br/>
+3. Todo컴포넌트에 todo, onUpdate, onDelete를 전달하며 todo라는 이름으로 item전달, onUpdate와 onDelete실행 시 handleUpdate, handleDelete실행 <br/>
+    * handleUpdate : map()로 todos를 순회하며 todos.id가 updated.id와 같다면 updated로 저장 <br/>
+    * handleDelete : filter()로 todos를 순회하며 todos.id가 deleted.id와 같지 않은 것만 남김 <br/>
+4. Todo컴포넌트에서 업데이트와 삭제 구현<br/>
+5. checkbox, label, button 생성 <br/>
+    * checkbox : id를 부여해 label과 연결 - 변경사항이 발생할 경우, handleChange함수실행 <br/>
+    * label : htmlFor를 통해 checkbox와 연결 - props로 전달받은 text출력 - map을 통해 props를 전달함으로 checkbox, label, button으로 구성된 개별 리스트가 생성됨 (`<label>`: form요소에 이름표를 붙이기 위한 것으로 나이를 적는 폼 앞에 '나이'와 같은 이름표를 붙여주는 것 / 폼 요소를 위한 레이블을 생성하는 경우 id, htmlFor를 사용해 연결되어 있음을 나타냄)<br/>
+    * button : react-icons패키지를 설치하여 Trash아이콘 생성 - 클릭이 발생할 경우 handleDelete을 실행하도록 설정<br/>
+6. handleChange, handleDelete구현 <br/>
+    * handleChange : <br/>
+    * handleDelete :  <br/>
+___
 
 [Git]()
 
