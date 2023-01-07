@@ -76,7 +76,7 @@ export default function TodoList() {
 </details>
 
 
-1. Components 폴더생성 <br/>
+</br>1. Components 폴더생성 <br/>
 2. TodoList 폴더생성 - TodoList 파일생성 <br/>
     - PostCSS를 통해 컴포넌트별로 스타일이 적용될 예정으로 App을 구성하는 요소를 별도 컴포넌트로 관리 <br/>
 3. App에서 TodoList컴포넌트 출력 <br/>
@@ -141,6 +141,7 @@ export default function TodoList() {
 
 ```javaScript
 import React, {useState} from 'react';
+import {v4 as uuid4} from 'uuid';
 
 export default function AddTodo({ onAdd }) {
     const [text, setText] = useState();
@@ -173,7 +174,7 @@ export default function AddTodo({ onAdd }) {
 </details>
 
 
-1. AddTodo폴더생성 - AddTodo 파일생성 </br>
+</br>1. AddTodo폴더생성 - AddTodo 파일생성 </br>
 2. TodoList에서 AddTodo 컴포넌트 출력 
 3. AddTodo 컴포넌트에 onAdd라는 이름으로 props전달 - onAdd가 실행될 경우 handleAdd 함수실행</br>
     * handleAdd : 추가된 리스트가 있는 경우, 기존의 todos목록에 리스트 추가</br>
@@ -188,7 +189,9 @@ export default function AddTodo({ onAdd }) {
 * 화살표 함수 : const change = function(event) {return console.log(event)} 와 같은 코드를 아래와 같이 변경할 수 있게 함 const change = (event) => {return console.log}</br>
 * ... : 펼침 연산자(Spread operator)로 배열 또는 객체의 모든 값을 복사할 수 있음</br>
 * 고유한 아이디 : uuid패키지 설치를 통해 아이디부여 가능 (yarn add uuid)</br>
+
 ___
+
 
 [Git]()
 
