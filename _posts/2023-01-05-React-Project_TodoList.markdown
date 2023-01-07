@@ -196,6 +196,8 @@ ___
 
 ### 3. 삭제하기 구현하기
 
+<img src="/images/Posting/React/TodoList_Delete.png" alt="Project">
+
 <details>
 <summary>TodoList.jsx</summary>
 <div markdown="1">
