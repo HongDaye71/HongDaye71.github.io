@@ -75,7 +75,7 @@ export default function TodoList() {
 </div>
 </details>
 
-</br>
+
 
 1. Components 폴더생성 <br/>
 2. TodoList 폴더생성 - TodoList 파일생성 <br/>
@@ -174,7 +174,7 @@ export default function AddTodo({ onAdd }) {
 </div>
 </details>
 
-</br>
+
 
 1. AddTodo폴더생성 - AddTodo 파일생성 </br>
 2. TodoList에서 AddTodo 컴포넌트 출력 
@@ -272,7 +272,6 @@ export default function Todo({todo, onUpdate, onDelete}) {
 </details>
 
 
-</br>
 
 1. Todo폴더생성 - Todo파일생성 <br/>
 2. 기존에는 `<li>`를 통해 Todos의 목록을 출력하였으나, 업데이트와 삭제기능 구현을 위해 코드수정 필요 - Todo컴포넌트를 통해 업데이트와 삭제기능 구현 <br/>
@@ -287,6 +286,8 @@ export default function Todo({todo, onUpdate, onDelete}) {
 6. handleChange, handleDelete구현 <br/>
     * handleChange : 이벤트가 발생한 리스트아이템을 가져옴 - 체크박스가 활성화된 상태라면 status를 completed로 변경하고, 그렇지 않다면 active로 변경함 - props로 전달받은 onUpdate를 실행하며 todo을 목록을 펼쳐 status값을 업데이트함<br/>
     * handleDelete : props로 전달받은 onDelete를 실행하며 todo를 전달함<br/>
+
+
 ___
 
 [Git]()
