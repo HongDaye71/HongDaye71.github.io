@@ -285,8 +285,8 @@ export default function Todo({todo, onUpdate, onDelete}) {
     * label : htmlFor를 통해 checkbox와 연결 - props로 전달받은 text출력 - map을 통해 props를 전달함으로 checkbox, label, button으로 구성된 개별 리스트가 생성됨 (`<label>`: form요소에 이름표를 붙이기 위한 것으로 나이를 적는 폼 앞에 '나이'와 같은 이름표를 붙여주는 것 / 폼 요소를 위한 레이블을 생성하는 경우 id, htmlFor를 사용해 연결되어 있음을 나타냄)<br/>
     * button : react-icons패키지를 설치하여 Trash아이콘 생성 - 클릭이 발생할 경우 handleDelete을 실행하도록 설정<br/>
 6. handleChange, handleDelete구현 <br/>
-    * handleChange : <br/>
-    * handleDelete :  <br/>
+    * handleChange : 이벤트가 발생한 리스트아이템을 가져옴 - 체크박스가 활성화된 상태라면 status를 completed로 변경하고, 그렇지 않다면 active로 변경함 - props로 전달받은 onUpdate를 실행하며 todo을 목록을 펼쳐 status값을 업데이트함<br/>
+    * handleDelete : props로 전달받은 onDelete를 실행하며 todo를 전달함<br/>
 ___
 
 [Git]()
