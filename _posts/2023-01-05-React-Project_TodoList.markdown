@@ -209,29 +209,29 @@ import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
 
 export default function TodoList() {
-    const [todos, setTodos] = useState([
-        {id: '123', text: '장보기', status: 'active'},
-        {id: '124', text: '공부하기', status: 'active'}
-        ])
-    const handleAdd = (todo) => {setTodos([...todos, todo])}
-    const handleUpdate = (updated) => 
-        setTodos.map((t) => t.id === updated.id ? updated : t)
+  const [todos, setTodos] = useState([
+      {id: '123', text: '장보기', status: 'active'},
+      {id: '124', text: '공부하기', status: 'active'}
+  ])
+  const handleAdd = (todo) => {setTodos([...todos, todo])}
+  const handleUpdate = (updated) =>
+    setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
+  const handleDelete = (deleted) => 
+    setTodos(todos.filter((t) => t.id !== deleted.id));
 
-    return <section> 
-        <ul>
-            {
-                todos.map((item) => (
-                    <Todo 
-                      key={item.id}
-                      todo={item}
-                      onUpdate={handleUpdate}
-                      onDelete={handleDelete}
-                    />
-                ))
-                <AddTodo onAdd={handleAdd}/>
-            }
-        </ul>
-    </section>
+    return <section>
+    <ul>
+        {
+            todos.map((item) => (
+            <Todo 
+              key={item.id} 
+              todo={item}
+              onUpdate={handleUpdate}
+              onDelete={handleDelete}/>
+        ))}
+        <AddTodo onAdd={handleAdd}/>
+    </ul>
+  </section>
 }
 
 ```
@@ -290,6 +290,125 @@ export default function Todo({todo, onUpdate, onDelete}) {
     * handleDelete : props로 전달받은 onDelete를 실행하며 todo를 전달함<br/>
 
 
+___
+
+### 4. 필터 적용하기
+
+<img src="/images/Posting/React/TodoList_Filter.png" alt="Project">
+
+<details>
+<summary>App.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+import './App.css';
+import Header from './components/Header/Header';
+import TodoList from './components/TodoList/TodoList'
+import React, {useState} from 'react';
+
+const filters = ['all', 'active', 'complited'];
+
+function App() {
+    const [filter, setFilter] = useState(filters[0]);
+
+    return(
+        <div>
+            <Header 
+                filter={filter} 
+                filters={filters} 
+                onFilterChange={setFilter}
+            />
+            <TodoList filter={filter} />
+        </div>
+    )
+}
+
+export default App;
+
+```
+</div>
+</details>
+
+<details>
+<summary>Header.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+import React from 'react'
+
+export default function Header({ filters, onFilterChange }) {
+    return (
+    <header>
+        <ul>
+            {filters.map((value, index) => <li key={index}>
+                <button onClick={() => onFilterChange(value)}>{value}</button>
+            </li>    
+            )}
+        </ul>
+    </header>);
+}
+
+```
+</div>
+</details>
+
+<details>
+<summary>TodoList.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+import React, {useState} from 'react';
+import AddTodo from '../AddTodo/AddTodo';
+import Todo from '../Todo/Todo';
+
+export default function TodoList({ filter }) {
+  const [todos, setTodos] = useState([
+      {id: '123', text: '장보기', status: 'active'},
+      {id: '124', text: '공부하기', status: 'active'}
+  ])
+  const handleAdd = (todo) => {setTodos([...todos, todo])}
+  const handleUpdate = (updated) =>
+    setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
+  const handleDelete = (deleted) => 
+    setTodos(todos.filter((t) => t.id !== deleted.id));
+
+  const filtered = getFilteredItems(todos, filter);
+
+
+    return <section>
+    <ul>
+        {
+            filtered.map((item) => (
+            <Todo 
+              key={item.id} 
+              todo={item}
+              onUpdate={handleUpdate}
+              onDelete={handleDelete}/>
+        ))}
+        <AddTodo onAdd={handleAdd}/>
+    </ul>
+  </section>
+}
+
+
+function getFilteredItems(todos, filter) {
+  if(filter === 'all') {
+    return todos;
+  }
+  return todos.filter(todo => todo.status === filter);
+}
+
+
+```
+</div>
+</details>
+
+
+
+1. 
 ___
 
 [Git]()
