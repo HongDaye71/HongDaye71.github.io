@@ -408,7 +408,69 @@ function getFilteredItems(todos, filter) {
 
 
 
-1. 
+1. 필터러이란 : all, active, completed 버튼 클릭 시에 상태조건에 일치하는 리스트만을 출력해주는 것
+2. Header폴더생성 - Header파일생성
+3. 필터처리는 Header(버튼 컴포넌트), TodoList(리스트 컴포넌트)에서 함께 이루어져야 함으로 App에서 상태값 설정
+4. useState를 통해 filter생성, filters목록을 생성해 all, active, completed 값 입력
+5. Header에 filters목록, 현재 선택된 filter를 전달 - onFilterChange가 발생하면 Header에서 전달해준 filter로 setFilter해줄 것임을 입력
+6. TodoList에 변경된 filter전달
+7. Header 설정 : map()을 통해 filters의 값을 UI요소로 변환 (props받아옴 - `<ul><li>`태그를 사용해 filters의 값을 버튼으로 보여줌 - 개별 리스트의 키값은 고정된 배열이니 index로 설정 - button의 텍스트는 filters의 value로 설정 - 클릭이 발생할 경우, onFilterChange를 호출해 value전달
+8. TodoList 설정 : props를 통해 전달된 filter받아오기 - getFilteredItems함수를 통해 filtered된 아이템만을 filtered에 저장 (todoa, filter값을 전달하여 filter에 해당되는 값만을 받아오도록 설정할 것) - getFilteredItems() : todos, filter를 받아와서 todo의 status가 filter와 같은 것만 filtered에 저장 - todos대신 filtered를 돌며 Todo에 props를 전달하도록 수정
+
+* return문에 다수 컴포넌트 작성할 때에는 소괄호로 묶기
+
+___
+
+### 5. 스타일링 적용하기
+## 앱전체 스타일링
+
+<img src="/images/Posting/React/TodoList_Filter.png" alt="Project">
+
+<details>
+<summary>App.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+
+```
+</div>
+</details>
+
+<details>
+<summary>Header.jsx</summary>
+<div markdown="1">
+
+
+
+* index.css : 앱에 적용되는 전역스타일 <br/>
+* 반복되는 CSS값은 변수를 통해 적용해주는 것이 유지보수에 용이함
+
+```CSS
+:root {
+    --color-bg-dark: #f5f5f5;
+}
+```
+
+* 아이템이 중간에 오도록 설정하기 위해 아래의 코드를 사용할 수 있음
+
+```CSS
+  display: flex; /*아이템이 수평기준 중간에 오도록 설정*/
+  justify-content: center;
+  align-items: center; /*아이템이 수직기준 중간에 오도록 설정*/
+
+  /*
+  display: flex;
+  justify-content: center;
+  -> 아이템이 수평기준 중간에 오도록 설정
+  -> display: flex는 CSS3부터 지원되며 요소들을 자유자제로 위치시키는 속성이다
+  -> justify-content는 가로축을 기준으로 좌우에 대한 정렬을 관장한다
+
+  align-items: center; 
+  -> 아이템이 수직기준 중간에 오도록 설정
+  -> align-items은 세로축을 기준으로 상하에 대한 정렬을 관장한다
+  */
+```
 ___
 
 [Git]()
