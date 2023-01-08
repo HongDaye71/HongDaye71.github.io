@@ -471,6 +471,7 @@ body {
   -webkit-box-shadow: 17px 10px 23px 0px rgba(0,0,0,0.45); 
   -moz-box-shadow: 17px 10px 23px 0px rgba(0,0,0,0.45); 
   box-shadow: 17px 10px 23px 0px rgba(0,0,0,0.45);
+  overflow: hidden;
 }
 
 code {
@@ -486,6 +487,7 @@ ul {
 ```
 </div>
 </details>
+
 
 
 * index.css : 앱에 적용되는 전역스타일 <br/>
@@ -523,6 +525,87 @@ ul {
 
 * CSS Gradient사이트를 통해 그라이언트 효과를 적용할 수 있음 <br/>
 * Box shadow generator사이트를 통해 박스에 그림자 효과를 적용할 수 있음 <br/>
+
+#### 헤더 스타일링
+
+<details>
+<summary>Header.jsx</summary>
+<div markdown="1">
+
+```javaScript
+
+import React from 'react'
+import styles from './Header.module.css';
+
+export default function Header({ filters, onFilterChange }) {
+    return (
+    <header className={styles.header}>
+        <ul className={styles.filters}>
+            {filters.map((value, index) => <li key={index} >
+                <button className={styles.filter} onClick={() => onFilterChange(value)}>{value}</button>
+            </li>    
+            )}
+        </ul>
+    </header>);
+}
+
+```
+</div>
+</details>
+
+<details>
+<summary>Header.module.css</summary>
+<div markdown="1">
+
+```javaScript
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-dark);
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.filters {
+    display: flex;
+}
+
+.filter {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: var(--color-accent);
+    opacity: 0.6;
+    font-weigh: bold;
+}
+
+.filter:hover {
+    opacity: 1;
+}
+.filter.selected {
+    opacity: 1;
+}
+
+.filter.sected::after {
+    content: '';
+    display: block;
+    margin-top: 0.2rem;
+    border: 1px solid var(--color-text);
+}
+
+```
+</div>
+</details>
+
+1. 컴포넌트 스타일은 PostCSS 모듈을 통해 적용<br/>
+    * PostCSS란 : CSS전처리기로 선택자 중복적용 허용, 연상기능제공 등의 장점이 있다.<br/>
+2. Header.module.css파일생성 - Header.jsx 파일에서 임포트 - Header.jex 파일에서 ClassName지정 (classBame={styles.header})<br/>
+
+* display: flex : 컨테이너와 아이템들이 부모-자식 관계일 때 컨테이너에 display: flex속성을 주면, 수직으로 정렬되던 아이템들이 수평으로 정렬된다. 속성 적용을 통해 자식 요소들의 배치가 inline화(한줄에 배치)된 것이다.<br/>
+* 사이즈 단위 : px(고정), em(상위요소를 기준으로 n배), rem(최상위 요소를 기준으로 n배)<br/>
+* text-transform: capitalize: 앞글자를 소문자-대문자 변환<br/>
 ___
 
 [Git]()
