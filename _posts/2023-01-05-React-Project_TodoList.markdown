@@ -432,6 +432,56 @@ ___
 
 ```javaScript
 
+:root {
+  --color-bg-dark: #f5f5f5;
+  --color-bg: #fdfffd;
+  --color-grey: #d1d1d1;
+  --color-text: #22243b;
+  --color-accent: #f16e03;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  background: rgb(81, 87, 111);
+  background: linear-gradient(
+    90deg, 
+    rgba(8, 87, 111, 1) 0%, 
+    rgba(60, 61, 69, 1) 100%,);
+}
+
+#root {
+  width: 100%;
+  height: 60%;
+  max-width: 500px;
+  background-color: var(--color-bg-dark);
+  border-radius: 1rem;
+  display: flex;
+  padding-left : 10px;
+  flex-direction: column;
+  -webkit-box-shadow: 17px 10px 23px 0px rgba(0,0,0,0.45); 
+  -moz-box-shadow: 17px 10px 23px 0px rgba(0,0,0,0.45); 
+  box-shadow: 17px 10px 23px 0px rgba(0,0,0,0.45);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  list-style: none; 
+  padding-left: 0;
+}
 
 ```
 </div>
@@ -439,20 +489,24 @@ ___
 
 
 * index.css : 앱에 적용되는 전역스타일 <br/>
-* 반복되는 CSS값은 변수를 통해 적용해주는 것이 유지보수에 용이함
+* 반복되는 CSS값은 변수를 통해 적용해주는 것이 유지보수에 용이함 <br/>
 
 ```CSS
 :root {
     --color-bg-dark: #f5f5f5;
+}
+
+#root {
+    background-color: var(--color-bg-dark);
 }
 ```
 
 * 아이템이 중간에 오도록 설정하기 위해 아래의 코드를 사용할 수 있음
 
 ```CSS
-  display: flex; /*아이템이 수평기준 중간에 오도록 설정*/
+  display: flex; //아이템이 수평기준 중간에 오도록 설정
   justify-content: center;
-  align-items: center; /*아이템이 수직기준 중간에 오도록 설정*/
+  align-items: center; //아이템이 수직기준 중간에 오도록 설정
 
   /*
   display: flex;
@@ -466,6 +520,9 @@ ___
   -> align-items은 세로축을 기준으로 상하에 대한 정렬을 관장한다
   */
 ```
+
+* CSS Gradient사이트를 통해 그라이언트 효과를 적용할 수 있음 <br/>
+* Box shadow generator사이트를 통해 박스에 그림자 효과를 적용할 수 있음 <br/>
 ___
 
 [Git]()
