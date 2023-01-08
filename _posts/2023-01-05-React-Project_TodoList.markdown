@@ -427,7 +427,7 @@ ___
 <img src="/images/Posting/React/TodoList_Filter.png" alt="Project">
 
 <details>
-<summary>App.jsx</summary>
+<summary>index.css</summary>
 <div markdown="1">
 
 ```javaScript
@@ -436,11 +436,6 @@ ___
 ```
 </div>
 </details>
-
-<details>
-<summary>Header.jsx</summary>
-<div markdown="1">
-
 
 
 * index.css : 앱에 적용되는 전역스타일 <br/>
