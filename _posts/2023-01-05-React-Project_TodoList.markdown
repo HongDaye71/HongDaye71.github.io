@@ -424,7 +424,7 @@ ___
 ### 5. 스타일링 적용하기
 #### 앱전체 스타일링
 
-<img src="/images/Posting/React/TodoList_Filter.png" alt="Project">
+<img src="/images/Posting/React/TodoList_Styling.png" alt="Project">
 
 <details>
 <summary>index.css</summary>
